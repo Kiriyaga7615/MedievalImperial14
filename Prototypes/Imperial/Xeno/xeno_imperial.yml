@@ -1,0 +1,624 @@
+- type: entity
+  id: MobXenoImperial
+  parent: MobXeno
+  description: They mostly come at night. Mostly.
+  components:
+  - type: XenoBuilder
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoBurrower
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: Xeno
+    criticalStatesPerAge:
+    - 50
+    - 80
+    - 120
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 200
+    - 300
+    - 500
+    armorByAge:
+    - XenoMature
+    - XenoElder
+    - XenoAncient
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+  - type: ShowXenoAge
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: entity
+  name: Praetorian
+  parent: MobXenoPraetorian
+  id: MobXenoPraetorianImperial
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoPraetorian
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcidCorrosive
+    capacity: 1
+    count: 1
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.75
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: XenoBaseSpitter
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 8
+  - type: XenoPraetorian
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+  - type: Xeno
+    criticalStatesPerAge:
+    - 100
+    - 140
+    - 180
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 800
+    - 900
+    - 1000
+    armorByAge:
+    - XenoMature
+    - XenoElder
+    - XenoAncient
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+  - type: ShowXenoAge
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: entity
+  name: Drone
+  parent: MobXenoDrone
+  id: MobXenoDroneImperial
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      80: Dead
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 4
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      300: 0.7
+  - type: XenoDrone
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+  - type: Xeno
+    criticalStatesPerAge:
+    - 80
+    - 120
+    - 140
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 800
+    - 900
+    - 1000
+    armorByAge:
+    - XenoMature
+    - XenoElder
+    - XenoAncient
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoDrone
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: ShowXenoAge
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: entity
+  name: Queen
+  parent: MobXenoQueen
+  id: MobXenoQueenImperial
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Dead
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: MeleeWeapon
+    hidden: true
+    damage:
+     types:
+      Slash: 8
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      450: 0
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoQueen
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: XenoBaseSpitter
+    isAdvanced: true
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcidCorrosive
+    capacity: 1
+    count: 1
+  - type: Gun
+    showExamineText: false
+    fireRate: 1.25
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: XenoPraetorian
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+  - type: XenoBuilder
+  - type: XenoQueen
+  - type: XenoDrone
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+  - type: Xeno
+    criticalStatesPerAge:
+    - 300
+    - 340
+    - 380
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 1000
+    - 1100
+    - 1200
+    armorByAge:
+    - XenoMature
+    - XenoElder
+    - XenoAncient
+  - type: ShowXenoAge
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: entity
+  name: Ravager
+  parent: MobXenoRavager
+  id: MobXenoRavagerImperial
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: MeleeWeapon
+    hidden: true
+    damage:
+     types:
+      Slash: 6
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      350: 0
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoRavager
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: XenoRavager
+    knockdownDuration: 3
+    chargeDamage:
+      types:
+        Piercing: 2
+        Slash: 4
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: Xeno
+    criticalStatesPerAge:
+    - 100
+    - 130
+    - 160
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 800
+    - 900
+    - 1000
+    armorByAge:
+    - XenoMature
+    - XenoElder
+    - XenoAncient
+  - type: ShowXenoAge
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: entity
+  name: Runner
+  parent: MobXenoRunner
+  id: MobXenoRunnerImperial
+  components:
+  - type: MeleeWeapon
+    hidden: true
+    damage:
+     types:
+       Slash: 8
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: XenoRunner
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoRunner
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: Xeno
+    criticalStatesPerAge:
+    - 50
+    - 70
+    - 90
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 175
+    - 200
+    - 250
+    armorByAge:
+    - XenoMature
+    - XenoElder
+    - XenoAncient
+  - type: ShowXenoAge
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: entity
+  name: Spitter
+  parent: MobXenoSpitter
+  id: MobXenoSpitterImperial
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/spitter.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoSpitter
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: XenoBaseSpitter
+    isAdvanced: true
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 0.75
+  - type: BasicEntityAmmoProvider
+    proto: BulletAcidCorrosive
+    capacity: 1
+    count: 1
+  - type: Gun
+    showExamineText: false
+    fireRate: 1.25
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Xeno
+    criticalStatesPerAge:
+    - 50
+    - 90
+    - 130
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 800
+    - 875
+    - 925
+    armorByAge:
+    - XenoMature
+    - XenoElder
+    - XenoAncient
+  - type: ShowXenoAge
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: entity
+  name: lavra
+  parent: SimpleSpaceMobBase
+  id: MobXenoLawraImperial
+  description: Small xeno.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Xenos/xeno_lawra_imperial.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: walking
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: walking
+      Critical:
+        Base: walking
+      Dead:
+        Base: dead
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: male
+  - type: InputMover
+  - type: MobMover
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 8
+  - type: GhostTakeoverAvailable
+  - type: Damageable
+    damageModifierSet: XenoImp
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 25
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: Xeno
+    criticalStatesPerAge:
+    - 20
+    - 30
+    - 40
+    heal:
+      types:
+        Heat: -2
+        Blunt: -2
+        Toxin: -2
+        Brute: -2
+        Piercing: -2
+        Slash: -2
+    damageBuffByAge:
+    - 1.2
+    - 1.2
+    - 1.2
+    plasmaByAge:
+    - 10
+    - 15
+    - 20
+    armorByAge:
+    - XenoMature
+    - XenoMature
+    - XenoMature
+  - type: ShowXenoAge
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: Store
+    categories:
+    - XenoLavra
+    currencyWhitelist:
+    - XenoEvolvePoints
+  - type: NpcFactionMember
+    factions:
+    - Xeno
+  - type: GhostRole
+    allowMovement: true
+    makeSentient: true
+    name: ghost-role-information-lawra-name
+    description: ghost-role-information-lawra-description
+    rules: ghost-role-component-default-rules
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - XenoHiveMind
+  - type: ActiveRadio
+    channels:
+      - XenoHiveMind
+  - type: IntrinsicRadioReceiver
+
+- type: damageModifierSet
+  id: XenoImp
+  coefficients:
+    Heat: 2.5

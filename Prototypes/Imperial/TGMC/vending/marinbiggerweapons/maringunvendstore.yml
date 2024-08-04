@@ -1,0 +1,23 @@
+- type: vendingMachineInventory
+  id: MarineGunStore
+  startingInventory:
+   WeaponPistolMiltonTGMC: 24
+   WeaponSubMachineGunKhnumTGMC: 12
+   WeaponSubMachineGunC12rTGMC: 12
+   WeaponRifleHaarabadTGMC: 12
+   WeaponRifleDrennanTGMC: 6
+   BaseWeaponPeaceKeeperTGMC: 2
+   WeaponLauncherRocket: 1
+   WeaponPulseDruzhba: 6
+   BaseMagazinePistolMiltonTGMC: 80
+   BaseMagazinePistolSubMachineGunKhnumTGMC: 44
+   BaseMagazinePistolSubMachineGunC12RTGMC: 44
+   BaseMagazineRifleHaarabadTGMC: 44
+   BaseMagazineRifleDrennanTGMC: 24
+   BaseMagazineRiflePeaceKeeperTGMC: 18
+   CartridgeRocket: 4
+   ShieldRegularTGMC: 8
+   MagazineBoxRifleBig: 6
+   MagazineBoxLightRifleBig: 6
+   Flare: 24
+   PinpointerUniversal: 24

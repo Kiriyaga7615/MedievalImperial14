@@ -1,0 +1,30 @@
+- type: job
+  id: Reporter
+  name: job-name-reporter
+  description: job-description-reporter
+  playTimeTracker: JobReporter
+  startingGear: ReporterGear
+  icon: "JobIconReporter"
+  supervisors: job-supervisors-hop
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 #Imperial role timers
+  access:
+  - Service
+  - Maintenance
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+
+- type: startingGear
+  id: ReporterGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitReporter
+    back: ClothingBackpackFilled
+    shoes: ClothingShoesColorWhite
+    id: ReporterPDA
+    ears: ClothingHeadsetService
+  innerClothingSkirt: ClothingUniformJumpskirtReporter
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled

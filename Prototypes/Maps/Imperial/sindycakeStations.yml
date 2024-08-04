@@ -1,0 +1,23 @@
+- type: gameMap
+  id: ImperialNukieOutpost_original
+  mapName: Nukie Outpost
+  mapPath: /Maps/imperial/imperialnukeplanet_original.yml
+  minPlayers: 0
+  stations:
+    SyndicateOutpost:
+      stationProto: StandardNukieOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Nukie Outpost"
+
+- type: gameMap
+  id: ImperialNukieOutpost_new
+  mapName: Nukie Outpost
+  mapPath: /Maps/imperial/imperialnukeplanet.yml
+  minPlayers: 0
+  stations:
+    SyndicateOutpost:
+      stationProto: StandardNukieOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Nukie Outpost"

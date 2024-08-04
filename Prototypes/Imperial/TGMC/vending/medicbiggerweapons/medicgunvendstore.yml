@@ -1,0 +1,25 @@
+- type: vendingMachineInventory
+  id: MedGunStore
+  startingInventory:
+   WeaponPistolMiltonTGMC: 8
+   WeaponSubMachineGunC12rTGMC: 4
+   WeaponSubMachinegunSureaTGMC: 4
+   BaseMagazinePistolMiltonTGMC: 16
+   BaseMagazinePistolSubMachineGunC12RTGMC: 8
+   BaseMagazineSubMachinegunSureaTGMC: 8
+   HandheldHealthAnalyzer: 8
+   CheapRollerBedSpawnFolded: 8
+   MedicatedSuture: 12
+   RegenerativeMesh: 12
+   Bloodpack: 24
+   MedkitFilled: 16
+   MedkitToxinFilled: 8
+   MedkitCombatFilled: 4
+   BoxSyringe: 8
+   ClothingBackpackDuffelSurgeryFilled: 1
+   TGMCFunnyMedipen: 8
+   TGMCausticMedipen: 8
+   TGMCombatMedipen: 8
+   TGMCMegaMedipen: 4
+   Flare: 24
+   PinpointerUniversal: 4

@@ -1,0 +1,9 @@
+department-Cargo-description = Выполняйте заказы за деньги
+department-Civilian-description = Живите своей жизнью
+department-Command-description = Управляйте своими фракциями и обеспечивайте их эффективную работу.
+department-Engineering-description = Свергните легион синего орла!
+department-Medical-description = Воруй, убивай.
+department-Security-description = Основная задача легионеров - наблюдение за соблюдениями законов Уилля Ревента четвертого всем материком.
+department-Science-description = Основная задача - изучение и продажа заклинаний, поддержание магического барьера.
+department-Specific-description = Вакансии, которые есть не на всех станциях.
+department-Juristic-description = Несите веру в Богов в этот Богом забытый мир.

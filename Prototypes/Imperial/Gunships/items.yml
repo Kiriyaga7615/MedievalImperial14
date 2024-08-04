@@ -1,0 +1,991 @@
+- type: entity
+  id: BattleShipGearBase
+  abstract: true
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: FoodMeatCooked
+          amount: 5
+        - id: DoubleEmergencyOxygenTankFilled
+          amount: 3
+        - id: NitrogenTankFilled
+        - id: WeaponGrapplingGun
+        - id: ClothingMaskGasSwat
+        - id: ClothingHandsGlovesCombat
+        - id: AmpulaBica
+          amount: 2
+        - id: AmpulaDexa
+        - id: AmpulaTric
+          amount: 2
+        - id: AmpulaDerm
+        - id: Crowbar
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Multitool
+        - id: WelderIndustrialAdvanced
+        - id: ClothingBeltMilitaryWebbingBig
+        - id: ClothingBackpackERTSecurityBig
+        - id: ClothingEyesGlassesMeson
+        - id: HandheldGPSBasic
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsCombatFilled
+        - id: RegenerativeMesh
+          amount: 4
+        - id: MedicatedSuture
+          amount: 4
+        - id: PartRodMetal
+        - id: SheetGlass
+        - id: SheetSteel
+        - id: ClothingUniformJumpsuitTacticool
+        - id: TGMCombatMedipen
+          amount: 3
+        - id: BoxMRE
+          amount: 2
+        - id: SurgeryTourniquet
+          amount: 2
+        - id: SurgerySplint
+        - id: HandHeldMassScanner
+    - type: EntityStorage
+      capacity: 500
+
+
+- type: entity
+  id: ClothingOuterHardsuitImperialERTLeaderSB
+  suffix: Filled
+  parent: ClothingOuterHardsuitImperialERTLeader
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+    slowDown: false
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.75
+        Heat: 0.8
+        Radiation: 0.25
+        Caustic: 0.7
+        Stamina: 0.5 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#00b7ff"
+    critColor: "#0058ff"
+    deadColor: "#00000000"
+
+- type: entity
+  id: ClothingOuterHardsuitSyndieCommanderSB
+  suffix: Filled
+  parent: ClothingOuterHardsuitSyndieCommander
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+    slowDown: false
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.75
+        Heat: 0.8
+        Radiation: 0.25
+        Caustic: 0.7
+        Stamina: 0.5 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05
+    sprintModifier: 1.05
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#ff0000"
+    critColor: "#ad1e1e"
+    deadColor: "#00000000"
+
+
+- type: entity
+  id: ClothingOuterHardsuitERTImperialSecuritySB
+  suffix: Filled
+  parent: ClothingOuterHardsuitERTImperialSecurity
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.55
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.4
+        Heat: 0.5
+        Radiation: 0.25
+        Caustic: 0.7
+        Stamina: 0.35 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#00b7ff"
+    critColor: "#0058ff"
+    deadColor: "#00000000"
+
+- type: entity
+  id: ClothingOuterHardsuitSyndieSB
+  suffix: Filled
+  parent: ClothingOuterHardsuitSyndie
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.55
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.4
+        Heat: 0.5
+        Radiation: 0.25
+        Caustic: 0.7
+        Stamina: 0.35 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#ff0000"
+    critColor: "#ad1e1e"
+    deadColor: "#00000000"
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbing
+  id: ClothingBeltMilitaryWebbingBig
+  name: chest rig
+  description: A set of tactical webbing worn by Syndicate boarding parties.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,8,6
+
+- type: entity
+  parent: ClothingBackpackERTSecurity
+  id: ClothingBackpackERTSecurityBig
+  name: ERT security backpack
+  description: A spacious backpack with lots of pockets, worn by Security Officers of an Emergency Response Team.
+  components:
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,19,9
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/ertsec.rsi
+
+- type: entity
+  parent: ClothingBackpackERTSecurityBig
+  id: ClothingBackpackERTSecurityBigPilot
+  name: ERT security backpack
+  description: A spacious backpack with lots of pockets, worn by Security Officers of an Emergency Response Team.
+  components:
+    - type: StorageFill
+      contents:
+        - id: FoodMeatCooked
+          amount: 5
+        - id: DoubleEmergencyOxygenTankFilled
+          amount: 3
+        - id: NitrogenTankFilled
+        - id: WeaponGrapplingGun
+        - id: AmpulaBica
+          amount: 2
+        - id: AmpulaDexa
+        - id: AmpulaTric
+          amount: 2
+        - id: AmpulaDerm
+        - id: Crowbar
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Multitool
+        - id: WelderIndustrialAdvanced
+        - id: HandheldGPSBasic
+        - id: RegenerativeMesh
+          amount: 4
+        - id: MedicatedSuture
+          amount: 4
+        - id: PartRodMetal
+        - id: SheetGlass
+        - id: SheetSteel
+        - id: TGMCombatMedipen
+          amount: 3
+        - id: BoxMRE
+          amount: 2
+        - id: SurgeryTourniquet
+          amount: 2
+        - id: HandHeldMassScanner
+        - id: SurgerySplint
+        - id: PowerCellHyper
+          amount: 3
+        - id: FlashlightSeclite
+        - id: APCElectronics
+          amount: 2
+        - id: ShuttleConsoleCircuitboard
+          amount: 2
+        - id: RadarConsoleCircuitboard
+          amount: 2
+        - id: SubstationMachineCircuitboard
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingBig
+  id: ClothingBeltMilitaryWebbingBigPilot
+  name: chest rig
+  description: A set of tactical webbing worn by Syndicate boarding parties.
+  components:
+    - type: StorageFill
+      contents:
+        - id: SCAR-Magazine
+          amount: 8
+        - id: MagazinePistolCaselessRifle
+          amount: 4
+
+- type: entity
+  parent: ClothingBackpackERTSecurityBig
+  id: ClothingBackpackERTSecurityBigBattle
+  name: ERT security backpack
+  description: A spacious backpack with lots of pockets, worn by Security Officers of an Emergency Response Team.
+  components:
+    - type: StorageFill
+      contents:
+        - id: FoodMeatCooked
+          amount: 5
+        - id: DoubleEmergencyOxygenTankFilled
+          amount: 3
+        - id: NitrogenTankFilled
+        - id: WeaponGrapplingGun
+        - id: AmpulaBica
+          amount: 2
+        - id: AmpulaDexa
+        - id: AmpulaTric
+          amount: 2
+        - id: AmpulaDerm
+        - id: HandheldGPSBasic
+        - id: RegenerativeMesh
+          amount: 4
+        - id: MedicatedSuture
+          amount: 4
+        - id: PartRodMetal
+        - id: SheetGlass
+        - id: SheetSteel
+        - id: TGMCombatMedipen
+          amount: 3
+        - id: BoxMRE
+          amount: 2
+        - id: SurgeryTourniquet
+          amount: 2
+        - id: HandHeldMassScanner
+        - id: SurgerySplint
+        - id: StimpackMini
+          amount: 2
+        - id: PowerCellHyper
+          amount: 3
+        - id: FlashlightSeclite
+        - id: Crowbar
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Multitool
+        - id: WelderIndustrialAdvanced
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingBig
+  id: ClothingBeltMilitaryWebbingBigBattle
+  name: chest rig
+  description: A set of tactical webbing worn by Syndicate boarding parties.
+  components:
+    - type: StorageFill
+      contents:
+        - id: MagazineLightRifle
+          amount: 8
+        - id: mac10-Magazine
+          amount: 5
+        - id: GrenadeShrapnel
+          amount: 2
+        - id: Plastide
+          amount: 2
+
+- type: entity
+  parent: ClothingBackpackERTSecurityBig
+  id: ClothingBackpackERTSecurityBigMed
+  name: ERT security backpack
+  description: A spacious backpack with lots of pockets, worn by Security Officers of an Emergency Response Team.
+  components:
+    - type: StorageFill
+      contents:
+        - id: FoodMeatCooked
+          amount: 5
+        - id: DoubleEmergencyOxygenTankFilled
+          amount: 3
+        - id: Ampula
+          amount: 6
+        - id: NitrogenTankFilled
+        - id: WeaponGrapplingGun
+        - id: Crowbar
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Multitool
+        - id: WelderIndustrialAdvanced
+        - id: HandheldGPSBasic
+        - id: AmpulaBica
+          amount: 2
+        - id: AmpulaDexa
+        - id: AmpulaTric
+          amount: 2
+        - id: AmpulaDerm
+        - id: RegenerativeMesh
+          amount: 8
+        - id: MedicatedSuture
+          amount: 8
+        - id: PartRodMetal
+        - id: SheetGlass
+        - id: SheetSteel
+        - id: TGMCombatMedipen
+          amount: 7
+        - id: BoxMRE
+          amount: 2
+        - id: SurgeryTourniquet
+          amount: 5
+        - id: HandHeldMassScanner
+        - id: SurgerySplint
+          amount: 4
+        - id: HandheldHealthAnalyzer
+        - id: PowerCellHyper
+          amount: 3
+        - id: FlashlightSeclite
+        - id: OmnizineChemistryBottle
+          amount: 5
+        - id: StimpackMini
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingBig
+  id: ClothingBeltMilitaryWebbingBigMed
+  name: chest rig
+  description: A set of tactical webbing worn by Syndicate boarding parties.
+  components:
+    - type: StorageFill
+      contents:
+        - id: bizon-Magazine
+          amount: 6
+        - id: Glock18MagazinePistol
+          amount: 4
+        - id: Hypospray
+
+- type: entity
+  parent: ClothingBackpackERTSecurityBig
+  id: ClothingBackpackERTSecurityBigEng
+  name: ERT security backpack
+  description: A spacious backpack with lots of pockets, worn by Security Officers of an Emergency Response Team.
+  components:
+    - type: StorageFill
+      contents:
+        - id: FoodMeatCooked
+          amount: 5
+        - id: DoubleEmergencyOxygenTankFilled
+          amount: 3
+        - id: NitrogenTankFilled
+        - id: WeaponGrapplingGun
+        - id: AmpulaBica
+          amount: 2
+        - id: AmpulaDexa
+        - id: AmpulaTric
+          amount: 2
+        - id: AmpulaDerm
+        - id: RCUShield
+        - id: Crowbar
+        - id: Wrench
+        - id: Screwdriver
+        - id: Wirecutter
+        - id: Multitool
+        - id: WelderIndustrialAdvanced
+        - id: HandheldGPSBasic
+        - id: RegenerativeMesh
+          amount: 4
+        - id: MedicatedSuture
+          amount: 4
+        - id: PartRodMetal
+          amount: 5
+        - id: SheetGlass
+          amount: 3
+        - id: SheetSteel
+          amount: 5
+        - id: SheetPlasteel
+          amount: 3
+        - id: TGMCombatMedipen
+          amount: 3
+        - id: BoxMRE
+          amount: 2
+        - id: SurgeryTourniquet
+          amount: 2
+        - id: HandHeldMassScanner
+        - id: SurgerySplint
+        - id: StimpackMini
+        - id: WelderExperimental
+        - id: PowerCellHyper
+          amount: 3
+        - id: FlashlightSeclite
+        - id: APCElectronics
+          amount: 2
+        - id: ShuttleConsoleCircuitboard
+          amount: 2
+        - id: RadarConsoleCircuitboard
+          amount: 2
+        - id: SubstationMachineCircuitboard
+
+- type: entity
+  parent: ClothingBeltMilitaryWebbingBig
+  id: ClothingBeltMilitaryWebbingBigEng
+  name: chest rig
+  description: A set of tactical webbing worn by Syndicate boarding parties.
+  components:
+    - type: StorageFill
+      contents:
+        - id: BaseMagazineShotgunStormTrooperTGMC
+          amount: 12
+        - id: BerettaMagazinePistol
+          amount: 5
+        - id: GrenadeShrapnel
+        - id: Plastide
+          amount: 2
+
+
+
+- type: entity
+  id: ClothingOuterHardsuitERTImperialMedicalSB
+  suffix: Filled
+  parent: ClothingOuterHardsuitERTImperialMedical
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.55
+        Heat: 0.75
+        Radiation: 0.15
+        Caustic: 0.7
+        Stamina: 0.35 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#00b7ff"
+    critColor: "#0058ff"
+    deadColor: "#00000000"
+  - type: Tag
+    tags:
+      - SterileAll
+
+- type: entity
+  id: ClothingOuterHardsuitSyndieEliteSB
+  suffix: Filled
+  parent: ClothingOuterHardsuitSyndieElite
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.4
+        Heat: 0.75
+        Radiation: 0.15
+        Caustic: 0.7
+        Stamina: 0.35 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#ff0000"
+    critColor: "#ad1e1e"
+    deadColor: "#00000000"
+  - type: Tag
+    tags:
+      - SterileAll
+
+- type: entity
+  id: BattleShipGearPilotNT
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingMaskRebreatherBrigmedicSB
+        - id: ClothingHandsGlovesCombat
+        - id: ClothingBeltMilitaryWebbingBigPilot
+        - id: ClothingBackpackERTSecurityBigPilot
+        - id: ClothingEyesGlassesMeson
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsCombatFilled
+        - id: ClothingUniformJumpsuitTGMC
+        - id: ClothingOuterHardsuitImperialERTLeaderSB
+        - id: ClothingHeadsetAltCentCom
+        - id: CSWeaponSCAR-L
+        - id: CSWeaponUSP-S
+    - type: EntityStorage
+      capacity: 500
+
+- type: entity
+  id: BattleShipGearPilotSyndie
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingMaskRebreatherBrigmedicSB
+        - id: ClothingHandsGlovesCombat
+        - id: ClothingBeltMilitaryWebbingBigPilot
+        - id: ClothingBackpackERTSecurityBigPilot
+        - id: ClothingEyesGlassesMeson
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsCombatFilled
+        - id: ClothingUniformJumpsuitTGMC
+        - id: ClothingHeadsetAltSyndicate
+        - id: CSWeaponSCAR-L
+        - id: CSWeaponUSP-S
+        - id: ClothingOuterHardsuitSyndieCommanderSB
+    - type: EntityStorage
+      capacity: 500
+
+- type: entity
+  id: BattleShipGearBattleNT
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: CTMaskSB
+        - id: ClothingHandsGlovesCombat
+        - id: ClothingBeltMilitaryWebbingBigBattle
+        - id: ClothingBackpackERTSecurityBigBattle
+        - id: ClothingEyesGlassesMeson
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsCombatFilled
+        - id: ClothingUniformJumpsuitTacticool
+        - id: WeaponRifleAkBlack
+        - id: CSWeaponCZ
+        - id: ClothingHeadsetAltCentCom
+        - id: ClothingOuterHardsuitERTImperialSecuritySB
+    - type: EntityStorage
+      capacity: 500
+
+- type: entity
+  id: BattleShipGearBattleSyndie
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: CTMaskSB
+        - id: ClothingHandsGlovesCombat
+        - id: ClothingBeltMilitaryWebbingBigBattle
+        - id: ClothingBackpackERTSecurityBigBattle
+        - id: ClothingEyesGlassesMeson
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsCombatFilled
+        - id: ClothingUniformJumpsuitTacticool
+        - id: WeaponRifleAkBlack
+        - id: CSWeaponCZ
+        - id: ClothingHeadsetAltSyndicate
+        - id: ClothingOuterHardsuitSyndieSB
+    - type: EntityStorage
+      capacity: 500
+
+- type: entity
+  id: BattleShipGearMedNT
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingMaskBreathMedical
+        - id: ClothingHandsGlovesColorBlack
+        - id: ClothingBeltMilitaryWebbingBigMed
+        - id: ClothingBackpackERTSecurityBigMed
+        - id: ClothingEyesHudMedical
+        - id: ClothingHandsGlovesCombat
+        - id: JetpackMiniFilled
+        - id: CombatKnife
+        - id: ClothingShoesColorWhite
+        - id: ClothingUniformJumpsuitParamedic
+        - id: CSWeaponBizon
+        - id: CSWeaponGlock-18
+        - id: ClothingOuterHardsuitERTImperialMedicalSB
+        - id: ClothingHeadsetAltCentCom
+    - type: EntityStorage
+      capacity: 500
+
+- type: entity
+  id: BattleShipGearMedSyndie
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingMaskBreathMedical
+        - id: ClothingHandsGlovesColorBlack
+        - id: ClothingBeltMilitaryWebbingBigMed
+        - id: ClothingBackpackERTSecurityBigMed
+        - id: ClothingEyesHudMedical
+        - id: ClothingHandsGlovesCombat
+        - id: JetpackMiniFilled
+        - id: CombatKnife
+        - id: ClothingShoesColorWhite
+        - id: ClothingUniformJumpsuitParamedic
+        - id: CSWeaponBizon
+        - id: CSWeaponGlock-18
+        - id: ClothingOuterHardsuitSyndieEliteSB
+        - id: ClothingHeadsetAltSyndicate
+    - type: EntityStorage
+      capacity: 500
+
+- type: entity
+  name: AKMSBlack
+  parent: BaseWeaponRifle
+  id: WeaponRifleAkBlack
+  description: An iconic weapon of war. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/ak.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Imperial/Gunships/ak.rsi
+  - type: Gun
+    fireRate: 9
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+    angleDecay: 45
+    minAngle: 3
+    maxAngle: 35
+    cameraRecoilScalar: 10
+    angleIncrease: 3
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  id: SurgeryTourniquet
+  name: tourniquet
+  suffix: Full
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Imperial/HealingSurgery/medicine.rsi
+    state: tourniquet
+  - type: HealingSurgery
+    bleed: true
+    bones: false
+    startPhrase: "Вы накладываете турникет"
+    useTime: 8
+
+- type: entity
+  id: SurgerySplint
+  name: splint
+  suffix: Full
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Imperial/HealingSurgery/medicine.rsi
+    state: splint
+  - type: HealingSurgery
+    bleed: false
+    bones: true
+    startPhrase: "Вы накладываете шину"
+    useTime: 25
+
+- type: entity
+  id: CTMaskSB
+  name: splint
+  suffix: Full
+  parent: CTMask
+
+- type: entity
+  id: ClothingMaskGasMinuteManSB
+  name: splint
+  suffix: Full
+  parent: ClothingMaskGasMinuteMan
+
+- type: entity
+  id: ClothingMaskRebreatherBrigmedicSB
+  name: splint
+  suffix: Full
+  parent: ClothingMaskRebreatherBrigmedic
+
+- type: entity
+  id: ClothingOuterHardsuitERTEngineerAlternativeSB
+  suffix: Filled
+  parent: ClothingOuterHardsuitERTEngineerAlternative
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.35
+        Piercing: 0.65
+        Heat: 0.25
+        Radiation: 0.25
+        Caustic: 0.4
+        Stamina: 0.2 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#00b7ff"
+    critColor: "#0058ff"
+    deadColor: "#00000000"
+
+- type: entity
+  id: ClothingOuterHardsuitJuggernautSB
+  suffix: Filled
+  parent: ClothingOuterHardsuitJuggernaut
+  components:
+  - type: UnremovableOnEquip
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ExplosionResistance
+    damageCoefficient: 0.25
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.35
+        Piercing: 0.65
+        Heat: 0.25
+        Radiation: 0.25
+        Caustic: 0.4
+        Stamina: 0.2 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: ShuttleRender
+    radius: 0
+  - type: HumanSensor
+    aliveColor: "#ff0000"
+    critColor: "#ad1e1e"
+    deadColor: "#00000000"
+
+- type: entity
+  name: StormTrooper
+  # Don't parent to BaseWeaponShotgun because it differs significantly
+  parent: BaseItem
+  id: WeaponShotgunStormTrooperTGMCSB
+  description: It's a magazine-fed shotgun designed for close quarters combat. Uses .50 shotgun shells.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/stormtrooper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1.6
+    projectileSpeed: 8
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazineShotgunStormTrooperTGMC
+        priority: 2
+        whitelist:
+          tags:
+          - BaseMagazineShotgunStormTrooperTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  id: BattleShipGearEngNT
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingMaskGasMinuteManSB
+        - id: ClothingHandsGlovesColorYellow
+        - id: ClothingBeltMilitaryWebbingBigEng
+        - id: ClothingBackpackERTSecurityBigEng
+        - id: ClothingEyesGlassesMeson
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingUniformJumpsuitTacticool
+        - id: WeaponShotgunStormTrooperTGMCSB
+        - id: CSWeaponBeretta
+        - id: ClothingHeadsetAltCentCom
+        - id: ClothingOuterHardsuitERTEngineerAlternativeSB
+    - type: EntityStorage
+      capacity: 500
+
+- type: entity
+  id: BattleShipGearEngSyndie
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingMaskGasMinuteManSB
+        - id: ClothingHandsGlovesColorYellow
+        - id: ClothingBeltMilitaryWebbingBigEng
+        - id: ClothingBackpackERTSecurityBigEng
+        - id: ClothingEyesGlassesMeson
+        - id: JetpackMiniFilled
+        - id: ClothingShoesBootsMag
+        - id: ClothingUniformJumpsuitTacticool
+        - id: WeaponShotgunStormTrooperTGMCSB
+        - id: CSWeaponBeretta
+        - id: ClothingHeadsetAltSyndicate
+        - id: ClothingOuterHardsuitJuggernautSB
+    - type: EntityStorage
+      capacity: 500

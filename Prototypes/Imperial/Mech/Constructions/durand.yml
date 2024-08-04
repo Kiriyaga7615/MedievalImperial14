@@ -1,0 +1,282 @@
+- type: entity
+  id: BaseDurandPart
+  parent: BaseMechPart
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Imperial/Mech/mech_construct.rsi
+
+- type: entity
+  id: BaseDurandPartItem
+  parent: BaseDurandPart
+  abstract: true
+  components:
+  - type: Item
+    size: 50
+
+- type: entity
+  parent: BaseDurandPart
+  id: DurandHarness
+  name: durand harness
+  description: The core of the Durand APLU.
+  components:
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      durand_l_arm+o:
+        whitelist:
+          tags:
+          - DurandLArm
+      durand_r_arm+o:
+        whitelist:
+          tags:
+          - DurandRArm
+      durand_l_leg+o:
+        whitelist:
+          tags:
+          - DurandRLeg
+      durand_r_leg+o:
+        whitelist:
+          tags:
+          - DurandLLeg
+    sprite: Imperial/Mech/mech_construct.rsi
+  - type: ContainerContainer
+    containers:
+      mech-assembly-container: !type:Container
+  - type: MechAssembly
+    finishedPrototype: DurandChassis
+    requiredParts:
+      DurandLArm: false
+      DurandRArm: false
+      DurandRLeg: false
+      DurandLLeg: false
+  - type: Sprite
+    state: durand_harness+o
+    noRot: true
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandLArm
+  name: durand left arm
+  description: The left arm of the Durand APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_l_arm
+  - type: Tag
+    tags:
+    - DurandLArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandRLeg
+  name: durand right leg
+  description: The left leg of the Durand APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_r_leg
+  - type: Tag
+    tags:
+    - DurandRLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandLLeg
+  name: durand left leg
+  description: The left leg of the Durand APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_l_leg
+  - type: Tag
+    tags:
+    - DurandLLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandArmor
+  name: durand armor
+  description: The left leg of the Durand APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_armor
+  - type: Tag
+    tags:
+    - DurandArmor
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseDurandPartItem
+  id: DurandRArm
+  name: durand right arm
+  description: The right arm of the Durand APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: durand_r_arm
+  - type: Tag
+    tags:
+    - DurandRArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  id: DurandChassis
+  parent: BaseDurandPart
+  name: durand chassis
+  description: An in-progress construction of the Durand APLU mech.
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: durand
+  - type: Sprite
+    noRot: true
+    state: durand_chassis
+  - type: Construction
+    graph: Durand
+    node: start
+    defaultTarget: durand
+
+- type: constructionGraph
+  id: Durand
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: durand
+      steps:
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Cable
+        doAfter: 1
+
+      - tool: Cutting
+        doAfter: 1
+
+      - tag: DurandCentralControlModule
+        name: durand central control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - tag: DurandPeripheralsControlModule
+        name: durand peripherals control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: id_mod
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - component: PowerCell
+        name: power cell
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Steel
+        amount: 5
+        doAfter: 1
+
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - material: MetalRod
+        amount: 10
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - tag: DurandArmor
+        name: durand armor
+        doAfter: 2
+
+  - node: durand
+    actions:
+    - !type:BuildMech
+      mechPrototype: MechDurand
+
+- type: Tag
+  id: DurandCentralControlModule
+
+- type: Tag
+  id: DurandPeripheralsControlModule
+
+- type: Tag
+  id: DurandLArm
+
+- type: Tag
+  id: DurandRLeg
+
+- type: Tag
+  id: DurandLLeg
+
+- type: Tag
+  id: DurandRArm
+
+- type: Tag
+  id: DurandArmor
+
+- type: entity
+  id: DurandCentralElectronics
+  parent: BaseElectronics
+  name: durand central control module
+  description: The electrical control center for the durand mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - DurandCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: DurandPeripheralsElectronics
+  parent: BaseElectronics
+  name: durand peripherals control module
+  description: The electrical peripherals control for the durand mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - DurandPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics

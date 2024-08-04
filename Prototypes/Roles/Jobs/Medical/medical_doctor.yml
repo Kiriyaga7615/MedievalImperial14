@@ -1,0 +1,45 @@
+- type: job
+  id: MedicalDoctor
+  name: job-name-doctor
+  description: job-description-doctor
+  playTimeTracker: JobMedicalDoctor
+  #psychosisGainResist: 0.70 # psychosis
+  #requirements:
+    #- !type:DepartmentTimeRequirement
+    #  department: Medical
+    #  time: 14400 #Imperial role timers
+  startingGear: DoctorGear
+  icon: "JobIconMedicalDoctor"
+  supervisors: главарь
+  #access:
+  #- Medical
+  #- Maintenance
+  #extendedAccess:
+  #- Chemistry
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillPharmacology
+  #- skillSurgery
+  #- skillMedicalEquipment
+  #- skillNeuroSurgery
+
+- type: startingGear
+  id: DoctorGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalClothingShoesSpider
+    id: MedievalKeyAlchem
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    #pocket2: MedievalRevent25
+    neck: MedievalClothingNeckCloakClanWolf
+    belt: MedievalFalshionT3
+    head: MedievalClothingHeadHelmetBand2
+    gloves: ClothingHandsGlovesColorBlack
+    mask: MedievalMaskFace
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth16
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

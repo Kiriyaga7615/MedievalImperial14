@@ -1,0 +1,83 @@
+- type: entity
+  id: EvolveToDroneAction
+  name: Evolve to drone
+  description: Transfroms you into drone.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Aliens/Xenos/drone.rsi
+      state: running
+    event: !type:EvolveToDrone
+
+- type: entity
+  id: EvolveToRunnerAction
+  name: Evolve to runner
+  description: Transfroms you into runner.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Aliens/Xenos/runner.rsi
+      state: running
+    event: !type:EvolveToRunner
+
+- type: entity
+  id: EvolveToBurrowerAction
+  name: Evolve to burrower
+  description: Transfroms you into burrower.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Aliens/Xenos/burrower.rsi
+      state: running
+    event: !type:EvolveToBurrower
+
+- type: entity
+  id: EvolveToSpitterAction
+  name: Evolve to spitter
+  description: Transfroms you into spitter.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Aliens/Xenos/spitter.rsi
+      state: running
+    event: !type:EvolveToSpitter
+
+- type: entity
+  id: EvolveToPraetorianAction
+  name: Evolve to praetorian
+  description: Transfroms you into praetorian.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Aliens/Xenos/praetorian.rsi
+      state: running
+    event: !type:EvolveToPraetorian
+
+- type: entity
+  id: EvolveToRavagerAction
+  name: Evolve to ravager
+  description: Transfroms you into ravager.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Aliens/Xenos/ravager.rsi
+      state: running
+    event: !type:EvolveToRavager
+
+- type: entity
+  id: EvolveToQueenAction
+  name: Evolve to queen
+  description: Mobs/Aliens/Xenos/queen.rsi
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Mobs/Aliens/Xenos/queen.rsi
+      state: running
+    event: !type:EvolveToQueen

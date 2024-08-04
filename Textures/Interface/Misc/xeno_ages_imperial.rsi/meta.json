@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created by KianaBat (gitlab)",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "young"
+        },
+        {
+            "name": "mature"
+        },
+        {
+            "name": "elder"
+        },
+        {
+            "name": "ancient"
+        }
+    ]
+}

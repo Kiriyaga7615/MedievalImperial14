@@ -1,0 +1,286 @@
+- type: entity
+  id: SmartSkillCardBase
+  name: smart skill cards
+  desc: cyber thing
+  parent: BaseItem
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Imperial/CrewSkills/BrainInterface/SkillCards.rsi
+      layers:
+        - state: common
+    - type: CrewSkillsSmartSkillsDisk
+
+- type: entity
+  id: SmartSkillDiskMaster
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: gold
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  id: SmartSkillDiskBotany
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: service
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillBotany
+
+- type: entity
+  id: SmartSkillDiskBaseMed
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: med
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillBaseMed
+
+- type: entity
+  id: SmartSkillDiskBaseConstraction
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: engineering
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillBaseConstraction
+
+- type: entity
+  id: SmartSkillDiskCooking
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: service
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillCooking
+
+- type: entity
+  id: SmartSkillDiskBartending
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: service
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillBartending
+
+- type: entity
+  id: SmartSkillDiskHacking
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: security
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillHacking
+
+- type: entity
+  id: SmartSkillDiskInstrumentation
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: engineering
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillInstrumentation
+
+- type: entity
+  id: SmartSkillDiskMaintenance
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: engineering
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillMaintenance
+
+- type: entity
+  id: SmartSkillDiskMediumConstruction
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: engineering
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillMediumConstruction
+
+- type: entity
+  id: SmartSkillDiskMediumBotany
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: service
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillMediumBotany
+
+- type: entity
+  id: SmartSkillDiskBasicAtmos
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: engineering
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillBasicAtmos
+
+- type: entity
+  id: SmartSkillDiskMedicalEquipment
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: med
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillMedicalEquipment
+
+- type: entity
+  id: SmartSkillDiskPharmacology
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: med
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillPharmacology
+
+- type: entity
+  id: SmartSkillDiskPiloting
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: security
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillPiloting
+
+- type: entity
+  id: SmartSkillDiskAtmos
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: engineering
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillAtmos
+
+- type: entity
+  id: SmartSkillDiskHardInstrumentation
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: engineering
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillHardInstrumentation
+
+- type: entity
+  id: SmartSkillDiskRobotics
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: science
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillRobotics
+
+- type: entity
+  id: SmartSkillDiskResearch
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: science
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillResearch
+
+- type: entity
+  id: SmartSkillDiskPharmaceuticals
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: med
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillPharmaceuticals
+
+- type: entity
+  id: SmartSkillDiskShooting
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: security
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillShooting
+
+- type: entity
+  id: SmartSkillDiskSurgery
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: med
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillSurgery
+
+- type: entity
+  id: SmartSkillDiskNeuroSurgery
+  parent: SmartSkillCardBase
+  components:
+    - type: Sprite
+      layers:
+        - state: med
+    - type: CrewSkillsSmartSkillsDisk
+      grantSkills:
+        - skillNeuroSurgery

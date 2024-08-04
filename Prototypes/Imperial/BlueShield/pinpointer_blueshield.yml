@@ -1,0 +1,7 @@
+- type: entity
+  name: Search Helper
+  id: PinpointerHeads
+  parent: PinpointerBase
+  components:
+  - type: Pinpointer
+    component: DeathAlarmImplantInserted

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by .kreks.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "energy0"
+    },
+    {
+      "name": "energy1"
+    },
+    {
+      "name": "energy2"
+    },
+    {
+      "name": "energy3"
+    },
+    {
+      "name": "energy4"
+    },
+    {
+      "name": "energy5"
+    },
+    {
+      "name": "energy6"
+    },
+    {
+      "name": "energy7"
+    },
+    {
+      "name": "energy8"
+    },
+    {
+      "name": "energy9"
+    },
+    {
+      "name": "energy10"
+    },
+    {
+      "name": "energy11"
+    },
+    {
+      "name": "energy12"
+    },
+    {
+      "name": "energy13"
+    },
+    {
+      "name": "energy14"
+    },
+    {
+      "name": "energy15"
+    },
+    {
+      "name": "energy16"
+    },
+    {
+      "name": "energy17"
+    },
+    {
+      "name": "energy18"
+    },
+    {
+      "name": "energy19"
+    },
+    {
+      "name": "energy20"
+    }
+  ]
+}

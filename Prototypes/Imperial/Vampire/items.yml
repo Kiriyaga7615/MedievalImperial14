@@ -1,0 +1,79 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: VampireClothingNeckCloakShadowBlack
+  name: CloakShadow
+  description: CloakShadow
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shadow/Black/neck.rsi
+  - type: Insulated
+  - type: ToggleableClothing
+    clothingPrototype: MedievalClothingHeadHelmetHoodShadowBlack
+    requiredSlot:
+    - neck
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Item
+    size: Tiny
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.75
+        Heat: 0.75
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: TimedDespawn
+    lifetime: 600
+
+- type: entity
+  name: falshion
+  parent: BaseItem
+  id: FalshionVamp
+  description: An ancient war blade.
+  components:
+  - type: Sharp
+  - type: Sprite
+    sprite: Imperial/Medieval/Melee/vamp_sword.rsi
+    state: icon
+  - type: MeleeWeapon
+    attackRate: 0.85
+    damage:
+      types:
+        Slash: 9
+        Caustic: 1
+        Bloodloss: 6
+      groups:
+        Airloss: 6
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: Imperial/Medieval/Melee/vamp_sword.rsi
+    slots:
+    - back
+    - belt
+    quickEquip: false
+  - type: DisarmMalus
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 25
+        Bloodloss: 25
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0

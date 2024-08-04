@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mecha_equip"
+    },
+    {
+      "name": "atmos"
+    },
+    {
+      "name": "medclampnt"
+    },
+    {
+        "name": "medclampsyndie"
+    },
+    {
+      "name": "mecha_mousetrapmrtr"
+    },
+    {
+      "name": "mecha_bananamrtr"
+    },
+    {
+      "name": "mecha_honker"
+    },
+    {
+      "name": "mecha_mime"
+    },
+    {
+      "name": "mecha_scatter"
+    },
+    {
+      "name": "mecha_carbine"
+    },
+    {
+      "name": "mecha_disabler"
+    },
+    {
+      "name": "mecha_grenadelnchr"
+    },
+    {
+      "name": "mecha_uac2"
+    },
+    {
+      "name": "mecha_taser"
+    },
+    {
+      "name": "mecha_pulse"
+    },
+    {
+      "name": "mecha_laser"
+    },
+    {
+      "name": "mecha_missilerack"
+    },
+    {
+      "name": "mecha_teleport"
+    },
+    {
+      "name": "mecha_exting"
+    },
+    {
+      "name": "mecha_drill"
+    },
+    {
+      "name": "mecha_drilldark"
+    },
+    {
+      "name": "mecha_diamond_drill"
+    },
+    {
+      "name": "mecha_plasmacutter"
+    },
+    {
+      "name": "mecha_clamp"
+    },
+    {
+      "name": "fist"
+    },
+    {
+      "name": "ntfist"
+    },
+    {
+      "name": "darkfist"
+    },
+    {
+    "name": "energyrifle"
+    },
+    {
+    "name": "energyriflent"
+    },
+    {
+    "name": "energyriflesyndie"
+    },
+    {
+    "name": "mednanobot"
+    },
+    {
+    "name": "mednanobotnt"
+    },
+    {
+    "name": "mednanobotsyndie"
+    },
+    {
+    "name": "minigun"
+    },
+    {
+    "name": "minigunnt"
+    },
+    {
+    "name": "minigunsyndie"
+    },
+    {
+      "name": "rocket"
+    },
+    {
+      "name": "rocketnt"
+    },
+    {
+      "name": "rocketsyndie"
+    },
+    {
+    "name": "disabler"
+    },
+    {
+    "name": "disablernt"
+    },
+    {
+    "name": "disablersyndie"
+    },
+    {
+      "name": "mecha_wire"
+    },
+    {
+      "name": "mecha_wholegen",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "mecha_rcd"
+    },
+    {
+      "name": "repair_droid_a",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "repair_droid"
+    },
+    {
+      "name": "mecha_abooster_ccw"
+    },
+    {
+      "name": "mecha_abooster_proj"
+    },
+    {
+      "name": "tesla"
+    },
+    {
+      "name": "mecha_ion"
+    },
+    {
+      "name": "mecha_analyzer"
+    },
+    {
+      "name": "mecha_medigun"
+    },
+    {
+      "name": "mecha_punching_glove"
+    },
+    {
+      "name": "mecha_weapon_bay"
+    },
+    {
+      "name": "ripleyupgrade"
+    },
+    {
+      "name": "mecha_missilerack_six"
+    },
+    {
+      "name": "thrusters"
+    },
+    {
+      "name": "mecha_kineticgun"
+    },
+    {
+      "name": "mecha_camera"
+    },
+    {
+      "name": "mecha_bin"
+    },
+    {
+      "name": "mecha_air_tank"
+    },
+    {
+      "name": "mecha_radio"
+    },
+    {
+      "name": "mecha_sleeper"
+    },
+    {
+      "name": "mecha_syringegun"
+    },
+    {
+      "name": "paddy_claw"
+    },
+    {
+      "name": "paddyupgrade"
+    }
+  ]
+}

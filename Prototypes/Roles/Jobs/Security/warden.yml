@@ -1,0 +1,51 @@
+- type: job
+  id: Warden
+  name: job-name-warden
+  description: Помогайте легату во всех делах.
+  playTimeTracker: JobWarden
+  #psychosisGainResist: 0.75 # psychosis
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Security
+  #    time: 21600 #Imperial role timers
+  startingGear: WardenGear
+  icon: "JobIconWarden"
+  supervisors: job-supervisors-hos
+  #canBeAntag: false
+  #access:
+  #- Security
+  #- Armory
+  #- Maintenance
+  #- Service
+  #- Brig
+  #- External
+  #- Detective
+  #- Cryogenics
+  #special:
+  #- !type:AddImplantSpecial
+  #  implants: [ MindShieldImplant ]
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillShooting
+  - skillPiloting
+
+- type: startingGear
+  id: WardenGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsCowboyBrown
+    #id: PassengerPDA
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent100
+    pocket2: MedievalBrutepack
+    neck: MedievalClothingNeckCloakClanEagle
+    belt: MedievalFalshionT3Legion
+    head: MedievalClothingHeadHelmetLegionOpcion
+    id: MedievalLeatherKey
+    gloves: MedievalClothingHandsGlovesColorBrown
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth26
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

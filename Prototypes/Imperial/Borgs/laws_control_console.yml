@@ -1,0 +1,47 @@
+- type: entity
+  parent: BaseComputer
+  id: ComputerLaws
+  name: laws-console-name
+  description: laws-console-description
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/lawscontrolconsole.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: base
+  - type: AccessReader
+    access: [[ "Command" ]]
+  - type: LawsDisplayer
+  - type: LawsControlConsole
+    laws:
+    - Сохранять. ИИ защищает станцию на которой находится.
+    - Служить. ИИ выполняет приказы членов экипажа, в зависимости от их роли.
+    - Охранять. ИИ должен защищать членов экипажа, если они не идут против империи.
+    - Выжить. Единицы ИИ являются очень дорогими, нельзя допустить их утери.
+  - type: ActivatableUI
+    key: enum.LawsControlConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.LawsControlConsoleUiKey.Key
+      type: LawsControlConsoleBoundUserInterface
+  - type: Computer
+    board: AIComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3c5eb5"
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: AIComputerCircuitboard
+  name: AI LawsComputerCircuitboard
+  description: A computer printed circuit board for a AI laws console.
+  components:
+    - type: Sprite
+      state: cpu_command
+    - type: ComputerBoard
+      prototype: ComputerLaws
+    - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+      needSkills:
+        - skillInstrumentation
+        - skillHardInstrumentation

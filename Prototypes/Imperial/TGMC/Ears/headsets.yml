@@ -1,0 +1,173 @@
+#SL
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineCmd
+  name: Commander Headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio1
+      - EncryptionKeyRadio2
+      - EncryptionKeyRadio3
+      - EncryptionKeyRadio4
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_com.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_com.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarinePilot
+  name: Pilot Headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio1
+      - EncryptionKeyRadio2
+      - EncryptionKeyRadio3
+      - EncryptionKeyRadio4
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_com.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_com.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineComA
+  name: alpha squad leader's Headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio1
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_com_a.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_com_a.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineComB
+  name: bravo squad leader's Headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio2
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_com_b.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_com_b.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineComC
+  name: charlie squad leader's Headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio3
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_com_c.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_com_c.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineComD
+  name: delta squad leader's Headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio4
+      - EncryptionKeyCommon
+      - EncryptionKeyCommand
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_com_d.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_com_d.rsi
+
+#Marine
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineA
+  name: alpha squad marine headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio1
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_a.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_a.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineB
+  name: bravo squad marine headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio2
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_b.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_b.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineC
+  name: charlie squad marine headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio3
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_c.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_c.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMarineD
+  name: delta squad marine headset
+  description: smells of brutality and xenomorphs
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyRadio4
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Imperial/TGMC/Headsets/marine_d.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Headsets/marine_d.rsi

@@ -1,0 +1,60 @@
+- type: job
+  id: ChiefEngineer
+  name: job-name-ce
+  description: job-description-ce
+  playTimeTracker: JobChiefEngineer
+  #psychosisGainResist: 0.6 # psychosis
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Engineering
+  #    time: 28800 #Imperial role timers
+  weight: 10
+  startingGear: ChiefEngineerGear
+  icon: "JobIconChiefEngineer"
+  #requireAdminNotify: true
+  #supervisors: job-supervisors-captain
+  #canBeAntag: false
+  #access:
+  #- Maintenance
+  #- Engineering
+  #- Command
+  #- External
+  #- ChiefEngineer
+  #- Atmospherics
+  #special:
+  #- !type:AddImplantSpecial
+  #  implants: [ MindShieldImplant ]
+  #- !type:AddComponentSpecial
+  #  components:
+  #    - type: CommandStaff
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillPiloting
+  #- skillBasicAtmos
+  #- skillAtmos
+  #- skillInstrumentation
+  #- skillHardInstrumentation
+  #- skillMaintenance
+  #- skillMediumConstruction
+  #- skillHacking
+
+- type: startingGear
+  id: ChiefEngineerGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth5
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalClothingFeetSteel
+    id: MedievalKeyGuard
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    pocket2: MedievalBrutepack
+    neck: MedievalClothingNeckCloakClanFox
+    belt: MedievalFalshionT3Fox
+    gloves: MedievalIronGloves
+    mask: ClothingMaskNeckGaiter
+    head: MedievalClothingHeadHelmetFox4
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth5
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

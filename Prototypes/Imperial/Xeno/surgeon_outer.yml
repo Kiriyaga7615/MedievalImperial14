@@ -1,0 +1,28 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterSurgeonLab
+  name: surgeon lab coat
+  description: A suit that protects against minor chemical spills.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/surgeonlab.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/surgeonlab.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterSurgeonCoat
+  name: surgeon coat
+  description: Look, ama surgeon.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Coats/surgeoncoat.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Coats/surgeoncoat.rsi
+  - type: Tag
+    tags:
+      - Sterile

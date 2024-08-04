@@ -1,0 +1,15 @@
+﻿- type: body
+  id: AI
+  name: "AI"
+  root: torso
+  slots:
+    torso:
+      part: TorsoHuman
+      connections:
+      - right_arm
+    right_arm:
+      part: RightArmHuman
+      connections:
+      - right_hand
+    right_hand:
+      part: RightHandHuman

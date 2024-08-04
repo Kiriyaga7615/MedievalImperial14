@@ -1,0 +1,9 @@
+#Imperial SurgenTable
+- type: speechSounds
+  id: SurgenTable
+  saySound:
+    path: /Audio/Imperial/Surgery/beepbeep.ogg
+  askSound:
+    path: /Audio/Imperial/Surgery/beepbeep.ogg
+  exclaimSound:
+    path: /Audio/Imperial/Surgery/beepbeep.ogg

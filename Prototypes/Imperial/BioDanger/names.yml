@@ -1,0 +1,38 @@
+- type: dataset
+  id: BioDangerFirst
+  values:
+  - BU -
+  - RO -
+  - CA -
+  - PI -
+  - TY -
+  - RA -
+  - MON -
+  - DAN -
+  - BOS -
+  - CRA -
+
+- type: dataset
+  id: BioDangerSecond
+  values:
+  - MEN
+  - CHON
+  - BIN
+  - HON
+  - MUR
+  - CAR
+  - BUR
+  - HUD
+  - KE
+  - TAN
+  - TON
+  - ZY
+
+- type: dataset
+  id: BioDangerThird
+  values:
+  - DNGER
+  - VRS
+  - INFCTN
+  - ILNS
+  - RISK

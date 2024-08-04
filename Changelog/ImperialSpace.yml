@@ -1,0 +1,466 @@
+Entries:
+- author: Vladegeg
+  changes:
+    - {message: 'Диагональные окна теперь "цепляются" к окнам и стенам.', type: Tweak}
+  id: 6
+  time: '2024-06-06T18:07:08'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлены щиты на карте Гефест. Больше они не ломают инвентарь.', type: Fix}
+  id: 7
+  time: '2024-06-06T23:50:40'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлен спрайт пауков. Теперь их анимация должна отображаться корректно. ', type: Fix}
+  id: 9
+  time: '2024-06-07T01:55:29'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте Box краб в атмосии заменён на краба из заданий на кражу.', type: Tweak}
+  id: 10
+  time: '2024-06-07T09:09:54'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте Marathon доработана библиотека', type: Tweak}
+  id: 11
+  time: '2024-06-07T09:10:57'
+- author: Vladegeg
+  changes:
+    - {message: 'Фронтир | Исправил зону криокапсул, что бы игроки не застревали в стене при спавне.', type: Fix}
+  id: 12
+  time: '2024-06-07T09:24:57'
+- author: ArturUr
+  changes:
+    - {message: 'Удален заказ карго на платы ванильных боргов', type: Remove}
+  id: 13
+  time: '2024-06-07T20:19:49'
+- author: NeronClaudius
+  changes:
+    - {message: 'Добавлены новые спрайты ИИ и рандомизатор спрайтов ИИ. ', type: Add}
+  id: 14
+  time: '2024-06-07T20:21:17'
+- author: Vladegeg
+  changes:
+    - {message: 'Была обновлена карта "Hephaestus". Добавлено больше света, кабинеты некоторых глав были переделаны. Наименования факсов также были исправлены.', type: Fix}
+  id: 15
+  time: '2024-06-07T22:55:51'
+- author: ArturUr
+  changes:
+    - {message: 'Распылитель-форсунка и портативный замедлитель частиц больше не требуют наличия навыка меткой стрельбы для точности', type: Tweak}
+  id: 16
+  time: '2024-06-09T01:43:26'
+- author: mirton
+  changes:
+    - {message: 'Исправлено отображение ядерных оперативников в манифесте', type: Fix}
+  id: 17
+  time: '2024-06-09T10:51:15'
+- author: mirton
+  changes:
+    - {message: 'Космический ветер усилен. Теперь он представляет некоторую опасность. Скорость разгерметизации так же увеличена.', type: Tweak}
+  id: 18
+  time: '2024-06-09T11:07:30'
+- author: Vladegeg
+  changes:
+    - {message: 'На станцию "Frontier" были добавлены спальные места для глав.', type: Add}
+  id: 19
+  time: '2024-06-09T13:27:27'
+- author: Vladegeg
+  changes:
+    - {message: 'На станции "Moose", в библиотеке был расширен диапазон возможности изучения навыков.', type: Fix}
+  id: 20
+  time: '2024-06-09T13:40:35'
+- author: mirton
+  changes:
+    - {message: 'Исправлены "неизвестные" треки от "неизвестного" автора в лобби', type: Fix}
+  id: 21
+  time: '2024-06-09T15:42:59'
+- author: ArturUr
+  changes:
+    - {message: 'Скафандры медиков ОБР, РХБЗЗ, а также медика ЯО теперь снова полностью стерильны и не заносят инфекцию. ', type: Fix}
+  id: 22
+  time: '2024-06-09T16:29:07'
+- author: Seven228
+  changes:
+    - {message: 'Набор АКМС у ядерных оперативников стал дешевле на 1 ТК.', type: Tweak}
+    - {message: 'В наборе теперь не 3 а два дополнительных магазина.', type: Tweak}
+    - {message: 'Набор боеприпасов стал дороже на 1ТК.', type: Tweak}
+    - {message: 'Набор боеприпасов теперь включает в себя 4 магазина к АКМС.', type: Tweak}
+  id: 23
+  time: '2024-06-09T21:21:49'
+- author: Seven228
+  changes:
+    - {message: 'Цена энергетического арбалета снижена с 11 ТК до 8 ТК.', type: Tweak}
+  id: 24
+  time: '2024-06-09T21:23:45'
+- author: 3vlad31
+  changes:
+    - {message: 'Добавилены спавны именных животных в отделы.', type: Add}
+    - {message: 'Добавлены лампочки для вызова уборщика с кнопками в отделах.', type: Add}
+    - {message: 'Небольшие переработки карты', type: Tweak}
+  id: 28
+  time: '2024-06-10T05:06:40'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Bagel" был немного обновлён интерьер некоторых помещений, также в научный отдел были добавлены новые вещи с апстрима.', type: Add}
+  id: 29
+  time: '2024-06-10T16:41:02'
+- author: Vladegeg
+  changes:
+    - {message: 'На станции "Box" были проведены исправления нескольких незначительных недочётов карты. Также, в технические тоннели было добавлено несколько новых объектов интереса.', type: Add}
+  id: 30
+  time: '2024-06-11T02:49:22'
+- author: Fiafi
+  changes:
+    - {message: 'Исправлен баг с фейковым сообщением о ядерных оперативниках в манифесте.', type: Fix}
+  id: 31
+  time: '2024-06-11T17:35:54'
+- author: SentryPrimies
+  changes:
+    - {message: 'Респрайт капсулы криосна', type: Tweak}
+  id: 32
+  time: '2024-06-12T14:32:15'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлены неправильно выставленные слои в прототипах поисковых навигаторов.', type: Fix}
+  id: 33
+  time: '2024-06-12T14:34:32'
+- author: ArturUr
+  changes:
+    - {message: 'Игрушечному лазерному мечу добавлен маленький урон по стамине.', type: Tweak}
+  id: 34
+  time: '2024-06-12T14:35:39'
+- author: Fiafi
+  changes:
+    - {message: 'Исправлен баг с синтезом кетопирида', type: Fix}
+  id: 35
+  time: '2024-06-12T17:38:01'
+- author: KianaBat
+  changes:
+    - {message: 'Люди больше не получают тех панель и законы при клике синхронизатором.', type: Fix}
+  id: 36
+  time: '2024-06-12T18:14:47'
+- author: KianaBat
+  changes:
+    - {message: 'Действие ложных законов боргов активируется сразу.', type: Fix}
+  id: 37
+  time: '2024-06-12T18:15:09'
+- author: KianaBat
+  changes:
+    - {message: 'Загрузка модуля боргом в поврежденном состоянии более невозможна.', type: Fix}
+  id: 38
+  time: '2024-06-12T18:15:46'
+- author: KianaBat
+  changes:
+    - {message: 'Исправлена ошибка с уровнем заряда боргов.', type: Fix}
+  id: 39
+  time: '2024-06-12T21:00:42'
+- author: Ariturial
+  changes:
+    - {message: 'У платы консоли управления шаттла утилизаторов убрано требование навыка "Продвинутое приборостроение". Для создания консоли теперь нужен просто навык "Приборостроение".', type: Tweak}
+  id: 40
+  time: '2024-06-13T01:18:03'
+- author: ArturUr
+  changes:
+    - {message: 'Респрайт сварочных масок на сделанные нашей командой артистов', type: Tweak}
+  id: 41
+  time: '2024-06-13T12:00:46'
+- author: Vladegeg
+  changes:
+    - {message: 'На всех картах были изменены направления расположения криогенных блоков.', type: Fix}
+  id: 42
+  time: '2024-06-13T13:02:29'
+- author: Vladegeg
+  changes:
+    - {message: 'На карты "Miracle" и "Saltern" были добавлены криогенные блоки.', type: Add}
+  id: 43
+  time: '2024-06-13T13:03:02'
+- author: Vladegeg
+  changes:
+    - {message: 'На станции "Hephaestus" вновь было немного изменено освещение.', type: Fix}
+  id: 44
+  time: '2024-06-13T13:03:58'
+- author: Fiafi
+  changes:
+    - {message: 'Исправлен баг РСУ, теперь нельзя убрать плитку находясь за стеной', type: Fix}
+  id: 45
+  time: '2024-06-13T16:14:48'
+- author: ArturUr
+  changes:
+    - {message: 'Гриб, ИИ и разумную болезнь больше не гибает шаттл', type: Fix}
+  id: 46
+  time: '2024-06-13T18:24:22'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлен аварийный набор медика и его вместимость. Медицинская маска бригмедика переехала в аварийный набор. Добавлены навыки бригмедику. ', type: Fix}
+  id: 47
+  time: '2024-06-13T21:05:14'
+- author: mirton
+  changes:
+    - {message: 'Изменён шанс спавна синхронизатора законов ИИ в шкафах учёных. Теперь он спавнится всегда.', type: Tweak}
+  id: 48
+  time: '2024-06-14T15:56:24'
+- author: ArturUr
+  changes:
+    - {message: 'Медик ЯО теперь стартует раунд со своим собственным скафандром. Он полностью стерилен и обладает функцией проверки ДНК. ', type: Tweak}
+  id: 49
+  time: '2024-06-14T16:06:05'
+- author: ArturUr
+  changes:
+    - {message: 'У скафандра элиты синдиката убрана абсолютная стерильность. Теперь он не стерилен и утрачивает свою функцию в лечении. ', type: Remove}
+  id: 50
+  time: '2024-06-14T16:06:33'
+- author: ArturUr
+  changes:
+    - {message: 'Штурмовой борг визардов удален из аплинка ЯО', type: Remove}
+  id: 51
+  time: '2024-06-14T16:20:35'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлено наличие АКМС в аплинке ЯО. Теперь он находится во вкладке вооружение со всеми остальными наборами', type: Fix}
+  id: 52
+  time: '2024-06-14T16:47:11'
+- author: ArturUr
+  changes:
+    - {message: 'В ящик капитана добавлены его водолазки и ядро модсьюта', type: Fix}
+  id: 53
+  time: '2024-06-14T17:20:18'
+- author: ArturUr
+  changes:
+    - {message: 'Правила гост ролей теперь снова отображаются', type: Fix}
+  id: 54
+  time: '2024-06-14T18:43:00'
+- author: ArturUr
+  changes:
+    - {message: 'Ящик бригмедика снова наполнен нашими вещами. Ванильные вещи убраны', type: Tweak}
+  id: 55
+  time: '2024-06-14T18:43:23'
+- author: mirton
+  changes:
+    - {message: 'Исправлены категории товаров аплинка, которые добавлены билдом. Теперь они должны отображаться как и раньше.', type: Fix}
+  id: 56
+  time: '2024-06-15T10:40:25'
+- author: Fiafi
+  changes:
+    - {message: 'Исправлен баг со стрелами. Теперь они вводят реагенты, только если на человеке нет скафандра со шлемом или же ЭП в скафандре открыт.', type: Fix}
+  id: 57
+  time: '2024-06-15T19:02:29'
+- author: Fiafi
+  changes:
+    - {message: 'Исправлен баг с ядерами в манифесте. Теперь в манифесте корректно отображаются их имена и состояние команды на конец раунда. ', type: Fix}
+  id: 58
+  time: '2024-06-16T18:58:42'
+- author: ArturUr
+  changes:
+    - {message: 'Обезьянки синдиката теперь имеют навыки', type: Fix}
+  id: 59
+  time: '2024-06-17T01:41:54'
+- author: ArturUr
+  changes:
+    - {message: 'Добавлено распределение для одинокого оперативника', type: Add}
+  id: 60
+  time: '2024-06-17T01:46:20'
+- author: ArturUr
+  changes:
+    - {message: 'Борги синдиката снова добавлены в аплинк синдиката', type: Fix}
+  id: 61
+  time: '2024-06-17T01:53:59'
+- author: Dmitry2777
+  changes:
+    - {message: 'Новый антагонист: Паучья королева', type: Add}
+  id: 62
+  time: '2024-06-17T13:08:39'
+- author: Vladegeg
+  changes:
+    - {message: 'На станцию "Cluster" была добавлена комната репортёра.', type: Add}
+  id: 63
+  time: '2024-06-18T16:59:29'
+- author: ArturUr
+  changes:
+    - {message: 'Большие шаттлы снова могут совершать блюспейс прыжки', type: Fix}
+  id: 64
+  time: '2024-06-19T02:24:37'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Bagel" бармен больше не спавнится в робототехнике.', type: Fix}
+  id: 65
+  time: '2024-06-19T02:32:15'
+- author: Vladegeg
+  changes:
+    - {message: 'На карту "Marathon" добавлен шкафчик парамедика и его спавн.', type: Add}
+  id: 66
+  time: '2024-06-19T02:33:03'
+- author: Vladegeg
+  changes:
+    - {message: 'На карту "Hephaestus" добавлено 2 красных телефона.', type: Add}
+  id: 67
+  time: '2024-06-19T02:33:37'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Box" убран дублирующий гост-поинт в ядре ИИ.', type: Fix}
+  id: 68
+  time: '2024-06-19T02:34:17'
+- author: ArturUr
+  changes:
+    - {message: 'Спрайт курицы теперь не выдает ERROR при зомбификации', type: Fix}
+  id: 69
+  time: '2024-06-19T23:08:39'
+- author: Vladegeg
+  changes:
+    - {message: 'На станции "Aspid", "Bagel", "Cluster", "Hephaestus", "Miracle", "Moose" и "Saltern" были добавлены кабинеты психолога.', type: Add}
+  id: 70
+  time: '2024-06-20T17:04:55'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлен перевод в задании вора. Теперь оно отображается как "украсть плащи глав", а не "головной убор". ', type: Fix}
+  id: 71
+  time: '2024-06-21T14:08:11'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлен крафт укрепленных плиток. Теперь их снова можно сделать через G меню ', type: Fix}
+  id: 72
+  time: '2024-06-21T14:10:52'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Box" был убран настенный НаноМед, который выкидывал своё содержимое в стену.', type: Fix}
+  id: 73
+  time: '2024-06-23T16:31:59'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Frontier" был перемещён факс СИ. Теперь поступившие на него бумаги нельзя будет забрать через стенку.', type: Fix}
+  id: 74
+  time: '2024-06-23T16:33:04'
+- author: ArturUr
+  changes:
+    - {message: 'Исправлен дюп осколков стекла через сломанный компьютер', type: Fix}
+  id: 75
+  time: '2024-06-23T21:06:18'
+- author: Vladegeg
+  changes:
+    - {message: 'На карту "Bagel" добавлен одеждомат, который ранее был убран из комнаты с блоками криогенного сна.', type: Add}
+  id: 76
+  time: '2024-06-23T22:34:01'
+- author: mirton
+  changes:
+    - {message: 'Добавлена прокрутка для панели действий. Теперь, если все действия не помещаются на экран панель можно прокрутить и найти нужные действия.', type: Tweak}
+  id: 78
+  time: '2024-06-28T20:11:49'
+- author: mirton
+  changes:
+    - {message: 'Для установки в мозг нейроинтерфейса теперь требуется навык нейрохирургии вместо навыка хирургии.', type: Tweak}
+  id: 79
+  time: '2024-06-29T04:05:28'
+- author: ArturUr
+  changes:
+    - {message: 'При полностью заполненной книжкой полке больше не выдается ERROR', type: Fix}
+  id: 80
+  time: '2024-06-29T19:55:50'
+- author: Fiafi
+  changes:
+    - {message: 'Был возвращен старый рецепт свинца ', type: Add}
+  id: 82
+  time: '2024-06-30T20:29:11'
+- author: mirton
+  changes:
+    - {message: 'Обезьяне синдиката добавлены навыки антага', type: Fix}
+  id: 83
+  time: '2024-07-01T04:55:58'
+- author: mirton
+  changes:
+    - {message: 'Кобольдам добавлена система навыков', type: Add}
+  id: 84
+  time: '2024-07-01T04:57:02'
+- author: mirton
+  changes:
+    - {message: 'Навыки психолога исправлены. Теперь его навыки в игре соответствуют навыкам на вики', type: Fix}
+  id: 85
+  time: '2024-07-01T06:52:55'
+- author: KEEYNy
+  changes:
+    - {message: 'Обновлена карта "Twinkle". РнД, карго, инженерный отдел, уборщики.', type: Tweak}
+  id: 86
+  time: '2024-07-03T14:31:19'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Miracle" была расширена библиотека.', type: Add}
+  id: 87
+  time: '2024-07-03T17:22:40'
+- author: Seven2280
+  changes:
+    - {message: 'Изменён спрайт для проджектайла энерго-арбалетика', type: Tweak}
+  id: 88
+  time: '2024-07-04T17:08:27'
+- author: flex5hybrid
+  changes:
+    - {message: 'Переведены значки и надписи в консоли мониторинга экипажа.', type: Fix}
+  id: 89
+  time: '2024-07-04T17:12:48'
+- author: Dmitry2777
+  changes:
+    - {message: 'Паукам добавлена анимация.', type: Tweak}
+  id: 90
+  time: '2024-07-04T17:15:13'
+- author: Dmitry2777
+  changes:
+    - {message: 'Урон паукам от разгермы снижен в два раза.', type: Tweak}
+  id: 91
+  time: '2024-07-04T17:15:46'
+- author: Dmitry2777
+  changes:
+    - {message: 'Пауки больше не светятся.', type: Tweak}
+  id: 92
+  time: '2024-07-04T17:16:01'
+- author: Dmitry2777
+  changes:
+    - {message: 'Королева пауков теперь может говорить своему улью что либо через отдельный канал чата на :у', type: Tweak}
+  id: 93
+  time: '2024-07-04T17:17:22'
+- author: KAZAK
+  changes:
+    - {message: 'Добавлены вещи для ивента по CS.', type: Add}
+  id: 94
+  time: '2024-07-05T11:33:43'
+- author: ArturUr
+  changes:
+    - {message: 'Респрайтнут рюкзак офицера "Синий Щит", добавлена мантия офицера "Синий Щит". Слегка изменен бронежилет. Добавлен пояс офицера "Синий Щит"', type: Add}
+  id: 95
+  time: '2024-07-05T16:29:14'
+- author: Фыр
+  changes:
+    - {message: 'Изменён рецепт солевоглюкозового раствора. Теперь его вновь можно получить в игре.', type: Fix}
+  id: 96
+  time: '2024-07-05T18:26:38'
+- author: mirton
+  changes:
+    - {message: 'В шкафу научного руководителя теперь правильные ключи шифрования', type: Fix}
+  id: 97
+  time: '2024-07-06T18:19:48'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Marathon" был исправлен кусок плазмы, который ломал инвентарь.', type: Fix}
+  id: 98
+  time: '2024-07-06T18:24:45'
+- author: Vladegeg
+  changes:
+    - {message: 'На карте "Twinkle" были продлены доки прибытия.', type: Add}
+  id: 99
+  time: '2024-07-06T18:25:41'
+- author: Fiafi
+  changes:
+    - {message: 'Исправлен баг с возможностью извлечения батареи компактного дефибриллятора', type: Fix}
+  id: 100
+  time: '2024-07-06T20:09:17'
+- author: ArturUr
+  changes:
+    - {message: 'Возвращен старый спрайт бронежилета офицера "Синий Щит"', type: Tweak}
+  id: 101
+  time: '2024-07-07T01:33:27'
+- author: flex5hybrid
+  changes:
+    - {message: 'Агентам синдиката добавлена печать, способная копировать другие печати.', type: Add}
+  id: 102
+  time: '2024-07-08T23:06:42'
+- author: Fiafi
+  changes:
+    - {message: 'Исправлен баг с возможностью дюпа корпуса РИГ-а', type: Fix}
+  id: 103
+  time: '2024-07-09T00:52:18'

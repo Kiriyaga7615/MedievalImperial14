@@ -1,0 +1,1050 @@
+- type: entity
+  parent: Jug
+  name: jug (carbon)
+  id: JugCarbonImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-carbon
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Carbon
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Carbon
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (iodine)
+  id: JugIodineImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-iodine
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Iodine
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Iodine
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (fluorine)
+  id: JugFluorineImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-fluorine
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Fluorine
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Fluorine
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (chlorine)
+  id: JugChlorineImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-chlorine
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Chlorine
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Chlorine
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (aluminium)
+  id: JugAluminiumImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-aluminium
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Aluminium
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Aluminium
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (phosphorus)
+  id: JugPhosphorusImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-phosphorus
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Phosphorus
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Phosphorus
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (sulfur)
+  id: JugSulfurImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-sulfur
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Sulfur
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Sulfur
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (silicon)
+  id: JugSiliconImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-silicon
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Silicon
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Silicon
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (hydrogen)
+  id: JugHydrogenImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-hydrogen
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Hydrogen
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Hydrogen
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (lithium)
+  id: JugLithiumImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-lithium
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Lithium
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Lithium
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (sodium)
+  id: JugSodiumImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-sodium
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Sodium
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Sodium
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (potassium)
+  id: JugPotassiumImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-potassium
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Potassium
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Potassium
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (radium)
+  id: JugRadiumImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-radium
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Radium
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Radium
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (iron)
+  id: JugIronImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-iron
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Iron
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Iron
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (copper)
+  id: JugCopperImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-copper
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Copper
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Copper
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (gold)
+  id: JugGoldImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-gold
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Gold
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Gold
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (mercury)
+  id: JugMercuryImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-mercury
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Mercury
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Mercury
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (silver)
+  id: JugSilverImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-silver
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Silver
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Silver
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (ethanol)
+  id: JugEthanolImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-ethanol
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Ethanol
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Ethanol
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (sugar)
+  id: JugSugarImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-sugar
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Sugar
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Sugar
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (nitrogen)
+  id: JugNitrogenImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-nitrogen
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Nitrogen
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Nitrogen
+      solutionName: beaker
+
+- type: entity
+  parent: Jug
+  name: jug (oxygen)
+  id: JugOxygenImperial
+  noSpawn: true
+  components:
+    - type: Label
+      currentLabel: reagent-name-oxygen
+    - type: SolutionContainerManager
+      solutions:
+        beaker:
+          reagents:
+            - ReagentId: Oxygen
+              Quantity: 500
+    - type: ImperialJug
+      reagent: Oxygen
+      solutionName: beaker
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkColaBottleFullImperial
+  name: space cola bottle
+  description: Cola. In space.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Cola
+          Quantity: 500
+  - type: Label
+    currentLabel: кола
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/colabottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Cola
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkCreamCartonXLImperial
+  name: Milk Cream XL
+  description: It's cream. Made from milk. What else did you think you'd find in there?
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Cream
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: сливки
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cream.rsi
+  - type: ImperialJug
+    reagent: Cream
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkJuiceLimeCartonXLImperial
+  name: lime juice XL
+  description: Sweet-sour goodness.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: JuiceLime
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: лаймовый сок
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/limejuice.rsi
+  - type: ImperialJug
+    reagent: JuiceLime
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: DrinkJuiceOrangeCartonXLImperial
+  name: orange juice XL
+  description: Full of vitamins and deliciousness!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: JuiceOrange
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: апельсиновый сок
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/orangejuice.rsi
+  - type: ImperialJug
+    reagent: JuiceOrange
+    solutionName: drink
+
+- type: entity
+  parent: DrinkWaterBottleFull
+  id: DrinkSodaWaterBottleFullImperial
+  name: soda water bottle
+  description: Like water, but angry!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: SodaWater
+          Quantity: 500
+  - type: Label
+    currentLabel: газированная вода
+  - type: ImperialJug
+    reagent: SodaWater
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkSpaceMountainWindBottleFullImperial
+  name: space mountain wind bottle
+  description: Blows right through you like a space wind.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: SpaceMountainWind
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: космический маунтин винд
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/space_mountain_wind_bottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: SpaceMountainWind
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkSpaceUpBottleFullImperial
+  name: space-up bottle
+  description: Tastes like a hull breach in your mouth.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: SpaceUp
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: спейс-ап
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/space-up_bottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: SpaceUp
+    solutionName: drink
+
+- type: entity
+  parent: DrinkWaterBottleFull
+  id: DrinkTonicWaterBottleFullImperial
+  name: tonic water bottle
+  description: Like soda water, but angrier maybe? Often sweeter.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: TonicWater
+          Quantity: 500
+  - type: Label
+    currentLabel: тоник
+  - type: ImperialJug
+    reagent: TonicWater
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottlePlasticBaseFull]
+  id: DrinkAleBottleFullGrowlerImperial
+  name: Magm-Ale Growler
+  description: A true dorf's drink of choice. XL growler bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Ale
+          Quantity: 500
+  - type: Label
+    currentLabel: эль
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/alebottle.rsi
+  - type: Openable
+    closeable: false
+  - type: ImperialJug
+    reagent: Ale
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkBeerGrowlerImperial # Needs to be renamed DrinkBeerBottleFull
+  name: Beer Growler  # beer it is. coffee. beer? coff-ee? be-er? c-o... b-e
+  description: An alcoholic beverage made from malted grains, hops, yeast, and water. XL growler bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Beer
+          Quantity: 500
+  - type: Label
+    currentLabel: пиво
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/beer.rsi
+  - type: Openable
+    closeable: false
+  - type: ImperialJug
+    reagent: Beer
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkCoffeeLiqueurBottleFullImperial
+  name: coffee liqueur bottle
+  description: The great taste of coffee with none of the benifits.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: CoffeeLiqueur
+          Quantity: 500
+  - type: Label
+    currentLabel: кофейный ликёр
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/coffeeliqueurbottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: CoffeeLiqueur
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkCognacBottleFullImperial
+  name: cognac bottle
+  description: A sweet and strongly alchoholic drink, made after numerous distillations and years of maturing. You might as well not scream 'SHITCURITY' this time.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Cognac
+          Quantity: 500
+  - type: Label
+    currentLabel: коньяк
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cognacbottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Cognac
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkGinBottleFullImperial
+  name: Griffeater gin
+  description: A bottle of high quality gin, produced in the New London Space Station.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Gin
+          Quantity: 500
+  - type: Label
+    currentLabel: джин
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/ginbottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Gin
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkRumBottleFullImperial
+  name: captain pete's Cuban spiced rum
+  description: This isn't just rum, oh no. It's practically GRIFF in a bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Rum
+          Quantity: 500
+  - type: Label
+    currentLabel: ром
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/rumbottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Rum
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkTequilaBottleFullImperial
+  name: caccavo guaranteed quality tequila bottle
+  description: Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Tequila
+          Quantity: 500
+  - type: Label
+    currentLabel: текилла
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/tequillabottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Tequila
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkVermouthBottleFullImperial
+  name: goldeneye vermouth bottle
+  description: Sweet, sweet dryness!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Vermouth
+          Quantity: 500
+  - type: Label
+    currentLabel: вермут
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/vermouthbottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Vermouth
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkVodkaBottleFullImperial
+  name: vodka bottle
+  description: Aah, vodka. Prime choice of drink AND fuel by Russians worldwide.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Vodka
+          Quantity: 500
+  - type: Label
+    currentLabel: водка
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/vodkabottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Vodka
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsAll, DrinkBottleGlassBaseFull]
+  id: DrinkWhiskeyBottleFullImperial
+  name: uncle git's special reserve
+  description: A premium single-malt whiskey, gently matured inside the tunnels of a nuclear shelter. TUNNEL WHISKEY RULES.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Whiskey
+          Quantity: 500
+  - type: Label
+    currentLabel: виски
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/whiskeybottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Whiskey
+    solutionName: drink
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottleGlassBaseFull]
+  id: DrinkWineBottleFullImperial
+  name: doublebearded bearded special wine bottle
+  description: A faint aura of unease and asspainery surrounds the bottle.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Wine
+          Quantity: 500
+  - type: Label
+    currentLabel: вино
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/winebottle.rsi
+  - type: Sealable
+  - type: ImperialJug
+    reagent: Whiskey
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkSugarJugImperial
+  name: sugar jug
+  suffix: for drinks
+  description: some people put this in their coffee...
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 500
+  - type: Label
+    currentLabel: сахар
+  - type: Drink
+  - type: ImperialJug
+    reagent: Sugar
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkLemonLimeJugImperial
+  name: lemon lime jug
+  description: a dual citrus sensation.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: LemonLime
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: лемон-лайм
+  - type: ImperialJug
+    reagent: LemonLime
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkMeadJugImperial
+  name: mead jug
+  description: storing mead in a plastic jug should be a crime.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Mead
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: медовуха
+  - type: ImperialJug
+    reagent: Mead
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkIceJugImperial
+  name: ice jug
+  description: stubborn water. pretty cool.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Ice
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: лёд
+  - type: ImperialJug
+    reagent: Ice
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkCoffeeJugImperial
+  name: coffee jug
+  description: wake up juice, of the heated kind.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Coffee
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: кофе
+  - type: ImperialJug
+    reagent: Coffee
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkTeaJugImperial
+  name: tea jug
+  description: the drink of choice for the Bri'ish and hipsters.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: Tea
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: чай
+  - type: ImperialJug
+    reagent: Tea
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkGreenTeaJugImperial
+  name: green tea jug
+  description: its like tea... but green! great for settling the stomach.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: GreenTea
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: зеленый чай
+  - type: ImperialJug
+    reagent: GreenTea
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkIcedTeaJugImperial
+  name: iced tea jug
+  description: for when the regular tea is too hot for you boohoo
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: IcedTea
+          Quantity: 500
+  - type: Drink
+  - type: ImperialJug
+    reagent: JuiceLime
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkDrGibbJugImperial
+  name: dr gibb. jug
+  description: yeah I don't know either...
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: DrGibb
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: др гибб
+  - type: ImperialJug
+    reagent: DrGibb
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkRootBeerJugImperial
+  name: root beer jug
+  description: this drink makes Australians giggle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: RootBeer
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: рутбир
+  - type: ImperialJug
+    reagent: RootBeer
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkWaterMelonJuiceJugImperial
+  name: watermelon juice jug
+  description: May include leftover seeds
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: JuiceWatermelon
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: арбузный сок
+  - type: ImperialJug
+    reagent: JuiceWatermelon
+    solutionName: drink
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkEnergyDrinkJugImperial
+  name: red bool jug
+  description: A jug of Red Bool, with enough caffine to kill a whole station.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 500
+        reagents:
+        - ReagentId: EnergyDrink
+          Quantity: 500
+  - type: Drink
+  - type: Label
+    currentLabel: редбул
+  - type: ImperialJug
+    reagent: EnergyDrink
+    solutionName: drink

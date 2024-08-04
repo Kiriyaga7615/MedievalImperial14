@@ -1,0 +1,414 @@
+#Pilot
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarinePilotShuttleGhost
+  name: Spawn point ghost Pilot shuttle
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-pilot-name
+      description: marinespawn-pilot-desc
+      rules:  marinespawn-pilot-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarinePilotPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarinePilotMechAGhost
+  name: Spawn point ghost Pilot Mech A
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-pilot-mech-name
+      description:  marinespawn-pilot-mech-desc
+      rules: marinespawn-pilot-mech-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarinePilotMechAPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarinePilotMechBGhost
+  name: Spawn point ghost Pilot Mech B
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-pilot-mech-name
+      description: marinespawn-pilot-mech-desc
+      rules:  marinespawn-pilot-mech-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarinePilotMechBPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarinePilotMechCGhost
+  name: Spawn point ghost Pilot Mech C
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-pilot-mech-name
+      description: marinespawn-pilot-mech-desc
+      rules:  marinespawn-pilot-mech-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarinePilotMechCPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarinePilotMechDGhost
+  name: Spawn point ghost Pilot Mech D
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-pilot-mech-name
+      description: marinespawn-pilot-mech-desc
+      rules:  marinespawn-pilot-mech-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarinePilotMechDPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+#Cmd
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineCmdOperGhost
+  name: Spawn point ghost Cmd Oper
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-cmd-oper-name
+      description: marinespawn-cmd-oper-desc
+      rules:  marinespawn-cmd-oper-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineCmdOperPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineCmdFCGhost
+  name: Spawn point ghost FC
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-cmd-fc-name
+      description: marinespawn-cmd-fc-desc
+      rules:  marinespawn-cmd-fc-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineCmdFCPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineCmdAGhost
+  name: Spawn point ghost Marine cmd A
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-cmd-name
+      description: marinespawn-cmd-desc
+      rules:  marinespawn-cmd-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineCmdAPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineCmdBGhost
+  name: Spawn point ghost Marine cmd B
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-cmd-name
+      description: marinespawn-cmd-desc
+      rules: marinespawn-cmd-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineCmdBPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineCmdCGhost
+  name: Spawn point ghost Marine cmd C
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-cmd-name
+      description: marinespawn-cmd-desc
+      rules:  marinespawn-cmd-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineCmdCPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineCmdDGhost
+  name: Spawn point ghost Marine cmd D
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-cmd-name
+      description: marinespawn-cmd-desc
+      rules: marinespawn-cmd-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineCmdDPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+#Marine
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineAGhost
+  name: Spawn point ghost Marine A
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-name
+      description: marinespawn-desc
+      rules: marinespawn-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineAPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineBGhost
+  name: Spawn point ghost Marine B
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-name
+      description: marinespawn-desc
+      rules: marinespawn-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineBPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineCGhost
+  name: Spawn point ghost Marine C
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-name
+      description: marinespawn-desc
+      rules: marinespawn-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineCPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineDGhost
+  name: Spawn point ghost Marine D
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-name
+      description: marinespawn-desc
+      rules: marinespawn-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineDPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+#Medic
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineMedicAGhost
+  name: Spawn point ghost Marine medic A
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-medic-name
+      description: marinespawn-medic-desc
+      rules: marinespawn-medic-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineMedicAPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineMedicBGhost
+  name: Spawn point ghost Marine medic B
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-medic-name
+      description: marinespawn-medic-desc
+      rules: marinespawn-medic-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineMedicBPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineMedicCGhost
+  name: Spawn point ghost Marine medic C
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-medic-name
+      description: marinespawn-medic-desc
+      rules: marinespawn-medic-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineMedicCPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineMedicDGhost
+  name: Spawn point ghost Marine medic D
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-medic-name
+      description: marinespawn-medic-desc
+      rules: marinespawn-medic-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineMedicDPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+#Engineer
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineEngAGhost
+  name: Spawn point ghost Marine eng A
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-eng-name
+      description: marinespawn-eng-desc
+      rules: marinespawn-eng-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineEngAPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineEngBGhost
+  name: Spawn point ghost Marine eng B
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-eng-name
+      description: marinespawn-eng-desc
+      rules: marinespawn-eng-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineEngBPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineEngCGhost
+  name: Spawn point ghost Marine eng C
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-eng-name
+      description: marinespawn-eng-desc
+      rules: marinespawn-eng-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineEngCPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMarineEngDGhost
+  name: Spawn point ghost Marine eng D
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: marinespawn-eng-name
+      description: marinespawn-eng-desc
+      rules: marinespawn-eng-rules
+    - type: GhostRoleMobSpawner
+      prototype: MarineEngDPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+
+#Лавра
+- type: entity
+  #noSpawn: true
+  id: SpawLavraGhost
+  name: Spawn point ghost Lavra
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: lavra-name
+      description: lavra-desc
+      rules: lavra-rules
+    - type: GhostRoleMobSpawner
+      prototype: MobXenoLawraImperial
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green

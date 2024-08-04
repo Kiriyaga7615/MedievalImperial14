@@ -1,0 +1,354 @@
+- type: entity
+  name: Странный клоун
+  id: MobClownN
+  suffix: Нейтральные
+  parent: SimpleSpaceMobBase
+  description: Страшный сон сотрудника Службы Безопасности
+  components:
+  - type: Insulated
+  - type: CombatMode
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: XenoCompound
+    blackboard:
+      NavClimb: !type:Bool
+        true
+      NavInteract: !type:Bool
+        true
+      NavPry: !type:Bool
+        true
+      NavSmash: !type:Bool
+        true
+  - type: Tool
+    speed: 1.5
+    qualities:
+      - Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+  - type: Hands
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Clowns/clown.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 1000
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: Stamina
+    excess: 200
+  - type: Bloodstream
+    bloodMaxVolume: 100
+  - type: MeleeWeapon
+    hidden: true
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 6
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: running
+      Dead:
+        Base: dead
+  - type: Puller
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatClown
+      amount: 5
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: Дитя Хонкоматери
+    description: Вы существо измененное великой Хонкоматерью!
+    rules: Вы нейтральны ко всем, пока вас или ваших братьев клоунов не начнут избивать!
+  - type: GhostTakeoverAvailable
+  - type: Temperature
+    heatDamageThreshold: 360
+    coldDamageThreshold: -150
+    currentTemperature: 310.15
+  - type: Tag
+    tags:
+      - CannotSuicide
+      - DoorBumpOpener
+      - FootstepSound
+  - type: NoSlip
+  - type: Perishable #Ummmm the acid kills a lot of the bacteria or something
+    molsPerSecondPerUnitMass: 0.0005
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/clownstep2.ogg
+
+- type: entity
+  name: Хомункул
+  parent: MobClownN
+  id: MobClownMunculusN
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Clowns/munculus.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Dead
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 15
+  - type: Stamina
+    excess: 250
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      250: 0.7
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Длиннолицый
+  parent: MobClownN
+  id: MobClownLongFaceN
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Clowns/long_face.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 7
+  - type: Stamina
+    excess: 150
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      250: 0.7
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Чемпион
+  parent: MobClownN
+  id: MobClownDestroyerN
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Clowns/destroyer.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Dead
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 50
+  - type: Stamina
+    excess: 400
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      250: 0.6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Мясной клоун
+  parent: MobClownN
+  id: MobClownFleshclownN
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Clowns/fleshclown.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Dead
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 4
+  - type: Stamina
+    excess: 50
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      250: 0.6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Хонк халк
+  parent: MobClownN
+  id: MobClownHonkhulkN
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Clowns/honkhulk.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      350: Dead
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 25
+  - type: Stamina
+    excess: 350
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      250: 0.6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Хонк блоб
+  parent: MobClownN
+  id: MobClownBlobN
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Imperial/Clowns/blob.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      800: Dead
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 100
+  - type: Stamina
+    excess: 800
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.0
+    baseSprintSpeed : 2.0
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      250: 0.1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

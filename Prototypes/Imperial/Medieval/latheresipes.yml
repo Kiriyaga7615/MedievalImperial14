@@ -1,0 +1,2404 @@
+- type: latheRecipe
+  id: MedievalChanterelleSeeds
+  result: ChanterelleSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalLingzhiSeeds
+  result: LingzhiSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalTowercapSeeds
+  result: TowercapSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalOatSeeds
+  result: OatSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalTomatoSeeds
+  result: TomatoSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalSugarcaneSeeds
+  result: SugarcaneSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalWheatSeeds
+  result: WheatSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalPoppySeeds
+  result: PoppySeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalGarlicSeeds
+  result: GarlicSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalAppleSeeds
+  result: AppleSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalRiceSeeds
+  result: RiceSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalWatermelonSeeds
+  result: WatermelonSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalNettleSeeds
+  result: NettleSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalCannabisSeeds
+  result: CannabisSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalCabbageSeeds
+  result: CabbageSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalAloeSeeds
+  result: AloeSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalAmbrosiaVulgarisSeeds
+  result: AmbrosiaVulgarisSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalGalaxythistleSeeds
+  result: GalaxythistleSeeds
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    MedievalTopaz: 100
+    #MedievalGold: 20
+
+- type: latheRecipe
+  id: MedievalFireChemistryBottle
+  result: MedievalFireChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 105
+    MedievalAdam: 35
+    MedievalTopaz: 15
+
+- type: latheRecipe
+  id: MedievalDrugChemistryBottle
+  result: MedievalDrugChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 15
+    MedievalAdam: 80
+    MedievalTopaz: 50
+
+- type: latheRecipe
+  id: MedievalMutagenChemistryBottle
+  result: MedievalMutagenChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 15
+    MedievalAdam: 35
+    MedievalTopaz: 85
+    #MedievalGold: 35
+
+- type: latheRecipe
+  id: MedievalSleepChemistryBottle
+  result: MedievalSleepChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 85
+    MedievalAdam: 145
+    MedievalTopaz: 55
+
+- type: latheRecipe
+  id: MedievalBaffChemistryBottle
+  result: MedievalBaffChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 65
+    MedievalAdam: 115
+    MedievalTopaz: 125
+    MedievalSpiderHair: 165
+
+- type: latheRecipe
+  id: MedievalMuteChemistryBottle
+  result: MedievalMuteChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 50
+    MedievalAdam: 155
+    #MedievalGold: 35
+
+- type: latheRecipe
+  id: MedievalHealthChemistryBottle
+  result: MedievalHealthChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 100
+    #MedievalGold: 120
+
+- type: latheRecipe
+  id: MedievalFoodCondimentBottleEnzyme
+  result: FoodCondimentBottleEnzyme
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 10
+    MedievalAdam: 10
+    #MedievalGold: 40
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetSalad
+  result: MedievalClothingHeadHelmetSalad
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalIronIngot: 1200
+
+- type: latheRecipe
+  id: MedievalKeyStorage
+  result: MedievalKeyStorage
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalIronIngot: 475
+
+- type: latheRecipe
+  id: MedievalChemistryEmptyBottle01
+  result: MedievalChemistryEmptyBottle01
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    MedievalIronIngot: 100
+
+- type: latheRecipe
+  id: MedievalChemistryEmptyBottle02
+  result: MedievalChemistryEmptyBottle02
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    MedievalIronIngot: 100
+
+- type: latheRecipe
+  id: MedievalChemistryEmptyBottle03
+  result: MedievalChemistryEmptyBottle03
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    MedievalIronIngot: 100
+
+- type: latheRecipe
+  id: MedievalChemistryEmptyBottle04
+  result: MedievalChemistryEmptyBottle04
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    MedievalIronIngot: 100
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetSaladLight
+  result: MedievalClothingHeadHelmetSaladLight
+  applyMaterialDiscount: false
+  completetime: 14
+  materials:
+    MedievalIronIngot: 1200
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetNormand
+  result: MedievalClothingHeadHelmetNormand
+  applyMaterialDiscount: false
+  completetime: 9
+  materials:
+    MedievalIronIngot: 1200
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetBacinet
+  result: MedievalClothingHeadHelmetBacinet
+  applyMaterialDiscount: false
+  completetime: 9
+  materials:
+    MedievalIronIngot: 1200
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetShapel
+  result: MedievalClothingHeadHelmetShapel
+  applyMaterialDiscount: false
+  completetime: 9
+  materials:
+    MedievalIronIngot: 1200
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetCrusader
+  result: MedievalClothingHeadHelmetCrusader
+  applyMaterialDiscount: false
+  completetime: 9
+  materials:
+    MedievalIronIngot: 1200
+
+- type: latheRecipe
+  id: MedievalClothingOuterArmorIronCuirass
+  result: MedievalClothingOuterArmorIronCuirass
+  applyMaterialDiscount: false
+  completetime: 14
+  materials:
+    MedievalIronIngot: 7500
+
+- type: latheRecipe
+  id: MedievalClothingOuterArmorIron
+  result: MedievalClothingOuterArmorIron
+  applyMaterialDiscount: false
+  completetime: 13
+  materials:
+    MedievalIronIngot: 10000
+
+- type: latheRecipe
+  id: MedievalClothingOuterArmorUpIron
+  result: MedievalClothingOuterArmorUpIron
+  applyMaterialDiscount: false
+  completetime: 26
+  materials:
+    MedievalSteelIngot: 18000
+
+- type: latheRecipe
+  id: MedievalIronGloves
+  result: MedievalIronGloves
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalSteelIngot: 430
+
+- type: latheRecipe
+  id: MedievalSpear
+  result: MedievalSpearNotReady
+  applyMaterialDiscount: false
+  completetime: 11
+  materials:
+    MedievalIronIngot: 2200
+    Wood: 1700
+
+- type: latheRecipe
+  id: MedievalHatchet
+  result: MedievalHatchet
+  applyMaterialDiscount: false
+  completetime: 11
+  materials:
+    MedievalIronIngot: 1400
+    Wood: 800
+
+- type: latheRecipe
+  id: MedievalDagger
+  result: MedievalDaggerNotReady
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalIronIngot: 350
+    Wood: 150
+
+- type: latheRecipe
+  id: MedievalGrenade
+  result: MedievalGrenade
+  applyMaterialDiscount: false
+  completetime: 13
+  materials:
+    MedievalSteelIngot: 1000
+    Wood: 2450
+
+- type: latheRecipe
+  id: MedievalFalshion
+  result: MedievalFalshionNotReady
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 2150
+    Wood: 1400
+
+- type: latheRecipe
+  id: MedievalHammerBlacksmith
+  result: MedievalHammerBlacksmith
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 1150
+    Wood: 500
+
+- type: latheRecipe
+  id: MedievalMace
+  result: MedievalMaceNotReady
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 2750
+    Wood: 900
+
+- type: latheRecipe
+  id: MedievalPickaxe
+  result: MedievalPickaxe
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 850
+    Wood: 600
+
+- type: latheRecipe
+  id: MedievalIronHalberd
+  result: MedievalIronHalberdNotReady
+  applyMaterialDiscount: false
+  completetime: 22
+  materials:
+    MedievalIronIngot: 5500
+    Wood: 2500
+
+- type: latheRecipe
+  id: MedievalIronHammer
+  result: MedievalIronHammerNotReady
+  applyMaterialDiscount: false
+  completetime: 22
+  materials:
+    MedievalIronIngot: 4700
+    Wood: 3400
+
+- type: latheRecipe
+  id: MedievalWrench
+  result: MedievalWrench
+  applyMaterialDiscount: false
+  completetime: 22
+  materials:
+    MedievalSteelIngot: 500
+
+- type: latheRecipe
+  id: MedievalIronShield
+  result: MedievalIronShield
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 3200
+
+#- type: latheRecipe
+#  id: MedievalBeartrap
+#  result: MedievalBeartrap
+#  applyMaterialDiscount: false
+#  completetime: 13
+#  materials:
+#    MedievalIronIngot: 1900
+
+- type: latheRecipe
+  id: MedievalShovel
+  result: MedievalShovel
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalIronIngot: 500
+    Wood: 700
+
+- type: latheRecipe
+  id: MedievalHoe
+  result: MedievalHoe
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalIronIngot: 550
+    Wood: 400
+
+- type: latheRecipe
+  id: MedievalScythe
+  result: MedievalScythe
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalIronIngot: 600
+    Wood: 800
+
+- type: latheRecipe
+  id: MedievalClippers
+  result: MedievalClippers
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalIronIngot: 150
+    Wood: 200
+
+- type: latheRecipe
+  id: MedievalWoodWorkerPlaceCraft
+  result: MedievalWoodWorkerPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 11
+  materials:
+    Wood: 2800
+
+- type: latheRecipe
+  id: MedievalBarrelMead
+  result: MedievalBarrelMead
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    Wood: 26500
+    MedievalRope: 150
+
+- type: latheRecipe
+  id: MedievalBarrelRedMead
+  result: MedievalBarrelRedMead
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    Wood: 26500
+    MedievalRope: 150
+
+- type: latheRecipe
+  id: MedievalBarrelBeer
+  result: MedievalBarrelBeer
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    Wood: 26500
+    MedievalRope: 150
+
+- type: latheRecipe
+  id: MedievalBarrelRum
+  result: MedievalBarrelRum
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    Wood: 26500
+    MedievalRope: 150
+
+- type: latheRecipe
+  id: MedievalBarrelVodka
+  result: MedievalBarrelVodka
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    Wood: 26500
+    MedievalRope: 150
+
+- type: latheRecipe
+  id: MedievalBarrelAle
+  result: MedievalBarrelAle
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    Wood: 26500
+    MedievalRope: 150
+
+
+- type: latheRecipe
+  id: MedievalDecorAnonsCraft
+  result: MedievalDecorAnonsCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    Wood: 1300
+    MedievalRope: 50
+
+- type: latheRecipe
+  id: MedievalBarrelWine
+  result: MedievalBarrelWine
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    Wood: 26500
+    MedievalRope: 150
+
+- type: latheRecipe
+  id: MedievaldDiceBag
+  result: DiceBag
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    Wood: 60
+    MedievalLeather1: 35
+
+- type: latheRecipe
+  id: MedievalAlcPlaceCraft
+  result: MedievalAlcPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    Wood: 8000
+
+- type: latheRecipe
+  id: MedievalWoodenSword
+  result: MedievalWoodenSword
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    Wood: 1200
+
+- type: latheRecipe
+  id: MedievalWaterGeneratorCraft
+  result: MedievalWaterGeneratorCraft
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    Wood: 1200
+
+- type: latheRecipe
+  id: MedievalhydroponicsSoilCraft
+  result: MedievalhydroponicsSoilCraft
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    Wood: 300
+    MedievalStone: 100
+
+- type: latheRecipe
+  id: MedievalDecorMogila1Craft
+  result: MedievalDecorMogila1Craft
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalStone: 2000
+
+- type: latheRecipe
+  id: MedievalDecorMogila2Craft
+  result: MedievalDecorMogila2Craft
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalStone: 2000
+
+- type: latheRecipe
+  id: MedievalDecorMogila3Craft
+  result: MedievalDecorMogila3Craft
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalStone: 2000
+
+- type: latheRecipe
+  id: MedievalHandcuffs
+  result: MedievalHandcuffs
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 250
+    MedievalGear: 50
+
+- type: latheRecipe
+  id: MedievalStoneLoopHoleCraft
+  result: MedievalStoneLoopHoleCraft
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalStone: 1950
+
+- type: latheRecipe
+  id: MedievalStoneWorkerPlaceCraft
+  result: MedievalStoneWorkerPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalStone: 4000
+
+- type: latheRecipe
+  id: MedievalStoneWizardPlaceCraft
+  result: MedievalStoneWizardPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    MedievalStone: 6000
+
+- type: latheRecipe
+  id: MedievalStoneWallCraft
+  result: MedievalStoneWallCraft
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalStone: 1450
+
+- type: latheRecipe
+  id: MedievalWizardPlaceCraft
+  result: MedievalWizardPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    MedievalStone: 2800
+    MedievalTopaz: 200
+    MedievalFireSerdolick: 220
+
+- type: latheRecipe
+  id: MedievalWizardBlacksmithCraft
+  result: MedievalWizardBlacksmithCraft
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    MedievalSteelIngot: 1500
+    MedievalTopaz: 240
+    MedievalFireSerdolick: 310
+    MedievalGear: 150
+
+- type: latheRecipe
+  id: MedievalWizardPotionCraft
+  result: MedievalWizardPotionCraft
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    MedievalSteelIngot: 1100
+    MedievalFireSerdolick: 200
+    #MedievalGold: 100
+
+- type: latheRecipe
+  id: MedievalWizardGrassCraft
+  result: MedievalWizardGrassCraft
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 500
+    #MedievalGold: 70
+
+- type: latheRecipe
+  id: MedievalDecorTorchColoneCraft
+  result: MedievalDecorTorchColoneCraft
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalFireSerdolick: 15
+    MedievalStone: 450
+
+- type: latheRecipe
+  id: Medievalalchem_dispenserCraft
+  result: Medievalalchem_dispenserCraft
+  applyMaterialDiscount: false
+  completetime: 13
+  materials:
+    MedievalFireSerdolick: 150
+    Wood: 1500
+
+- type: latheRecipe
+  id: MedievalCampfireCraft
+  result: MedievalCampfireCraft
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    Wood: 1000
+
+- type: latheRecipe
+  id: MedievalFoundryCraft
+  result: MedievalFoundryCraft
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalStone: 3500
+
+- type: latheRecipe
+  id: MedievalWaterCraft
+  result: MedievalWaterCraft
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalStone: 2500
+
+- type: latheRecipe
+  id: MedievalMortarCraft
+  result: MedievalMortarCraft
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalStone: 1500
+
+- type: latheRecipe
+  id: MedievalRuneHealing
+  result: MedievalRuneHealing
+  applyMaterialDiscount: false
+  completetime: 40
+  materials:
+    MedievalTopaz: 200
+
+- type: latheRecipe
+  id: MedievalRuneFireBall
+  result: MedievalRuneFireBall
+  applyMaterialDiscount: false
+  completetime: 40
+  materials:
+    MedievalTopaz: 550
+    MedievalFireSerdolick: 250
+
+- type: latheRecipe
+  id: MedievalHandheldGPSBasic
+  result: MedievalHandheldGPSBasic
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalTopaz: 25
+    MedievalFireSerdolick: 25
+    #MedievalGold: 15
+
+- type: latheRecipe
+  id: MedaljonSpeed
+  result: MedaljonSpeed
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalTopaz: 250
+    #MedievalGold: 150
+    MedievalEssence: 150
+
+- type: latheRecipe
+  id: MedaljonNoslip
+  result: MedaljonNoslip
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalAdam: 200
+    #MedievalGold: 150
+
+- type: latheRecipe
+  id: MedaljonThieving
+  result: MedaljonThieving
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalAdam: 125
+    #MedievalGold: 150
+    MedievalEssence: 100
+
+- type: latheRecipe
+  id: MedaljonDark
+  result: MedaljonDark
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalAdam: 115
+    #MedievalGold: 150
+    MedievalEssence: 50
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetHoodInvis
+  result: MedievalClothingHeadHelmetHoodInvis
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 25
+    MedievalAdam: 350
+
+- type: latheRecipe
+  id: MedievalCoboldSummoner
+  result: MedievalCoboldSummoner
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 150
+    MedievalAdam: 115
+    MedievalTopaz: 150
+    MedievalEssence: 10
+
+- type: latheRecipe
+  id: MedievalHumanSummoner
+  result: MedievalHumanSummoner
+  applyMaterialDiscount: false
+  completetime: 40
+  materials:
+    MedievalFireSerdolick: 210
+    MedievalAdam: 150
+    MedievalTopaz: 170
+    MedievalEssence: 75
+
+- type: latheRecipe
+  id: MedievalFireSummoner
+  result: MedievalFireSummoner
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 100
+    MedievalAdam: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakInvis
+  result: MedievalClothingNeckCloakInvis
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 300
+    MedievalTopaz: 250
+    MedievalAdam: 900
+    MedievalEssence: 350
+
+- type: latheRecipe
+  id: MedievalHandheldHealthAnalyzer
+  result: MedievalHandheldHealthAnalyzer
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 125
+    #MedievalGold: 50
+    MedievalEssence: 100
+
+- type: latheRecipe
+  id: MedaljonFlashImmune
+  result: MedaljonFlashImmune
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalTopaz: 115
+    #MedievalGold: 150
+
+- type: latheRecipe
+  id: MedaljonDef
+  result: MedaljonDef
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 250
+    #MedievalGold: 150
+
+- type: latheRecipe
+  id: MedaljonExpl
+  result: MedaljonExpl
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalFireSerdolick: 115
+    #MedievalGold: 150
+
+- type: latheRecipe
+  id: RobustHarvestChemistryBottle
+  result: RobustHarvestChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalFireSerdolick: 75
+    MedievalTopaz: 25
+
+- type: latheRecipe
+  id: MedievalBloodChemistryBottle
+  result: MedievalBloodChemistryBottle
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalFireSerdolick: 30
+    MedievalTopaz: 40
+    #MedievalGold: 50
+
+- type: latheRecipe
+  id: MedievalRuneArrow
+  result: MedievalRuneArrow
+  applyMaterialDiscount: false
+  completetime: 40
+  materials:
+    MedievalTopaz: 375
+
+- type: latheRecipe
+  id: MedievalRuneLighting
+  result: MedievalRuneLighting
+  applyMaterialDiscount: false
+  completetime: 40
+  materials:
+    MedievalAdam: 475
+    MedievalFireSerdolick: 225
+
+- type: latheRecipe
+  id: MedievalRuneFlash
+  result: MedievalRuneFlash
+  applyMaterialDiscount: false
+  completetime: 40
+  materials:
+    MedievalAdam: 210
+
+- type: latheRecipe
+  id: MedievalFetter
+  result: MedievalFetter
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 210
+
+- type: latheRecipe
+  id: SheetSteelMedieval
+  result: MedievalIronIngot
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    Steel: 200
+    MedievalCoal: 100
+
+- type: latheRecipe
+  id: SheetSteel30Medieval
+  result: MedievalIronIngot10
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    Steel: 2000
+    MedievalCoal: 1000
+
+- type: latheRecipe
+  id: MedievalSteelIngot
+  result: MedievalSteelIngot
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    MedievalIronIngot: 400
+    MedievalCoal: 100
+
+- type: latheRecipe
+  id: MedievalSteelIngot10
+  result: MedievalSteelIngot10
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalIronIngot: 4000
+    MedievalCoal: 1000
+
+- type: latheRecipe
+  id: MedievalGoldOre
+  result: MedievalIngotGold
+  applyMaterialDiscount: false
+  completetime: 2
+  materials:
+    MedievalGoldOre: 150
+    MedievalCoal: 100
+
+- type: latheRecipe
+  id: MedievalAdamOre
+  result: MedievalAdam
+  applyMaterialDiscount: false
+  completetime: 2
+  materials:
+    MedievalAdamOre: 150
+
+- type: latheRecipe
+  id: MedievalBlacksmithArmorCraft
+  result: MedievalBlacksmithArmorCraft
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalSteelIngot: 2100
+
+- type: latheRecipe
+  id: MedievalClothingFeetSteel
+  result: MedievalClothingFeetSteel
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalSteelIngot: 300
+
+- type: latheRecipe
+  id: MedievalKeybenchCraft
+  result: MedievalKeybenchCraft
+  applyMaterialDiscount: false
+  completetime: 30
+  materials:
+    MedievalSteelIngot: 1100
+    MedievalGear: 600
+    #MedievalGold: 550
+
+- type: latheRecipe
+  id: MedievalPrisonGrilleCraft
+  result: MedievalPrisonGrilleCraft
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalFloorDrainCraft
+  result: MedievalFloorDrainCraft
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 700
+
+- type: latheRecipe
+  id: MedievalFloorDrain
+  result: MedievalFloorDrain
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalIronIngot: 700
+
+- type: latheRecipe
+  id: MedievalTopazOre
+  result: MedievalTopaz
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalTopazOre: 115
+
+- type: latheRecipe
+  id: MedievalFireSerdolickOre
+  result: MedievalFireSerdolick
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalFireSerdolickOre: 115
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetLeatherHelmet
+  result: MedievalClothingHeadHelmetLeatherHelmet
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 65
+    Wood: 400
+
+- type: latheRecipe
+  id: MedievalMedicalBedCraft
+  result: MedievalMedicalBedCraft
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 65
+    MedievalRope: 10
+    Wood: 1000
+
+- type: latheRecipe
+  id: MedievalMedicalBed2Craft
+  result: MedievalMedicalBed2Craft
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalLeather1: 235
+    MedievalRope: 80
+    Wood: 2500
+
+- type: latheRecipe
+  id: MedievalLeatherWorkingPlaceCraft
+  result: MedievalLeatherWorkingPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 200
+    Wood: 2300
+
+- type: latheRecipe
+  id: MedievalClothWorkingPlaceCraft
+  result: MedievalClothWorkingPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 150
+    Wood: 3700
+
+- type: latheRecipe
+  id: MedievalOreBag
+  result: OreBag
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 140
+    MedievalRope: 25
+
+- type: latheRecipe
+  id: MedievalPlantBag
+  result: PlantBag
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 140
+    MedievalRope: 25
+
+- type: latheRecipe
+  id: MedievalWineskin
+  result: MedievalWineskin
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalLeather1: 15
+
+- type: latheRecipe
+  id: MedievalClothingHeadBag
+  result: MedievalClothingHeadBag
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 55
+    MedievalRope: 30
+
+- type: latheRecipe
+  id: MedievalClothingMaskPlague
+  result: MedievalClothingMaskPlague
+  applyMaterialDiscount: false
+  completetime: 13
+  materials:
+    MedievalLeather1: 165
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetHood
+  result: MedievalClothingHeadHelmetHood
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 90
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetHood2
+  result: MedievalClothingHeadHelmetHood2
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 90
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetCap
+  result: MedievalClothingHeadHelmetCap
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 20
+    Wood: 100
+
+- type: latheRecipe
+  id: MedievalClothingOuterArmorLeather
+  result: MedievalClothingOuterArmorLeather
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    MedievalLeather1: 300
+    Wood: 1500
+    MedievalIronIngot: 550
+
+- type: latheRecipe
+  id: MedievalClothingOuterArmorLeather2
+  result: MedievalClothingOuterArmorLeather2
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    MedievalLeather1: 300
+    Wood: 1500
+    MedievalIronIngot: 550
+
+- type: latheRecipe
+  id: MedievalClothingOuterArmorStudded
+  result: MedievalClothingOuterArmorStudded
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    MedievalLeather1: 170
+    Wood: 600
+    MedievalIronIngot: 320
+
+- type: latheRecipe
+  id: MedievalClothingOuterArmorFur
+  result: MedievalClothingOuterArmorFur
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+    Wood: 600
+
+- type: latheRecipe
+  id: MedievalAlchemicBelt
+  result: MedievalAlchemicBelt
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 220
+    MedievalRope: 15
+    Wood: 140
+
+- type: latheRecipe
+  id: MedievalClothingBackpackSatchelLeather
+  result: MedievalClothingBackpackSatchelLeather
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 110
+    MedievalRope: 25
+
+- type: latheRecipe
+  id: MedievalClothingOuterApronChef
+  result: MedievalClothingOuterApronChef
+  applyMaterialDiscount: false
+  completetime: 9
+  materials:
+    MedievalLeather1: 40
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth1
+  result: MedievalClothingUniformJumpsuitShitCloth1
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 45
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth2
+  result: MedievalClothingUniformJumpsuitShitCloth2
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth3
+  result: MedievalClothingUniformJumpsuitShitCloth3
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 40
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth4
+  result: MedievalClothingUniformJumpsuitShitCloth4
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 40
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth5
+  result: MedievalClothingUniformJumpsuitShitCloth5
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 110
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth6
+  result: MedievalClothingUniformJumpsuitShitCloth6
+  completetime: 8
+  materials:
+    MedievalLeather1: 150
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth7
+  result: MedievalClothingUniformJumpsuitShitCloth7
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 105
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitFlannel
+  result: MedievalClothingUniformJumpsuitFlannel
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 65
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth8
+  result: MedievalClothingUniformJumpsuitShitCloth8
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 20
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth9
+  result: MedievalClothingUniformJumpsuitShitCloth9
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    MedievalLeather1: 5
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth10
+  result: MedievalClothingUniformJumpsuitShitCloth10
+  applyMaterialDiscount: false
+  completetime: 3
+  materials:
+    MedievalLeather1: 30
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth11
+  result: MedievalClothingUniformJumpsuitShitCloth11
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 30
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth12
+  result: MedievalClothingUniformJumpsuitShitCloth12
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth14
+  result: MedievalClothingUniformJumpsuitShitCloth14
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 90
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth15
+  result: MedievalClothingUniformJumpsuitShitCloth15
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 145
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth16
+  result: MedievalClothingUniformJumpsuitShitCloth16
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 125
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth17
+  result: MedievalClothingUniformJumpsuitShitCloth17
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 45
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth18
+  result: MedievalClothingUniformJumpsuitShitCloth18
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 155
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth19
+  result: MedievalClothingUniformJumpsuitShitCloth19
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 150
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth20
+  result: MedievalClothingUniformJumpsuitShitCloth20
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 115
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth21
+  result: MedievalClothingUniformJumpsuitShitCloth21
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 135
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpsuitShitCloth22
+  result: MedievalClothingUniformJumpsuitShitCloth22
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 125
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorBlack
+  result: MedievalClothingNeckCloakColorBlack
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorHell
+  result: MedievalClothingNeckCloakColorHell
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorYellow
+  result: MedievalClothingNeckCloakColorYellow
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorWhite
+  result: MedievalClothingNeckCloakColorWhite
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorRed
+  result: MedievalClothingNeckCloakColorRed
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorLightBlue
+  result: MedievalClothingNeckCloakColorLightBlue
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorGreen
+  result: MedievalClothingNeckCloakColorGreen
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorBlue
+  result: MedievalClothingNeckCloakColorBlue
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 95
+
+- type: latheRecipe
+  id: MedievalMattress
+  result: Mattress
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 5
+
+- type: latheRecipe
+  id: MedievalRope
+  result: MedievalRope
+  applyMaterialDiscount: false
+  completetime: 2
+  materials:
+    MedievalLeather1: 150
+
+- type: latheRecipe
+  id: MedievalRopeSpider
+  result: MedievalRope
+  applyMaterialDiscount: false
+  completetime: 2
+  materials:
+    MedievalSpiderHair: 50
+
+- type: latheRecipe
+  id: MedievalClothingShoesSpider
+  result: MedievalClothingShoesSpider
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalSpiderHair: 125
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorHellShort
+  result: MedievalClothingNeckCloakColorHellShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorBlackShort
+  result: MedievalClothingNeckCloakColorBlackShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorYellowShort
+  result: MedievalClothingNeckCloakColorYellowShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorWhiteShort
+  result: MedievalClothingNeckCloakColorWhiteShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorRedShort
+  result: MedievalClothingNeckCloakColorRedShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorLightBlueShort
+  result: MedievalClothingNeckCloakColorLightBlueShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorGreenShort
+  result: MedievalClothingNeckCloakColorGreenShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingNeckCloakColorBlueShort
+  result: MedievalClothingNeckCloakColorBlueShort
+  applyMaterialDiscount: false
+  completetime: 5
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalBannerHell
+  result: MedievalBannerHell
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalBannerYellow
+  result: MedievalBannerYellow
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalBannerWhite
+  result: MedievalBannerWhite
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalBannerRed
+  result: MedievalBannerRed
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalBannerGreen
+  result: MedievalBannerGreen
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalBannerFish
+  result: MedievalBannerFish
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalBannerBlue
+  result: MedievalBannerBlue
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalBannerBlack
+  result: MedievalBannerBlack
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    MedievalLeather1: 100
+
+- type: latheRecipe
+  id: MedievalClothingUniformJumpskirtJanimaid
+  result: MedievalClothingUniformJumpskirtJanimaid
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 175
+
+- type: latheRecipe
+  id: MedievalClothingHeadFarmerHat
+  result: MedievalClothingHeadFarmerHat
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 15
+
+- type: latheRecipe
+  id: MedievalClothingHeadArcherHat
+  result: MedievalClothingHeadArcherHat
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetExecutor1
+  result: MedievalClothingHeadHelmetExecutor1
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: MedievalClothingHeadHelmetExecutor2
+  result: MedievalClothingHeadHelmetExecutor2
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: MedievalClothingHeadHatPlaguedoctor
+  result: MedievalClothingHeadHatPlaguedoctor
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalLeather1: 30
+
+- type: latheRecipe
+  id: MedievalClothingOuterPlagueSuit
+  result: MedievalClothingOuterPlagueSuit
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 75
+
+- type: latheRecipe
+  id: MedievalClothingShoesLeather
+  result: MedievalClothingShoesLeather
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalLeather1: 25
+    MedievalRope: 5
+
+- type: latheRecipe
+  id: MedievalBastShoes
+  result: MedievalBastShoes
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    Wood: 25
+
+- type: latheRecipe
+  id: MedievalClothingHandsGlovesColorBrown
+  result: MedievalClothingHandsGlovesColorBrown
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalLeather1: 20
+
+- type: latheRecipe
+  id: MedievalClothingHandsGlovesColorBlack
+  result: ClothingHandsGlovesColorBlack
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    MedievalLeather1: 20
+
+- type: latheRecipe
+  id: MedievalGauze
+  applyMaterialDiscount: false
+  result: Gauze1
+  completetime: 1
+  materials:
+    MedievalLeather1: 15
+    MedievalRope: 5
+
+- type: latheRecipe
+  id: MedievalPaper
+  applyMaterialDiscount: false
+  result: MedievalPaper
+  completetime: 1
+  materials:
+    MedievalLeather1: 10
+
+- type: latheRecipe
+  id: MedievalMaskFace
+  applyMaterialDiscount: false
+  result: MedievalMaskFace
+  completetime: 1
+  materials:
+    MedievalLeather1: 50
+
+- type: latheRecipe
+  id: MedievalWeaponCrossbow
+  result: MedievalWeaponCrossbow
+  applyMaterialDiscount: false
+  completetime: 25
+  materials:
+    MedievalRope: 220
+    Wood: 1550
+    MedievalSteelIngot: 400
+    MedievalGear: 550
+
+- type: latheRecipe
+  id: MedievalWeaponTurretNanoTrasenCraft
+  result: MedievalWeaponTurretNanoTrasenCraft
+  applyMaterialDiscount: false
+  completetime: 45
+  materials:
+    MedievalRope: 430
+    Wood: 3550
+    MedievalSteelIngot: 900
+    MedievalGear: 1850
+
+- type: latheRecipe
+  id: MedievalMopBucket
+  result: MedievalMopBucket
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    Wood: 1800
+    MedievalIronIngot: 550
+
+- type: latheRecipe
+  id: MedievalBrutepack
+  result: MedievalBrutepack
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalLeather1: 25
+    MedievalIronIngot: 50
+
+- type: latheRecipe
+  id: MedievalKnut
+  result: MedievalKnut
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    MedievalRope: 200
+    Wood: 1200
+
+- type: latheRecipe
+  id: MedievalWoodenFloorCraft
+  result: MedievalWoodenFloorCraft
+  applyMaterialDiscount: false
+  completetime: 2
+  materials:
+    Wood: 50
+
+- type: latheRecipe
+  id: MedievalStockadeCraft
+  result: MedievalStockadeCraft
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    MedievalRope: 1
+    Wood: 300
+
+- type: latheRecipe
+  id: MedievalStockadeHighCraft
+  result: MedievalStockadeHighCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalRope: 3
+    Wood: 500
+
+- type: latheRecipe
+  id: AltarSpawnerCraft
+  result: AltarSpawnerCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 200
+    Wood: 1800
+
+- type: latheRecipe
+  id: CarpetBlackCraft
+  result: CarpetBlackCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: CarpetPinkCraft
+  result: CarpetPinkCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: CarpetCraft
+  result: CarpetCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: CarpetPurpleCraft
+  result: CarpetPurpleCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: CarpetSBlueCraft
+  result: CarpetSBlueCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: CarpetOrangeCraft
+  result: CarpetOrangeCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: CarpetGreenCraft
+  result: CarpetGreenCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: CarpetBlueCraft
+  result: CarpetBlueCraft
+  applyMaterialDiscount: false
+  completetime: 7
+  materials:
+    MedievalLeather1: 25
+
+- type: latheRecipe
+  id: MedievalTarget
+  result: MedievalTarget
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalLeather1: 40
+    Wood: 1500
+    MedievalRope: 15
+
+- type: latheRecipe
+  id: MedievalMopItem
+  result: MedievalMopItem
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalLeather1: 30
+    Wood: 1000
+
+- type: latheRecipe
+  id: MedievalChest
+  result: MedievalChest
+  applyMaterialDiscount: false
+  completetime: 18
+  materials:
+    Wood: 3000
+    MedievalIronIngot: 260
+
+- type: latheRecipe
+  id: MedievalCrateCoffin
+  result: MedievalCrateCoffin
+  applyMaterialDiscount: false
+  completetime: 10
+  materials:
+    MedievalLeather1: 100
+    Wood: 2600
+
+- type: latheRecipe
+  id: MedievalPen
+  result: MedievalPen
+  applyMaterialDiscount: false
+  completetime: 2
+  materials:
+    Wood: 20
+
+- type: latheRecipe
+  id: MedievalBolt
+  result: MedievalBolt
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    Wood: 100
+    MedievalIronIngot: 30
+
+- type: latheRecipe
+  id: MedievalBoltPractice
+  result: MedievalBoltPractice
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    Wood: 40
+
+- type: latheRecipe
+  id: MedievalBowImprovised
+  result: BowImprovised
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalRope: 140
+    Wood: 1250
+
+- type: latheRecipe
+  id: MedievalArrow
+  result: MedievalArrow
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    Wood: 130
+    MedievalIronIngot: 20
+
+- type: latheRecipe
+  id: MedievalArrowPractice
+  result: MedievalArrowPractice
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    Wood: 35
+
+- type: latheRecipe
+  id: MedievalQuiver
+  result: MedievalQuiver
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalLeather1: 140
+
+- type: latheRecipe
+  id: MedievalBeaker
+  result: MedievalBeaker
+  applyMaterialDiscount: false
+  completetime: 4
+  materials:
+    Wood: 40
+
+- type: latheRecipe
+  id: MedievalWoodenShield
+  result: MedievalWoodenShield
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    Wood: 2000
+    MedievalLeather1: 50
+
+- type: latheRecipe
+  id: MedievalBanjoInstrument
+  result: MedievalBanjoInstrument
+  applyMaterialDiscount: false
+  completetime: 8
+  materials:
+    Wood: 1500
+    MedievalLeather1: 50
+    MedievalRope: 20
+    MedievalIronIngot: 40
+
+- type: latheRecipe
+  id: MedievalAirlockChapelLockedCraft
+  result: MedievalAirlockChapelLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockCargoLockedCraft
+  result: MedievalAirlockCargoLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockBarLockedCraft
+  result: MedievalAirlockBarLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockServiceCaptainLockedCraft
+  result: MedievalAirlockServiceCaptainLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockChemistryLockedCraft
+  result: MedievalAirlockChemistryLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockSecurityLockedCraft
+  result: MedievalAirlockSecurityLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockAtmosLockedCraft
+  result: MedievalAirlockAtmosLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockMaintenanceLockedCraft
+  result: MedievalAirlockMaintenanceLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockHydroponicsLockedCraft
+  result: MedievalAirlockHydroponicsLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalGear
+  result: MedievalGear
+  applyMaterialDiscount: false
+  completetime: 2
+  materials:
+    MedievalIronIngot: 50
+    MedievalSteelIngot: 50
+
+- type: latheRecipe
+  id: MedievalAirlockJanitorLockedCraft
+  result: MedievalAirlockJanitorLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockChiefEngineerLockedCraft
+  result: MedievalAirlockChiefEngineerLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockEngineeringLockedCraft
+  result: MedievalAirlockEngineeringLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalCoal
+  result: MedievalCoal
+  applyMaterialDiscount: false
+  completetime: 1
+  materials:
+    Wood: 25
+
+- type: latheRecipe
+  id: MedievalAirlockMedicalLockedCraft
+  result: MedievalAirlockMedicalLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalAirlockScienceLockedCraft
+  result: MedievalAirlockScienceLockedCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    MedievalGear: 200
+    Wood: 3800
+    MedievalIronIngot: 400
+
+- type: latheRecipe
+  id: MedievalStartPlaceCraft
+  result: MedievalStartPlaceCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    Wood: 1000
+
+- type: latheRecipe
+  id: MedievalAirlockCraft
+  result: MedievalAirlockCraft
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    Wood: 3800
+    MedievalGear: 200
+
+- type: latheRecipe
+  id: MedievalLeatherKey
+  result: MedievalLeatherKey
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300
+
+#- type: latheRecipe
+#  id: MedievalUnknownKey
+#  result: MedievalUnknownKey
+#  applyMaterialDiscount: false
+#  completetime: 6
+#  materials:
+#    #MedievalGold: 100
+
+- type: latheRecipe
+  id: MedievalFarmerKey
+  result: MedievalFarmerKey
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300
+
+- type: latheRecipe
+  id: MedievalGateKey
+  result: MedievalGateKey
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300
+
+- type: latheRecipe
+  id: MedievalBlacksmithKey
+  result: MedievalBlacksmithKey
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300
+
+- type: latheRecipe
+  id: MedievalWoodKey
+  result: MedievalWoodKey
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300
+
+#- type: latheRecipe
+#  id: MedievalMaidKey
+#  result: MedievalMaidKey
+#  applyMaterialDiscount: false
+#  completetime: 6
+#  materials:
+#    #MedievalGold: 100
+#
+#- type: latheRecipe
+#  id: MedievalKeyGuard
+#  result: MedievalKeyGuard
+#  applyMaterialDiscount: false
+#  completetime: 6
+#  materials:
+#    #MedievalGold: 100
+
+- type: latheRecipe
+  id: MedievalKeyChapel
+  result: MedievalKeyChapel
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300
+
+#- type: latheRecipe
+#  id: MedievalKeyAlchem
+#  result: MedievalKeyAlchem
+#  applyMaterialDiscount: false
+#  completetime: 6
+#  materials:
+    #MedievalGold: 100
+
+- type: latheRecipe
+  id: MedievalKeyTavern
+  result: MedievalKeyTavern
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300
+
+#- type: latheRecipe
+#  id: MedievalKeyKing
+#  result: MedievalKeyKing
+#  applyMaterialDiscount: false
+#  completetime: 6
+#  materials:
+#    #MedievalGold: 100
+#
+#- type: latheRecipe
+#  id: MedievalKeyWizard
+#  result: MedievalKeyWizard
+#  applyMaterialDiscount: false
+#  completetime: 6
+#  materials:
+#    #MedievalGold: 100
+#
+- type: latheRecipe
+  id: MedievalKeyCargo
+  result: MedievalKeyCargo
+  applyMaterialDiscount: false
+  completetime: 6
+  materials:
+    MedievalIronIngot: 300

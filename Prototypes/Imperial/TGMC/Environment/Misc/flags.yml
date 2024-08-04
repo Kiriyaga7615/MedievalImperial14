@@ -1,0 +1,23 @@
+- type: entity
+  parent: PosterBase
+  id: TGMCFlagTG
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Environment/Flags/flags.rsi
+    state: TGFlag
+
+- type: entity
+  parent: BaseItem
+  id: TGMCSmallFlag
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Environment/Flags/flags.rsi
+    state: tgsmall
+
+- type: entity
+  parent: BaseItem
+  id: TGMCSmallTransFlag
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Environment/Flags/flags.rsi
+    state: trans

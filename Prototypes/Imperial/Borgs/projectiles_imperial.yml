@@ -1,0 +1,17 @@
+- type: entity
+  name: cybernetic mg bolt
+  id: CyberneticMGBolt
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_imperial.rsi
+    layers:
+      - state: redlaser
+        shader: unshaded
+  - type: Ammo
+  - type: Projectile
+    damage:
+      types:
+        Heat: 4
+        Piercing: 10

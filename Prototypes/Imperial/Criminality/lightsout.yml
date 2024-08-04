@@ -1,0 +1,55 @@
+- type: entity
+  id: LightsOutAuto
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 0 # nuh uh
+    minimumPlayers: 99
+    startAudio:
+      path: /Audio/Imperial/Criminality/blackout.ogg
+      params:
+       volume: -2
+    endAudio:
+      path: /Audio/Imperial/Criminality/blackoutend.ogg
+      params:
+        volume: -2
+    duration: 120
+    maxDuration: 180
+  - type: BlackoutRule
+    auto: true
+
+- type: entity
+  id: LightsOutBegin
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 0 # nuh uh
+    minimumPlayers: 99
+    startAudio:
+      path: /Audio/Imperial/Criminality/blackout.ogg
+      params:
+       volume: -2
+    duration: 0
+    maxDuration: 0
+  - type: BlackoutRule
+    auto: false
+
+- type: entity
+  id: LightsOutEnd
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 0 # nuh uh
+    minimumPlayers: 99
+    startAudio:
+      path: /Audio/Imperial/Criminality/blackoutend.ogg
+      params:
+       volume: -2
+    duration: 0
+    maxDuration: 0
+  - type: BlackoutRule
+    auto: false
+    end: true

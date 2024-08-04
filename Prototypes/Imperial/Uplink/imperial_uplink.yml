@@ -1,0 +1,7 @@
+- type: listing
+  id: UplinkChainsaw
+  productEntity: Chainsaw
+  cost:
+    Telecrystal: 16
+  categories:
+  - UplinkWeaponry

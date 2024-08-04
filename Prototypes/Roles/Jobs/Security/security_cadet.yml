@@ -1,0 +1,50 @@
+- type: job
+  id: SecurityCadet
+  name: job-name-cadet
+  description: job-description-cadet
+  playTimeTracker: JobSecurityCadet
+  psychosisGainResist: 0.5 # psychosis
+  requirements:
+    #- !type:OverallPlaytimeRequirement
+    #  time: 21600 #Imperial role timers
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 54000 #15 hrs
+      inverted: true # stop playing intern if you're good at security!
+  startingGear: SecurityCadetGear
+  icon: "JobIconSecurityCadet"
+  supervisors: job-supervisors-security
+  #canBeAntag: false
+  #access:
+  #- Security
+  #- Brig
+  #- Maintenance
+  #- Service
+  #- External
+  #- Cryogenics
+  #special:
+  #- !type:AddImplantSpecial
+  #  implants: [ MindShieldImplant ]
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillShooting
+
+- type: startingGear
+  id: SecurityCadetGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsSalvage
+    #id: PassengerPDA
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    pocket2: MedievalBrutepack
+    neck: MedievalClothingNeckCloakClanEagle
+    #belt: MedievalFalshionT3Legion
+    head: MedievalClothingHeadHelmetLegionRecruit
+    id: MedievalLeatherKey
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth26
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

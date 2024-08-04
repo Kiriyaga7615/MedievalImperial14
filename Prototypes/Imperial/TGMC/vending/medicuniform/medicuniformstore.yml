@@ -1,0 +1,12 @@
+- type: vendingMachineInventory
+  id: MedicUniformStore
+  startingInventory:
+   ClothingHeadHelmetIibada: 4
+   ClothingOuterArmorIibada: 4
+   ClothingHeadHatBeretBrigmedic: 2
+   ClothingMaskGasBalaclava: 2
+   ClothingBackpackSatchelMedical: 4
+   ClothingBeltChiefMedicalFilledTGMC: 4
+   ClothingEyesHudMarineMed: 4
+   ClothingMaskBreath: 8
+   YellowOxygenTankFilled: 8

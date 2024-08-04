@@ -1,0 +1,282 @@
+- type: entity
+  id: BaseOdysseusPart
+  parent: BaseMechPart
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Imperial/Mech/mech_construct.rsi
+
+- type: entity
+  id: BaseOdysseusPartItem
+  parent: BaseOdysseusPart
+  abstract: true
+  components:
+  - type: Item
+    size: 50
+
+- type: entity
+  parent: BaseOdysseusPart
+  id: OdysseusHarness
+  name: odysseus harness
+  description: The core of the Odysseus APLU.
+  components:
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      odysseus_l_arm+o:
+        whitelist:
+          tags:
+          - OdysseusLArm
+      odysseus_r_arm+o:
+        whitelist:
+          tags:
+          - OdysseusRArm
+      odysseus_l_leg+o:
+        whitelist:
+          tags:
+          - OdysseusRLeg
+      odysseus_r_leg+o:
+        whitelist:
+          tags:
+          - OdysseusLLeg
+    sprite: Imperial/Mech/mech_construct.rsi
+  - type: ContainerContainer
+    containers:
+      mech-assembly-container: !type:Container
+  - type: MechAssembly
+    finishedPrototype: OdysseusChassis
+    requiredParts:
+      OdysseusLArm: false
+      OdysseusRArm: false
+      OdysseusRLeg: false
+      OdysseusLLeg: false
+  - type: Sprite
+    state: odysseus_torso+o
+    noRot: true
+
+- type: entity
+  parent: BaseOdysseusPartItem
+  id: OdysseusLArm
+  name: odysseus left arm
+  description: The left arm of the Odysseus APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: odysseus_l_arm
+  - type: Tag
+    tags:
+    - OdysseusLArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseOdysseusPartItem
+  id: OdysseusRLeg
+  name: odysseus right leg
+  description: The left leg of the Odysseus APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: odysseus_r_leg
+  - type: Tag
+    tags:
+    - OdysseusRLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseOdysseusPartItem
+  id: OdysseusLLeg
+  name: odysseus left leg
+  description: The left leg of the Odysseus APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: odysseus_l_leg
+  - type: Tag
+    tags:
+    - OdysseusLLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseOdysseusPartItem
+  id: OdysseusArmor
+  name: odysseus armor
+  description: The left leg of the Odysseus APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: odysseus_armor
+  - type: Tag
+    tags:
+    - OdysseusArmor
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseOdysseusPartItem
+  id: OdysseusRArm
+  name: odysseus right arm
+  description: The right arm of the Odysseus APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: odysseus_r_arm
+  - type: Tag
+    tags:
+    - OdysseusRArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  id: OdysseusChassis
+  parent: BaseOdysseusPart
+  name: odysseus chassis
+  description: An in-progress construction of the Odysseus APLU mech.
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: odysseus
+  - type: Sprite
+    noRot: true
+    state: odysseus_chassis
+  - type: Construction
+    graph: Odysseus
+    node: start
+    defaultTarget: odysseus
+
+- type: constructionGraph
+  id: Odysseus
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: odysseus
+      steps:
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Cable
+        doAfter: 1
+
+      - tool: Cutting
+        doAfter: 1
+
+      - tag: OdysseusCentralControlModule
+        name: odysseus central control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - tag: OdysseusPeripheralsControlModule
+        name: odysseus peripherals control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: id_mod
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - component: PowerCell
+        name: power cell
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Steel
+        amount: 5
+        doAfter: 1
+
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - material: MetalRod
+        amount: 10
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - tag: OdysseusArmor
+        name: odysseus armor
+        doAfter: 2
+
+  - node: odysseus
+    actions:
+    - !type:BuildMech
+      mechPrototype: MechOdissey
+
+- type: Tag
+  id: OdysseusCentralControlModule
+
+- type: Tag
+  id: OdysseusPeripheralsControlModule
+
+- type: Tag
+  id: OdysseusLArm
+
+- type: Tag
+  id: OdysseusRLeg
+
+- type: Tag
+  id: OdysseusLLeg
+
+- type: Tag
+  id: OdysseusRArm
+
+- type: Tag
+  id: OdysseusArmor
+
+- type: entity
+  id: OdysseusCentralElectronics
+  parent: BaseElectronics
+  name: odysseus central control module
+  description: The electrical control center for the odysseus mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - OdysseusCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: OdysseusPeripheralsElectronics
+  parent: BaseElectronics
+  name: odysseus peripherals control module
+  description: The electrical peripherals control for the odysseus mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - OdysseusPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics

@@ -1,0 +1,64 @@
+# Best job.
+
+- type: job
+  id: ChiefMedicalOfficer
+  name: job-name-cmo
+  description: job-description-cmo
+  playTimeTracker: JobChiefMedicalOfficer
+  #psychosisGainResist: 0.70 # psychosis
+  #requirements:
+  #  - !type:RoleTimeRequirement
+  #    role: JobChemist
+  #    time: 7200 #Imperial role timers
+  #  - !type:RoleTimeRequirement
+  #    role: JobMedicalDoctor
+  #    time: 7200 #Imperial role timers
+  #  - !type:DepartmentTimeRequirement
+  #    department: Medical
+  #    time: 28800 #Imperial role timers
+  weight: 10
+  startingGear: CMOGear
+  icon: "JobIconChiefMedicalOfficer"
+  #requireAdminNotify: true
+  #supervisors: job-supervisors-captain
+  #canBeAntag: false
+  #access:
+  #- Medical
+  #- Command
+  #- Maintenance
+  #- Chemistry
+  #- ChiefMedicalOfficer
+  #special:
+  #- !type:AddImplantSpecial
+  #  implants: [ MindShieldImplant ]
+  #- !type:AddComponentSpecial
+  #  components:
+  #    - type: CommandStaff
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillPharmaceuticals
+  #- skillPharmacology
+  #- skillSurgery
+  #- skillMedicalEquipment
+  #- skillNeuroSurgery
+
+- type: startingGear
+  id: CMOGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsCowboyBlack
+    id: MedievalKeyAlchem
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    #pocket2: MedievalRevent25
+    neck: MedievalClothingNeckCloakClanWolf
+    belt: MedievalFalshionT3Steel
+    head: MedievalClothingHeadHelmetBand3
+    gloves: ClothingHandsGlovesColorBlack
+    mask: MedievalMaskFace
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth16
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

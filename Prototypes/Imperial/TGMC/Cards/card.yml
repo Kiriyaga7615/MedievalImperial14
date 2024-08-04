@@ -1,0 +1,373 @@
+#Cmd
+- type: entity
+  parent: IDCardStandard
+  id: MarineCmdOperCard
+  name: Commander Operation
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineCmdOper
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineCmdFieldCard
+  name: Field Commander
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineCmdField
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineCmdACard
+  name: Marine cmd A card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineCmdA
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineCmdBCard
+  name: Marine cmd B card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineCmdB
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineCmdCCard
+  name: Marine cmd C card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineCmdC
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineCmdDCard
+  name: Marine cmd D card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineCmdD
+
+#Pilot
+- type: entity
+  parent: IDCardStandard
+  id: MarinePilotCard
+  name: Shuttle pilot card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarinePilot
+
+- type: entity
+  parent: IDCardStandard
+  id: MarinePilotMechACard
+  name: Pilot mech A card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarinePilotMechA
+
+- type: entity
+  parent: IDCardStandard
+  id: MarinePilotMechBCard
+  name: Pilot mech B card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarinePilotMechB
+
+- type: entity
+  parent: IDCardStandard
+  id: MarinePilotMechCCard
+  name: Pilot mech C card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarinePilotMechC
+
+- type: entity
+  parent: IDCardStandard
+  id: MarinePilotMechDCard
+  name: Pilot mech D card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarinePilotMechD
+
+#Marine
+- type: entity
+  parent: IDCardStandard
+  id: MarineACard
+  name: Marine A card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineA
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineBCard
+  name: Marine B card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineB
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineCCard
+  name: Marine C card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineC
+
+- type: entity
+  parent: IDCardStandard
+  id: MarineDCard
+  name: Marine D card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineD
+
+#Medic
+- type: entity
+  parent: IDCardStandard
+  id: MedicACard
+  name: Medic A card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineMedicA
+
+- type: entity
+  parent: IDCardStandard
+  id: MedicBCard
+  name: Medic B card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineMedicB
+
+- type: entity
+  parent: IDCardStandard
+  id: MedicCCard
+  name: Medic C card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineMedicC
+
+- type: entity
+  parent: IDCardStandard
+  id: MedicDCard
+  name: Medic D card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineMedicD
+
+#Engineer
+- type: entity
+  parent: IDCardStandard
+  id: EngineerACard
+  name: Engineer A card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineEngA
+
+- type: entity
+  parent: IDCardStandard
+  id: EngineerBCard
+  name: Engineer B card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineEngB
+
+- type: entity
+  parent: IDCardStandard
+  id: EngineerCCard
+  name: Engineer C card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineEngC
+
+- type: entity
+  parent: IDCardStandard
+  id: EngineerDCard
+  name: Engineer D card
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: Clothing
+      sprite: Imperial/TGMC/card/dogtag.rsi
+      layers:
+        - state: default
+    - type: PresetIdCard
+      job: MarineEngD
+

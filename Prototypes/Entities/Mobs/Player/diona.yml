@@ -1,0 +1,32 @@
+- type: entity
+  save: false
+  name: Urist McPlants
+  parent: BaseMobDiona
+  id: MobDiona
+  components:
+    - type: Respirator
+      damage:
+        types:
+          Asphyxiation: 0.5
+      damageRecovery:
+        types:
+          Asphyxiation: -1.0
+    #Imperial foot prints
+    - type: FootPrints
+      leftBarePrint: "footprint-left-bare-diona"
+      rightBarePrint: "footprint-right-bare-diona"
+    - type: ThrowSpamStop #imperial throw spam stop
+    - type: GrantPacified #imperial pacified new players
+    - type: AntispamProtectGhostVisibiity #imperial eye protect system
+
+# Reformed Diona
+- type: entity
+  parent: MobDiona
+  noSpawn: true
+  id: MobDionaReformed
+  name: Reformed Diona
+  components:
+    - type: IsDeadIC
+    - type: RandomHumanoidAppearance
+    - type: CrewSkills #imperial skills
+      skillPoints: 12

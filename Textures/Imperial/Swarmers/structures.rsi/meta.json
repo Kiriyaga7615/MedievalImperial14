@@ -1,0 +1,45 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "for imperial space",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "barrier"
+        },
+        {
+            "name": "tile"
+        },
+        {
+            "name": "wall_bad"
+        },
+        {
+            "name": "wall_good"
+        },
+        {
+            "name": "wall_mirror"
+        },
+        {
+          "name": "holo",
+          "delays": [
+            [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ]
+          ]
+        }
+    ]
+}

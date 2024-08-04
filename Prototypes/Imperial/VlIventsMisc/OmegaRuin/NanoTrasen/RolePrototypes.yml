@@ -1,0 +1,187 @@
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: ComERTOmegaPreset
+  name: ERT Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryLeader
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: Loadout
+      prototypes: [ ERTOmegaLeaderGearEVA ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MedERTOmegaPreset
+  name: ERT Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertmedicaleva
+    - type: Loadout
+      prototypes: [ ERTOmegaMedicalGearEVA ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: SecERTOmegaPreset
+  name: ERT Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertsecurityeva
+    - type: Loadout
+      prototypes: [ ERTOmegaSecurityGearEVA ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: EngERTOmegaPreset
+  name: ERT Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertengineereva
+    - type: Loadout
+      prototypes: [ ERTOmegaEngineerGearEVA ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery

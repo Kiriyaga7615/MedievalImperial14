@@ -1,0 +1,26 @@
+- type: reagentDispenserInventory
+  id: ChemDispenserStandardInventory
+  inventory:
+  - JugAluminiumImperial # Imperial Chemistry
+  - JugCarbonImperial # Imperial Chemistry
+  - JugChlorineImperial # Imperial Chemistry
+  - JugCopperImperial # Imperial Chemistry
+  - JugEthanolImperial # Imperial Chemistry
+  - JugFluorineImperial # Imperial Chemistry
+  - JugSugarImperial # Imperial Chemistry
+  - JugHydrogenImperial # Imperial Chemistry
+  - JugIodineImperial # Imperial Chemistry
+  - JugIronImperial # Imperial Chemistry
+  - JugLithiumImperial # Imperial Chemistry
+  - JugMercuryImperial # Imperial Chemistry
+  - JugNitrogenImperial # Imperial Chemistry
+  - JugOxygenImperial # Imperial Chemistry
+  - JugPhosphorusImperial # Imperial Chemistry
+  - JugPotassiumImperial # Imperial Chemistry
+  - JugRadiumImperial # Imperial Chemistry
+  - JugSiliconImperial # Imperial Chemistry
+  - JugSodiumImperial # Imperial Chemistry
+  - JugSulfurImperial # Imperial Chemistry
+
+- type: reagentDispenserInventory
+  id: EmptyInventory

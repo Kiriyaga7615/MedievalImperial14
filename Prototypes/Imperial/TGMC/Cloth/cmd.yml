@@ -1,0 +1,63 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitFieldCommander
+  name: field commander jumpsuit
+  description: It's a blue jumpsuit with some gold markings denoting the rank of "field commander".
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/Cloth/fieldcommander.rsi
+    - type: Clothing
+      sprite: Imperial/TGMC/Cloth/fieldcommander.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformCommanderOperation
+  name: Commander operation jumpsuit
+  description: It's a blue jumpsuit with some gold markings denoting the rank of "Commander".
+  components:
+    - type: Sprite
+      sprite: Imperial/TGMC/Cloth/commanderoperation.rsi
+    - type: Clothing
+      sprite: Imperial/TGMC/Cloth/commanderoperation.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCommanderOperation
+  name: Commander Operation beret
+  description: A black beret with a commander's rank emblem.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/beret_cmd.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/beret_cmd.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+
+- type: entity
+  parent: ClothingHeadBaseButcherable
+  id: ClothingHeadHatFieldCommander
+  name: field commander cap
+  description: A cap in corporation colors.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/capcmdf.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/capcmdf.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ClothingHeadHelmetPilot
+  name: Pilot helmet
+  description: Lol, its real
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/pilot.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/pilot.rsi
+
+- type: entity
+  parent: MedievalClothingNeckCloakShadowBlack
+  id: ClothingNeckCmdOper
+  name: Neck cmd oper
+  description: cool

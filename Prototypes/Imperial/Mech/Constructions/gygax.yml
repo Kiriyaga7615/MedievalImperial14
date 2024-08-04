@@ -1,0 +1,282 @@
+- type: entity
+  id: BaseGygaxPart
+  parent: BaseMechPart
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Imperial/Mech/mech_construct.rsi
+
+- type: entity
+  id: BaseGygaxPartItem
+  parent: BaseGygaxPart
+  abstract: true
+  components:
+  - type: Item
+    size: 50
+
+- type: entity
+  parent: BaseGygaxPart
+  id: GygaxHarness
+  name: gygax harness
+  description: The core of the Gygax APLU.
+  components:
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      gygax_l_arm+o:
+        whitelist:
+          tags:
+          - GygaxLArm
+      gygax_r_arm+o:
+        whitelist:
+          tags:
+          - GygaxRArm
+      gygax_l_leg+o:
+        whitelist:
+          tags:
+          - GygaxRLeg
+      gygax_r_leg+o:
+        whitelist:
+          tags:
+          - GygaxLLeg
+    sprite: Imperial/Mech/mech_construct.rsi
+  - type: ContainerContainer
+    containers:
+      mech-assembly-container: !type:Container
+  - type: MechAssembly
+    finishedPrototype: GygaxChassis
+    requiredParts:
+      GygaxLArm: false
+      GygaxRArm: false
+      GygaxRLeg: false
+      GygaxLLeg: false
+  - type: Sprite
+    state: gygax_harness+o
+    noRot: true
+
+- type: entity
+  parent: BaseGygaxPartItem
+  id: GygaxLArm
+  name: gygax left arm
+  description: The left arm of the Gygax APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: gygax_l_arm
+  - type: Tag
+    tags:
+    - GygaxLArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseGygaxPartItem
+  id: GygaxRLeg
+  name: gygax right leg
+  description: The left leg of the Gygax APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: gygax_r_leg
+  - type: Tag
+    tags:
+    - GygaxRLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseGygaxPartItem
+  id: GygaxLLeg
+  name: gygax left leg
+  description: The left leg of the Gygax APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: gygax_l_leg
+  - type: Tag
+    tags:
+    - GygaxLLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseGygaxPartItem
+  id: GygaxArmor
+  name: gygax armor
+  description: The left leg of the Gygax APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: gygax_armor
+  - type: Tag
+    tags:
+    - GygaxArmor
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseGygaxPartItem
+  id: GygaxRArm
+  name: gygax right arm
+  description: The right arm of the Gygax APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: gygax_r_arm
+  - type: Tag
+    tags:
+    - GygaxRArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  id: GygaxChassis
+  parent: BaseGygaxPart
+  name: gygax chassis
+  description: An in-progress construction of the Gygax APLU mech.
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: gygax
+  - type: Sprite
+    noRot: true
+    state: gygax_chassis
+  - type: Construction
+    graph: Gygax
+    node: start
+    defaultTarget: gygax
+
+- type: constructionGraph
+  id: Gygax
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: gygax
+      steps:
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Cable
+        doAfter: 1
+
+      - tool: Cutting
+        doAfter: 1
+
+      - tag: GygaxCentralControlModule
+        name: gygax central control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - tag: GygaxPeripheralsControlModule
+        name: gygax peripherals control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: id_mod
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - component: PowerCell
+        name: power cell
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Steel
+        amount: 5
+        doAfter: 1
+
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - material: MetalRod
+        amount: 10
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - tag: GygaxArmor
+        name: gygax armor
+        doAfter: 2
+
+  - node: gygax
+    actions:
+    - !type:BuildMech
+      mechPrototype: MechGygaxDantanat
+
+- type: Tag
+  id: GygaxCentralControlModule
+
+- type: Tag
+  id: GygaxPeripheralsControlModule
+
+- type: Tag
+  id: GygaxLArm
+
+- type: Tag
+  id: GygaxRLeg
+
+- type: Tag
+  id: GygaxLLeg
+
+- type: Tag
+  id: GygaxRArm
+
+- type: Tag
+  id: GygaxArmor
+
+- type: entity
+  id: GygaxCentralElectronics
+  parent: BaseElectronics
+  name: gygax central control module
+  description: The electrical control center for the gygax mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - GygaxCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: GygaxPeripheralsElectronics
+  parent: BaseElectronics
+  name: gygax peripherals control module
+  description: The electrical peripherals control for the gygax mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - GygaxPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics

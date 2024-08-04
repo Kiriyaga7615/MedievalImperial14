@@ -1,0 +1,8 @@
+- type: soundCollection
+  id: LobbyMusicImperialNewYear
+  files:
+  - /Audio/Imperial/LobbyMusic/George_Street_Shuffle.ogg
+  - /Audio/Imperial/LobbyMusic/Just_Nasty.ogg
+  - /Audio/Imperial/LobbyMusic/Lobby_Time.ogg
+  - /Audio/Imperial/LobbyMusic/Nouvelle_Noel.ogg
+  - /Audio/Imperial/LobbyMusic/Shades_of_Spring.ogg

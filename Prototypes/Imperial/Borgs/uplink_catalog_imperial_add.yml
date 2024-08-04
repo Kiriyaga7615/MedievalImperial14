@@ -1,0 +1,58 @@
+- type: listing
+  id: UplinkMedicalBorg
+  name: uplink-medical-borg-name
+  description: uplink-medical-borg-desc
+  icon: { sprite: /Textures/Mobs/Silicon/medicalborgsyndie.rsi, state: idle }
+  productEntity: medborgsyndi
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkAllies
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+
+- type: listing
+  id: UplinkAssaultBorg
+  name: uplink-assault-borg-name
+  description: uplink-assault-borg-desc
+  icon: { sprite: /Textures/Mobs/Silicon/assaultborg.rsi, state: icon }
+  productEntity: assaultborg
+  cost:
+    Telecrystal: 80
+  categories:
+  - UplinkAllies
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+
+- type: listing
+  id: UplinkSabotageBorg
+  name: uplink-sabotage-borg-name
+  description: uplink-sabotage-borg-desc
+  icon: { sprite: /Textures/Mobs/Silicon/sabotageborg.rsi, state: icon }
+  productEntity: sabotageborg
+  cost:
+    Telecrystal: 25
+  categories:
+  - UplinkAllies
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+
+- type: listing
+  id: UplinkFakeLaws
+  name: uplink-fake-laws-name
+  description: uplink-fake-laws-desc
+  icon: { sprite: Objects/Misc/module.rsi, state: mainboard }
+  productEntity: BorgFakeLawsUpgrader
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkUtility

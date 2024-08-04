@@ -1,0 +1,14 @@
+- type: Tag
+  id: MechBaseEqipment
+
+- type: Tag
+  id: MechMedEqipment
+
+- type: Tag
+  id: MechBattleEqipment
+
+- type: Tag
+  id: MechIndustrialEqipment
+
+- type: Tag
+  id: MechHonkEqipment

@@ -1,0 +1,21 @@
+- type: vendingMachineInventory
+  id: LeaderGunStore
+  startingInventory:
+   WeaponPulseTalos: 1
+   WeaponPulseVenator: 1
+   WeaponRifleR79TGMC: 1
+   WeaponShotgunStormTrooperTGMC: 1
+   WeaponRifleHaarabadTGMC: 1
+   WeaponSubMachinegunSureaTGMC: 1
+   WeaponRifleYaqutTGMC: 1
+   WeaponPistolMiltonTGMC: 1
+   WeaponPulseDruzhba: 1
+   BaseMagazineRifleR79TGMC: 8
+   BaseMagazineShotgunStormTrooperTGMC: 8
+   BaseMagazineRifleHaarabadTGMC: 8
+   BaseMagazineSubMachinegunSureaTGMC: 8
+   BaseMagazineRifleYaqutTGMC: 8
+   BaseMagazinePistolMiltonTGMC: 8
+   ShieldSLTGMC: 2
+   Flare: 24
+   PinpointerUniversal: 4

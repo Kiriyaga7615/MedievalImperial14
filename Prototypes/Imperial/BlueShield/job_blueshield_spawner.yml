@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnBlueshield
+  parent: SpawnPointJobBase
+  name: BlueshieldSpawn
+  components:
+  - type: SpawnPoint
+    job_id: BlueShieldOfficer
+  - type: Sprite
+    layers:
+      - state: green
+      - state: blueshield

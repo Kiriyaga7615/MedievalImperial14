@@ -1,0 +1,40 @@
+- type: entity
+  name: borg grappling gun
+  parent: WeaponGrapplingGun
+  id: WeaponGrapplingGunBorg
+  components:
+  - type: Sprite
+    sprite: Imperial/Borgs/grappling_gun.rsi
+    layers:
+      - state: base
+
+- type: entity
+  name: borg mining drill
+  parent: MiningDrill
+  id: MiningDrillBorg
+  description: Powerful tool used to quickly drill through rocks
+  components:
+  - type: Sprite
+    sprite: Imperial/Borgs/drill.rsi
+    state: base
+# imperial quality fix start
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+# imperial quality fix end
+
+- type: entity
+  parent: AppraisalTool
+  id: AppraisalToolBorg
+  name: borg appraisal tool
+  description: A beancounter's best friend, with a quantum connection to the galactic market and the ability to appraise even the toughest items.
+  components:
+  - type: Sprite
+    sprite: Imperial/Borgs/AppraisalTool.rsi
+    state: base

@@ -1,0 +1,93 @@
+- type: entity
+  parent: BasePDA
+  id: RobotechPDA
+  name: robotech PDA
+  description: Beaten, battered and broken, but just barely useable.
+  components:
+  - type: Pda
+    id: RobotechIDCard
+    state: pda-seniorofficer
+  - type: PdaBorderColor
+    borderColor: "#A32D26"
+    accentVColor: "#DFDFDF"
+  - type: Icon
+    state: pda-seniorofficer
+
+- type: entity
+  parent: IDCardStandard
+  id: RobotechIDCard
+  name: research ID card
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: idroboticist
+    - type: PresetIdCard
+      job: Scientist
+
+- type: job
+  id: Robotech
+  name: job-name-robotech
+  description: job-description-robotech
+  playTimeTracker: JobRobotech
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 21600 #Imperial role timers
+  sponsorsOnly: true
+  startingGear: RobotechGear
+  icon: "JobIconRobotech"
+  supervisors: job-supervisors-rd
+  access:
+  - Research
+  - Maintenance
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillHardInstrumentation
+  - skillInstrumentation
+  - skillRobotics
+  - skillResearch
+  - skillPharmaceuticals
+  - skillPharmacology
+  - skillMediumConstruction
+  - skillMedicalEquipment
+  - skillHacking
+  - skillBasicAtmos
+  - skillNeuroSurgery
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconRobotech
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: Roboticist
+
+- type: playTimeTracker
+  id: JobRobotech
+
+- type: startingGear
+  id: RobotechGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRoboticist
+    back: ClothingBackpackScienceFilled
+    shoes: ClothingShoesColorWhite
+    outerClothing: ClothingOuterCoatRobo
+    id: RobotechPDA
+    ears: ClothingHeadsetRobotics
+  innerClothingSkirt: ClothingUniformJumpskirtRoboticist
+  satchel: ClothingBackpackSatchelScienceFilled
+  duffelbag: ClothingBackpackDuffelScienceFilled
+
+- type: entity
+  id: SpawnPointRobotech
+  parent: SpawnPointJobBase
+  name: robotech
+  components:
+    - type: SpawnPoint
+      job_id: Robotech
+    - type: Sprite
+      layers:
+        - state: green
+        - state: scientist

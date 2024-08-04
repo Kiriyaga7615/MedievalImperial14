@@ -1,0 +1,79 @@
+- type: entity
+  id: ActionCultTwistedConstruction
+  name: Осквернение конструкции
+  description: Зловещее заклинание, используемое для превращения металла в рунический металл.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 50
+      canTargetSelf: false
+      icon:
+        sprite: /Textures/Objects/Materials/Sheets/metal.rsi
+        state: steel
+      event: !type:CultTwistedConstructionActionEvent
+
+- type: entity
+  id: ActionCultTeleport
+  name: Телепорт
+  description: Полезное заклинание, телепортирующее культистов в выбранное место.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 30
+      whitelist:
+        components:
+          - HumanoidAppearance
+          - Cultist
+      canTargetSelf: true
+      deselectOnMiss: true
+      repeat: false
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: teleport
+      event: !type:CultTeleportTargetActionEvent
+
+- type: entity
+  id: ActionCultSummonCombatEquipment
+  name: Вызов боевого снаряжения
+  description: Важнейшее заклинание, позволяющее призвать полный комплект боевого снаряжения.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 300
+      whitelist:
+        components:
+          - HumanoidAppearance
+          - Cultist
+      canTargetSelf: true
+      deselectOnMiss: true
+      repeat: false
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: armor
+      event: !type:CultSummonCombatEquipmentTargetActionEvent
+
+- type: entity
+  id: InstantActionSummonCultDagger
+  name: Призвать ритуальный кинжал
+  description: Призывает ритуальный кинжал.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon:
+        sprite: /Textures/White/Cult/interface.rsi
+        state: icon
+      event: !type:CultSummonDaggerActionEvent
+      useDelay: 200
+
+- type: entity
+  id: InstantActionBloodRites
+  name: Кровавый обряд
+  description: Всасывает кровь вокруг и лечит вас.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: blood_rites
+      event: !type:CultBloodRitesInstantActionEvent
+      useDelay: 35

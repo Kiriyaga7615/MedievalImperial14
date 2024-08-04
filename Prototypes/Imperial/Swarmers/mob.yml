@@ -1,0 +1,568 @@
+- type: entity
+  save: false
+  abstract: true
+  id: PlayerSiliconBase #for player controlled silicons
+  components:
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: Input
+    context: "human"
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+  - type: Clickable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Bloodstream
+    bloodReagent: Oil
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          1
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -1
+  - type: InteractionOutline
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          # Circles, cuz rotation of rectangles looks very bad
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 3
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+  - type: Physics
+    bodyType: KinematicController
+  - type: Hands
+    showInHands: false
+  - type: Body
+    prototype: Drone
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+  - type: DoAfter
+  - type: Pullable
+  - type: Examiner
+  - type: Puller
+  - type: StandingState
+  - type: Alerts
+  - type: Tag
+    tags:
+      - ShoesRequiredStepTriggerImmune
+
+- type: entity
+  #noSpawn: true
+  id: SwarmerGhostRole
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    allowMovement: true
+    makeSentient: true
+    raffle:
+      settings: short
+    name: Свармер
+    description: TYPE-INIT
+    rules: |
+      1. Потребляйте ресурсы и самовоспроизводитесь, пока ресурсы не закончатся совсем.
+      2. Убедитесь что станция будет пригодна для будущего вторжения, [color=red]не делайте того что сделает станцию непригодной для жизни[/color].
+      3. Биологические ресурсы будут добываться позднее,[color=red] не причиняйте им вреда [/color] без весомой причины.
+      Маленькие роботы, которые самовоспроизводятся при помощи ближайших доступных материалов и строят сооружения, необходимые им для дальнейшего вторжения.
+      Из-за отсутствия новых приказов за последние [ОШИБКА] года, Рой продолжает безостановочно выполнять свои задачи.
+      Разбирайте структуры на ресурсы, стройте укрепления и фабрики по производству своих собратьев.
+      Вы получаете [color=red]урон от разгерметизации[/color], поэтому не стоит трогать внешнюю обшивку станции.
+      Нажмите на [color=red]Z[/color] удерживая материал, чтобы выбрать постройку.
+      Говорить в рацию роя [color=red]:р[/color]
+  - type: GhostRoleMobSpawner
+    prototype: Swarmer
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: Imperial/Swarmers/mob_base.rsi
+        state: start
+
+- type: entity
+  name: swarmer TYPE-initiator
+  id: Swarmer
+  parent: PlayerSiliconBase
+  components:
+  - type: SwarmerTool
+    tools:
+      - id: WeaponSwarmerUniversal
+      - id: SwarmerOmnitool
+      - id: WelderSwarmer
+  - type: InventorySlots
+  - type: Strippable
+  - type: GhostRole
+    allowMovement: true
+    makeSentient: true
+    name: Свармер
+    description: TYPE-INIT
+    rules: |
+      1. Потребляйте ресурсы и самовоспроизводитесь, пока ресурсы не закончатся совсем.
+      2. Убедитесь что станция будет пригодна для будущего вторжения, [color=red]не делайте того что сделает станцию непригодной для жизни[/color].
+      3. Биологические ресурсы будут добываться позднее,[color=red] не причиняйте им вреда [/color] без весомой причины.
+      Маленькие роботы, которые самовоспроизводятся при помощи ближайших доступных материалов и строят сооружения, необходимые им для дальнейшего вторжения.
+      Из-за отсутствия новых приказов за последние [ОШИБКА] года, Рой продолжает безостановочно выполнять свои задачи.
+      Разбирайте структуры на ресурсы, стройте укрепления и фабрики по производству своих собратьев.
+      Вы получаете [color=red]урон от разгерметизации[/color], поэтому не стоит трогать внешнюю обшивку станции.
+      Нажмите на [color=red]Z[/color] удерживая материал, чтобы выбрать постройку.
+      Говорить в рацию роя [color=red]:р[/color]
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 5
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: NoSlip
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      110: 0.7
+      165: 0.5
+  - type: Temperature
+    heatDamageThreshold: 5000
+    currentTemperature: 310.15
+    specificHeat: 42
+    heatDamage:
+      types:
+        Heat : 0.1 #per second, scales with temperature & other constants
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: start
+      sprite: Imperial/Swarmers/mob_base.rsi
+      map: ["base"]
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: Appearance
+  - type: Repairable
+    fuelcost: 15
+    doAfterDelay: 3
+  - type: Actions
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 3.5
+    softness: 1
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: Tag
+    tags:
+      - ShoesRequiredStepTriggerImmune
+      - CannotSuicide
+      - SwarmerMob
+  - type: Hands
+    showInHands: false
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Swarmer
+  - type: ActiveRadio
+    channels:
+      - Swarmer
+  - type: IntrinsicRadioReceiver
+  - type: CombatMode
+  - type: Swarmer
+    deconstructionTime: 10
+    teleportTime: 1
+    hasDeconstruction: true
+    hasTeleport: true
+    hasTile: true
+    wallTime: 1
+    tileTime: 0.7
+    stunTime: 25
+  - type: Body
+    prototype: Swarmer
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 1
+                max: 1
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.2
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Imperial/Swarmers/Init.ogg
+  - type: Speech
+    speechSounds: Swarmer
+    speechVerb: Swarmer
+  - type: ZombieImmune
+
+- type: speechSounds
+  id: Swarmer
+  saySound:
+    path: /Audio/Imperial/Swarmers/SpeechSay.ogg
+  askSound:
+    path: /Audio/Imperial/Swarmers/SpeechAsk.ogg
+  exclaimSound:
+    path: /Audio/Imperial/Swarmers/SpeechExclaim.ogg
+
+- type: speechVerb
+  id: Swarmer
+  name: chat-speech-verb-name-swarmer
+  speechVerbStrings:
+  - chat-speech-verb-swarmer-1
+  - chat-speech-verb-swarmer-2
+  - chat-speech-verb-swarmer-3
+  - chat-speech-verb-swarmer-4
+
+- type: radioChannel
+  id: Swarmer
+  name: chat-radio-swarmer
+  keycode: 'р'
+  frequency: 2028
+  color: "#ff1800"
+  # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
+  longRange: true
+
+- type: entity
+  name: swarmer TYPE-builder
+  id: SwarmerBuilder
+  parent: Swarmer
+  components:
+  - type: SwarmerTool
+    tools:
+      - id: SwarmerOmnitool
+      - id: WelderSwarmer
+  - type: CombatMode
+    combatToggleAction: ActionCombatModeToggleOff
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      85: Dead
+  - type: NoSlip
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      42: 0.7
+      64: 0.5
+  - type: Swarmer
+    deconstructionTime: 6
+    teleportTime: 1
+    hasDeconstruction: true
+    hasTeleport: false
+    hasTile: true
+    wallTime: 0.5
+    tileTime: 0.15
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 85
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 1
+                max: 1
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: builder
+      sprite: Imperial/Swarmers/mob_base.rsi
+      map: ["base"]
+  - type: GhostRole
+    description: TYPE-BUILDER
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 3
+
+- type: entity
+  name: swarmer TYPE-universal
+  id: SwarmerUniversal
+  parent: Swarmer
+  components:
+  - type: GhostRole
+    description: TYPE-UNIVERSAL
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      55: Dead
+  - type: NoSlip
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 0.7
+      40: 0.5
+  - type: Swarmer
+    deconstructionTime: 15
+    teleportTime: 2.8
+    hasDeconstruction: true
+    hasTeleport: true
+    hasTile: true
+    wallTime: 2
+    tileTime: 1.6
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 55
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 1
+                max: 1
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: base
+      sprite: Imperial/Swarmers/mob_base.rsi
+      map: ["base"]
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 4
+  - type: SwarmerTool
+    tools:
+      - id: WeaponSwarmerUniversalBad
+      - id: SwarmerOmnitool
+      - id: WelderSwarmer
+
+- type: entity
+  name: swarmer TYPE-fighter
+  id: SwarmerFighter
+  parent: Swarmer
+  components:
+  - type: GhostRole
+    description: TYPE-FIGHTER
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      215: Dead
+  - type: NoSlip
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      120: 0.7
+      185: 0.5
+  - type: Swarmer
+    deconstructionTime: 30
+    teleportTime: 1.4
+    hasDeconstruction: true
+    hasTeleport: true
+    hasTile: false
+    wallTime: 3
+    stunTime: 24
+  - type: SwarmerTool
+    tools:
+      - id: WeaponSwarmer
+      - id: WelderSwarmer
+      - id: SwarmerStunbaton
+  - type: Body
+    prototype: Swarmer
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 215
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 1
+                max: 1
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: fighter
+      sprite: Imperial/Swarmers/mob_base.rsi
+      map: ["base"]
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.2
+    baseSprintSpeed : 4.5
+
+- type: entity
+  name: swarmer TYPE-ghost
+  id: SwarmerSniper
+  parent: Swarmer
+  components:
+  - type: GhostRole
+    description: TYPE-GHOST
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      140: Dead
+  - type: NoSlip
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      70: 0.7
+      115: 0.5
+  - type: Swarmer
+    deconstructionTime: 30
+    teleportTime: 0.5
+    hasDeconstruction: true
+    hasTeleport: true
+    hasTile: false
+    wallTime: 3
+    stunTime: 25
+  - type: SwarmerTool
+    tools:
+      - id: WeaponSwarmerSniper
+      - id: WelderSwarmer
+  - type: Stealth
+    minVisibility: 0.04
+  - type: StealthOnMove
+    passiveVisibilityRate: -0.5
+    movementVisibilityRate: 0.15
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 140
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 1
+                max: 1
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: sniper
+      sprite: Imperial/Swarmers/mob_base.rsi
+      map: ["base"]
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 1.5
+    baseSprintSpeed : 5
+
+- type: entity
+  name: swarmer TYPE-shield
+  id: SwarmerShield
+  parent: Swarmer
+  components:
+  - type: GhostRole
+    description: TYPE-DEFENDER
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      650: Dead
+  - type: NoSlip
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      270: 0.7
+      380: 0.5
+  - type: Swarmer
+    deconstructionTime: 30
+    teleportTime: 2
+    hasDeconstruction: true
+    hasTeleport: false
+    hasTile: true
+    wallTime: 1.5
+    tileTime: 0.4
+  - type: SwarmerTool
+    tools:
+      - id: SwarmerStunbaton
+      - id: WelderSwarmer
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 550
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 1
+                max: 1
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: shield
+      sprite: Imperial/Swarmers/mob_base.rsi
+      map: ["base"]
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.3
+    baseSprintSpeed : 3.5
+
+- type: Tag
+  id: SwarmerDeconstructionWhitelist
+
+- type: Tag
+  id: SwarmerDeconstructionBlacklist
+
+- type: Tag
+  id: SwarmerStructure
+
+- type: Tag
+  id: SwarmerCount
+
+- type: Tag
+  id: SwarmerMob

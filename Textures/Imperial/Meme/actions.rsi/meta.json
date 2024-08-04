@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by .kreks.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "mute"
+    },
+    {
+      "name": "infect"
+    },
+    {
+      "name": "transfer"
+    },
+    {
+      "name": "punish"
+    },
+    {
+      "name": "praise"
+    },
+    {
+      "name": "paralise"
+    },
+    {
+      "name": "control"
+    },
+    {
+      "name": "infectedtransfer"
+    },
+    {
+      "name": "infectedmessage"
+    }
+  ]
+}

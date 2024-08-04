@@ -1,0 +1,74 @@
+- type: entity
+  name: bodycamera
+  parent: BaseItem
+  id: BodyCamera
+  description: MedievalVendigoFur
+  components:
+  - type: Sprite
+    sprite: Imperial/BodyCamera/bodycamera.rsi
+    state: camera
+  - type: SurveillanceCamera
+    networkSet: true
+    id: Bodycamera
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCameraSecurity
+    transmitFrequencyId: SurveillanceCamera
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 4
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Appearance
+  - type: ExtensionCableReceiver
+  - type: Eye
+  - type: WiredNetworkConnection
+  - type: DeviceNetworkRequiresPower
+  - type: Clickable
+  - type: InteractionOutline
+  - type: ApcPowerReceiver
+    needsPower: false
+  - type: Item
+    size: Small
+  - type: SurveillanceCameraVisuals
+    sprites:
+      Active: camera
+      Disabled: camera_off
+      InUse: camera_in_use
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - neck
+  - type: SurveillanceCameraMicrophone
+    blacklist:
+      components:
+        - SurveillanceCamera
+        - SurveillanceCameraMonitor
+        - RadioSpeaker
+  - type: ActiveListener
+    range: 7
+  - type: Damageable
+
+- type: technology
+  id: BodycameraSecurity
+  name: research-technology-bodycamera
+  icon:
+    sprite: Imperial/BodyCamera/bodycamera.rsi
+    state: camera
+  discipline: Arsenal
+  tier: 1
+  cost: 2000
+  recipeUnlocks:
+  - BodyCamera
+
+- type: latheRecipe
+  id: BodyCamera
+  result: BodyCamera
+  completetime: 2
+  materials:
+    Glass: 100
+    Plastic: 250
+    Steel: 150

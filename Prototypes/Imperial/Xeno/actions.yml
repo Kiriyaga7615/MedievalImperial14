@@ -1,0 +1,283 @@
+- type: entity
+  id: XenoEvolveShop
+  name: Shop
+  description: Opens evolve shop.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: evolution
+    event: !type:XenoEvolveShopAction
+
+- type: entity
+  id: Pounce
+  name: action-name-pounce
+  description: action-description-pounce
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: pounce
+    event: !type:PounceModeChangeEvent
+
+- type: entity
+  id: Savage
+  name: action-name-savage
+  description: action-description-savage
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: savage
+    event: !type:SavageEvent
+    useDelay: 10
+
+- type: entity
+  id: Chill
+  name: action-name-chill
+  description: action-description-chill
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: sleep
+    event: !type:ChillActionEvent
+    useDelay: 10
+
+- type: entity
+  id: CheckPlasmaCount
+  name: action-name-plasma-count
+  description: action-description-plasma-count
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: plasma
+    event: !type:CheckPlasmaActionEvent
+    useDelay: 1
+
+- type: entity
+  id: Evasion
+  name: action-name-evasion
+  description: action-description-evasion
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: evasion
+    event: !type:EvasionActivationEvent
+    useDelay: 30
+
+- type: entity
+  id: HealAura
+  name: action-name-healaura
+  description: action-description-healaura
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: heal_aura
+    event: !type:HealAuraMode
+    useDelay: 1
+
+- type: entity
+  id: PlasmaAura
+  name: action-name-plasmaaura
+  description: action-description-plasmaaura
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: plasma_aura
+    event: !type:PlasmaAuraMode
+    useDelay: 1
+
+- type: entity
+  id: TransferPlasma
+  name: action-name-transfer-plasma
+  description: action-description-transfer-plasma
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: plasma_transfer
+    event: !type:TransferPlasmaMode
+    useDelay: 1
+
+- type: entity
+  id: PlantHealWeeds
+  name: action-name-heal-weed
+  description: action-description-heal-weed
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: plant_heal_weeds
+    event: !type:SummonHealWeedEvent
+    useDelay: 10
+
+- type: entity
+  id: PlantPlasmaWeeds
+  name: action-name-plasma-weed
+  description: action-description-plasma-weed
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: plant_plasma_weeds
+    event: !type:SummonPlasmaWeedEvent
+    useDelay: 10
+
+- type: entity
+  id: XenoBuildWall
+  name: action-name-build-wall
+  description: action-description-build-wall
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: build_wall
+    event: !type:BuildWallActionEvent
+    useDelay: 5
+
+- type: entity
+  id: XenoBuildTurret
+  name: action-name-build-turret
+  description: action-description-build-turret
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: build_turret
+    event: !type:BuildTurretActionEvent
+    useDelay: 20
+
+- type: entity
+  id: RavagerCharge
+  name: action-name-ravager-charge
+  description: action-description-ravager-charge
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: charge
+    event: !type:RavagerChargeActionEvent
+    useDelay: 20
+
+- type: entity
+  id: Ravage
+  name: action-name-ravager-ravage
+  description: action-description-ravager-ravage
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: ravage
+    event: !type:RavageActionEvent
+    useDelay: 5
+
+- type: entity
+  id: Rage
+  name: action-name-ravager-rage
+  description: action-description-ravager-rage
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: rage
+    event: !type:RageActionEvent
+    useDelay: 60
+
+- type: entity
+  id: CorrosiveAcidMode
+  name: action-name-corrosive-acid-mode
+  description: action-description-corrosive-acid-mode
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: corrosive_acid
+    event: !type:ChangeCorrosiveAcidMode
+    useDelay: 1
+
+- type: entity
+  id: NeurotoxinMode
+  name: action-name-neurotoxin-mode
+  description: action-description-neurotoxin-mode
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: neurotoxin
+    event: !type:ChangeNeurotoxinMode
+    useDelay: 1
+
+- type: entity
+  id: HarmAcidMode
+  name: action-name-harm-acid
+  description: action-description-harm-acid
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: acid
+    event: !type:ChangeHarmAcidMode
+    useDelay: 1
+
+- type: entity
+  id: HealPheromones
+  name: action-name-heal-pheromones
+  description: action-description-heal-pheromones
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: emit_heal_pheromones
+    event: !type:HealPheromonesEmit
+    useDelay: 30
+
+- type: entity
+  id: ChangeLeaderOnTouchMode
+  name: action-name-change-leader
+  description: action-description-change-leader
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: leader
+    event: !type:ChangeLeaderModeEvent
+    useDelay: 1
+
+- type: entity
+  id: SpawnLawra
+  name: action-name-spawn-lawra
+  description: action-description-spawn-lawra
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Interface/Actions/xeno_imperial.rsi
+      state: spawn_lawra
+    event: !type:SpawnLawraEvent
+    useDelay: 120

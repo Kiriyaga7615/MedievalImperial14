@@ -1,0 +1,32 @@
+- type: job
+  id: Lawyer
+  name: job-name-lawyer
+  description: job-description-lawyer
+  playTimeTracker: JobLawyer
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Security
+  #    time: 7200 #Imperial role timers
+  startingGear: LawyerGear
+  icon: "JobIconLawyer"
+  supervisors: никто
+  #access:
+  #- Service
+  #- Lawyer
+  #- Brig
+  #- Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: CustomDesription
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+
+
+- type: startingGear
+  id: LawyerGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth9  # TODO change jumpsuit to randomiser of the 4 variants # ignoring this since loadouts are gonna be out soon
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth9

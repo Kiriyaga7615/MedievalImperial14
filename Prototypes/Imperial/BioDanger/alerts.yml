@@ -1,0 +1,125 @@
+- type: alert
+  id: Mutagen
+  #category: Health #it's like ghostie health
+  icons:
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence0
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence1
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence2
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence3
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence4
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence5
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence6
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence7
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence8
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence9
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence10
+  - sprite: /Textures/Imperial/BioDanger/mutagen_counter.rsi
+    state: essence11
+  name: Мутаген
+  description: Текущее количество мутагена. На каждое улучшение необходимо 15 мутагена, на каждую попытку заражения вручную 10 мутагена. При каждом новом заболевшем +8 мутагена.
+  minSeverity: 0
+  maxSeverity: 11
+
+- type: alert
+  id: LethalAlert
+  #category: Health #it's like ghostie health
+  icons:
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence0
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence1
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence2
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence3
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence4
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence5
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence6
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence7
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence8
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence9
+  - sprite: /Textures/Imperial/BioDanger/lethal_counter.rsi
+    state: essence10
+  name: Летальность
+  description: Текущий уровень летальности болезни. Влияет на получаемый при кашле урон.
+  minSeverity: 0
+  maxSeverity: 10
+
+- type: alert
+  id: InfectionAlert
+  #category: Health #it's like ghostie health
+  icons:
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence0
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence1
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence2
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence3
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence4
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence5
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence6
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence7
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence8
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence9
+  - sprite: /Textures/Imperial/BioDanger/infection_counter.rsi
+    state: essence10
+  name: Заразность
+  description: Текущий уровень заразности болезни. Влияет на шанс заражения, в том числе и в инкубационном периоде болезни.
+  minSeverity: 0
+  maxSeverity: 10
+
+- type: alert
+  id: DefendAlert
+  #category: Health #it's like ghostie health
+  icons:
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence0
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence1
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence2
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence3
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence4
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence5
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence6
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence7
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence8
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence9
+  - sprite: /Textures/Imperial/BioDanger/defend_counter.rsi
+    state: essence10
+  name: Устойчивость к лекарству
+  description: Текущий уровень устойчивости болезни. Влияет на то, как быстро будет лечится человек при принятии лекарства.
+  minSeverity: 0
+  maxSeverity: 10

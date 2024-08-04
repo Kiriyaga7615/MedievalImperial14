@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseStructureBroken
+  id: StructureBrokenThrusterNormal
+  name: broken normal thruster
+  description: broken thruster
+  components:
+  - type: Sprite
+    sprite: Imperial/broken/thrusterNormal.rsi
+    state: base
+  - type: RadiationSource
+    intensity: 1
+    slope: 0.85

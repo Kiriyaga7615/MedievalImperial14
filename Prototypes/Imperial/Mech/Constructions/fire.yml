@@ -1,0 +1,260 @@
+- type: entity
+  id: BaseFirePart
+  parent: BaseMechPart
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Imperial/Mech/mech_construct.rsi
+
+- type: entity
+  id: BaseFirePartItem
+  parent: BaseFirePart
+  abstract: true
+  components:
+  - type: Item
+    size: 50
+
+- type: entity
+  parent: BaseFirePart
+  id: FireHarness
+  name: fireripley harness
+  description: The core of the Fire APLU.
+  components:
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      ripley_l_arm+o:
+        whitelist:
+          tags:
+          - FireLArm
+      ripley_r_arm+o:
+        whitelist:
+          tags:
+          - FireRArm
+      ripley_l_leg+o:
+        whitelist:
+          tags:
+          - FireRLeg
+      ripley_r_leg+o:
+        whitelist:
+          tags:
+          - FireLLeg
+    sprite: Imperial/Mech/mech_construct.rsi
+  - type: ContainerContainer
+    containers:
+      mech-assembly-container: !type:Container
+  - type: MechAssembly
+    finishedPrototype: FireChassis
+    requiredParts:
+      FireLArm: false
+      FireRArm: false
+      FireRLeg: false
+      FireLLeg: false
+  - type: Sprite
+    state: ripley_harness+o
+    noRot: true
+
+- type: entity
+  parent: BaseFirePartItem
+  id: FireLArm
+  name: fireripley left arm
+  description: The left arm of the Fire APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: ripley_l_arm
+  - type: Tag
+    tags:
+    - FireLArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseFirePartItem
+  id: FireRLeg
+  name: fireripley right leg
+  description: The left leg of the Fire APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: ripley_r_leg
+  - type: Tag
+    tags:
+    - FireRLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseFirePartItem
+  id: FireLLeg
+  name: fireripley left leg
+  description: The left leg of the Fire APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: ripley_l_leg
+  - type: Tag
+    tags:
+    - FireLLeg
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  parent: BaseFirePartItem
+  id: FireRArm
+  name: fireripley right arm
+  description: The right arm of the Fire APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: ripley_r_arm
+  - type: Tag
+    tags:
+    - FireRArm
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics
+
+- type: entity
+  id: FireChassis
+  parent: BaseFirePart
+  name: fireripley chassis
+  description: An in-progress construction of the Fire APLU mech.
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: ripley
+  - type: Sprite
+    noRot: true
+    state: ripley_chassis
+  - type: Construction
+    graph: Fire
+    node: start
+    defaultTarget: ripley
+
+- type: constructionGraph
+  id: Fire
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: ripley
+      steps:
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Cable
+        doAfter: 1
+
+      - tool: Cutting
+        doAfter: 1
+
+      - tag: FireCentralControlModule
+        name: fireripley central control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - tag: FirePeripheralsControlModule
+        name: fireripley peripherals control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: id_mod
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - component: PowerCell
+        name: power cell
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Steel
+        amount: 5
+        doAfter: 1
+
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - material: MetalRod
+        amount: 10
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+  - node: ripley
+    actions:
+    - !type:BuildMech
+      mechPrototype: MechRipleyFire
+
+- type: Tag
+  id: FireCentralControlModule
+
+- type: Tag
+  id: FirePeripheralsControlModule
+
+- type: Tag
+  id: FireLArm
+
+- type: Tag
+  id: FireRLeg
+
+- type: Tag
+  id: FireLLeg
+
+- type: Tag
+  id: FireRArm
+
+- type: entity
+  id: FireCentralElectronics
+  parent: BaseElectronics
+  name: fireripley central control module
+  description: The electrical control center for the ripley mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - FireCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: FirePeripheralsElectronics
+  parent: BaseElectronics
+  name: fireripley peripherals control module
+  description: The electrical peripherals control for the ripley mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - FirePeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics

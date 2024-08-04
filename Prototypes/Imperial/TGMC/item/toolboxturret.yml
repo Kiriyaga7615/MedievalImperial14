@@ -1,0 +1,30 @@
+- type: entity
+  name: turret box
+  suffix: TGMC, Turret
+  parent: ToolboxElectrical
+  id: ToolboxElectricalTurretMarine
+  description: turret box
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: SpawnAfterInteract
+    prototype: WeaponTurretMarine
+    doAfter: 8
+    removeOnInteract: true
+
+- type: entity
+  parent: BaseWeaponTurret
+  id: WeaponTurretMarine
+  suffix: TGMC
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/turrets.rsi
+    drawdepth: Mobs
+    layers:
+      - state: turret-tgms
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+  - type: DisassembleOnAltVerb
+    prototype: ToolboxElectricalTurretMarine
+    doAfter: 12

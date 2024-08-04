@@ -1,0 +1,6079 @@
+- type: entity
+  id: CannonRocketAqueron
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/aqueron.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketAqueron
+    reloadTime: 44
+    fireBurstDelayMin: 44
+    baseFireBurstDelayMin: 44
+    fireBurstDelayMax: 44
+    baseFireBurstDelayMax: 44
+    baseFireInterval: 44
+    fireInterval: 44
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 65
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 750
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketPegas
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/pegas.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketPegas
+    fireBurstDelayMin: 38
+    baseFireBurstDelayMin: 38
+    fireBurstDelayMax: 38
+    baseFireBurstDelayMax: 38
+    baseFireInterval: 38
+    fireInterval: 38
+    reloadTime: 38
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 80
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 750
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketOrion
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/orion.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketOrion
+    fireBurstDelayMin: 56
+    baseFireBurstDelayMin: 56
+    fireBurstDelayMax: 56
+    baseFireBurstDelayMax: 56
+    baseFireInterval: 56
+    fireInterval: 56
+    reloadTime: 56
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 55
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 750
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketIkar
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/ikar.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketIkar
+    fireBurstDelayMin: 32
+    baseFireBurstDelayMin: 32
+    fireBurstDelayMax: 32
+    baseFireBurstDelayMax: 32
+    baseFireInterval: 32
+    fireInterval: 32
+    reloadTime: 32
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 70
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 750
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapChaos
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/chaos.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapChaos
+    fireBurstDelayMin: 18
+    baseFireBurstDelayMin: 18
+    fireBurstDelayMax: 18
+    baseFireBurstDelayMax: 18
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 9
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 35
+    maxAngle: 60
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 650
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapStorm
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/storm.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapStorm
+    fireBurstDelayMin: 27
+    baseFireBurstDelayMin: 27
+    fireBurstDelayMax: 27
+    baseFireBurstDelayMax: 27
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 16
+    maxAngle: 20
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 800
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonZeus
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/zeus.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonZeus
+    reloadTime: 34
+    fireBurstDelayMin: 34
+    baseFireBurstDelayMin: 34
+    fireBurstDelayMax: 34
+    baseFireBurstDelayMax: 34
+    baseFireInterval: 34
+    fireInterval: 34
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 90
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 800
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonElec
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/elec.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonElec
+    fireBurstDelayMin: 22
+    reloadTime: 22
+    baseFireBurstDelayMin: 22
+    fireBurstDelayMax: 22
+    baseFireBurstDelayMax: 22
+    baseFireInterval: 0.4
+    fireInterval: 0.4
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 650
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonLight
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/light.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonLight
+    reloadTime: 15
+    fireBurstDelayMin: 15
+    baseFireBurstDelayMin: 15
+    fireBurstDelayMax: 15
+    baseFireBurstDelayMax: 15
+    baseFireInterval: 15
+    fireInterval: 15
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 6
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 700
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserAvangard
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserAvangard
+    reloadTime: 3.2
+    fireBurstDelayMin: 8
+    baseFireBurstDelayMin: 8
+    fireBurstDelayMax: 8
+    baseFireBurstDelayMax: 8
+    baseFireInterval: 0.5
+    fireInterval: 0.5
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 750
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserFenix
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/fenix.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserFenix
+    reloadTime: 6.5
+    fireBurstDelayMin: 17
+    baseFireBurstDelayMin: 17
+    fireBurstDelayMax: 17
+    baseFireBurstDelayMax: 17
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 5
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 650
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserGroza
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/groza.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserGroza
+    reloadTime: 12
+    fireBurstDelayMin: 12
+    baseFireBurstDelayMin: 12
+    fireBurstDelayMax: 12
+    baseFireBurstDelayMax: 12
+    baseFireInterval: 12
+    fireInterval: 12
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 500
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserDemon
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/demon.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserDemon
+    reloadTime: 11
+    fireBurstDelayMin: 22
+    baseFireBurstDelayMin: 22
+    fireBurstDelayMax: 22
+    baseFireBurstDelayMax: 22
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1280
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketAqueronMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/aqueron.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketAqueron
+    fireBurstDelayMin: 80
+    reloadTime: 80
+    baseFireBurstDelayMin: 80
+    fireBurstDelayMax: 80
+    baseFireBurstDelayMax: 80
+    baseFireInterval: 80
+    fireInterval: 80
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 65
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 450
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketPegasMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/pegas.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketPegas
+    fireBurstDelayMin: 67
+    reloadTime: 67
+    baseFireBurstDelayMin: 67
+    fireBurstDelayMax: 67
+    baseFireBurstDelayMax: 67
+    baseFireInterval: 67
+    fireInterval: 67
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 80
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 450
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketOrionMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/orion.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketOrion
+    fireBurstDelayMin: 90
+    baseFireBurstDelayMin: 90
+    fireBurstDelayMax: 90
+    baseFireBurstDelayMax: 90
+    baseFireInterval: 90
+    fireInterval: 90
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+    reloadTime: 90
+  - type: Gun
+    projectileSpeed: 55
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 450
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketIkarMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/ikar.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketIkar
+    fireBurstDelayMin: 50
+    reloadTime: 50
+    baseFireBurstDelayMin: 50
+    fireBurstDelayMax: 50
+    baseFireBurstDelayMax: 50
+    baseFireInterval: 50
+    fireInterval: 50
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 70
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 450
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapChaosMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/chaos.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapChaos
+    fireBurstDelayMin: 34
+    baseFireBurstDelayMin: 34
+    fireBurstDelayMax: 34
+    baseFireBurstDelayMax: 34
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 9
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 35
+    maxAngle: 60
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 350
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapStormMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/storm.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapStorm
+    fireBurstDelayMin: 44
+    baseFireBurstDelayMin: 44
+    fireBurstDelayMax: 44
+    baseFireBurstDelayMax: 44
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 16
+    maxAngle: 20
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 500
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonZeusMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/zeus.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonZeus
+    reloadTime: 66
+    fireBurstDelayMin: 66
+    baseFireBurstDelayMin: 66
+    fireBurstDelayMax: 66
+    baseFireBurstDelayMax: 66
+    baseFireInterval: 66
+    fireInterval: 66
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 90
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 500
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonElecMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/elec.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonElec
+    reloadTime: 40
+    fireBurstDelayMin: 40
+    baseFireBurstDelayMin: 40
+    fireBurstDelayMax: 40
+    baseFireBurstDelayMax: 40
+    baseFireInterval: 0.4
+    fireInterval: 0.4
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonLightMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/light.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonLight
+    reloadTime: 25
+    fireBurstDelayMin: 25
+    baseFireBurstDelayMin: 25
+    fireBurstDelayMax: 25
+    baseFireBurstDelayMax: 25
+    baseFireInterval: 25
+    fireInterval: 25
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 6
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserAvangardMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserAvangard
+    fireBurstDelayMin: 5.4
+    reloadTime: 4.5
+    baseFireBurstDelayMin: 15
+    fireBurstDelayMax: 15
+    baseFireBurstDelayMax: 15
+    baseFireInterval: 0.5
+    fireInterval: 0.5
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserFenixMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/fenix.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    reloadTime: 10
+    boltType: LaserFenix
+    fireBurstDelayMin: 28
+    baseFireBurstDelayMin: 28
+    fireBurstDelayMax: 28
+    baseFireBurstDelayMax: 28
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 5
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 650
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserGrozaMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/groza.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserGroza
+    reloadTime: 20
+    fireBurstDelayMin: 20
+    baseFireBurstDelayMin: 20
+    fireBurstDelayMax: 20
+    baseFireBurstDelayMax: 20
+    baseFireInterval: 20
+    fireInterval: 20
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserDemonMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/demon.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserDemon
+    reloadTime: 17
+    fireBurstDelayMin: 56
+    baseFireBurstDelayMin: 56
+    fireBurstDelayMax: 56
+    baseFireBurstDelayMax: 56
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 680
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketAqueronMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/aqueron.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketAqueron
+    reloadTime: 30
+    fireBurstDelayMin: 30
+    baseFireBurstDelayMin: 30
+    fireBurstDelayMax: 30
+    baseFireBurstDelayMax: 30
+    baseFireInterval: 30
+    fireInterval: 30
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 65
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketPegasMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/pegas.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketPegas
+    reloadTime: 28
+    fireBurstDelayMin: 28
+    baseFireBurstDelayMin: 28
+    fireBurstDelayMax: 28
+    baseFireBurstDelayMax: 28
+    baseFireInterval: 28
+    fireInterval: 28
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 80
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketOrionMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/orion.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketOrion
+    reloadTime: 34
+    fireBurstDelayMin: 34
+    baseFireBurstDelayMin: 34
+    fireBurstDelayMax: 34
+    baseFireBurstDelayMax: 34
+    baseFireInterval: 34
+    fireInterval: 34
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 55
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketIkarMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/ikar.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketIkar
+    reloadTime: 22
+    fireBurstDelayMin: 22
+    baseFireBurstDelayMin: 22
+    fireBurstDelayMax: 22
+    baseFireBurstDelayMax: 22
+    baseFireInterval: 22
+    fireInterval: 22
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 70
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapChaosMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/chaos.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapChaos
+    fireBurstDelayMin: 12
+    baseFireBurstDelayMin: 12
+    fireBurstDelayMax: 12
+    baseFireBurstDelayMax: 12
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 9
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 35
+    maxAngle: 60
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 750
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapStormMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/storm.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapStorm
+    fireBurstDelayMin: 14
+    baseFireBurstDelayMin: 14
+    fireBurstDelayMax: 14
+    baseFireBurstDelayMax: 14
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 16
+    maxAngle: 20
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1000
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonZeusMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/zeus.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonZeus
+    reloadTime: 22
+    fireBurstDelayMin: 22
+    baseFireBurstDelayMin: 22
+    fireBurstDelayMax: 22
+    baseFireBurstDelayMax: 22
+    baseFireInterval: 22
+    fireInterval: 22
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 90
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1100
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonElecMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/elec.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonElec
+    reloadTime: 16
+    fireBurstDelayMin: 16
+    baseFireBurstDelayMin: 16
+    fireBurstDelayMax: 16
+    baseFireBurstDelayMax: 16
+    baseFireInterval: 0.4
+    fireInterval: 0.4
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 850
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonLightMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/light.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonLight
+    reloadTime: 10
+    fireBurstDelayMin: 10
+    baseFireBurstDelayMin: 10
+    fireBurstDelayMax: 10
+    baseFireBurstDelayMax: 10
+    baseFireInterval: 10
+    fireInterval: 10
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 6
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 600
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserAvangardMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserAvangard
+    reloadTime: 2
+    fireBurstDelayMin: 5
+    baseFireBurstDelayMin: 5
+    fireBurstDelayMax: 5
+    baseFireBurstDelayMax: 5
+    baseFireInterval: 0.5
+    fireInterval: 0.5
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 650
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserFenixMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/fenix.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserFenix
+    reloadTime: 3.8
+    fireBurstDelayMin: 11
+    baseFireBurstDelayMin: 11
+    fireBurstDelayMax: 11
+    baseFireBurstDelayMax: 11
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 5
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 850
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserGrozaMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/groza.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    reloadTime: 8
+    boltType: LaserGroza
+    fireBurstDelayMin: 8
+    baseFireBurstDelayMin: 8
+    fireBurstDelayMax: 8
+    baseFireBurstDelayMax: 8
+    baseFireInterval: 8
+    fireInterval: 8
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 700
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserDemonMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/demon.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    reloadTime: 8
+    boltType: LaserDemon
+    fireBurstDelayMin: 14
+    baseFireBurstDelayMin: 14
+    fireBurstDelayMax: 14
+    baseFireBurstDelayMax: 14
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1580
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketAqueronMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/aqueron.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketAqueron
+    reloadTime: 18
+    fireBurstDelayMin: 18
+    baseFireBurstDelayMin: 18
+    fireBurstDelayMax: 18
+    baseFireBurstDelayMax: 18
+    baseFireInterval: 18
+    fireInterval: 18
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 65
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketPegasMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/pegas.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketPegas
+    reloadTime: 14
+    fireBurstDelayMin: 14
+    baseFireBurstDelayMin: 14
+    fireBurstDelayMax: 14
+    baseFireBurstDelayMax: 14
+    baseFireInterval: 14
+    fireInterval: 14
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 80
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketOrionMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/orion.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketOrion
+    reloadTime: 18
+    fireBurstDelayMin: 18
+    baseFireBurstDelayMin: 18
+    fireBurstDelayMax: 18
+    baseFireBurstDelayMax: 18
+    baseFireInterval: 18
+    fireInterval: 18
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 55
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonRocketIkarMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/ikar.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: RocketIkar
+    reloadTime: 12
+    fireBurstDelayMin: 12
+    baseFireBurstDelayMin: 12
+    fireBurstDelayMax: 12
+    baseFireBurstDelayMax: 12
+    baseFireInterval: 12
+    fireInterval: 12
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 70
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapChaosMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/chaos.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapChaos
+    fireBurstDelayMin: 7
+    baseFireBurstDelayMin: 7
+    fireBurstDelayMax: 7
+    baseFireBurstDelayMax: 7
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 9
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 35
+    maxAngle: 60
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1050
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonShrapStormMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/storm.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Emitter
+    boltType: ShrapStorm
+    fireBurstDelayMin: 8
+    baseFireBurstDelayMin: 8
+    fireBurstDelayMax: 8
+    baseFireBurstDelayMax: 8
+    baseFireInterval: 0.01
+    fireInterval: 0.01
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/zapusk-snaryada-_1_.ogg
+    minAngle: 16
+    maxAngle: 20
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1200
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonZeusMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/zeus.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonZeus
+    reloadTime: 15
+    fireBurstDelayMin: 15
+    baseFireBurstDelayMin: 15
+    fireBurstDelayMax: 15
+    baseFireBurstDelayMax: 15
+    baseFireInterval: 15
+    fireInterval: 15
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 90
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 1
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1200
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonElecMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/elec.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonElec
+    reloadTime: 9
+    fireBurstDelayMin: 9
+    baseFireBurstDelayMin: 9
+    fireBurstDelayMax: 9
+    baseFireBurstDelayMax: 9
+    baseFireInterval: 0.4
+    fireInterval: 0.4
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 45
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 4
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonIonLightMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/light.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: IonLight
+    reloadTime: 6
+    fireBurstDelayMin: 6
+    baseFireBurstDelayMin: 6
+    fireBurstDelayMax: 6
+    baseFireBurstDelayMax: 6
+    baseFireInterval: 6
+    fireInterval: 6
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 35
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 6
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 900
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserAvangardMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserAvangard
+    reloadTime: 1
+    fireBurstDelayMin: 1.5
+    baseFireBurstDelayMin: 1.5
+    fireBurstDelayMax: 1.5
+    baseFireBurstDelayMax: 1.5
+    baseFireInterval: 1.5
+    fireInterval: 1.5
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1050
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserFenixMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/fenix.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserFenix
+    reloadTime: 2.4
+    fireBurstDelayMin: 6
+    baseFireBurstDelayMin: 6
+    fireBurstDelayMax: 6
+    baseFireBurstDelayMax: 6
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 4
+    maxAngle: 5
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1350
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserGrozaMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/groza.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    reloadTime: 4.5
+    boltType: LaserGroza
+    fireBurstDelayMin: 4
+    baseFireBurstDelayMin: 4
+    fireBurstDelayMax: 4
+    baseFireBurstDelayMax: 4
+    baseFireInterval: 4
+    fireInterval: 4
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 2
+    maxAngle: 2
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1300
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserDemonMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/demon.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserDemon
+    reloadTime: 7
+    fireBurstDelayMin: 7
+    baseFireBurstDelayMin: 7
+    fireBurstDelayMax: 7
+    baseFireBurstDelayMax: 7
+    baseFireInterval: 1
+    fireInterval: 1
+    fireBurstSize: 3
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 2280
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserBSA
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/bsa.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.LockVisuals.Locked"]
+  - type: Gunship
+    boltType: LaserBSA
+    reloadTime: 60
+    fireBurstDelayMin: 60
+    baseFireBurstDelayMin: 60
+    fireBurstDelayMax: 60
+    baseFireBurstDelayMax: 60
+    baseFireInterval: 60
+    fireInterval: 60
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 10
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 0
+    maxAngle: 0
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1980
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  name: disabler
+  parent: BaseWeaponBatterySmall
+  id: WeaponHandBSA
+  description: Bomba delaet bbbum
+  components:
+    - type: Tag
+      tags:
+        - Taser
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-0
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+      quickEquip: false
+      slots:
+        - Belt
+    - type: Gun
+      projectileSpeed: 10
+      showExamineText: false
+      fireRate: 10
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+      minAngle: 0
+      maxAngle: 0
+    - type: ProjectileBatteryAmmoProvider
+      proto: LaserBSA
+      fireCost: 1
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: true
+    - type: Appearance
+    - type: ShuttleRender
+      radius: 3.5
+      color: white
+      filled: true
+
+- type: entity
+  id: CannonLaserBioGunMK0
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Gunship
+    boltType: LaserBioGun
+    fireBurstDelayMin: 44
+    reloadTime: 44
+    baseFireBurstDelayMin: 44
+    fireBurstDelayMax: 44
+    baseFireBurstDelayMax: 44
+    baseFireInterval: 44
+    fireInterval: 44
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 550
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserBioGunMK1
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Gunship
+    boltType: LaserBioGun
+    reloadTime: 35
+    fireBurstDelayMin: 35
+    baseFireBurstDelayMin: 35
+    fireBurstDelayMax: 35
+    baseFireBurstDelayMax: 35
+    baseFireInterval: 35
+    fireInterval: 35
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 850
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserBioGunMK2
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Gunship
+    boltType: LaserBioGun
+    reloadTime: 24
+    fireBurstDelayMin: 24
+    baseFireBurstDelayMin: 24
+    fireBurstDelayMax: 24
+    baseFireBurstDelayMax: 24
+    baseFireInterval: 24
+    fireInterval: 24
+    fireBurstSize: 5
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1250
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard
+
+- type: entity
+  id: CannonLaserBioGunMK3
+  name: Artillery laser cannon
+  parent: ConstructibleMachine
+  description: A artillery laser cannon. Shoots non-stop when turned on.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 400
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    netsync: false
+    layers:
+    - state: emitter
+    - state: beam
+      shader: unshaded
+      map: ["enum.EmitterVisualLayers.Lights"]
+    - state: unlock
+      shader: unshaded
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Gunship
+    boltType: LaserBioGun
+    reloadTime: 13
+    fireBurstDelayMin: 13
+    baseFireBurstDelayMin: 13
+    fireBurstDelayMax: 13
+    baseFireBurstDelayMax: 13
+    baseFireInterval: 13
+    fireInterval: 13
+    fireBurstSize: 1
+    fireRateMultiplier: 1
+  - type: Gun
+    projectileSpeed: 220
+    showExamineText: false
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Imperial/Gunships/fat-laser-cannon_gkby6b4u.ogg
+    minAngle: 6
+    maxAngle: 10
+  - type: PowerConsumer
+    voltage: High
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: HVPower
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1750
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Appearance
+  - type: ShuttleRender
+    radius: 3.5
+    color: white
+    filled: true
+  - type: Lock
+    locked: false
+  - type: Machine
+    board: EmitterCircuitboard

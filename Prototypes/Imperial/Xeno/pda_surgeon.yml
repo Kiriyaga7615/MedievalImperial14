@@ -1,0 +1,33 @@
+- type: entity
+  parent: BasePDA
+  id: SurgeonPDA
+  name: medical PDA
+  description: Shiny and sterile. Has a built-in health analyzer.
+  components:
+  - type: Pda
+    id: SurgeonIDCard
+    state: pda-medical
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+    accentVColor: "#447987"
+  - type: Icon
+    state: pda-medical
+  - type: HealthAnalyzer
+    scanDelay: 1.2
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: GuideHelp
+    guides:
+    - Medical Doctor
+
+- type: entity
+  parent: IDCardStandard
+  id: SurgeonIDCard
+  name: surgeon ID card
+  components:
+    - type: Sprite
+      layers:
+        - state: default
+        - state: idmedicaldoctor
+    - type: PresetIdCard
+      job: Surgeon

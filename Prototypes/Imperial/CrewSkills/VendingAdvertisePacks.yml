@@ -1,0 +1,17 @@
+- type: messagePack
+  id: ManualVandingMachineAdvertise
+  messages:
+    - advertisement-manual-vending-machine-1
+    - advertisement-manual-vending-machine-2
+    - advertisement-manual-vending-machine-3
+    - advertisement-manual-vending-machine-4
+    - advertisement-manual-vending-machine-5
+    - advertisement-manual-vending-machine-6
+    - advertisement-manual-vending-machine-7
+    - advertisement-manual-vending-machine-8
+    - advertisement-manual-vending-machine-9
+    - advertisement-manual-vending-machine-10
+    - advertisement-manual-vending-machine-11
+    - advertisement-manual-vending-machine-12
+  thankyous:
+    - vending-machine-thanks

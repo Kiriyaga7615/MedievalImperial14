@@ -1,0 +1,25 @@
+- type: entity
+  id: FloorLavaEntityTimed
+  name: lava
+  description: Don't jump in. It's not worth it, no matter how funny it is.
+  parent: FloorLavaEntity
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: TimedDespawn
+    lifetime: 4
+
+- type: entity
+  id: FloorLavaEntityMinigame
+  name: lava
+  description: Don't jump in. It's not worth it, no matter how funny it is.
+  parent: FloorLavaEntity
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: TimedDespawn
+    lifetime: 1

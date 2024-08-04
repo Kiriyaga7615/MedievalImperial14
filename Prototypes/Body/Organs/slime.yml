@@ -1,0 +1,99 @@
+- type: entity
+  id: SentientSlimeCore
+  parent: [BaseItem, BaseHumanOrgan] 
+  #parent: [BaseItem, OrganHumanBrain] Изменено для корректной работы хирургии. Ядро больше не выполняет функцию мозга/ Imperial Space
+  name: sentient slime core
+  description: "The source of incredible, unending gooeyness."
+  components:
+  #Imperial skills start
+#    - type: Sprite
+#      layers:
+#        - sprite: Mobs/Species/Slime/organs.rsi //// Это основной спрайт ядра-мозга слаймолюда на ванильной версии. У нас заменен, так как мозг отдельный орган Imperial Space
+#          state: brain-slime
+#        - sprite: Imperial/CrewSkills/BrainInterface/BrainInterface.rsi
+#          map: ["enum.BrainInterfaceVisuals.BrainInterfaceVisualkey"]
+    - type: Sprite
+      layers:
+        - sprite: Imperial/SlimeCore/SlimeCore.rsi
+          state: slimecore
+  #Imperial skill end
+    - type: Stomach
+    - type: Metabolizer
+      maxReagents: 6
+      metabolizerTypes: [ Slime ]
+      removeEmpty: true
+      groups:
+        - id: Food
+        - id: Drink
+        - id: Medicine
+        - id: Poison
+        - id: Narcotic
+        - id: Alcohol
+          rateModifier: 0.25
+    - type: SolutionContainerManager
+      solutions:
+        stomach:
+          maxVol: 50.0
+        food:
+          maxVol: 5
+          reagents:
+          - ReagentId: GreyMatter
+            Quantity: 5
+        organ:
+          reagents:
+          - ReagentId: Slime
+            Quantity: 10
+
+      
+- type: entity
+  id: OrganSlimeLungs
+  parent: BaseHumanOrgan
+  name: slime gas sacs
+  description: "Collects nitrogen, which slime cells use for maintenance."
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Slime/organs.rsi
+    layers:
+      - state: lung-l-slime
+      - state: lung-r-slime
+  - type: Lung
+    alert: LowNitrogen
+  - type: ImperialLungMark #imperial
+  - type: LungStatus # imperial
+  - type: Metabolizer
+    removeEmpty: true
+    solutionOnBody: false
+    solution: "Lung"
+    metabolizerTypes: [ Slime ]
+    groups:
+    - id: Gas
+      rateModifier: 100.0
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Slime
+          Quantity: 10
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+
+- type: entity ## Отдельный мозг для слаймов для корректной работы хирургии Imperial Space
+  id: SlimeBrain
+  parent: OrganHumanBrain
+  name: The brain of a slime man
+  description: It looks slimy and unpleasant!
+  components: 
+  #Imperial skills start
+  - type: Sprite
+    layers:
+      - sprite: Mobs/Species/Slime/organs.rsi
+        state: brain-slime
+      - sprite: Imperial/CrewSkills/BrainInterface/BrainInterface.rsi
+        map: ["enum.BrainInterfaceVisuals.BrainInterfaceVisualkey"]
+  #Imperial skill end

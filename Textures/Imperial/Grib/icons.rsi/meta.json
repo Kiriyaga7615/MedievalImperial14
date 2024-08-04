@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "for imperial space",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "armor"
+    },
+    {
+      "name": "armorup"
+    },
+    {
+      "name": "big"
+    },
+    {
+      "name": "delete"
+    },
+    {
+      "name": "farm"
+    },
+    {
+      "name": "heal"
+    },
+    {
+      "name": "icore"
+    },
+    {
+      "name": "little_blue_mushroom_animation"
+    },
+    {
+      "name": "little_green_mushroom_animation"
+    },
+    {
+      "name": "little_red_mushroom_animation"
+    },
+    {
+      "name": "main"
+    },
+    {
+      "name": "move_core"
+    },
+    {
+      "name": "reflect"
+    },
+    {
+      "name": "uzel"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿- type: entity
+  id: ToggHUDAction
+  name: hud-toggle-name
+  description: hud-toggle-desc
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Clothing/Eyes/Hud/med.rsi
+      state: icon
+    event: !type:ToggleHUDActionEvent
+    clientExclusive: true
+    checkCanInteract: false
+    useDelay: 1

@@ -1,0 +1,734 @@
+#- type: latheRecipe
+#  id: base
+#  result: base
+#  completetime: 10
+#  materials:
+#    Steel: 150
+#    Glass: 150
+#    Plastic: 150
+#    Gold: 100
+#    Plasteel: 1500
+#    Plasma: 1000
+#    Uranium: 100
+#    Silver: 50
+#    Cloth: 300
+#    Durathread: 100
+
+#- type: latheRecipe
+#  id: HonkerCentralElectronics
+#  result: HonkerCentralElectronics
+#  completetime: 4
+#  materials:
+#    Steel: 100
+#    Glass: 900
+#    Gold: 100
+
+#- type: latheRecipe
+#  id: RipleyHarness
+#  result: RipleyHarness
+#  completetime: 10
+#  materials:
+#    Steel: 1500
+#    Glass: 1200
+
+- type: latheRecipe
+  id: OdysseusArmor
+  result: OdysseusArmor
+  completetime: 10
+  materials:
+    Steel: 550
+    Plastic: 850
+
+- type: latheRecipe
+  id: OdysseusHarness
+  result: OdysseusHarness
+  completetime: 10
+  materials:
+    Steel: 1350
+    Glass: 1400
+    Plastic: 250
+
+- type: latheRecipe
+  id: OdysseusLLeg
+  result: OdysseusLLeg
+  completetime: 10
+  materials:
+    Steel: 800
+    Plastic: 250
+
+- type: latheRecipe
+  id: OdysseusRLeg
+  result: OdysseusRLeg
+  completetime: 10
+  materials:
+    Steel: 800
+    Plastic: 250
+
+- type: latheRecipe
+  id: OdysseusLArm
+  result: OdysseusLArm
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 150
+
+- type: latheRecipe
+  id: OdysseusRArm
+  result: OdysseusRArm
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 150
+
+- type: latheRecipe
+  id: OdysseusPeripheralsElectronics
+  result: OdysseusPeripheralsElectronics
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+- type: latheRecipe
+  id: OdysseusCentralElectronics
+  result: OdysseusCentralElectronics
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+- type: latheRecipe
+  id: MechEquipmentGrabberMed
+  result: MechEquipmentGrabberMed
+  completetime: 10
+  materials:
+    Steel: 900
+    Plastic: 350
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotBurn1
+  result: MechEquipmentMedNanobotBurn1
+  completetime: 10
+  materials:
+    Steel: 450
+    Plastic: 250
+    Glass: 150
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotAirloss1
+  result: MechEquipmentMedNanobotAirloss1
+  completetime: 10
+  materials:
+    Steel: 450
+    Plastic: 250
+    Glass: 150
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotBrute1
+  result: MechEquipmentMedNanobotBrute1
+  completetime: 10
+  materials:
+    Steel: 450
+    Plastic: 250
+    Glass: 150
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotBurn2
+  result: MechEquipmentMedNanobotBurn2
+  completetime: 10
+  materials:
+    Steel: 950
+    Plastic: 450
+    Glass: 250
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotAirloss2
+  result: MechEquipmentMedNanobotAirloss2
+  completetime: 10
+  materials:
+    Steel: 950
+    Plastic: 450
+    Glass: 250
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotBrute2
+  result: MechEquipmentMedNanobotBrute2
+  completetime: 10
+  materials:
+    Steel: 950
+    Plastic: 450
+    Glass: 250
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotBurn3
+  result: MechEquipmentMedNanobotBurn3
+  completetime: 10
+  materials:
+    Steel: 1350
+    Plastic: 1050
+    Glass: 650
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotAirloss3
+  result: MechEquipmentMedNanobotAirloss3
+  completetime: 10
+  materials:
+    Steel: 1350
+    Plastic: 1050
+    Glass: 650
+
+- type: latheRecipe
+  id: MechEquipmentMedNanobotBrute3
+  result: MechEquipmentMedNanobotBrute3
+  completetime: 10
+  materials:
+    Steel: 1350
+    Plastic: 1050
+    Glass: 650
+
+- type: latheRecipe
+  id: MechEquipmentAtmos
+  result: MechEquipmentAtmos
+  completetime: 10
+  materials:
+    Steel: 150
+    Plastic: 250
+    Glass: 550
+
+
+
+
+
+- type: latheRecipe
+  id: GygaxArmor
+  result: GygaxArmor
+  completetime: 10
+  materials:
+    Steel: 3550
+    Plastic: 1400
+    Plasteel: 1200
+
+- type: latheRecipe
+  id: GygaxHarness
+  result: GygaxHarness
+  completetime: 10
+  materials:
+    Steel: 4550
+    Plastic: 190
+    Plasteel: 160
+    Glass: 1800
+
+- type: latheRecipe
+  id: GygaxLLeg
+  result: GygaxLLeg
+  completetime: 10
+  materials:
+    Steel: 1400
+    Plasteel: 250
+
+- type: latheRecipe
+  id: GygaxRLeg
+  result: GygaxRLeg
+  completetime: 10
+  materials:
+    Steel: 1400
+    Plasteel: 250
+
+- type: latheRecipe
+  id: GygaxLArm
+  result: GygaxLArm
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plasteel: 150
+
+- type: latheRecipe
+  id: GygaxRArm
+  result: GygaxRArm
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plasteel: 150
+
+- type: latheRecipe
+  id: GygaxPeripheralsElectronics
+  result: GygaxPeripheralsElectronics
+  completetime: 10
+  materials:
+    Steel: 200
+    Glass: 1100
+    Gold: 200
+    Silver: 150
+
+- type: latheRecipe
+  id: GygaxCentralElectronics
+  result: GygaxCentralElectronics
+  completetime: 10
+  materials:
+    Steel: 200
+    Glass: 1400
+    Gold: 200
+    Silver: 150
+
+- type: latheRecipe
+  id: MechEquipmentPilotDef
+  result: MechEquipmentPilotDef
+  completetime: 10
+  materials:
+    Steel: 400
+    Plasteel: 700
+
+- type: latheRecipe
+  id: WeaponDisablerMech
+  result: WeaponDisablerMech
+  completetime: 10
+  materials:
+    Steel: 900
+    Plasteel: 700
+    Plastic: 850
+
+- type: latheRecipe
+  id: WeaponAdvancedLaserMech
+  result: WeaponAdvancedLaserMech
+  completetime: 10
+  materials:
+    Steel: 1200
+    Plasteel: 800
+    Plastic: 1150
+    Glass: 2200
+
+- type: latheRecipe
+  id: CyberneticMechMachineGunIonHeavy
+  result: CyberneticMechMachineGunIonHeavy
+  completetime: 10
+  materials:
+    Steel: 1100
+    Plasteel: 900
+    Plastic: 1450
+    Glass: 1600
+
+- type: latheRecipe
+  id: CyberneticMechMachineGunFlare
+  result: CyberneticMechMachineGunFlare
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plasteel: 1400
+    Plastic: 1450
+    Glass: 200
+    Plasma: 600
+
+- type: latheRecipe
+  id: DurandArmor
+  result: DurandArmor
+  completetime: 10
+  materials:
+    Steel: 4500
+    Plasteel: 2200
+
+- type: latheRecipe
+  id: DurandHarness
+  result: DurandHarness
+  completetime: 10
+  materials:
+    Steel: 5700
+    Plastic: 1500
+    Plasteel: 2200
+    Glass: 1400
+    Silver: 500
+
+- type: latheRecipe
+  id: DurandLLeg
+  result: DurandLLeg
+  completetime: 10
+  materials:
+    Steel: 1600
+    Plasteel: 950
+    Silver: 100
+
+- type: latheRecipe
+  id: DurandRLeg
+  result: DurandRLeg
+  completetime: 10
+  materials:
+    Steel: 1600
+    Plasteel: 950
+    Silver: 100
+
+- type: latheRecipe
+  id: DurandLArm
+  result: DurandLArm
+  completetime: 10
+  materials:
+    Steel: 1200
+    Plasteel: 550
+    Silver: 50
+
+- type: latheRecipe
+  id: DurandRArm
+  result: DurandRArm
+  completetime: 10
+  materials:
+    Steel: 1200
+    Plasteel: 550
+    Silver: 50
+
+- type: latheRecipe
+  id: DurandPeripheralsElectronics
+  result: DurandPeripheralsElectronics
+  completetime: 10
+  materials:
+    Steel: 400
+    Glass: 800
+    Gold: 400
+    Silver: 250
+    Uranium: 300
+
+- type: latheRecipe
+  id: DurandCentralElectronics
+  result: DurandCentralElectronics
+  completetime: 10
+  materials:
+    Steel: 400
+    Glass: 800
+    Gold: 400
+    Silver: 250
+    Uranium: 300
+
+- type: latheRecipe
+  id: CyberneticMechMachineGun
+  result: CyberneticMechMachineGun
+  completetime: 10
+  materials:
+    Steel: 1600
+    Plasteel: 1800
+    Plastic: 1150
+    Glass: 400
+    Plasma: 1000
+    Silver: 250
+
+- type: latheRecipe
+  id: CyberneticMechMachineGunHeavy
+  result: CyberneticMechMachineGunHeavy
+  completetime: 10
+  materials:
+    Steel: 1600
+    Plasteel: 1800
+    Plastic: 1150
+    Glass: 1400
+    Plasma: 900
+    Silver: 350
+
+- type: latheRecipe
+  id: MechEquipmentMachineGunIronStorm
+  result: MechEquipmentMachineGunIronStorm
+  completetime: 10
+  materials:
+    Steel: 3200
+    Plasteel: 1900
+
+- type: latheRecipe
+  id: MagazineMechaIronStorm
+  result: MagazineMechaIronStorm
+  completetime: 10
+  materials:
+    Steel: 1000
+    Plasteel: 200
+
+- type: latheRecipe
+  id: WeaponLauncherMultipleRocketMech
+  result: WeaponLauncherMultipleRocketMech
+  completetime: 10
+  materials:
+    Steel: 4000
+    Plasteel: 1200
+    Silver: 700
+    Plasma: 600
+
+- type: latheRecipe
+  id: CartridgeRocketMech
+  result: CartridgeRocketMech
+  completetime: 10
+  materials:
+    Steel: 600
+    Plasteel: 100
+    Silver: 25
+    Plasma: 100
+
+- type: latheRecipe
+  id: MechEquipmentFistNT
+  result: MechEquipmentFistNT
+  completetime: 10
+  materials:
+    Plasteel: 44000
+    Silver: 600
+
+
+
+
+
+
+- type: latheRecipe
+  id: MechEquipmentSpeed1
+  result: MechEquipmentSpeed1
+  completetime: 10
+  materials:
+    Steel: 450
+    Plastic: 250
+    Glass: 150
+
+- type: latheRecipe
+  id: MechEquipmentHp1
+  result: MechEquipmentHp1
+  completetime: 10
+  materials:
+    Steel: 650
+    Plasteel: 150
+
+- type: latheRecipe
+  id: MechEquipmentSpeed2
+  result: MechEquipmentSpeed2
+  completetime: 10
+  materials:
+    Steel: 850
+    Plastic: 450
+    Glass: 250
+
+- type: latheRecipe
+  id: MechEquipmentHp2
+  result: MechEquipmentHp2
+  completetime: 10
+  materials:
+    Steel: 1150
+    Plasteel: 250
+
+- type: latheRecipe
+  id: MechEquipmentSpeed3
+  result: MechEquipmentSpeed3
+  completetime: 10
+  materials:
+    Steel: 1300
+    Plastic: 700
+    Glass: 400
+    Silver: 400
+
+- type: latheRecipe
+  id: MechEquipmentHp3
+  result: MechEquipmentHp3
+  completetime: 10
+  materials:
+    Steel: 1750
+    Plasteel: 550
+    Silver: 600
+
+- type: latheRecipe
+  id: MechEquipmentSmoke
+  result: MechEquipmentSmoke
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 450
+
+- type: latheRecipe
+  id: MechEquipmentTeleport
+  result: MechEquipmentTeleport
+  completetime: 10
+  materials:
+    Steel: 1100
+    Plastic: 700
+    Glass: 300
+    Uranium: 250
+
+
+
+
+
+
+
+
+
+
+- type: latheRecipe
+  id: ClarkeHarness
+  result: ClarkeHarness
+  completetime: 10
+  materials:
+    Steel: 1550
+    Glass: 1400
+    Plastic: 250
+
+- type: latheRecipe
+  id: ClarkeLeg
+  result: ClarkeLeg
+  completetime: 10
+  materials:
+    Steel: 1200
+    Plastic: 450
+
+- type: latheRecipe
+  id: ClarkeLArm
+  result: ClarkeLArm
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 150
+
+- type: latheRecipe
+  id: ClarkeRArm
+  result: ClarkeRArm
+  completetime: 10
+  materials:
+    Steel: 500
+    Plastic: 150
+
+- type: latheRecipe
+  id: ClarkePeripheralsElectronics
+  result: ClarkePeripheralsElectronics
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+- type: latheRecipe
+  id: ClarkeCentralElectronics
+  result: ClarkeCentralElectronics
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+
+
+
+
+
+
+
+
+- type: latheRecipe
+  id: FireHarness
+  result: FireHarness
+  completetime: 10
+  materials:
+    Steel: 1650
+    Glass: 1800
+    Plastic: 150
+
+- type: latheRecipe
+  id: FireLLeg
+  result: FireLLeg
+  completetime: 10
+  materials:
+    Steel: 1300
+    Plastic: 250
+
+- type: latheRecipe
+  id: FireRLeg
+  result: FireRLeg
+  completetime: 10
+  materials:
+    Steel: 1300
+    Plastic: 250
+
+- type: latheRecipe
+  id: FireLArm
+  result: FireLArm
+  completetime: 10
+  materials:
+    Steel: 700
+    Plastic: 150
+
+- type: latheRecipe
+  id: FireRArm
+  result: FireRArm
+  completetime: 10
+  materials:
+    Steel: 700
+    Plastic: 150
+
+- type: latheRecipe
+  id: FirePeripheralsElectronics
+  result: FirePeripheralsElectronics
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+- type: latheRecipe
+  id: FireCentralElectronics
+  result: FireCentralElectronics
+  completetime: 10
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+- type: latheRecipe
+  id: MechEquipmentDrille
+  result: MechEquipmentDrille
+  completetime: 10
+  materials:
+    Steel: 1600
+    Glass: 100
+    Gold: 100
+    Plastic: 450
+
+- type: latheRecipe
+  id: MechEquipmentDrilleDiamond
+  result: MechEquipmentDrilleDiamond
+  completetime: 10
+  materials:
+    Steel: 2600
+    Glass: 4000
+    Gold: 300
+    Plastic: 350
+    #Diamond: 300 выпил, ну а хули нет. алмаз как материал удалили из игры, теперь просто больше стекла пусть надо будет
+
+- type: latheRecipe
+  id: MechEquipmentThruster
+  result: MechEquipmentThruster
+  completetime: 10
+  materials:
+    Steel: 700
+    Glass: 200
+
+- type: latheRecipe
+  id: WeaponProtoKineticAcceleratorMech
+  result: WeaponProtoKineticAcceleratorMech
+  completetime: 10
+  materials:
+    Steel: 1400
+    Glass: 300
+    Plastic: 350
+
+- type: latheRecipe
+  id: MechEquipmentRemdrone1
+  result: MechEquipmentRemdrone1
+  completetime: 10
+  materials:
+    Steel: 450
+    Plastic: 250
+    Glass: 150
+
+- type: latheRecipe
+  id: MechEquipmentRemdrone2
+  result: MechEquipmentRemdrone2
+  completetime: 10
+  materials:
+    Steel: 950
+    Plastic: 450
+    Glass: 250
+
+- type: latheRecipe
+  id: MechEquipmentRemdrone3
+  result: MechEquipmentRemdrone3
+  completetime: 10
+  materials:
+    Steel: 1350
+    Plastic: 1050
+    Glass: 650
+    Silver: 150

@@ -1,0 +1,9 @@
+department-Cargo = Группа наёмников
+department-Civilian = Вольные люди
+department-Command = Лидеры
+department-Engineering = Убежище красных лис
+department-Medical = Банда черного волка
+department-Security = Легион синего орла
+department-Science = Коллегия магов
+department-Specific = Торговый караван
+department-Juristic = Религия

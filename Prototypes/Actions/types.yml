@@ -1,0 +1,352 @@
+# base actions
+
+- type: entity
+  id: BaseSuicideAction
+  abstract: true
+  components:
+  - type: ConfirmableAction
+    popup: suicide-action-popup
+
+# actions
+
+- type: entity
+  id: ActionScream
+  name: Крикнуть #Imperial translate
+  description: AAAAAAAAAAAAAAAAAAAAAAAAA #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 10
+    icon: Interface/Actions/scream.png
+    event: !type:ScreamActionEvent
+    checkCanInteract: false
+
+- type: entity
+  id: ActionTurnUndead
+  name: Обратиться #Imperial translate
+  description: Поддайтесь инфекции и станьте зомби. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    icon: Interface/Actions/zombie-turn.png
+    event: !type:ZombifySelfActionEvent
+
+- type: entity
+  id: ActionToggleLight
+  name: Переключить свет #Imperial translate
+  description: Включение и выключение света. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Objects/Tools/flashlight.rsi, state: flashlight }
+    iconOn: { sprite: Objects/Tools/flashlight.rsi, state: flashlight-on }
+    event: !type:ToggleActionEvent
+
+- type: entity
+  id: ActionOpenStorageImplant
+  name: Имплантат хранилища #Imperial translate
+  description: Открывает хранилище, встроенный под кожу. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Clothing/Back/Backpacks/backpack.rsi
+      state: icon
+    event: !type:OpenStorageImplantEvent
+
+- type: entity
+  parent: BaseSuicideAction
+  id: ActionActivateMicroBomb
+  name: Активировать микробомбу #Imperial translate
+  description: Активирует вашу внутреннюю микробомбу, полностью уничтожая вас и ваше оборудование. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Actions/Implants/implants.rsi
+      state: explosive
+    event: !type:ActivateImplantEvent
+
+- type: entity
+  parent: BaseSuicideAction
+  id: ActionActivateDeathAcidifier
+  name: Активировать кислотную смерть #Imperial translate
+  description: Активирует кислотную смерть, полностью расплавляя вас и ваше снаряжение. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: gib
+    event: !type:ActivateImplantEvent
+
+
+- type: entity
+  id: ActionActivateFreedomImplant
+  name: Вырваться на свободу #Imperial translate
+  description: Активация имплантата "свободы" освободит вас от любых ограничений для рук. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    charges: 3
+    checkCanInteract: false
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Actions/Implants/implants.rsi
+      state: freedom
+    event: !type:UseFreedomImplantEvent
+
+- type: entity
+  id: ActionOpenUplinkImplant
+  name: Открыть аплинк #Imperial translate
+  description: Открывает восходящий канал синдиката, встроенный под вашу кожу. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Devices/communication.rsi
+      state: old-radio
+    event: !type:OpenUplinkImplantEvent
+
+- type: entity
+  id: ActionActivateEmpImplant
+  name: Активировать ЭМИ #Imperial translate
+  description: Вызывает небольшой ЭМИ-импульс вокруг вас. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    charges: 3
+    useDelay: 5
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Objects/Weapons/Grenades/empgrenade.rsi
+      state: icon
+    event: !type:ActivateImplantEvent
+
+- type: entity
+  id: ActionActivateScramImplant
+  name: ТЕЛЕПОРТ! #Imperial translate
+  description: Случайным образом телепортирует вас на большое расстояние. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    charges: 2
+    useDelay: 5
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Structures/Specific/anomaly.rsi
+      state: anom4
+    event: !type:UseScramImplantEvent
+
+- type: entity
+  id: ActionActivateDnaScramblerImplant
+  name: Смена ДНК #Imperial translate
+  description:  Случайным образом меняет ваше имя и внешний вид. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    charges: 1
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: Clothing/OuterClothing/Hardsuits/lingspacesuit.rsi
+      state: icon
+    event: !type:UseDnaScramblerImplantEvent
+
+- type: entity
+  id: ActionToggleSuitPiece
+  name: Переключить часть костюма #Imperial translate
+  description: Не забудьте экипировать важные части вашего костюма, прежде чем приступить к действию. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigItem
+    useDelay: 1 # equip noise spam.
+    event: !type:ToggleClothingEvent
+
+- type: entity
+  id: ActionCombatModeToggle
+  name: "[color=red]Боевой режим[/color]" #Imperial translate
+  description: Переключить боевой режим #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    icon: Interface/Actions/harmOff.png
+    iconOn: Interface/Actions/harm.png
+    event: !type:ToggleCombatActionEvent
+    priority: -100
+
+- type: entity
+  id: ActionCombatModeToggleOff
+  parent: ActionCombatModeToggle
+  name: "[color=red]Боевой режим[/color]" #Imperial translate
+  description: Переключить боевой режим #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    enabled: false
+    autoPopulate: false
+    priority: -100
+
+- type: entity
+  id: ActionChangeVoiceMask
+  name: Установить имя #Imperial translate
+  description: Измените имя, которое слышат другие, на что-нибудь другое. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Interface/Actions/voice-mask.rsi, state: icon }
+    event: !type:VoiceMaskSetNameEvent
+
+- type: entity
+  id: ActionVendingThrow
+  name: Выдача предмета #Imperial translate
+  description: Случайным образом выдет предмет из вашего запаса. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 30
+    event: !type:VendingMachineSelfDispenseEvent
+
+- type: entity
+  id: ActionArtifactActivate
+  name: Активировать Артефакт #Imperial translate
+  description: Немедленно активирует текущий узел артефакта. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Objects/Specific/Xenoarchaeology/xeno_artifacts.rsi
+      state: ano01
+    useDelay: 60
+    event: !type:ArtifactSelfActivateEvent
+
+- type: entity
+  id: ActionToggleBlock
+  name: Блок #Imperial translate
+  description: Поднимите или опустите свой щит. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: teleriot-icon }
+    iconOn: Objects/Weapons/Melee/shields.rsi/teleriot-on.png
+    event: !type:ToggleActionEvent
+
+- type: entity
+  id: ActionClearNetworkLinkOverlays
+  name: Очистить наложения сетевых ссылок #Imperial translate
+  description: Удаление наложений сетевых ссылок. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    clientExclusive: true
+    checkCanInteract: false
+    checkConsciousness: false
+    temporary: true
+    icon: { sprite: Objects/Tools/multitool.rsi, state: icon }
+    event: !type:ClearAllOverlaysEvent
+
+- type: entity
+  id: ActionAnimalLayEgg
+  name: Снести яйцо #Imperial translate
+  description: Использует голод, чтобы отложить яйцо. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Objects/Consumable/Food/egg.rsi, state: icon }
+    useDelay: 60
+    event: !type:EggLayInstantActionEvent
+
+- type: entity
+  id: ActionSleep
+  name: Спать #Imperial translate
+  description: Пойти спать. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    icon: { sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi, state: icon }
+    event: !type:SleepActionEvent
+
+- type: entity
+  id: ActionWake
+  name: Проснуться #Imperial translate
+  description: Прекратить спать. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Clothing/Head/Hats/pyjamasyndicatered.rsi, state: icon }
+    checkCanInteract: false
+    checkConsciousness: false
+    event: !type:WakeActionEvent
+
+- type: entity
+  id: ActionActivateHonkImplant
+  name: Хонк #Imperial translate
+  description: Активирует сигнальный имплант, который издает характерный звук клоуна. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Objects/Fun/bikehorn.rsi, state: icon }
+    event: !type:ActivateImplantEvent
+    useDelay: 1
+
+- type: entity
+  id: ActionFireStarter
+  name: Зажгите #Imperial translate
+  description: Поджигает врагов в радиусе вокруг вас. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    priority: -1
+    useDelay: 30
+    icon: Interface/Actions/firestarter.png
+    event: !type:FireStarterActionEvent
+
+- type: entity
+  id: ActionToggleEyes
+  name: Открыть/Закрыть глаза #Imperial translate
+  description: Закройте глаза, чтобы защитить своих глазки, или откройте глаза, чтобы насладиться красивыми огнями. #Imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: Interface/Actions/eyeopen.png
+    iconOn: Interface/Actions/eyeclose.png
+    event: !type:ToggleEyesActionEvent
+    useDelay: 1 # so u cant give yourself and observers eyestrain by rapidly spamming the action
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: ActionToggleWagging
+  name: action-name-toggle-wagging
+  description: action-description-toggle-wagging
+  noSpawn: true
+  components:
+    - type: InstantAction
+      icon: { sprite: Mobs/Customization/reptilian_parts.rsi, state: tail_smooth_behind }
+      iconOn: { sprite: Mobs/Customization/reptilian_parts.rsi, state: tail_smooth_behind }
+      itemIconStyle: NoItem
+      useDelay: 1 # emote spam
+      event: !type:ToggleActionEvent

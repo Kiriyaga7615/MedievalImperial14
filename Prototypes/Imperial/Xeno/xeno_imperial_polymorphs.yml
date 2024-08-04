@@ -1,0 +1,84 @@
+﻿- type: polymorph
+  id: ImperialRunnerXeno
+  configuration:
+    entity: MobXenoRunnerImperial
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: ImperialPraetorianXeno
+  configuration:
+    entity: MobXenoPraetorianImperial
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: ImperialDroneXeno
+  configuration:
+    entity: MobXenoDroneImperial
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: ImperialQueenXeno
+  configuration:
+    entity: MobXenoQueenImperial
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: ImperialRavagerXeno
+  configuration:
+    entity: MobXenoRavagerImperial
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+
+- type: polymorph
+  id: ImperialSpitterXeno
+  configuration:
+    entity: MobXenoSpitterImperial
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: ImperialBurrowerXeno
+  configuration:
+    entity: MobXenoImperial
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false

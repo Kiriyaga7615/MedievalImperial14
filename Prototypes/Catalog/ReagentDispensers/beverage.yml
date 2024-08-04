@@ -1,0 +1,37 @@
+- type: reagentDispenserInventory
+  id: SodaDispenserInventory
+  inventory:
+  - DrinkCoffeeJugImperial # Imperial Upstream Chemistry
+  - DrinkColaBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkCreamCartonXLImperial # Imperial Upstream Chemistry
+  - DrinkDrGibbJugImperial # Imperial Upstream Chemistry
+  - DrinkEnergyDrinkJugImperial # Imperial Upstream Chemistry
+  - DrinkGreenTeaJugImperial # Imperial Upstream Chemistry
+  - DrinkIceJugImperial # Imperial Upstream Chemistry
+  - DrinkJuiceLimeCartonXLImperial # Imperial Upstream Chemistry
+  - DrinkJuiceOrangeCartonXLImperial # Imperial Upstream Chemistry
+  - DrinkLemonLimeJugImperial # Imperial Upstream Chemistry
+  - DrinkRootBeerJugImperial # Imperial Upstream Chemistry
+  - DrinkSodaWaterBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkSpaceMountainWindBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkSpaceUpBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkSugarJugImperial # Imperial Upstream Chemistry
+  - DrinkTeaJugImperial # Imperial Upstream Chemistry
+  - DrinkTonicWaterBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkWaterMelonJuiceJugImperial # Imperial Upstream Chemistry
+
+- type: reagentDispenserInventory
+  id: BoozeDispenserInventory
+  inventory:
+  - DrinkAleBottleFullGrowlerImperial # Imperial Upstream Chemistry
+  - DrinkBeerGrowlerImperial # Imperial Upstream Chemistry
+  - DrinkCoffeeLiqueurBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkCognacBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkGinBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkMeadJugImperial # Imperial Upstream Chemistry
+  - DrinkRumBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkTequilaBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkVermouthBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkVodkaBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkWhiskeyBottleFullImperial # Imperial Upstream Chemistry
+  - DrinkWineBottleFullImperial # Imperial Upstream Chemistry

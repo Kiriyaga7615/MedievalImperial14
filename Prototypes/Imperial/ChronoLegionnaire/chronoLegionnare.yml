@@ -1,0 +1,66 @@
+- type: entity
+  parent: MobHumanInvincible
+  id: MobChronoLegionnaire
+  name: Chrono legionnaire
+  description: He came here to fix time and space
+  components:
+    - type: Visibility
+    - type: ToggleVisibility
+    - type: Blink
+    # - type: RandomMetadata
+    #   nameSegments:
+    #   - names_first_male
+    #   - names_last_male
+    - type: Loadout
+      prototypes: [ ChronoLegionnare ]
+    - type: Access
+      groups:
+        - AllAccess
+
+- type: startingGear
+  id: ChronoLegionnare
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBlack
+    shoes: ClothingShoesBootsCombatFilledNoSound
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingChronoSuit
+    back: ClothingBackpackDuffelChronoFilled
+    # id: ERTLeaderPDA
+    ears: ClothingHeadsetAltCentCom
+    # belt: ClothingBeltChiefEngineerFilled
+    # pocket1: Flare
+    #ClothingBackpackDuffelGenetics
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelChronoFilled
+  name: chrono duffel bag
+  description: A large duffel bag for holding extra chrono things.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Duffels/genetics.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1.1
+  - type: Unremoveable
+  - type: StorageFill
+    contents:
+      - id: WeaponChronoGun
+  - type: QualityOfItem #Imperial Space
+    slowDown: false
+
+
+- type: soundCollection
+  id: EmptySteps
+  files:
+  - /Audio/Imperial/ChronoLegionnaire/empty_step.ogg
+
+- type: entity
+  parent: ClothingShoesBootsCombatFilled
+  id: ClothingShoesBootsCombatFilledNoSound
+  suffix: NoSound
+  components:
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: EmptySteps

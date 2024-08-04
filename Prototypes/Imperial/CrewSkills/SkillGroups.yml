@@ -1,0 +1,55 @@
+- type: skillGroup
+  id: skillGroupStandartSS14All
+  skills:
+    - skillBotany #base
+    - skillBaseMed
+    - skillBaseConstraction
+    - skillCooking  #Easy
+    - skillBartending
+    - skillHacking
+    - skillInstrumentation #Medium
+    - skillMaintenance
+    - skillMediumConstruction
+    - skillMediumBotany
+    - skillBasicAtmos
+    - skillMedicalEquipment
+    - skillPharmacology
+    - skillPiloting #Hard
+    - skillAtmos
+    - skillHardInstrumentation
+    - skillRobotics
+    - skillResearch
+    - skillPharmaceuticals
+    - skillShooting
+    - skillSurgery
+    - skillNeuroSurgery
+
+- type: skillGroup
+  id: skillGroupStandartSS14Base
+  skills:
+    - skillBotany #base
+    - skillBaseMed
+    - skillBaseConstraction
+
+- type: skillGroup
+  id: skillGroupEngineering # Набор инженерных навыков
+  skills:
+    - skillBaseConstraction
+    - skillInstrumentation
+    - skillMaintenance
+    - skillMediumConstruction
+    - skillBasicAtmos
+    - skillAtmos
+    - skillHardInstrumentation
+    - skillHacking
+##  - skillPiloting Не уверен, нужно ли это боргам
+
+- type: skillGroup
+  id: skillGroupMedicine # Набор медицинских навыков
+  skills:
+    - skillBaseMed
+    - skillMedicalEquipment
+    - skillPharmacology
+    - skillPharmaceuticals
+    - skillSurgery
+    - skillNeuroSurgery

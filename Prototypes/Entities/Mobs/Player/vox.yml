@@ -1,0 +1,13 @@
+﻿- type: entity
+  save: false
+  name: Vox
+  parent: BaseMobVox
+  id: MobVox
+  components:
+    #Imperial foot prints
+    - type: FootPrints
+      leftBarePrint: "footprint-left-bare-lizard"
+      rightBarePrint: "footprint-right-bare-lizard"
+    - type: ThrowSpamStop #imperial throw spam stop
+    - type: GrantPacified #imperial pacified new players
+    - type: AntispamProtectGhostVisibiity #imperial eye protect system

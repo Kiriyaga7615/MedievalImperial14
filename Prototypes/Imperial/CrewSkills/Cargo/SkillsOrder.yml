@@ -1,0 +1,59 @@
+- type: cargoProduct
+  id: CargoOrderMedSkillsCrate
+  icon:
+    sprite: Imperial/CrewSkills/Books.rsi
+    state: mediumMed
+  product: MedicalSkillsCrate
+  cost: 4000
+  category: Медицина
+  group: market
+
+- type: cargoProduct
+  id: CargoOrderEngSkillsCrate
+  icon:
+    sprite: Imperial/CrewSkills/Books.rsi
+    state: mediumEng
+  product: EngSkillsCrate
+  cost: 4000
+  category: Инженерное дело
+  group: market
+
+- type: cargoProduct
+  id: CargoOrderSecSkillsCrate
+  icon:
+    sprite: Imperial/CrewSkills/Books.rsi
+    state: mediumSec
+  product: SecSkillsCrate
+  cost: 6000
+  category: Охрана
+  group: market
+
+- type: cargoProduct
+  id: CargoOrderSciSkillsCrate
+  icon:
+    sprite: Imperial/CrewSkills/Books.rsi
+    state: mediumSci
+  product: SciSkillsCrate
+  cost: 5000
+  category: Научное
+  group: market
+
+- type: cargoProduct
+  id: CargoOrderServiceSkillsCrate
+  icon:
+    sprite: Imperial/CrewSkills/Books.rsi
+    state: mediumSrv
+  product: ServiceSkillsCrate
+  cost: 1500
+  category: Сервис
+  group: market
+
+- type: cargoProduct
+  id: CargoOrderCargoSkillsCrate
+  icon:
+    sprite: Imperial/CrewSkills/Books.rsi
+    state: mediumCargo
+  product: CargoSkillsCrate
+  cost: 2000
+  category: Снабжение
+  group: market

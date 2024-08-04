@@ -1,0 +1,14 @@
+ - type: entity
+   id: BorgsMalfunction
+   parent: BaseGameRule
+   noSpawn: true
+   components:
+     - type: StationEvent
+       startAnnouncement: station-event-borgs-malfunction-announcement
+       minimumPlayers: 10
+       weight: 10
+       startAudio:
+         path: /Audio/Imperial/i-storm1.ogg
+         params:
+           volume: -4
+     - type: BorgMalfunctionRule

@@ -1,0 +1,54 @@
+- type: job
+  id: BlueShieldOfficer
+  name: job-name-blueshield
+  description: job-description-blueshield
+  psychosisGainResist: 1 # psychosis
+  playTimeTracker: JobBlueShieldOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 3600 #Imperial role timers
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10800 #Imperial role timers
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 10800 #Imperial role timers
+  startingGear: BlueShieldOfficerGear
+  icon: "JobIconBlueshield"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  sponsorsOnly: true
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillShooting
+  - skillPiloting
+  - skillPharmacology
+  - skillMedicalEquipment
+
+- type: startingGear
+  id: BlueShieldOfficerGear
+  equipment:
+    head: ClothingHeadHatBlueshieldBeret
+    jumpsuit: ClothingUniformBlushieldOfficer
+    back: ClothingBackpackBlueshieldOfficerFilled
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesBlueshield
+    outerClothing: ClothingOuterVestKevlarBlueshield
+    id: BlueshieldPDA
+    ears: ClothingHeadsetAltCommand
+    belt: ClothingBeltBlueShield
+    gloves: ClothingHandsGlovesCombat
+  innerclothingskirt: ClothingUniformBlushieldOfficer
+  satchel: ClothingBackpackBlueshieldOfficerFilled
+  duffelbag: ClothingBackpackBlueshieldOfficerFilled

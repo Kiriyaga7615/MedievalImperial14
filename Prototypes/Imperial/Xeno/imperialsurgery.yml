@@ -1,0 +1,59 @@
+- type: reaction
+  id: Humanizine
+  reactants:
+    Radium:
+      amount: 6
+    Phalanximine:
+      amount: 6
+    Blood:
+      amount: 6
+  products:
+    Humanisine: 1
+
+#- type: reaction
+#  id: Arachnizine
+#  reactants:
+#    Radium:
+#      amount: 6
+#    Phalanximine:
+#      amount: 6
+#    SpiderBlood:
+#      amount: 6
+#  products:
+#    Arachnizine: 1
+
+- type: reaction
+  id: Dionizine
+  reactants:
+    Radium:
+      amount: 6
+    Phalanximine:
+      amount: 6
+    RobustHarvest:
+      amount: 6
+  products:
+    Dionizine: 1
+
+- type: reaction
+  id: Unathizine
+  reactants:
+    Radium:
+      amount: 6
+    Phalanximine:
+      amount: 6
+    Cryptobiolin:
+      amount: 6
+  products:
+    Unathizine: 1
+
+- type: reaction
+  id: Dwarfizine
+  reactants:
+    Radium:
+      amount: 6
+    Phalanximine:
+      amount: 6
+    Ethanol:
+      amount: 6
+  products:
+    Dwarfizine: 1

@@ -1,0 +1,25 @@
+- type: entity
+  id: RandomGameRuleTraitor
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: RandomGameRule
+    chance: 0.3
+    rules:
+      - Memetic
+      - Memetic
+      - GribInfected
+# 33.33% Grib 66.66% Meme Total: 20% Meme 10% grib
+
+- type: entity
+  id: RandomGameRuleSurvival
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: RandomGameRule
+    chance: 0.3
+    rules:
+      - Memetic
+      - Memetic
+      - GribInfected
+# 33.33% Grib 66.66% Meme Total: 20% Meme 10% grib

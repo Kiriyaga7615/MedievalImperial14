@@ -1,0 +1,30 @@
+{"version": 1,
+"size": {"x": 32, "y": 32},
+"license": "CC-BY-SA-3.0",
+"copyright": "discord .flazerowo",
+"states":
+[
+    {"name": "Small_coctail_makeng"},
+    {"name": "Small_cooking"},
+    {"name": "Small_lockpicking"},
+    {"name": "small_cover"},
+    {"name": "smallCargo"},
+    {"name": "smallEng"},
+    {"name": "smallMed"},
+    {"name": "smallSci"},
+    {"name": "smallSec"},
+    {"name": "smallSrv"},
+    {"name": "small_trait0"},
+    {"name": "small_trait1"},
+    {"name": "small_trait2"},
+    {"name": "small_trait3"},
+    {"name": "smallA0"},
+    {"name": "smallA1"},
+    {"name": "smallA2"},
+    {"name": "smallA3"},
+    {"name": "smallA4"},
+    {"name": "smallA5"},
+    {"name": "smallA6"},
+    {"name": "small_pages"}
+]
+}

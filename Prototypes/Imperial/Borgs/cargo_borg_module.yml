@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: CrateBorg
+  icon:
+      sprite: Objects/Misc/module.rsi
+      state: cpuboard
+  product: CrateScienceBorg
+  cost: 5000
+  category: Научное
+  group: market

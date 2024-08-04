@@ -1,0 +1,99 @@
+- type: entity
+  #noSpawn: true
+  id: SpawnComNukeOmega
+  name: Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukecom-name
+      description: vl-pot-desc
+      rules: vl-potsynd-rules
+    - type: GhostRoleMobSpawner
+      prototype: ComNukeOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: hos
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMedNukeOmega
+  name: Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukemed-name
+      description: vl-pot-desc
+      rules: vl-potsynd-rules
+    - type: GhostRoleMobSpawner
+      prototype: MedNukeOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: brigmedic
+
+- type: entity
+  #noSpawn: true
+  id: SpawnEliteNukeOmega
+  name: Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukeelite-name
+      description: vl-pot-desc
+      rules: vl-potsynd-rules
+    - type: GhostRoleMobSpawner
+      prototype: EliteNukeOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: seniorofficer
+
+- type: entity
+  #noSpawn: true
+  id: SpawnDefNukeOmega
+  name: Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukedef-name
+      description: vl-pot-desc
+      rules: vl-potsynd-rules
+    - type: GhostRoleMobSpawner
+      prototype: DefNukeOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: security_officer
+
+- type: entity
+  #noSpawn: true
+  id: SpawnJugNukeOmega
+  name: Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukejug-name
+      description: vl-pot-desc
+      rules: vl-potsynd-rules
+    - type: GhostRoleMobSpawner
+      prototype: JugNukeOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertsecurityeva

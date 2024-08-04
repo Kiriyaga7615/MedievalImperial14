@@ -1,0 +1,180 @@
+- type: entity
+  id: VampireInfoAction
+  name: more def
+  description: blyat madagaskari
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 1
+      checkCanInteract: false
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: level
+      event: !type:VampireInfoActionEvent
+
+- type: entity
+  id: VampireDrinkAction
+  name: infection
+  description: drink blood
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 2.2
+      deselectOnMiss: true
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: drink
+      event: !type:VampireDrinkActionEvent
+      whitelist:
+        components:
+          - HumanoidAppearance
+
+- type: entity
+  id: VampireCreateAction
+  name: create
+  description: create blood
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 2.2
+      deselectOnMiss: true
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: create
+      event: !type:VampireCreateActionEvent
+      whitelist:
+        components:
+          - HumanoidAppearance
+
+- type: entity
+  id: VampireStopAction
+  name: stop
+  description: stop human
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 35
+      deselectOnMiss: true
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      range: 10
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: stop
+      event: !type:VampireStopActionEvent
+      whitelist:
+        components:
+          - HumanoidAppearance
+
+- type: entity
+  id: VampireBoostAction
+  name: boost
+  description: boost vamp
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 10
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: boost
+      event: !type:VampireBoostActionEvent
+
+- type: entity
+  id: VampireRegenAction
+  name: regen
+  description: regen vamp
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 40
+      checkCanInteract: false
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: regen
+      event: !type:VampireRegenActionEvent
+
+- type: entity
+  id: VampireCloakAction
+  name: Cloak
+  description: Cloak vamp
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 350
+      checkCanInteract: true
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: cloak
+      event: !type:VampireCloakActionEvent
+
+- type: entity
+  id: VampireSwordAction
+  name: name
+  description: description
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 450
+      checkCanInteract: true
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: sword
+      event: !type:VampireSwordActionEvent
+
+- type: entity
+  id: VampireInvisAction
+  name: name
+  description: description
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 60
+      checkCanInteract: false
+      icon:
+        sprite: /Textures/Imperial/Vampire/actions.rsi
+        state: invis
+      event: !type:VampireInvisActionEvent
+
+
+- type: alert
+  id: VampireBlood
+  icons:
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed0
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed1
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed2
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed3
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed4
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed5
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed6
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed7
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed8
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed9
+  - sprite: /Textures/Interface/Alerts/bleed.rsi
+    state: bleed10
+  name: Уровень крови
+  description: Шкала, примерно отображающая ваш голод. Для более точной информацией - прожмите действие в левой панельке.
+  minSeverity: 0
+  maxSeverity: 10

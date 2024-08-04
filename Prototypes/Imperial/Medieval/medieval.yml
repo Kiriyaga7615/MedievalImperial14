@@ -1,0 +1,3158 @@
+- type: entity
+  parent: BaseWall
+  id: MedievalStoneBrickWall
+  name: stone wall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      - RCDDeconstructWhitelist
+  - type: Sprite
+    sprite: Imperial/Medieval/Walls/stone_brick.rsi
+  - type: Icon
+    sprite: Imperial/Medieval/Walls/stone_brick.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2900
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: walls
+    base: brick
+  - type: ExplosionResistance
+    damageCoefficient: 19
+
+- type: entity
+  parent: Barricade
+  id: MedievalStockade
+  name: MedievalStockade
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      - RCDDeconstructWhitelist
+  - type: Sprite
+    sprite: Imperial/Medieval/Walls/stockade.rsi
+    drawdepth: Walls
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 795
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound: /Audio/Imperial/Medieval/ES_Wood_Break_8_-_SFX_Producer.ogg
+  - type: ExplosionResistance
+    damageCoefficient: 19
+
+- type: entity
+  parent: Barricade
+  id: MedievalStockadeHigh
+  name: MedievalStockadeHigh
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      - RCDDeconstructWhitelist
+  - type: Sprite
+    sprite: Imperial/Medieval/Walls/stockade.rsi
+    state: barricadewoodenhigh
+    drawdepth: Walls
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1695
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound: /Audio/Imperial/Medieval/ES_Wood_Break_8_-_SFX_Producer.ogg
+  - type: ExplosionResistance
+    damageCoefficient: 19
+  - type: Occluder
+
+- type: entity
+  parent: BaseStructure
+  id: MedievalStoneBrickWallLoopHole
+  name: stone loophole
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Walls/stone_loophole.rsi
+  - type: Icon
+    sprite: Imperial/Medieval/Walls/stone_loophole.rsi
+    state: full
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 2900
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: walls
+    base: brick
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 55
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: ExplosionResistance
+    damageCoefficient: 19
+  - type: Damageable
+
+- type: entity
+  id: MedievalFireChemistryBottle
+  name: MedievalFireChemistryBottle
+  description: MedievalFireChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: ChlorineTrifluoride
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalDrugChemistryBottle
+  name: MedievalDrugChemistryBottle
+  description: MedievalDrugChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalMutagenChemistryBottle
+  name: MedievalMutagenChemistryBottle
+  description: MedievalMutagenChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: UnstableMutagen
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalSleepChemistryBottle
+  name: MedievalSleepChemistryBottle
+  description: MedievalSleepChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalBaffChemistryBottle
+  name: MedievalBaffChemistryBottle
+  description: MedievalBaffChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalMuteChemistryBottle
+  name: MedievalMuteChemistryBottle
+  description: MedievalMuteChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: MuteToxin
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalAntChemistryBottle
+  name: MedievalAntChemistryBottle
+  description: MedievalAntChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Iron
+          Quantity: 10
+        - ReagentId: TranexamicAcid
+          Quantity: 10
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalHealthChemistryBottle
+  name: MedievalHealthChemistryBottle
+  description: MedievalHealthChemistryBottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalImpedrezeneChemistryBottle
+  name: ey
+  description: mnk
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Impedrezene
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalWaterGenerator
+  description: A high efficiency water generator.
+  name: water generator
+#  parent: [ BaseGenerator, ConstructibleMachine ]
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: PowerSupplier
+    supplyRate: 5000
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/water.rsi
+    state: portgen0_1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Transform
+    anchored: true
+  - type: Appearance
+  - type: Battery
+    maxCharge: 500000000
+    startingCharge: 500000000
+  - type: NodeContainer
+    examinable: true
+    nodes:
+      input:
+        !type:CableDeviceNode
+        nodeGroupID: MVPower
+      output:
+        !type:CableDeviceNode
+        nodeGroupID: Apc
+  - type: Apc
+    voltage: Apc
+  - type: PowerProvider
+    voltage: Apc
+  - type: BatteryCharger
+    voltage: Medium
+  - type: ExtensionCableProvider
+#    receptionRange: 7
+  - type: PowerNetworkBattery
+    maxSupply: 10000
+    maxChargeRate: 5000
+    supplyRampTolerance: 1000
+    supplyRampRate: 500
+  - type: StationInfiniteBatteryTarget
+  - type: UserInterface
+    interfaces:
+    - key: enum.ApcUiKey.Key
+      type: ApcBoundUserInterface
+  - type: Physics
+    bodyType: Dynamic
+  - type: Anchorable
+  - type: Damageable
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Pullable
+
+#- type: entity
+#  parent: CableBase
+#  id: MedievalLV
+#  name: LC pipe
+#  description: A cable used to connect machines to an APC. #APCs aren't area defined anymore so need this cable to connect things to the APC. This description should be dynamic in future.
+#  components:
+#  - type: Sprite
+#    color: Brown
+#    sprite: Structures/Power/Cables/lv_cable.rsi
+#    state: lvcable_0
+#  - type: Icon
+#    color: Brown
+#    sprite: Structures/Power/Cables/lv_cable.rsi
+#    state: lvcable_4
+#  - type: NodeContainer
+#    nodes:
+#      power:
+#        !type:CableNode
+#        nodeGroupID: Apc
+#  - type: PowerProvider
+#    voltage: Apc
+#  - type: ExtensionCableProvider
+#  - type: Cable
+#    cableDroppedOnCutPrototype: CableApcStack1
+#    cableType: Apc
+#  - type: Destructible
+#    thresholds:
+#    - trigger:
+#        !type:DamageTrigger
+#        damage: 100
+#      behaviors:
+#      - !type:DoActsBehavior
+#        acts: ["Destruction"]
+#  - type: CableVisualizer
+#    statePrefix: lvcable_
+#  - type: AmbientSound
+#    volume: -17
+#    range: 2
+#    sound:
+#      path: /Audio/Ambience/Objects/emf_buzz.ogg
+
+#- type: entity
+#  id: MedievalBlastDoor
+#  parent: BaseShutter
+#  name: blast door
+#  description: This one says 'BLAST DONGER'.
+#  components:
+#  - type: Sprite
+#    netsync: false
+#    sprite: Structures/Doors/Shutters/medieval_blastdoor.rsi
+#    layers:
+#    - state: closed
+#      map: ["enum.DoorVisualLayers.Base"]
+#  - type: Door
+#    closeTimeOne: 0.4
+#    closeTimeTwo: 0.4
+#    openTimeOne: 0.4
+#    openTimeTwo: 0.4
+#    pryTime: -1
+#    crushDamage:
+#      types:
+#        Blunt: 15 # yowch
+#  - type: Occluder
+#  - type: Appearance
+#    visuals:
+#    - type: AirlockVisualizer
+#      simpleVisuals: true
+#      animationTime: 1.0
+#
+#- type: entity
+#  id: MedievalBlastDoorOpen
+#  parent: MedievalBlastDoor
+#  suffix: Open
+#  components:
+#  - type: Door
+#    state: Open
+#  - type: Occluder
+#    enabled: false
+#  - type: Physics
+#    canCollide: false
+#  - type: Airtight
+#    airBlocked: false
+
+- type: Tag
+  id: MedievalLeather
+
+- type: Tag
+  id: Bolt
+
+- type: Tag
+  id: MedievalKey
+
+- type: Tag
+  id: MedievalStone
+
+- type: Tag
+  id: MedievalTopaz
+
+- type: Tag
+  id: MedievalFireSerdolickOre
+
+- type: Tag
+  id: MedievalGoldOre
+
+- type: Tag
+  id: MedievalAdamOre
+
+- type: Tag
+  id: MedievalFireSerdolick
+
+- type: Tag
+  id: MedievalRune
+
+- type: Tag
+  id: MedievalRevent
+
+- type: Tag
+  id: MedievalMob
+
+- type: entity
+  parent: BaseItem
+  id: MedievalBeaker
+  components:
+  - type: Tag
+    tags:
+    - GlassBeaker
+  - type: Sprite
+    sprite: Imperial/Medieval/Drinks/wooden_beaker.rsi
+    netsync: false
+    layers:
+      - state: beaker
+      - state: beaker1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    sprite: Imperial/Medieval/Drinks/wooden_beaker.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 50
+        canMix: true
+  - type: FitsInDispenser
+    solution: beaker
+  - type: RefillableSolution
+    solution: beaker
+  - type: DrainableSolution
+    solution: beaker
+  #- type: ExaminableSolution
+  #  solution: beaker
+  - type: DrawableSolution
+    solution: beaker
+  - type: InjectableSolution
+    solution: beaker
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+    - key: enum.TransferAmountUiKey.Key
+      type: TransferAmountBoundUserInterface
+  - type: Drink
+    isOpen: true
+    solution: beaker
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: beaker
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Glass
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpillBehavior
+        solution: beaker
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: DamageOnHighSpeedImpact
+    minimumSpeed: 2
+    damage:
+      types:
+        Blunt: 5
+
+- type: entity
+  parent: BaseItem
+  id: MedievalWineskin
+  components:
+  - type: Tag
+    tags:
+    - GlassBeaker
+  - type: Sprite
+    sprite: Imperial/Medieval/Drinks/wooden_wineskin.rsi
+    netsync: false
+    layers:
+      - state: beaker
+      - state: beaker1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    sprite: Imperial/Medieval/Drinks/wooden_beaker.rsi
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        maxVol: 80
+        canMix: true
+  - type: FitsInDispenser
+    solution: beaker
+  - type: RefillableSolution
+    solution: beaker
+  - type: DrainableSolution
+    solution: beaker
+  - type: ExaminableSolution
+    solution: beaker
+  - type: DrawableSolution
+    solution: beaker
+  - type: InjectableSolution
+    solution: beaker
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: UserInterface
+    interfaces:
+    - key: enum.TransferAmountUiKey.Key
+      type: TransferAmountBoundUserInterface
+  - type: Drink
+    isOpen: true
+    solution: beaker
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: beaker
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 15
+      behaviors:
+      - !type:SpillBehavior
+        solution: beaker
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# - type: entity
+#   parent: BaseAPC
+#   id: MedievalAPC
+#   suffix: Hyper Capacity, 200kW
+#   components:
+#   - type: Battery
+#     maxCharge: 2000000
+#     startingCharge: 2000000
+#   - type: Destructible
+#     thresholds:
+#     - trigger:
+#         !type:DamageTrigger
+#         damage: 120
+#       behaviors:
+#       - !type:DoActsBehavior
+#         acts: [ "Destruction" ]
+#   - type: Sprite
+#     drawdepth: WallMountedItems
+#     netsync: false
+#     sprite: Structures/Power/medieval_apc.rsi
+#     state: apc0
+
+- type: entity
+  parent: Paper
+  id: MedievalPaper
+  name: MedievalPaper
+  description: MedievalPaper
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/medieval_paper.rsi
+
+- type: entity
+  parent: Paper
+  id: MedievalPaperGuide
+  name: MedievalPaper
+  description: MedievalPaper
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/medieval_paper.rsi
+  - type: Paper
+    content: medieval-rpg-guide
+
+- type: entity
+  parent: Pen
+  id: MedievalPen
+  name: MedievalPen
+  description: MedievalPen
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/medieval_paper.rsi
+
+- type: entity
+  name: handcuffs
+  description: Used to detain criminals and other assholes.
+  id: MedievalHandcuffs
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Small
+  - type: Handcuff
+    breakoutTime: 180
+    cuffedRSI: Imperial/Medieval/Misc/handcuffs.rsi
+    iconState: body-overlay
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/handcuffs.rsi
+    state: handcuff
+  - type: Tag
+    tags:
+    - Handcuffs
+  - type: MeleeWeapon
+    resetOnHandSelected: false
+    animation: WeaponArcDisarm
+    damage:
+      types:
+        Blunt: 3
+
+- type: entity
+  parent: Grille
+  id: MedievalPrisonGrille
+  name: MedievalPrisonGrille
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Walls/prison_grille.rsi
+    state: icon
+  - type: Icon
+    sprite: Imperial/Medieval/Walls/prison_grille.rsi
+    state: icon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  name: dude target
+  id: MedievalTarget
+  parent: BaseTarget
+  description: A shooting target.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/medieval_target.rsi
+    state: target_h
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  name: explosive bomb
+  description: Grenade that creates a small but devastating explosion.
+  parent: GrenadeBase
+  id: MedievalGrenade
+  components:
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 3
+    intensitySlope: 1
+    totalIntensity: 45
+    canCreateVacuum: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/medieval_grenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/Imperial/Medieval/bomb.ogg"
+      params:
+        volume: 7
+    initialBeepDelay: 0
+    beepInterval: 6 # 2 beeps total (at 0 and 2)
+    delay: 2.5
+
+- type: entity
+  parent: MopItem
+  id: MedievalMopItem
+  name: MedievalMopItem
+  description: MedievalMopItem
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonSpeed
+  name: MedaljonSpeed
+  description: MedaljonSpeed
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_speed.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_speed.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.08
+    sprintModifier: 1.08
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonFlashImmune
+  name: MedaljonFlashImmune
+  description: MedaljonFlashImmune
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_flash.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_flash.rsi
+  - type: AddAccentClothing
+    accent: FlashImmunity
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonNoslip
+  name: MedaljonNoslip
+  description: MedaljonNoslip
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_noslip.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_noslip.rsi
+  - type: AddAccentClothing
+    accent: NoSlip
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonThieving
+  name: MedaljonThieving
+  description: MedaljonThieving
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_thieving.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_thieving.rsi
+  - type: AddAccentClothing
+    accent: Thieving
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonDef
+  name: MedaljonDef
+  description: MedaljonDef
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonExpl
+  name: MedaljonExpl
+  description: MedaljonExpl
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_expl.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_expl.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.99
+        Slash: 0.99
+        Piercing: 0.99
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+
+- type: entity
+  parent: ClothingNeckTieDet
+  id: MedaljonDark
+  name: MedaljonDark
+  description: MedaljonDark
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_dark.rsi
+  - type: Clothing
+    slots:
+    - ears
+    sprite: Imperial/Medieval/Clothing/Medaljons/medaljon_dark.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.15
+        Radiation: 0.04
+        Bloodloss: 0.1
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+
+- type: entity
+  parent: ChemistryEmptyBottle01
+  id: MedievalChemistryEmptyBottle01
+  name: MedievalChemistryEmptyBottle01
+  description: MedievalChemistryEmptyBottle01
+  components:
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: ChemistryEmptyBottle02
+  id: MedievalChemistryEmptyBottle02
+  name: MedievalChemistryEmptyBottle02
+  description: MedievalChemistryEmptyBottle02
+  components:
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: ChemistryEmptyBottle03
+  id: MedievalChemistryEmptyBottle03
+  name: MedievalChemistryEmptyBottle03
+  description: MedievalChemistryEmptyBottle03
+  components:
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: ChemistryEmptyBottle04
+  id: MedievalChemistryEmptyBottle04
+  name: MedievalChemistryEmptyBottle04
+  description: MedievalChemistryEmptyBottle04
+  components:
+  - type: Item
+    size: Tiny
+
+- type: entity
+  name: Lockpick
+  parent: CrowbarRed
+  id: Lockpick
+  description: A thiev's best friend.
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/lockpick.rsi
+    state: omnitool-screwing
+    scale: 0.6, 0.6
+  - type: Item
+    sprite: Objects/Tools/omnitool.rsi
+    size: Small
+  #- type: MedievalLockpick
+  # - type: SignalLinker
+  #   requiredQuality: Pulsing
+  #- type: UserInterface
+  #  interfaces:
+  #    - key: enum.SignalLinkerUiKey.Key
+  #      type: SignalPortSelectorBoundUserInterface
+  #- type: Tool
+  #  qualities:
+  #    - Screwing
+  #  speed: 1.2 # Kept for future adjustments. Currently 1.2x for balance
+  #  useSound: /Audio/Items/drill_use.ogg
+  #- type: LatticeCutting
+  #- type: MultipleTool
+  #  statusShowBehavior: true
+  #  entries:
+  #    - behavior: Screwing
+  #      sprite:
+  #        sprite: Imperial/Medieval/Misc/lockpick.rsi
+  #        state: omnitool-screwing
+  #      useSound:
+  #        path: /Audio/Items/drill_use.ogg
+  #      changeSound:
+  #        path: /Audio/Items/change_drill.ogg
+  #    - behavior: Prying
+  #      sprite:
+  #        sprite: Imperial/Medieval/Misc/lockpick.rsi
+  #        state: omnitool-prying
+  #      useSound:
+  #        path: /Audio/Items/jaws_pry.ogg
+  #      changeSound:
+  #        path: /Audio/Items/change_drill.ogg
+  #    - behavior: Anchoring
+  #      sprite:
+  #        sprite: Imperial/Medieval/Misc/lockpick.rsi
+  #        state: omnitool-wrenching
+  #      useSound:
+  #        path: /Audio/Items/ratchet.ogg
+  #      changeSound:
+  #        path: /Audio/Items/change_drill.ogg
+  #    - behavior: Cutting
+  #      sprite:
+  #        sprite: Imperial/Medieval/Misc/lockpick.rsi
+  #        state: omnitool-snipping
+  #      useSound:
+  #        path: /Audio/Items/jaws_cut.ogg
+  #      changeSound:
+  #        path: /Audio/Items/change_drill.ogg
+  #    - behavior: Pulsing
+  #      sprite:
+  #        sprite: Imperial/Medieval/Misc/lockpick.rsi
+  #        state: omnitool-pulsing
+  #      changeSound:
+  #        path: /Audio/Items/change_drill.ogg
+
+- type: inventoryTemplate
+  id: goblin
+  slots:
+    - name: neck
+      slotTexture: neck
+      slotFlags: NECK
+      uiWindowPos: 0,1
+      strippingWindowPos: 0,1
+      displayName: Neck
+    - name: mask
+      slotTexture: mask
+      slotFlags: MASK
+      uiWindowPos: 1,1
+      strippingWindowPos: 1,1
+      displayName: Mask
+    - name: eyes
+      slotTexture: glasses
+      slotFlags: EYES
+      stripTime: 3
+      uiWindowPos: 0,0
+      strippingWindowPos: 0,0
+      displayName: Eyes
+    - name: ears
+      slotTexture: ears
+      slotFlags: EARS
+      stripTime: 3
+      uiWindowPos: 2,0
+      strippingWindowPos: 2,0
+      displayName: Ears
+    - name: head
+      slotTexture: head
+      slotFlags: HEAD
+      uiWindowPos: 1,0
+      strippingWindowPos: 1,0
+      displayName: Head
+    - name: pocket1
+      slotTexture: pocket
+      slotFlags: POCKET
+      slotGroup: MainHotbar
+      stripTime: 3
+      uiWindowPos: 0,3
+      strippingWindowPos: 0,4
+      displayName: Pocket 1
+      stripHidden: true
+    - name: pocket2
+      slotTexture: pocket
+      slotFlags: POCKET
+      slotGroup: MainHotbar
+      stripTime: 3
+      uiWindowPos: 2,3
+      strippingWindowPos: 1,4
+      displayName: Pocket 2
+      stripHidden: true
+    - name: suitstorage
+      slotTexture: suit_storage
+      slotFlags:   SUITSTORAGE
+      stripTime: 3
+      uiWindowPos: 2,0
+      strippingWindowPos: 2,5
+      dependsOn: outerClothing
+      displayName: Suit Storage
+    - name: id
+      slotTexture: id
+      slotFlags: IDCARD
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 2,1
+      strippingWindowPos: 2,4
+      displayName: ID
+    - name: belt
+      slotTexture: belt
+      slotFlags: BELT
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 3,1
+      strippingWindowPos: 1,5
+      displayName: Belt
+    - name: back
+      slotTexture: back
+      slotFlags: BACK
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 3,0
+      strippingWindowPos: 0,5
+      displayName: Back
+
+- type: entity
+  id: MedievalWallRock
+  parent: BaseStructure
+  name: rock
+  components:
+    #- type: Gatherable
+    #  whitelist:
+    #    tags:
+    #      - Pickaxe
+    #- type: Damageable
+    #  damageContainer: Inorganic
+    #  damageModifierSet: Metallic
+    #- type: Destructible
+    #  thresholds:
+    #    - trigger:
+    #        !type:DamageTrigger
+    #        damage: 150
+    #      behaviors:
+    #        - !type:DoActsBehavior
+    #          acts: ["Destruction"]
+    - type: Occluder
+    - type: Airtight
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          density: 100
+          mask:
+            - FullTileMask
+          layer:
+            - WallLayer
+    - type: IconSmooth
+      key: walls
+      mode: NoSprite
+    - type: SmoothEdge
+    - type: Sprite
+      sprite: Imperial/Medieval/Walls/rock.rsi
+      netsync: false
+      layers:
+        - state: rock
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_west
+    #- type: OreVein
+    #  oreChance: 0.9
+    #  oreRarityPrototypeId: MedievalRandom
+
+
+- type: entity
+  id: MedievalWallRockUpgr
+  parent: BaseStructure
+  name: rock
+  components:
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Metallic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 850
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Occluder
+    - type: Airtight
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          density: 100
+          mask:
+            - FullTileMask
+          layer:
+            - WallLayer
+    - type: IconSmooth
+      key: walls
+      mode: NoSprite
+    - type: SmoothEdge
+    - type: Sprite
+      sprite: Imperial/Medieval/Walls/rock.rsi
+      netsync: false
+      layers:
+        - state: rock
+        - map: [ "enum.EdgeLayer.South" ]
+          state: rock_south
+        - map: [ "enum.EdgeLayer.East" ]
+          state: rock_east
+        - map: [ "enum.EdgeLayer.North" ]
+          state: rock_north
+        - map: [ "enum.EdgeLayer.West" ]
+          state: rock_west
+    #- type: OreVein
+    #  oreChance: 0.9
+    #  oreRarityPrototypeId: MedievalRandom
+
+- type: emoteSounds
+  id: MedievalBear
+  sound:
+    path: /Audio/Imperial/Medieval/bear.ogg
+    params:
+      variation: 0.125
+
+- type: entity
+  name: MedievalHandheldHealthAnalyzer
+  parent:
+    - BaseItem
+    - PowerCellSlotSmallItem
+  id: MedievalHandheldHealthAnalyzer
+  description: MedievalHandheldHealthAnalyzer
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdvhealthanalyzer.rsi
+    netsync: false
+    state: icon
+    layers:
+    - state: icon
+    - state: analyzer
+      shader: unshaded
+      visible: true
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: PowerCellDraw
+    drawRate: 0
+    useRate: 0
+  - type: ActivatableUIRequiresPowerCell
+  - type: ActivatableUI
+    key: enum.HealthAnalyzerUiKey.Key
+    closeOnHandDeselect: false
+  - type: UserInterface
+    interfaces:
+      - key: enum.HealthAnalyzerUiKey.Key
+        type: HealthAnalyzerBoundUserInterface
+  - type: HealthAnalyzer
+    scanningEndSound:
+      path: "/Audio/Imperial/Medieval/b366784e62914fc.ogg"
+  - type: Tag
+    tags:
+    - DiscreteHealthAnalyzer
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerCellSlotVisuals.Enabled:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: false }
+          False: { visible: false }
+
+- type: entity
+  name: MedievalHandheldGPSBasic
+  parent: BaseItem
+  id: MedievalHandheldGPSBasic
+  description: MedievalHandheldGPSBasic
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdvgps.rsi
+    netsync: false
+    layers:
+    - state: icon
+    - state: active
+  - type: Item
+    sprite: Imperial/Medieval/Misc/mdvgps.rsi
+  - type: HandheldGPS
+
+- type: entity
+  id: MedievalBloodChemistryBottle
+  name: robust harvest bottle
+  description: This will increase the potency of your plants.
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: DexalinPlus
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalSpaceChemistryBottle
+  name: robust harvest bottle
+  description: This will increase the potency of your plants.
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Spaceacillin
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalRadChemistryBottle
+  name: robust harvest bottle
+  description: This will increase the potency of your plants.
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Arithrazine
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalGigaHealChemistryBottle
+  name: robust harvest bottle
+  description: This will increase the potency of your plants.
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Thrivenin
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalGeneticChemistryBottle
+  name: robust harvest bottle
+  description: This will increase the potency of your plants.
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+        reagents:
+        - ReagentId: Phalanximine
+          Quantity: 20
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: MedievalFloorDrain
+  name: MedievalFloorDrain
+  description: MedievalFloorDrain
+  placement:
+    mode: SnapgridCenter
+  parent: FloorDrain
+  components:
+    - type: Sprite
+      drawdepth: FloorObjects
+      sprite: Imperial/Medieval/Decor/drain_medival.rsi
+      state: drain
+
+- type: soundCollection
+  id: MedievalFootstepSteel
+  files:
+  - /Audio/Imperial/Medieval/0919132c658e1be.ogg
+
+- type: entity
+  name: MedievalBrutepack
+  description: A therapeutic gel pack and bandages designed to treat blunt-force trauma.
+  parent: BaseHealingItem
+  id: MedievalBrutepack
+  components:
+    - type: Tag
+      tags:
+        - Brutepack
+    - type: Sprite
+      state: brutepack
+    - type: Healing
+      damageContainer: Biological
+      damage:
+        groups:
+          Brute: -15 # 5 for each type in the group
+      healingBeginSound:
+        path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      healingEndSound:
+        path: "/Audio/Items/Medical/brutepack_end.ogg"
+    - type: Stack
+      stackType: MedievalBrutepack
+      count: 10
+
+- type: stack
+  id: MedievalBrutepack
+  name: MedievalBrutepack
+  icon: { sprite: "/Textures/Objects/Specific/Medical/medical.rsi", state: gauze }
+  spawn: MedievalBrutepack
+  maxCount: 10
+
+- type: entity
+  name: mop bucket
+  id: MedievalMopBucket
+  description: Holds water and the tears of the janitor.
+  components:
+  - type: Clickable
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/janitorialmdv.rsi
+    netsync: false
+    noRot: true
+    layers:
+      - state: mopbucket
+      - state: mopbucket_water-2
+        map: ["enum.SolutionContainerLayers.Fill"]
+  - type: InteractionOutline
+  - type: SolutionContainerManager
+    solutions:
+      bucket:
+        maxVol: 600
+        reagents:
+          - ReagentId: Water
+            Quantity: 300
+  - type: Spillable
+    spillDelay: 3.0
+  - type: DrainableSolution
+    solution: bucket
+  - type: RefillableSolution
+    solution: bucket
+  - type: ExaminableSolution
+    solution: bucket
+  - type: Tag
+    tags:
+      - Wringer
+  - type: Physics
+    bodyType: Dynamic
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.40,0.25,0.25"
+        density: 60
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Pullable
+  - type: Drink
+    isOpen: true
+    solution: bucket
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: mopbucket_water-
+
+- type: entity
+  id: MedievalDruidTree
+  description: Yep, it's a tree.
+  components:
+  - type: SpriteFade
+  - type: Clickable
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/flora_druid.rsi
+    drawdepth: Overdoors
+    offset: 0,0.9
+    state: treelarge05
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.35,-0.4,0.35,0.4"
+        density: 1000
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Wood
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path: /Audio/Effects/chop.ogg
+        params:
+          variation: 0.05
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/tree_fell.ogg
+          params:
+            volume: 5
+            variation: 0.05
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Log:
+            min: 2
+            max: 8
+          MedievalSpawnDruid:
+            min: 1
+            max: 1
+  - type: WarpPoint
+    follow: true
+    location: Medieval boss angry tree
+
+- type: entity
+  name: Exception Spawner
+  id: MedievalSpawnDruid
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+        - state: ai
+    - type: RandomSpawner
+      prototypes:
+      - MedievalMobDruid
+      chance: 1
+
+- type: entity
+  name: cobold_summoner
+  description: New Interstellar Version 2340
+  parent: BaseStorageItem
+  id: MedievalCoboldSummoner
+  components:
+  - type: UseDelay
+    delay: 3.0
+  - type: Summonable
+    specialItem: MedievalMobKobold
+    requriesBibleUser: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Summon/murlock.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Imperial/Medieval/Summon/murlock.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,1
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+
+- type: entity
+  name: cobold_summoner
+  description: New Interstellar Version 2340
+  parent: BaseStorageItem
+  id: MedievalFireSummoner
+  components:
+  - type: UseDelay
+    delay: 3.0
+  - type: Summonable
+    specialItem: MedievalMobFire
+    requriesBibleUser: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Summon/human.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Imperial/Medieval/Summon/human.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,1
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+
+- type: entity
+  name: cobold_summoner
+  description: New Interstellar Version 2340
+  parent: BaseStorageItem
+  id: MedievalHumanSummoner
+  components:
+  - type: UseDelay
+    delay: 3.0
+  - type: Summonable
+    specialItem: MedievalRandomHumanoidSpawnerHewbie
+    requriesBibleUser: false
+  - type: Sprite
+    sprite: Imperial/Medieval/Summon/fire.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Imperial/Medieval/Summon/fire.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,1
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalBlack
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-black
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalBlue
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-blue
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalFish
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-fish
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalGreen
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-green
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalRed
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-red
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalWhite
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-white
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalYellow
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-yellow
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalHell
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-hell
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalWizard
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-wizard
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalNecro
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-necro
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  name: stamp
+  parent: RubberStampMime
+  id: MedievalStampMedievalMercs
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-medieval-mercs
+    stampState: "paper_stamp-trader"
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/bureaucracy.rsi
+    state: stamp-chaplain
+
+- type: entity
+  id: MedievalWoodenFloor
+  parent: BaseStructure
+  description: "Fancy walking surface."
+  components:
+  - type: Sprite
+    drawdepth: FloorTiles
+    netsync: false
+    sprite: Imperial/Medieval/Decor/wooden.rsi
+    state: wood
+  - type: Tag
+    tags: [ Carpet ]
+  - type: Physics
+    canCollide: false
+  - type: Fixtures
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+
+- type: entity
+  id: MedievalRandomHumanoidSpawnerHewbie
+  name: ERT leader
+  suffix: EVA
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertleadereva
+    - type: RandomHumanoidSpawner
+      settings: MedievalNewbie
+    - type: RandomHumanoidAppearance
+    - type: RandomMetadata
+      nameSegments:
+      - names_first
+      - names_last
+
+- type: randomHumanoidSettings
+  id: MedievalNewbie
+  parent: ERTLeader
+  components:
+    - type: GhostRole
+      name: ghost-role-information-medieval-newbie-name
+      description: ghost-role-information-medieval-newbiedescription
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ MedievalNothingWerwolf ]
+
+- type: speechSounds
+  id: Goblin
+  saySound:
+    path: /Audio/Imperial/Medieval/zvuki-goblina_004.ogg
+  askSound:
+    path: /Audio/Imperial/Medieval/zvuki-goblina_004.ogg
+  exclaimSound:
+    path: /Audio/Imperial/Medieval/zvuki-goblina_004.ogg
+
+- type: entity
+  name: gol
+  parent: BaseItem
+  id: MedievalVendigoFur
+  description: gol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/vendigo.rsi
+    state: icon
+
+- type: Tag
+  id: Vendigo
+
+- type: entity
+  name: pinpointer
+  id: PinpointerVendigo
+  parent: PinpointerBase
+  components:
+  - type: Pinpointer
+    component: Damageable
+
+- type: entity
+  parent: BaseStructure
+  id: MedievalBaseWeaponTurret
+  name: ballistic turret
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Actions
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.4,-0.4,0.4,0.4"
+          density: 60
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: Sprite
+      sprite: Imperial/Medieval/Decor/ballista.rsi
+      drawdepth: Mobs
+      layers:
+        - state: syndie_lethal
+    - type: CombatMode
+      toggleMouseRotator: false
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 220
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+    - type: Gun
+      fireRate: 0.2
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot: /Audio/Imperial/Medieval/ES_Arrow_Release_1_-_SFX_Producer.ogg
+    - type: BallisticAmmoProvider
+      proto: MedievalBolt
+      capacity: 80
+    - type: ExplosionResistance
+      damageCoefficient: 20
+    - type: HTN
+      rootTask:
+        task: TurretCompound
+      blackboard:
+        RotateSpeed: !type:Single
+          0.641
+        SoundTargetInLOS: !type:SoundPathSpecifier
+          path: /Audio/Imperial/Medieval/ES_Crossbow_Fire_10_-_SFX_Producer.ogg
+    - type: MouseRotator
+      angleTolerance: 5
+      rotationSpeed: 180
+      simple4DirMode: false
+    - type: NoRotateOnInteract
+    - type: NoRotateOnMove
+    - type: Input
+      context: "human"
+
+- type: entity
+  parent: MedievalBaseWeaponTurret
+  id: MedievalWeaponTurretSyndicate
+  suffix: Syndicate
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+
+- type: entity
+  parent: MedievalBaseWeaponTurret
+  id: MedievalWeaponTurretNanoTrasen
+  suffix: NanoTrasen
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+
+- type: entity
+  parent: MedievalBaseWeaponTurret
+  id: MedievalWeaponTurretHostile
+  suffix: Hostile
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+
+- type: entity
+  parent: ClothingUniformJumpsuitFlannel
+  id: MedievalClothingUniformJumpsuitFlannel
+
+- type: entity
+  parent: BookBase
+  id: MedievalBookNecro1
+  name: book
+  description: The book is in good condition
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Misc/mdv_books.rsi
+      layers:
+        - state: bk1
+    - type: Paper
+      content: book-necro-1
+    - type: RadiationSource
+      intensity: 3
+      slope: 0.2
+
+- type: entity
+  parent: BookBase
+  id: MedievalBookNecro2
+  name: book
+  description: The book is in good condition
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Misc/mdv_books.rsi
+      layers:
+        - state: bk2
+    - type: Paper
+      content: book-necro-2
+    - type: RadiationSource
+      intensity: 3
+      slope: 0.2
+
+- type: entity
+  parent: BookBase
+  id: MedievalBookNecro3
+  name: book
+  description: The book is in good condition
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Misc/mdv_books.rsi
+      layers:
+        - state: bk3
+    - type: Paper
+      content: book-necro-3
+    - type: RadiationSource
+      intensity: 3
+      slope: 0.2
+
+
+
+- type: entity
+  parent: BaseItem
+  id: MedievalGeigerCounter
+  name: Geiger counter
+  description: A handheld device used for detecting and measuring radiation pulses.
+  components:
+    - type: Sprite
+      sprite: Imperial/Medieval/Misc/mdv_geiger.rsi
+      layers:
+        - state: geiger_base
+        - state: geiger_on_idle
+          map: ["enum.GeigerLayers.Screen"]
+          shader: unshaded
+          visible: false
+    - type: Item
+      sprite: Imperial/Medieval/Misc/mdv_geiger.rsi
+    - type: Geiger
+      showControl: true
+      showExamine: true
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.GeigerVisuals.IsEnabled:
+          GeigerLayers.Screen:
+            True: { visible: True }
+            False: { visible: False }
+        enum.GeigerVisuals.DangerLevel:
+          GeigerLayers.Screen:
+            None: {state: geiger_on_idle}
+            Low: {state: geiger_on_low}
+            Med: {state: geiger_on_med}
+            High: {state: geiger_on_high}
+            Extreme: {state: geiger_on_ext}
+
+- type: entity
+  name: first aid kit
+  description: It's an emergency medical kit for those serious boo-boos.
+  parent: BaseStorageItem
+  id: MedievalMedkit
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/CraftBosses/firstaidkits.rsi
+    state: firstaid
+  - type: Storage
+    grid:
+    - 0,0,8,1
+  - type: Item
+    size: Large
+    sprite: Imperial/Medieval/CraftBosses/firstaidkits.rsi
+    heldPrefix: firstaid
+  - type: Tag
+    tags:
+    - Medkit
+
+# - type: entity
+#   name: first aid kit
+#   description: It's an emergency medical kit for those serious boo-boos.
+#   parent: MedievalMedkit
+#   id: MedievalMedkitFilled
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: FixOVein
+#       - id: Hemostat
+#       - id: BoneSetter
+#       - id: Retractor
+#       - id: Cautery
+#       - id: Scalpel
+#       - id: Saw
+#       - id: BoneGel
+#       - id: OrganHealer
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootGoblin
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: goblin
+  - type: Currency
+    price:
+      Revent: 10
+  - type: Item
+    size: Tiny
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootHog
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: hog
+  - type: Currency
+    price:
+      Revent: 14
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootHunter
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: hunter
+  - type: Currency
+    price:
+      Revent: 25
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootCrab
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: crab
+  - type: Currency
+    price:
+      Revent: 3
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootCrabDevil
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: dcrab
+  - type: Currency
+    price:
+      Revent: 7
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootWolf
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: wolf
+  - type: Currency
+    price:
+      Revent: 15
+  - type: Item
+    size: Tiny
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootDevilMouse
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: dmouse
+  - type: Currency
+    price:
+      Revent: 3
+  - type: Item
+    size: Tiny
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootAnt
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: hitin
+  - type: Currency
+    price:
+      Revent: 13
+  - type: Item
+    size: Tiny
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootBear
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: bear
+  - type: Currency
+    price:
+      Revent: 25
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootWeak
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: weak
+  - type: Currency
+    price:
+      Revent: 5
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootMeat
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: meat
+  - type: Currency
+    price:
+      Revent: 7
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootFighter
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: fighter
+  - type: Currency
+    price:
+      Revent: 11
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootLegion
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: legion
+  - type: Currency
+    price:
+      Revent: 22
+  - type: Item
+    size: Small
+
+- type: entity
+  name: MedievalLoot
+  parent: BaseItem
+  id: MedievalLootEgg
+  description: MedievalLoot
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+    state: egg
+  - type: Currency
+    price:
+      Revent: 9
+  - type: Item
+    size: Small
+
+#- type: entity
+#  name: MedievalRandom
+#  parent: BaseItem
+#  id: MedievalRandom
+#  noSpawn: true
+#  description: MedievalRandom
+#  components:
+#  - type: Sprite
+#    sprite: Imperial/Medieval/Misc/mdv_loot.rsi
+#    state: egg
+
+- type: entity
+  name: multitool
+  parent: BaseItem
+  id: MedievalMultitool
+  description: An advanced tool to copy, store, and send electrical pulses and signals through wires and machines
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/multitool_drop.ogg
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/mdv_multitool.rsi
+    layers:
+    - state: icon
+    - state: green-unlit
+      shader: unshaded
+  - type: Item
+    size: Small
+  - type: Tool
+    qualities:
+      - Pulsing
+  - type: NetworkConfigurator
+  - type: ActivatableUI
+    key: enum.NetworkConfiguratorUiKey.List
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      - key: enum.NetworkConfiguratorUiKey.List
+        type: NetworkConfiguratorBoundUserInterface
+      - key: enum.NetworkConfiguratorUiKey.Configure
+        type: NetworkConfiguratorBoundUserInterface
+      - key: enum.NetworkConfiguratorUiKey.Link
+        type: NetworkConfiguratorBoundUserInterface
+  - type: Tag
+    tags:
+      - Multitool
+      - DroneUsable
+
+- type: entity
+  parent: BaseStructureComputer
+  id: MedievalComms
+  name: computer
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Effects/glass_hit.ogg"
+  - type: Computer
+  - type: ExtensionCableReceiver
+  - type: Sprite
+    sprite: Objects/Fun/Instruments/structureinstruments.rsi
+    state: tuba
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+        ents: []
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StrongMetallic
+  - type: UserInterface
+    interfaces:
+    - key: enum.CommunicationsConsoleUiKey.Key
+      type: CommunicationsConsoleBoundUserInterface
+  - type: CommunicationsConsole
+    title: medieval-announcement-title-horn
+    color: "#ff0000"
+    canShuttle: false
+    global: true
+    sound: /Audio/Imperial/Medieval/horn.ogg
+  - type: ActivatableUI
+    key: enum.CommunicationsConsoleUiKey.Key
+
+- type: entity
+  id: MedievalWaterDeepDarkEntity
+  name: water
+  description: A real thirst quencher.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: Sprite
+    sprite: Tiles/Planet/water.rsi
+    drawdepth: Overdoors
+    layers:
+      - state: shoreline_water
+  - type: MovementSpeedModifier
+    walkSpeedModifier: 0.25
+    sprintSpeedModifier: 0.25
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepWater
+      params:
+        volume: 12
+  - type: DamageContacts
+    damage:
+      types:
+        Asphyxiation: 8
+    ignoreWhitelist:
+      tags:
+      - MedievalMob
+
+
+- type: entity
+  id: MedievalScrollBarrierWeak
+  name: scroll of runes
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/medieval_decor.rsi
+    layers:
+    - state: scroll1
+  - type: MagicScroll
+    power: 3
+
+- type: entity
+  id: MedievalScrollBarrierNormal
+  name: scroll of runes
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/medieval_decor.rsi
+    layers:
+    - state: scroll2
+  - type: MagicScroll
+    power: 7
+
+- type: entity
+  id: MedievalScrollBarrierGood
+  name: scroll of runes
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Imperial/Medieval/Decor/medieval_decor.rsi
+    layers:
+    - state: scroll3
+  - type: MagicScroll
+    power: 12
+
+- type: entity
+  id: MedievalScrollBarrierBad
+  name: scroll of runes
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    layers:
+    - state: spell_default
+  - type: MagicScroll
+    power: -10
+
+- type: entity
+  id: MedievalScrollBarrierDebug
+  name: scroll of runes
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    layers:
+    - state: spell_default
+  - type: MagicScroll
+    power: 60
+
+- type: entity
+  id: MedievalScrollBarrierDebugBad
+  name: scroll of runes
+  parent: BaseItem
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Objects/Magic/magicactions.rsi
+    layers:
+    - state: spell_default
+  - type: MagicScroll
+    power: -60
+
+- type: tile
+  id: MedievalFloorWood1
+  name: средневековье дерево 1
+  sprite: /Textures/Tiles/Imperial/wood1.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorWood2
+  name: средневековье дерево 2
+  sprite: /Textures/Tiles/Imperial/wood2.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorWood3
+  name: средневековье дерево 3
+  sprite: /Textures/Tiles/Imperial/wood3.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone1
+  name: средневековье камень 1
+  sprite: /Textures/Tiles/Imperial/stone1.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone2
+  name: средневековье камень 2
+  sprite: /Textures/Tiles/Imperial/stone2.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone3
+  name: средневековье камень 3
+  sprite: /Textures/Tiles/Imperial/stone3.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone4
+  name: средневековье камень 4
+  sprite: /Textures/Tiles/Imperial/stone4.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone5
+  name: средневековье камень 5
+  sprite: /Textures/Tiles/Imperial/stone5.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone6
+  name: средневековье камень 6
+  sprite: /Textures/Tiles/Imperial/stone6.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone7
+  name: средневековье камень 7
+  sprite: /Textures/Tiles/Imperial/stone7.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone8
+  name: средневековье камень 8
+  sprite: /Textures/Tiles/Imperial/stone8.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: tile
+  id: MedievalFloorStone9
+  name: средневековье камень 9
+  sprite: /Textures/Tiles/Imperial/stone9.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  #deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepTile
+  itemDrop: FloorTileItemWoodLarge
+  heatCapacity: 10000
+
+- type: entity
+  parent: BaseItem
+  id: BaseMagicSpellbook
+  name: syndicate uplink
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/burger.rsi
+  - type: Item
+  - type: UserInterface
+    interfaces:
+    - key: enum.StoreUiKey.Key
+      type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Store
+    preset: StorePresetMedievalCharmerIsland
+    balance:
+      MagicMedieval: 100
+  - type: TimedDespawn
+    lifetime: 300
+
+- type: entity
+  parent: BaseMagicSpellbook
+  id: BaseMagicSpellbook75
+  name: syndicate uplink
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Store
+    balance:
+      MagicMedieval: 75
+
+- type: entity
+  parent: BaseMagicSpellbook
+  id: BaseMagicSpellbook150
+  name: syndicate uplink
+  description: Suspiciously looking old radio...
+  suffix: Empty
+  components:
+  - type: Store
+    balance:
+      MagicMedieval: 150
+
+- type: storePreset
+  id: StorePresetMedievalCharmerIsland
+  storeName: store-preset-medieval
+  categories:
+  - MedievalCharmer1
+  - MedievalCharmer2
+  - MedievalCharmer3
+  currencyWhitelist:
+  - MagicMedieval
+
+- type: currency
+  id: MagicMedieval
+  displayName: store-currency-display-magic-medieval
+  canWithdraw: false
+
+- type: storeCategory
+  id: MedievalCharmer1
+  name: medieval-category-charm-1
+  priority: 0
+
+- type: storeCategory
+  id: MedievalCharmer2
+  name: medieval-category-charm-2
+  priority: 1
+
+- type: storeCategory
+  id: MedievalCharmer3
+  name: medieval-category-charm-3
+  priority: 2
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookSmoke
+  productEntity: MedievalSpellbookSmoke
+  cost:
+    MagicMedieval: 9
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+#- type: listing
+#  id: MagicSpellShopMedievalSpellbookLight
+#  productEntity: MedievalSpellbookLight
+#  cost:
+#    MagicMedieval: 11
+#  categories:
+#  - MedievalCharmer1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookLight
+  productEntity: MedievalSpellbookLight
+  cost:
+    MagicMedieval: 11
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookFlash1
+  productEntity: MedievalSpellbookFlash1
+  cost:
+    MagicMedieval: 11
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookArrow1
+  productEntity: MedievalSpellbookArrow1
+  cost:
+    MagicMedieval: 14
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookDisabler1
+  productEntity: MedievalSpellbookDisabler1
+  cost:
+    MagicMedieval: 14
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookBarrier
+  productEntity: MedievalSpellbookBarrier
+  cost:
+    MagicMedieval: 15
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookHeal1
+  productEntity: MedievalSpellbookHeal1
+  cost:
+    MagicMedieval: 13
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookFireball1
+  productEntity: MedievalSpellbookFireball1
+  cost:
+    MagicMedieval: 32
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookBoost1
+  productEntity: MedievalSpellbookBoost1
+  cost:
+    MagicMedieval: 15
+  categories:
+  - MedievalCharmer1
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+#- type: listing
+#  id: MagicSpellShopMedievalSpellbookBoost1
+#  productEntity: MedievalSpellbookBoost1
+#  cost:
+#    MagicMedieval: 15
+#  categories:
+#  - MedievalCharmer2
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookBlink
+  productEntity: MedievalSpellbookBlink
+  cost:
+    MagicMedieval: 34
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookSmoke2
+  productEntity: MedievalSpellbookSmoke2
+  cost:
+    MagicMedieval: 17
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookHeal2
+  productEntity: MedievalSpellbookHeal2
+  cost:
+    MagicMedieval: 25
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookBarrier2
+  productEntity: MedievalSpellbookBarrier2
+  cost:
+    MagicMedieval: 24
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookArrow2
+  productEntity: MedievalSpellbookArrow2
+  cost:
+    MagicMedieval: 22
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookDisabler2
+  productEntity: MedievalSpellbookDisabler2
+  cost:
+    MagicMedieval: 22
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookFireball2
+  productEntity: MedievalSpellbookFireball2
+  cost:
+    MagicMedieval: 58
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookFlash2
+  productEntity: MedievalSpellbookFlash2
+  cost:
+    MagicMedieval: 21
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookBoost2
+  productEntity: MedievalSpellbookBoost2
+  cost:
+    MagicMedieval: 24
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookSleep2
+  productEntity: MedievalSpellbookSleep2
+  cost:
+    MagicMedieval: 28
+  categories:
+  - MedievalCharmer2
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookSmoke3
+  productEntity: MedievalSpellbookSmoke3
+  cost:
+    MagicMedieval: 38
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookHeal3
+  productEntity: MedievalSpellbookHeal3
+  cost:
+    MagicMedieval: 62
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookBarrier3
+  productEntity: MedievalSpellbookBarrier3
+  cost:
+    MagicMedieval: 65
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookArrow3
+  productEntity: MedievalSpellbookArrow3
+  cost:
+    MagicMedieval: 52
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookDisabler3
+  productEntity: MedievalSpellbookDisabler3
+  cost:
+    MagicMedieval: 78
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookFireball3
+  productEntity: MedievalSpellbookFireball3
+  cost:
+    MagicMedieval: 85
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookFlash3
+  productEntity: MedievalSpellbookFlash3
+  cost:
+    MagicMedieval: 54
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookBoost3
+  productEntity: MedievalSpellbookBoost3
+  cost:
+    MagicMedieval: 52
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: MagicSpellShopMedievalSpellbookSleep3
+  productEntity: MedievalSpellbookSleep3
+  cost:
+    MagicMedieval: 56
+  categories:
+  - MedievalCharmer3
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: startingGear
+  id: MobAghostDantanatGear
+  equipment:
+    back: ClothingBackpackSatchelHoldingAdmin
+    id: AdminPDA
+    mask: ClothingKrilBig
+    head: MedievalClothingHeadCrownKing
+
+- type: entity
+  name: gol
+  parent: BaseItem
+  id: MedievalFlowerVetr
+  description: gol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/flowers.rsi
+    state: vetr
+    scale: 0.76, 0.76
+  - type: MagicPotionsIngredient
+    ingredientType: Vetr
+  - type: Currency
+    price:
+      Revent: 2
+
+- type: entity
+  name: gol
+  parent: BaseItem
+  id: MedievalFlowerLipad
+  description: gol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/flowers.rsi
+    state: lipad
+    scale: 0.4, 0.4
+  - type: MagicPotionsIngredient
+    ingredientType: Lipad
+  - type: Currency
+    price:
+      Revent: 2
+
+- type: entity
+  name: gol
+  parent: BaseItem
+  id: MedievalFlowerLava
+  description: gol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/flowers.rsi
+    state: lava
+    scale: 0.5, 0.5
+  - type: MagicPotionsIngredient
+    ingredientType: Lava
+  - type: Currency
+    price:
+      Revent: 2
+
+- type: entity
+  name: gol
+  parent: BaseItem
+  id: MedievalFlowerCryo
+  description: gol
+  components:
+  - type: Sprite
+    sprite: Imperial/Medieval/Misc/flowers.rsi
+    state: cryo
+    scale: 0.5, 0.5
+  - type: MagicPotionsIngredient
+    ingredientType: Cryo
+  - type: Currency
+    price:
+      Revent: 2

@@ -1,0 +1,21 @@
+- type: vendingMachineInventory
+  id: EngGunInventory
+  startingInventory:
+   WeaponShotgunStormTrooperTGMC: 5
+   WeaponSubMachineGunZekeTGMC: 5
+   WeaponPistolMiltonTGMC: 10
+   BaseMagazineShotgunStormTrooperTGMC: 10
+   BaseMagazinePistolMiltonTGMC: 20
+   BaseMagazinePistolSubMachineGunZekeTGMC: 10
+   MagazineBoxPistol: 5
+   BoxLethalshot: 10
+   SheetSteelTGMC: 3
+   SheetSteel: 5
+   SheetGlass: 5
+   SheetPlastic: 5
+   ClothingHandsGlovesColorYellow: 10
+   CrowbarTGMC: 10
+   WrenchTGMC: 10
+   ToolboxElectricalTurretMarine: 2
+   Flare: 24
+   PinpointerUniversal: 4

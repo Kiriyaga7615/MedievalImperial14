@@ -1,0 +1,46 @@
+# Actions added to mobs in crit.
+- type: entity
+  id: ActionCritSuccumb
+  name: Сдаться #imperial translate
+  description: Прими свою судьбу. #imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    checkConsciousness: false
+    icon:
+      sprite: Mobs/Ghosts/ghost_human.rsi
+      state: icon
+    event: !type:CritSuccumbEvent
+
+- type: entity
+  id: ActionCritFakeDeath
+  name: Фальшивая Смерть #imperial translate
+  description: Притворитесь, что делаете последний вздох, оставаясь в живых. #imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    checkConsciousness: false
+    icon:
+      sprite: Interface/Actions/actions_crit.rsi
+      state: fakedeath
+    event: !type:CritFakeDeathEvent
+    useDelay: 30
+
+- type: entity
+  id: ActionCritLastWords
+  name: Скажи последние слова #imperial translate
+  description: Прошепчите свои последние слова всем, кто рядом, а затем поддайтесь своей судьбе. У вас есть только 30 персонажей для работы. #imperial translate
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    checkConsciousness: false
+    icon:
+      sprite: Interface/Actions/actions_crit.rsi
+      state: lastwords
+    event: !type:CritLastWordsEvent

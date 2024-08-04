@@ -1,0 +1,18 @@
+- type: entity
+  id: footprintBase
+  components:
+  - type: Clickable
+  - type: Sprite
+    sprite: Imperial/FootPrints/footprints.rsi
+    drawdepth: DeadMobs
+    layers:
+    - state: footprint-shoes
+      map: ["enum.FootpritsVisuals.FootprintStateKey"]
+  - type: Appearance
+  - type: FootPrintsObj
+  - type: SolutionContainerManager
+    solutions:
+      content:
+        maxVol: 100
+  - type: TimedDespawn
+    lifetime: 600

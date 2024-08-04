@@ -1,0 +1,33 @@
+- type: entity
+  parent: BaseWall
+  id: WallXeno
+  name: xeno wall
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/xeno_imperial.rsi
+  - type: Icon
+    sprite: Structures/Walls/xeno_imperial.rsi
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    destroySound:
+      path: /Audio/Effects/metalbreak.ogg
+  - type: IconSmooth
+    key: walls
+    base: xeno

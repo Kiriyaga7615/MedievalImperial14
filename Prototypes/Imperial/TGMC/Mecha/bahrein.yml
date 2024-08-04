@@ -1,0 +1,45 @@
+- type: entity
+  parent: BaseMech
+  id: MechBahreinTGMC
+  name: Bahrein Mech
+  description: "Produced by \"Tyranny of Honk, INC\", this exosuit is designed as heavy clown-support. Used to spread the fun and joy of life. HONK!"
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/TGMC/Mecha/bahrein.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: bahrein
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+      params:
+        volume: -10
+  - type: Mech
+    baseState: bahrein
+    openState: bahrein
+    brokenState: broken
+    mechToPilotDamageMultiplier: 0.5
+    pilotWhitelist:
+      components:
+      - HumanoidAppearance
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.35
+    baseSprintSpeed: 2.75
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  name: Bahrein Spawner
+  id: SpawnMechBahrein
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+  - type: ConditionalSpawner
+    prototypes:
+      - MechBahreinTGMC

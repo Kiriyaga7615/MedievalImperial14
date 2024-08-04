@@ -1,0 +1,170 @@
+- type: entity
+  name: drone
+  id: DroneImperial
+  parent: PlayerSiliconBase
+  components:
+  - type: DroneImperialLimitation
+  - type: SwarmerTool
+    tools:
+      - id: Omnitool
+      - id: WelderExperimental
+      - id: trayScanner
+      - id: ClothingBackpackSatchelEngineering
+  - type: NameIdentifier
+    group: Drone
+  - type: Inventory
+    templateId: drone
+  - type: InventorySlots
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: CrewSkills
+    skills:
+    - skillBaseConstraction
+    - skillInstrumentation
+    - skillMaintenance
+    - skillMediumConstruction
+    - skillBasicAtmos
+    - skillAtmos
+    - skillHardInstrumentation
+    - skillHacking
+    - skillRobotics
+  - type: GhostRole
+    allowMovement: true
+    makeSentient: true
+    name: ghost-dronimperial-name
+    description: ghost-dronimperial-desc
+    rules: ghost-dronimperial-rules
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - AI
+  - type: ActiveRadio
+    channels:
+    - AI
+    - Common
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      60: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+  - type: Flashable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: NoSlip
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 0.7
+      50: 0.5
+  - type: Temperature
+    heatDamageThreshold: 5000
+    currentTemperature: 310.15
+    specificHeat: 42
+    heatDamage:
+      types:
+        Heat : 1 #per second, scales with temperature & other constants
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: drone
+      sprite: Imperial/DroneImperial/drone.rsi
+      map: ["base"]
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: Appearance
+  - type: ReplacementAccent
+    accent: silicon
+  - type: Repairable
+    fuelcost: 15
+    doAfterDelay: 8
+  - type: Actions
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 3.5
+    softness: 1
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: Tag
+    tags:
+      - ShoesRequiredStepTriggerImmune
+      - CannotSuicide
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechSounds: Pai
+
+#Name
+
+- type: nameIdentifierGroup
+  id: Drone
+  prefix: DR
+  fullName: true
+  minValue: 10000
+  maxValue: 99999
+
+#Body
+
+- type: body
+  id: Drone
+  name: "drone"
+  root: torso
+  slots:
+    torso:
+      part: TorsoAnimal
+      connections:
+      - hand
+    hand:
+      part: HandsAnimal
+
+#Рецепт
+
+- type: latheRecipe
+  id: Drone
+  result: DroneImperial
+  completetime: 6
+  materials:
+    Steel: 1500
+    Glass: 1500
+    Plastic: 1500
+    Plasma: 500
+    Uranium: 1000

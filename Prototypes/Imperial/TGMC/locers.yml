@@ -1,0 +1,38 @@
+- type: entity
+  id: LockerCmdperTGMC
+  parent: LockerBooze
+  name: CmdOper locker
+  description: Usually cold and empty... like your heart.
+  components:
+    - type: AccessReader
+      access: [["MarineComOper"]]
+    - type: StorageFill
+      contents:
+       - id: CaptainSabre
+       - id: ClothingBeltSheriffSheath
+       - id: ClothingOuterArmorCO
+       - id: ClothingUniformJumpsuitCOTGMC
+       - id: ClothingHeadHelmetCO
+       - id: ClothingNeckCloakCOTGMC
+       - id: ShieldCOTGMC
+       - id: SpeedLoaderMagnum
+       - id: SpeedLoaderMagnum
+       - id: WeaponRevolverDeckard
+
+- type: entity
+  id: LockerCmdFieldTGMC
+  parent: LockerBooze
+  name: CmdField locker
+  description: Usually cold and empty... like your heart.
+  components:
+    - type: AccessReader
+      access: [["MarineFieldCommander"]]
+    - type: StorageFill
+      contents:
+       - id: WeaponRevolverDeckard
+       - id: SpeedLoaderMagnum
+       - id: SpeedLoaderMagnum
+       - id: SpeedLoaderMagnum
+       - id: SpeedLoaderMagnum
+       - id: ClothingHeadHelmetFC
+       - id: ClothingOuterArmorFC

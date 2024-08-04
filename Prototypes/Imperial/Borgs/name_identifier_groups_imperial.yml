@@ -1,0 +1,5 @@
+﻿- type: nameIdentifierGroup
+  id: BorgImperial
+  prefix: БРГ
+  minValue: 1000
+  maxValue: 9999

@@ -1,0 +1,113 @@
+- type: entity
+  id: WeaponChronoGunBase
+  abstract: true
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Basic/staves.rsi
+  - type: Item
+    size: Large
+  - type: Gun
+    fireRate: 10
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: AmmoCounter
+  # All staves recharge. Wands are not.
+  - type: RechargeBasicEntityAmmo
+
+- type: entity
+  name: chrono gun
+  parent: WeaponChronoGunBase
+  id: WeaponChronoGun
+  description: Erases someone or something from the universe.
+  components:
+  - type: Sprite
+    sprite: Imperial/ChronoLegionnaire/chronogun.rsi
+    layers:
+    - state: icon
+  - type: Item
+    size: Large
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Imperial/ChronoLegionnaire/chronogun_shoot.ogg
+  - type: BasicEntityAmmoProvider
+    proto: ProjectileChronoGun
+    capacity: 5
+    count: 5
+
+- type: entity
+  id: ProjectileChronoGun
+  name: Chrono bullet
+  description: You never existed
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: SingularityDistortion
+    FalloffPower: 1.5
+    Intensity: 10
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: bluespace
+  - type: Projectile
+    damage:
+      groups: # good enough. Maybe make it call the rejuvenate command later.
+        Brute: 0
+        Burn: 0
+        Airloss: 0
+        Toxin: 0
+    ignoreResistances: true
+  - type: ChronoGunProjectile
+
+- type: entity
+  name: chronoEffectIn
+  id: chronoEffectIn
+  components:
+  - type: Sprite
+    sprite: Imperial/ChronoLegionnaire/chronolegionnaireEffect.rsi
+    drawdepth: Effects
+    netsync: false
+    layers:
+    - state: "chronoEffectIn"
+      shader: unshaded
+  - type: Physics
+    canCollide: false
+  - type: PointLight
+    enabled: true
+    color: "#4080FF"
+    radius: 3.5
+    softness: 1
+    autoRot: true
+    castShadows: false
+  - type: TimedDespawn
+    lifetime: 0.8
+  - type: Tag
+    tags:
+      - HideContextMenu
+
+- type: entity
+  name: chronoEffectOut
+  id: chronoEffectOut
+  parent: chronoEffectIn
+  components:
+  - type: Sprite
+    sprite: Imperial/ChronoLegionnaire/chronolegionnaireEffect.rsi
+    drawdepth: Effects
+    netsync: false
+    layers:
+    - state: "chronoEffectOut"
+      shader: unshaded
+
+# - type: entity
+#   name: chronoEffectTarget
+#   id: chronoEffectTarget
+#   parent: chronoEffectIn
+#   components:
+#   - type: Sprite
+#     sprite: /Textures/_Imperial/Effects/chronoLegionnaire/chronoEffectVisible.rsi
+#     drawdepth: Effects
+#     netsync: false
+#     layers:
+#     - state: "chronoEffectTarget"
+#       shader: unshaded

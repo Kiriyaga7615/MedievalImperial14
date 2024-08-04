@@ -1,0 +1,444 @@
+- type: entity # броники
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterArmorTGMCMarine
+  name: bulletproof vest
+  description: A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinevest.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinevest.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.7
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Storage
+    capacity: 60
+  - type: UserInterface
+    interfaces:
+      - key: enum.StorageUiKey.Key
+        type: StorageBoundUserInterface
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterArmorTGMCEngineer
+  name: bulletproof vest
+  description: A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinevestengi.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinevestengi.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Heat: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.35
+  - type: Storage
+    capacity: 90
+    whitelist:
+      tags:
+        - Powerdrill
+        - Wirecutter
+        - Crowbar
+        - Screwdriver
+        - Flashlight
+        - Wrench
+        - GeigerCounter
+        - Flare
+        - CableCoil
+        - CigPack
+        - Radio
+        - HolofanProjector
+        - Multitool
+        - AppraisalTool
+        - Sheet
+        - RawMaterial
+        - Ingot
+  - type: UserInterface
+    interfaces:
+      - key: enum.StorageUiKey.Key
+        type: StorageBoundUserInterface
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterArmorTGMCMedic
+  name: bulletproof vest
+  description: A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinevestmed.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinevestmed.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8 #на случай огня по своим
+        Heat: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterArmorTGMCommando
+  name: bulletproof vest
+  description: A Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinecommando.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinecommando.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6 #на случай огня по своим
+        Heat: 0.6
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+
+- type: entity #шлемы
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetTGMC
+  name: SWAT helmet
+  description: An extremely robust helmet, commonly used by paramilitary forces. This one has the Nanotrasen logo emblazoned on the top.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinegunner.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinegunner.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Caustic: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: PointLight
+    color: "#a0f1e8"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    radius: 8
+    softness: 20
+    autoRot: true
+  - type: UnpoweredFlashlight
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetTGMCEngi
+  name: SWAT helmet
+  description: An extremely robust helmet, commonly used by paramilitary forces. This one has the Nanotrasen logo emblazoned on the top.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinengi.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinengi.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.8
+        Heat: 0.8
+        Caustic: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: UserInterface
+    interfaces:
+      - key: enum.StorageUiKey.Key
+        type: StorageBoundUserInterface
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: PointLight
+    color: "#a0f1e8"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    radius: 12
+    softness: 20
+    autoRot: true
+  - type: UnpoweredFlashlight
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetTGMCMedic
+  name: SWAT helmet
+  description: An extremely robust helmet, commonly used by paramilitary forces. This one has the Nanotrasen logo emblazoned on the top.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinemed.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinemed.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: Storage
+    capacity: 15
+  - type: UserInterface
+    interfaces:
+      - key: enum.StorageUiKey.Key
+        type: StorageBoundUserInterface
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: PointLight
+    color: "#a0f1e8"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    radius: 20
+    softness: 20
+    autoRot: true
+  - type: UnpoweredFlashlight
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHelmetTGMCMD
+  name: SWAT helmet
+  description: An extremely robust helmet, commonly used by paramilitary forces. This one has the Nanotrasen logo emblazoned on the top.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marinecmd.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marinecmd.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.8
+        Caustic: 0.6
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: PointLight
+    color: "#a0f1e8"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    radius: 35
+    softness: 20
+    autoRot: true
+  - type: UnpoweredFlashlight
+
+- type: entity #униформа
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTGMC
+  name: marine jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Cloth/marineuniform.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Cloth/marineuniform.rsi
+
+- type: entity #визоры
+  parent: ClothingEyesBase
+  id: ClothingEyesHudMarineEngineer
+  name: marine engi hud
+  description: A heads-up display capable of analyzing the integrity and status of robotics and exosuits.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Helm/marinevisorengi.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Helm/marinevisorengi.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: ShowSecurityIcons
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHudMarineCMD
+  name: marine cmd hud
+  description: A heads-up display capable of analyzing the integrity and status of everything
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Helm/marinevisorcmd.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Helm/marinevisorcmd.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: ShowSecurityIcons
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHudMarineMed
+  name: marine med hud
+  description: A heads-up display capable of analyzing the integrity and status of humans
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Helm/marinevisormed.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Helm/marinevisormed.rsi
+  - type: FlashImmunity
+  - type: ShowSecurityIcons
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: Tag
+    tags:
+    - HudMedical
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHudMarine
+  name: marine hud
+  description: A heads-up display capable of analyzing the integrity and status of humans
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Helm/marinevisor.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Helm/marinevisor.rsi
+  - type: FlashImmunity
+  - type: ShowSecurityIcons
+
+- type: entity
+  parent: ClothingBeltMedical
+  id: ClothingBeltChiefMedical
+  name: chief medical belt
+  description: Can hold various medical equipment.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Belt/chiefmed.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Belt/chiefmed.rsi
+  - type: Storage
+    capacity: 135
+
+- type: entity
+  id: ClothingBeltChiefMedicalFilledTGMC
+  parent: ClothingBeltChiefMedical
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: MedicatedSuture
+        amount: 2
+      - id: RegenerativeMesh
+        amount: 2
+      - id: Bloodpack
+        amount: 2
+      - id: Gauze
+      - id: EmergencyMedipen
+        amount: 3
+      - id: TGMCombatMedipen
+        amount: 3
+      - id: TGMCFunnyMedipen
+        amount: 3
+      - id: TGMCMegaMedipen
+        amount: 3
+      - id: TGMCausticMedipen
+        amount: 3
+
+- type: entity
+  id: ClothingBeltUtilityEngineeringTGMC
+  parent: ClothingBeltUtility
+  suffix: Filled, TGMC
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrowbarTGMC
+      - id: WrenchTGMC
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: WelderIndustrialAdvancedTGMC
+      - id: Multitool

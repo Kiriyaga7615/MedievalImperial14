@@ -1,0 +1,699 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorFur
+  name: fur armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/fur_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/fur_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.6
+        Stamina: 0.95 ## Stamina resistance
+  - type: Item
+    size: Small
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorStudded
+  name: studded armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/studder_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/studder_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.78
+        Heat: 0.7
+        Stamina: 0.9 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeather
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.7
+        Piercing: 0.75
+        Heat: 0.65
+        Stamina: 0.78 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeather2
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  noSpawn: true
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor2.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor2.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.7
+        Piercing: 0.75
+        Heat: 0.65
+        Stamina: 0.78 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeatherLight
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_light.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_light.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.7
+        Piercing: 0.75
+        Heat: 0.65
+        Stamina: 0.85 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorLeatherHeavy
+  name: leather armor
+  description: An armored vest with fur plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_heavy.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/leather_armor_heavy.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.5
+        Stamina: 0.7 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorIronCuirass
+  name: iron armor cuirass
+  description: An armored iron plate to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor_cuirass.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor_cuirass.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.35
+        Stamina: 0.6 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorIron
+  name: iron armor
+  description: An armor with iron plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/iron_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.28
+        Piercing: 0.38
+        Heat: 0.35
+        Stamina: 0.45 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75
+  - type: Item
+    size: Huge
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorUpIron
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/up_iron_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.25
+        Slash: 0.2
+        Piercing: 0.3
+        Heat: 0.25
+        Stamina: 0.3 ## Stamina resistance
+  - type: ClothingSpeedModifier
+    walkModifier: 0.45
+    sprintModifier: 0.45
+  - type: Item
+    size: Huge
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalIronGloves
+  name: IronGloves
+  description: gloves
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/iron_gloves.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nanomachines
+  - type: FingerprintMask
+  - type: MeleeWeapon
+    attackRate: 1.1
+    damage:
+      types:
+        Blunt: 7.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingOuterPlagueSuit
+  id: MedievalClothingOuterPlagueSuit
+  name: MedievalClothingOuterPlagueSuit
+  description: MedievalClothingOuterPlagueSuit
+  components:
+  - type: Tag
+    tags:
+    - Sterile
+
+- type: entity
+  parent: ClothingUniformJumpskirtJanimaidmini
+  id: MedievalClothingUniformJumpskirtJanimaid
+  name: MedievalClothingUniformJumpskirtJanimaid
+  description: MedievalClothingUniformJumpskirtJanimaid
+
+- type: entity
+  parent: ClothingMaskGas
+  id: MedievalMaskFace
+  name: medievalMaskFace
+  description: edievalMaskFace
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Mask/bandit.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Mask/bandit.rsi
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: MedievalAlchemicBelt
+  name: MedievalAlchemicBelt
+  description: MedievalAlchemicBelt
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Belt/alchemic.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Belt/alchemic.rsi
+  - type: Storage
+    grid:
+    - 0,0,4,4
+    whitelist:
+      tags:
+        - MedievalRune
+        - Bottle
+  - type: Appearance
+  - type: Item
+    size: Large
+
+- type: entity
+  parent: Clothing
+  id: MedievalClothingFeetSteel
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/steel.rsi
+    state: icon
+  - type: Clothing
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Shoes/steel.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: MedievalFootstepSteel
+
+- type: entity
+  parent: Clothing
+  id: MedievalClothingFeetNecromancer
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/necro.rsi
+    state: icon
+  - type: Clothing
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Shoes/necro.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: MedievalFootstepSteel
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalNecroGloves
+  name: IronGloves
+  description: gloves
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves.rsi
+  - type: MeleeWeapon
+    attackRate: 1.8
+    damage:
+      types:
+        Caustic: 12
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MedievalNecroGlovesLight
+  name: IronGloves
+  description: gloves
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves_light.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Gloves/necro_gloves_light.rsi
+  - type: MeleeWeapon
+    attackRate: 1.1
+    damage:
+      types:
+        Caustic: 7
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorNecro
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.38
+        Slash: 0.38
+        Piercing: 0.38
+        Heat: 0.38
+        Stamina: 0.3 ## Stamina resistance
+  - type: Item
+    size: Large
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorNecroLight
+  name: upgrade iron armor
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor_light.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/necro_iron_armor_light.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.44
+        Piercing: 0.7
+        Heat: 0.5
+        Stamina: 0.5 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: Clothing
+  id: MedievalClothingFeetNecromancerLight
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Shoes/necro_light.rsi
+    state: icon
+  - type: Clothing
+    slots: [feet]
+    sprite: Imperial/Medieval/Clothing/Shoes/necro_light.rsi
+  - type: Insulated
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 0.99
+    sprintModifier: 0.99
+  - type: RadiationSource
+    intensity: 0.3
+    slope: 0.2
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorCharmer
+  name: MedievalClothingOuterArmorCharmer
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.55
+        Piercing: 0.7
+        Heat: 0.4
+        Bloodloss: 0.6
+        Stamina: 0.5 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+
+
+- type: entity
+  parent: ClothingOuterBase
+  id: MedievalClothingOuterArmorCharmerLight
+  name: MedievalClothingOuterArmorCharmerLight
+  description: An upgraded armor with iron plates to protect against melee weapons.
+  components:
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 10
+      4: 0
+      5: 0
+      6: 0
+  - type: Sprite
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_light.rsi
+  - type: Clothing
+    sprite: Imperial/Medieval/Clothing/Armor/charmer_armor_light.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.65
+        Piercing: 0.85
+        Heat: 0.65
+        Bloodloss: 0.65
+        Stamina: 0.7 ## Stamina resistance
+  - type: Item
+    size: Normal
+  - type: ExplosionResistance
+    damageCoefficient: 0.7

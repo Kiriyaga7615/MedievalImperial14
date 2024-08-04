@@ -1,0 +1,47 @@
+- type: job
+  id: SecurityOfficer
+  name: job-name-security
+  description: job-description-security
+  playTimeTracker: JobSecurityOfficer
+  #psychosisGainResist: 0.75 # psychosis
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Security
+  #    time: 7200 #Imperial role timers
+  startingGear: SecurityOfficerGear
+  icon: "JobIconSecurityOfficer"
+  supervisors: командир
+  canBeAntag: false
+  #access:
+  #- Security
+  #- Brig
+  #- Maintenance
+  #- Service
+  #- External
+  #- Cryogenics
+  #special:
+  #- !type:AddImplantSpecial
+  #  implants: [ MindShieldImplant ]
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillShooting
+
+- type: startingGear
+  id: SecurityOfficerGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsSalvage
+    #id: PassengerPDA
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    pocket2: MedievalBrutepack
+    neck: MedievalClothingNeckCloakClanEagle
+    belt: MedievalFalshionT3Legion
+    head: MedievalClothingHeadHelmetLegionLegioner
+    id: MedievalLeatherKey
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth26
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

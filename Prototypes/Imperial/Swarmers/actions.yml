@@ -1,0 +1,117 @@
+- type: entity
+  id: SwarmerTeleportAction
+  name: teleport
+  description: A useful spell that teleports aboba to a chosen destination.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 0
+      whitelist:
+        components:
+          - HumanoidAppearance
+          - Swarmer
+      deselectOnMiss: false
+      repeat: false
+      canTargetSelf: true
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/White/Cult/actions_cult.rsi
+        state: teleport
+      event: !type:TeleportActionEvent
+
+- type: entity
+  id: SwarmerDeconstructionAction
+  name: deconstruction
+  description: A useful spell that teleports aboba to a chosen destination.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 0
+      deselectOnMiss: false
+      repeat: true
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Swarmers/actions.rsi
+        state: deconstruction_action
+      event: !type:DeconstructionSlowActionEvent
+
+- type: entity
+  id: SwarmerWallAction
+  name: wall
+  description: A useful spell that teleports aboba to a chosen destination.
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 0
+      deselectOnMiss: false
+      repeat: true
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Swarmers/structures.rsi
+        state: wall_good
+      event: !type:WallActionEvent
+
+- type: entity
+  id: SwarmerTileAction
+  name: tile
+  description: A useful spell that teleports aboba to a chosen destination.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 0
+      deselectOnMiss: false
+      repeat: true
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Swarmers/structures.rsi
+        state: tile
+      event: !type:TileActionEvent
+
+- type: entity
+  id: SwarmerHoloAction
+  name: holo
+  description: A useful spell that teleports aboba to a chosen destination.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 0
+      deselectOnMiss: false
+      repeat: true
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Swarmers/structures.rsi
+        state: holo
+      event: !type:HoloActionEvent
+
+- type: entity
+  id: SwarmerCaptureAction
+  name: capture
+  description: A useful spell that makes aboba to be aboba.
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 0
+      deselectOnMiss: false
+      repeat: true
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Swarmers/structures.rsi
+        state: wall_mirror
+      event: !type:CaptureActionEvent

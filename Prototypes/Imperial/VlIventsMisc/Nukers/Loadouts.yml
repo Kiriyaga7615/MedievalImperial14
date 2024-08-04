@@ -1,0 +1,154 @@
+- type: startingGear
+  id: SyndComUnUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieCommander
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndComUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieCommander
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    pocket1: BaseUplinkRadio40TC
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndMedUnUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieMedic
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiAgentPDA
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndMedUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieMedic
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiAgentPDA
+    pocket1: BaseUplinkRadio40TC
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndEliteUnUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieElite
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndEliteUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieElite
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    pocket1: BaseUplinkRadio40TC
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndDefUnUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndie
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndDefUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndie
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    pocket1: BaseUplinkRadio40TC
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndJugUnUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitJuggernaut
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndJugUplinkGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitJuggernaut
+    ears: ClothingHeadsetAltSyndicate
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    pocket1: BaseUplinkRadio40TC
+    mask: ClothingMaskGasSyndicate
+    pocket2: DoubleEmergencyOxygenTankFilled

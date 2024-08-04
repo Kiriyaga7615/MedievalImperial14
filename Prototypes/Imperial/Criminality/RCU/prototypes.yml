@@ -1,0 +1,1520 @@
+- type: Tag
+  id: 357MagnumCartridge
+
+- type: Tag
+  id: 357SpeedLoader
+
+- type: Tag
+  id: MilkorSpeedLoader
+
+- type: Tag
+  id: IronSkin
+
+- type: entity
+  id: SpeedLoaderMilkor
+  name: "grenade speedloader"
+  suffix: RCU
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MilkorSpeedLoader
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Grenade
+    proto: GrenadeFrag
+    capacity: 6
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/grenade.rsi
+    scale: 0.5, 0.5
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-6
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+
+- type: entity
+  id: BaseSpeedLoader357
+  name: "speed loader (.357 magnum)"
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - 357SpeedLoader
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - 357MagnumCartridge
+    proto: Base357Cartridge
+    capacity: 7
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-6
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+
+- type: entity
+  id: SpeedLoader357AP
+  name: "speed loader (.357 magnum armor-piercing)"
+  suffix: RCU
+  parent: BaseSpeedLoader357
+  components:
+  - type: BallisticAmmoProvider
+    proto: 357CartridgeArmorPiercing
+
+- type: entity
+  id: Base357Cartridge
+  name: cartridge (.357 magnum)
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - 357MagnumCartridge
+  - type: CartridgeAmmo
+    proto: BaseBullet357
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1 #Imperial price balance
+
+- type: entity
+  id: 357CartridgeArmorPiercing
+  name: cartridge (.357 magnum armor-piercing)
+  suffix: RCU
+  parent: Base357Cartridge
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet357ArmorPiercing
+
+- type: entity
+  id: BaseBullet357
+  name: bullet (.357 magnum)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+
+- type: entity
+  id: Bullet357ArmorPiercing
+  name: bullet (.357 magnum armor-piercing)
+  parent: BaseBullet357
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 32
+    ignoreResistances: true
+
+
+- type: entity
+  name: Unica
+  parent: BaseItem
+  id: BaseUnica
+  description: A rooty tooty point and shooty.
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/Unica/unica.rsi
+    state: icon
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/Unica/unica.rsi
+    quickEquip: false
+    slots:
+    - suitStorage
+    - Belt
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 3
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+  - type: ContainerContainer
+    containers:
+      revolver-ammo: !type:Container
+  - type: RevolverAmmoProvider
+    whitelist:
+      tags:
+        - 357MagnumCartridge
+        - 357SpeedLoader
+    proto: Base357Cartridge
+    capacity: 7
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    soundEject:
+      path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+  - type: StaticPrice
+    price: 500
+  - type: AmmoCounter
+
+- type: entity
+  name: Unica
+  parent: BaseUnica
+  id: RCUUnica
+  suffix: RCU
+  description: A rooty tooty point and shooty.
+  components:
+  - type: RevolverAmmoProvider
+    proto: 357CartridgeArmorPiercing
+  - type: Speech # Взрывные РИГ'и
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные РИГ'и
+    friendlyFaction: DeathSquad
+    chance: 1
+    minRandomTime: 1
+    maxRandomTime: 5
+
+- type: entity
+  parent: CentcomIDCard
+  id: RCUIdCardOperator
+  name: RCU ID Card
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/deadsquad.rsi
+      layers:
+        - state: blackcard
+        - state: deadsquadID
+    - type: Item
+      # heldPrefix: gold
+    - type: IdCard
+      jobTitle: IJYLUNIL
+
+- type: entity
+  parent: CentcomIDCard
+  id: RCUIdCardOfficer
+  name: RCU ID Card
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/deadsquad.rsi
+      layers:
+        - state: blackcard
+        - state: deadsquadID
+    - type: Item
+      # heldPrefix: gold
+    - type: IdCard
+      jobTitle: IZZCWYL
+
+- type: entity
+  parent: BasePDA
+  id: RCUPDAOperator
+  name: RCU PDA
+  description: Oh no ...
+  components:
+    - type: Pda
+      id: RCUIdCardOperator
+      state: pda-bartender
+    - type: PdaBorderColor
+      borderColor: "#242424"
+      accentHColor: "#447987"
+    - type: Icon
+      sprite: Objects/Devices/pda.rsi
+      state: pda-bartender
+
+- type: entity
+  parent: BasePDA
+  id: RCUPDAOfficer
+  name: RCU PDA
+  description: Oh no ...
+  components:
+    - type: Pda
+      id: RCUIdCardOfficer
+      state: pda-bartender
+    - type: PdaBorderColor
+      borderColor: "#242424"
+      accentHColor: "#447987"
+    - type: Icon
+      sprite: Objects/Devices/pda.rsi
+      state: pda-bartender
+
+- type: explosion
+  id: Plastide
+  damagePerIntensity:
+    types:
+      Structural: 200
+      Heat: 2
+      Blunt: 2
+      Piercing: 2
+  tileBreakChance: [ 0 ]
+  tileBreakIntensity: [ 0 ]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Effects/fire.rsi
+  fireStates: 3
+
+- type: explosion
+  id: MinibombRCU
+  damagePerIntensity:
+    types:
+      Heat: 4
+      Blunt: 7
+      Piercing: 4
+  tileBreakChance: [0]
+  tileBreakIntensity: [0]
+  tileBreakRerollReduction: 20
+  lightColor: Orange
+  texturePath: /Textures/Effects/fire.rsi
+  fireStates: 3
+  resmult: 4
+
+- type: entity
+  id: ShellShotgunUTS
+  name: shell (.50)
+  suffix: RCU
+  parent: BaseShellShotgun
+  components:
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: PelletShotgun
+    spread: 10
+
+- type: entity
+  name: UTS-15-S
+  parent: BaseWeaponShotgun
+  id: UTS15S
+  suffix: RCU
+  description: Haha funny silenced shotgun
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/UTS-15/icon.rsi
+  - type: Item
+    sprite: Imperial/CriminalityRCU/UTS-15/inhand.rsi
+  - type: BallisticAmmoProvider
+    capacity: 15
+    proto: ShellShotgunUTS
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Imperial/Criminality/RCU/uts.ogg
+      params:
+        volume: -12
+  - type: MultiHandedItem
+  - type: Speech # Взрывные РИГ'и
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные РИГ'и
+    friendlyFaction: DeathSquad
+    chance: 1
+    minRandomTime: 1
+    maxRandomTime: 5
+
+- type: entity
+  name: shotgun lethal cartridges dispenser
+  parent: AmmoProviderShotgunShell
+  id: BoxLethalshotUTS
+  suffix: RCU
+  description: A dispenser box full of lethal pellet shots, designed for riot shotguns.
+  components:
+  - type: BallisticAmmoProvider
+    proto: ShellShotgunUTS
+    capacity: 30
+  - type: Sprite
+    layers:
+      - state: boxwide
+      - state: shelllethal
+
+- type: entity
+  name: plastide
+  parent: C4
+  id: Plastide
+  suffix: RCU
+  description: plastide huh
+  components:
+  - type: Explosive
+    explosionType: Plastide
+    totalIntensity: 120
+    intensitySlope: 5
+    maxIntensity: 30
+    canCreateVacuum: false
+  - type: OnUseTimerTrigger
+    delay: 5
+    delayOptions: [5, 10]
+  #- type: Item
+  #- type: Sprite
+
+- type: entity
+  parent: ClothingBackpackDeadSquadSecurity
+  id: RCUBackpack
+  name: RCU Backpack
+  suffix: RCU
+  description: its not used anyways
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/Backpack/backpack.rsi
+  - type: Storage
+    maxItemSize: Ginormous
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,10,6
+  - type: Speech # Взрывные 
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные 
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: entity
+  name: RCU Officer Hardsuit
+  parent: ClothingOuterHardsuitDeathsquad
+  id: RCUOFFHARD
+  suffix: RCU
+  description: no way
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/Hardsuits/Officer/hardsuiticon.rsi
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/Hardsuits/Officer/hardsuitinhand.rsi
+  - type: ToggleableClothing
+    clothingPrototype: RCUOFFHARDHELMET
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.3
+        Heat: 0.4
+        Radiation: 0.35
+        Caustic: 0.1
+        Stamina: 0.4
+  - type: Speech # Взрывные 
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные 
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: RCUOFFHARDHELMET
+  suffix: RCU
+  noSpawn: true
+  name: RCU Officer Helmet
+  description: h
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/Hardsuits/Officer/helmeticon.rsi
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/Hardsuits/Officer/helmetinhand.rsi
+  - type: PointLight
+    color: '#d43e41'
+    radius: 7
+    energy: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
+        Radiation: 0.80
+        Caustic: 0.95
+
+- type: entity
+  name: RCU Operator Hardsuit
+  parent: ClothingOuterHardsuitDeathsquad
+  id: RCUOPRHARD
+  suffix: RCU
+  description: no way
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/Hardsuits/Operator/hardsuiticon.rsi
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/Hardsuits/Operator/hardsuitinhand.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.2
+        Heat: 0.3
+        Radiation: 0.35
+        Caustic: 0.1
+        Stamina: 0.3
+  - type: ToggleableClothing
+    clothingPrototype: RCUOPRHARDHELMET
+  - type: Speech # Взрывные 
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные 
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: RCUOPRHARDHELMET
+  suffix: RCU
+  noSpawn: true
+  name: RCU Operator Helmet
+  description: h
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/Hardsuits/Operator/helmeticon.rsi
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/Hardsuits/Operator/helmetinhand.rsi
+  - type: PointLight
+    color: '#d43e41'
+    radius: 7
+    energy: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
+        Radiation: 0.80
+        Caustic: 0.95
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ClothingShoesBootsMagRCU
+  name: RCU magboots
+  suffix: RCU
+  description: nuh uh
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/MagBoots/magboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/MagBoots/magboots.rsi
+  - type: Magboots
+    toggleAction: ActionToggleMagbootsRCU
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+    slowDown: false
+  - type: Speech # Взрывные 
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные 
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: entity
+  parent: ClothingMaskGasDeathSquad
+  id: ClothingMaskGasRCU
+  name: RCU gas mask
+  suffix: RCU
+  description: nuh uh x2
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/GasMask/gasmask.rsi
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/GasMask/gasmask.rsi
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+
+- type: entity
+  id: ActionToggleMagbootsRCU
+  parent: ActionBaseToggleMagboots
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Imperial/CriminalityRCU/MagBoots/magboots.rsi, state: icon }
+    iconOn: Imperial/CriminalityRCU/MagBoots/magboots.rsi/icon-on.png
+  - type: Speech # Взрывные РИГ'и
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные РИГ'и
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: entity
+  name: RCU Shield
+  parent: ShieldSLTGMC
+  id: RCUShield
+  suffix: RCU
+  description: A shield!
+  components:
+    - type: Sprite
+      sprite: Imperial/CriminalityRCU/Shields/sigmaberserk.rsi
+      state: icon
+    - type: Item
+      sprite: Imperial/CriminalityRCU/Shields/sigmaberserk.rsi
+      size: Huge
+    - type: Blocking
+      passiveBlockModifier:
+        coefficients:
+          Blunt: 0.6
+          Slash: 0.6
+          Piercing: 0.7
+          Heat: 0.6
+          Caustic: 0.75
+      activeBlockModifier:
+        coefficients:
+          Blunt: 2
+          Slash: 2
+          Piercing: 2
+          Heat: 2
+          Caustic: 2
+        flatReductions:
+          Blunt: 1
+          Slash: 1
+          Piercing: 1
+          Heat: 1
+    - type: Damageable
+      damageContainer: Shield
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 500
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound: /Audio/Effects/metalbreak.ogg
+    - type: Clothing
+      sprite: Imperial/CriminalityRCU/Shields/sigmaberserk.rsi
+      quickEquip: false
+      slots:
+        - Back
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 20
+      soundHit:
+        path: "/Audio/Weapons/smash.ogg"
+    - type: QualityOfItem
+      qualityWeights:
+        0: 0
+        1: 0
+        2: 0
+        3: 100
+        4: 0
+        5: 0
+        6: 0
+    - type: StaminaDamageOnHit
+      damage: 70
+    - type: Wieldable
+    - type: IncreaseDamageOnWield
+      damage:
+        types:
+          Blunt: 20
+    - type: Speech # Взрывные РИГ'и
+      speechSounds: Pai
+    - type: ClothingFactionExplosion # Взрывные РИГ'и
+      friendlyFaction: DeathSquad
+      chance: 1
+      minRandomTime: 1
+      maxRandomTime: 5
+
+- type: entity
+  noSpawn: true
+  parent: BaseBullet
+  id: BulletAntiMaterielRCU
+  name: bullet (.60 anti-materiel)
+  components:
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Piercing: 1
+        Structural: 1
+  - type: StaminaDamageOnCollide
+    damage: 1000
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: TimedExplodeOnTrigger
+    time: 1000
+    soundHit:
+      path: "/Audio/Imperial/Criminality/RCU/detonation.ogg"
+  - type: Explosive
+    explosionType: MinibombRCU
+    totalIntensity: 200
+    intensitySlope: 30
+    maxIntensity: 60
+
+
+- type: entity
+  parent: BaseCartridge
+  id: CartridgeAntiMaterielRCU
+  suffix: RCU
+  name: cartridge (.60 explosive anti-materiel)
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntiMaterielRCU
+  - type: CartridgeAmmo
+    proto: BulletAntiMaterielRCU
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 2 #Imperial price balance
+
+
+- type: entity
+  name: Heavy Hristov
+  parent: BaseWeaponSniper
+  id: WeaponSniperHristovRCU
+  suffix: RCU
+  description: A portable anti-materiel rifle. Fires armor piercing 14.5mm shells. Uses .60 anti-materiel ammo.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeAntiMateriel
+      - CartridgeAntiMaterielRCU
+    capacity: 3
+    proto: CartridgeAntiMaterielRCU
+  - type: GunRequiresWield
+  - type: Wieldable
+  - type: Speech # Взрывные РИГ'и
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные РИГ'и
+    friendlyFaction: DeathSquad
+    chance: 1
+    minRandomTime: 1
+    maxRandomTime: 5
+
+- type: entity
+  parent: MagazineRifle
+  id: MagazineRifleRCU
+  suffix: RCU
+  name: Extended Rifle Magazine
+  description: nuh uh
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 40
+    proto: CartridgeLightRifleRCU
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltAssaultRCU
+  name: RCU Assault Belt
+  suffix: RCU
+  description: A tactical assault belt.
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/assault.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/assault.rsi
+  - type: Storage
+    maxItemSize: Ginormous
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,7,3
+  - type: StorageFill
+    contents:
+      - id: PowerDrill
+      - id: JawsOfLifeRCU
+      - id: WelderExperimental
+      - id: Multitool
+  - type: Speech # Взрывные РИГ'и
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные РИГ'и
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: startingGear
+  id: RCUOperator
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: RCUBackpack
+    shoes: ClothingShoesBootsMagRCU
+    mask: ClothingMaskGasRCU
+    eyes: ClothingEyesExperimentalVision
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: RCUOPRHARD
+    suitstorage: OxygenTankFilled
+    id: RCUPDAOperator
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltAssaultRCU
+    pocket1: ERTUplinkRCU
+    neck: RCUMantle
+
+- type: startingGear
+  id: RCUOfficer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: RCUBackpack
+    shoes: ClothingShoesBootsMagRCU
+    mask: ClothingMaskGasRCU
+    eyes: ClothingEyesExperimentalVision
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: RCUOFFHARD
+    suitstorage: OxygenTankFilled
+    id: RCUPDAOfficer
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltAssaultRCU
+    pocket1: ERTUplinkRCU
+
+- type: Tag
+  id: ErtUplinkRCU
+
+- type: Tag
+  id: CartridgeAntiMaterielRCU
+
+- type: storeCategory
+  id: ERTUplinkWeaponCombatRCU
+  name: store-category-ert-uplink-weapon-combat
+
+- type: storeCategory
+  id: ERTUplinkAmmoCombatRCU
+  name: store-category-ert-uplink-ammo-combat
+
+- type: storeCategory
+  id: ERTUplinkExplosivesRCU
+  name: store-category-ert-uplink-explosives
+
+- type: storePreset
+  id: ErtCallUplinkRCUPreset
+  storeName: ErtUplinkFull
+  categories:
+  - ERTUplinkRCUSuppression
+  - ERTUplinkMeleeRCU
+  - ERTUplinkWeaponCombatRCU
+  - ERTUplinkAmmoCombatRCU
+  - ERTUplinkExplosivesRCU
+  - ERTUplinkMedial
+  currencyWhitelist:
+  - BlueSpaceCube
+
+- type: entity
+  parent: BaseERTUplink
+  id: ERTUplinkRCU
+  suffix: RCU, ERT
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/ert_tablet.rsi
+    layers:
+    - state: device-on
+    - state: device-deadsquad-anim
+      shader: unshaded
+      visible: true
+  - type: Store
+    preset: ErtCallUplinkRCUPreset
+    balance:
+      BlueSpaceCube: 60
+  - type: Tag
+    tags:
+      - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkMagazineRifleRCU
+  name: rcu-rifleammo-name
+  description: rcu-rifleammo-desc
+  productEntity: MagazineRifleRCU
+  cost:
+    BlueSpaceCube: 3
+  categories:
+  - ERTUplinkAmmoCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkMagazineBoxAntiMaterielRCU
+  name: rcu-uplink-magazineboxantimateriel-name
+  description: rcu-uplink-magazineboxantimateriel-desc
+  productEntity: MagazineBoxAntiMaterielRCU
+  cost:
+    BlueSpaceCube: 5
+  categories:
+  - ERTUplinkAmmoCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkMagazineShotgunSlugRCU
+  name: rcu-uplink-shotgunammo-name
+  description: rcu-uplink-shotgunammo-desc
+  productEntity: BoxLethalshotUTS
+  cost:
+    BlueSpaceCube: 3
+  categories:
+  - ERTUplinkAmmoCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkExGrenadeRCU
+  name: ert-uplink-explosives-exgrenade-name
+  description: ert-uplink-explosives-exgrenade-desc
+  productEntity: ExGrenade
+  cost:
+    BlueSpaceCube: 4
+  categories:
+  - ERTUplinkExplosivesRCU
+
+- type: listing
+  id: ErtCallUplinkPlastide
+  name: rcu-uplink-plastide-name
+  description: rcu-uplink-plastide-desc
+  productEntity: Plastide
+  cost:
+    BlueSpaceCube: 3
+  categories:
+  - ERTUplinkExplosivesRCU
+
+- type: listing
+  id: ErtCallUplinkPillAmbuzolPlusRCU
+  name: ert-uplink-medical-pillambuzolplus-name
+  description: ert-uplink-medical-pillambuzolplus-desc
+  productEntity: PillAmbuzolPlus
+  cost:
+   BlueSpaceCube: 2
+  categories:
+  - ERTUplinkMedial
+  conditions:
+   - !type:StoreWhitelistCondition
+     whitelist:
+       tags:
+         - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkWeaponRifleODENRCU
+  name: rcu-uplink-oden-name
+  description: rcu-uplink-oden-desc
+  productEntity: WeaponODEN
+  cost:
+    BlueSpaceCube: 8
+  categories:
+  - ERTUplinkWeaponCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkWeaponMinigunRCU
+  name: ert-uplink-weaponcombat-weaponminigun-name
+  description: ert-uplink-weaponcombat-weaponminigun-desc
+  productEntity: WeaponMinigun
+  cost:
+    BlueSpaceCube: 25
+  categories:
+  - ERTUplinkWeaponCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkWeaponSniperRCU
+  name: rcu-uplink-sniper-name
+  description: rcu-uplink-sniper-desc
+  productEntity: WeaponSniperHristovRCU
+  cost:
+    BlueSpaceCube: 12
+  categories:
+  - ERTUplinkWeaponCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkWeaponUTS15S
+  name: rcu-uts15-name
+  description: rcu-uts15-desc
+  productEntity: UTS15S
+  cost:
+    BlueSpaceCube: 10
+  categories:
+  - ERTUplinkWeaponCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkWeaponShield
+  name: rcu-shield-name
+  description: rcu-shield-desc
+  productEntity: RCUShield
+  cost:
+    BlueSpaceCube: 10
+  categories:
+  - ERTUplinkWeaponCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: entity
+  parent: BaseMagazineBoxAntiMateriel
+  id: MagazineBoxAntiMaterielRCU
+  name: ammunition box (.60 explosive anti-materiel)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeAntiMaterielRCU
+    capacity: 12
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  name: Milkor MGL
+  parent: BaseWeaponLauncher
+  suffix: RCU
+  id: MilkorMGLRCU
+  description: PLOOP
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/MilkorMGL/icon.rsi
+    layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    sprite: Imperial/CriminalityRCU/MilkorMGL/inhand.rsi
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: RevolverAmmoProvider
+    capacity: 6
+    chambers: [ True, True, True, True, True, True ]
+    ammoSlots: [ null, null, null, null, null, null ]
+    proto: GrenadeFrag
+    whitelist:
+      tags:
+        - Grenade
+        - MilkorSpeedLoader
+  - type: MultiHandedItem
+  - type: Speech # Взрывные РИГ'и
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные РИГ'и
+    friendlyFaction: DeathSquad
+    chance: 1
+    minRandomTime: 1
+    maxRandomTime: 5
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  suffix: RCU
+  id: RCUOperatorPreset
+  name: RCU Operator
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/imperial_jobs.rsi
+      state: rcuoperator
+    - type: Loadout
+      prototypes: [ RCUOperator ]
+    - type: AutoImplant
+      implants:
+      - FreedomImplant
+      - EmpImplant
+      - MindShieldImplant
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+    - type: NpcFactionMember
+      factions:
+      - DeathSquad
+    - type: TimedExplodeDisable
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstRCUOperator
+      - names_last
+    - type: InjectionCollideBlock
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  suffix: RCU
+  id: RCUOfficerPreset
+  name: RCU Officer
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/imperial_jobs.rsi
+      state: rcuofficer
+    - type: Loadout
+      prototypes: [ RCUOfficer ]
+    - type: AutoImplant
+      implants:
+      - FreedomImplant
+      - EmpImplant
+      - MindShieldImplant
+    - type: TimedExplodeDisable
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+    - type: NpcFactionMember
+      factions:
+      - DeathSquad
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstRCU
+      - names_last
+    - type: InjectionCollideBlock
+
+- type: entity
+  id: SpawnRCUOperator
+  suffix: RCU
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: rcuoperator-name
+      description: rcuoperator-desc
+      raffle:
+        settings: short
+      rules: rcuoperator-rules
+    - type: GhostRoleMobSpawner
+      prototype: RCUOperatorPreset
+    - type: Sprite
+      sprite: Markers/imperial_jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/imperial_jobs.rsi
+          state: rcuoperator
+
+- type: entity
+  id: SpawnRCUOfficer
+  suffix: RCU
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: rcuofficer-name
+      description: rcuofficer-desc
+      rules: rcuofficer-rules
+      raffle:
+        settings: short
+    - type: GhostRoleMobSpawner
+      prototype: RCUOfficerPreset
+    - type: Sprite
+      sprite: Markers/imperial_jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/imperial_jobs.rsi
+          state: rcuofficer
+
+- type: entity
+  id: JawsOfLifeRCU
+  parent: JawsOfLife
+  suffix: RCU
+  name: NUH UH
+  description: NUH UH
+  components:
+  - type: Item
+    size: Small
+
+- type: dataset
+  id: NamesFirstRCUOperator
+  values:
+  - IJYLUNIL
+
+- type: dataset
+  id: NamesFirstRCU
+  values:
+  - IZZCWYL
+
+# - type: listing Временно убрано из аплинка, так как наносит огромный ущерб станции
+#   id: ErtCallUplinkWeaponMilkor
+#   name: rcu-milkor-name
+#   description: rcu-milkor-desc
+#   productEntity: MilkorMGLRCU
+#   cost:
+#     BlueSpaceCube: 25
+#   categories:
+#   - ERTUplinkWeaponCombatRCU
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       whitelist:
+#         tags:
+#           - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkWeaponUnica
+  name: rcu-unica-name
+  description: rcu-unica-desc
+  productEntity: RCUUnica
+  cost:
+    BlueSpaceCube: 15
+  categories:
+  - ERTUplinkWeaponCombatRCU
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkSpeedLoader
+  name: rcu-milkorspeed-name
+  description: rcu-milkorspeed-desc
+  productEntity: SpeedLoaderMilkor
+  cost:
+    BlueSpaceCube: 5
+  categories:
+  - ERTUplinkAmmoCombatRCU
+
+- type: listing
+  id: ErtCallUplinkSpeedLoader357
+  name: rcu-357speed-name
+  description: rcu-357speed-desc
+  productEntity: BaseSpeedLoader357
+  cost:
+    BlueSpaceCube: 1
+  categories:
+  - ERTUplinkAmmoCombatRCU
+
+- type: listing
+  id: ErtCallUplinkSpeedLoader357AP
+  name: rcu-357speedap-name
+  description: rcu-357speedap-desc
+  productEntity: SpeedLoader357AP
+  cost:
+    BlueSpaceCube: 3
+  categories:
+  - ERTUplinkAmmoCombatRCU
+
+- type: entity
+  parent: WardenMantleID
+  id: RCUMantle
+  name: RCU Operator Mantle
+  suffix: RCU
+  description: nuh uh
+
+- type: entity
+  name: ODEN
+  parent: BaseWeaponRifle
+  id: WeaponODEN
+  suffix: RCU
+  description: A high end military grade assault rifle. Uses .20 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/ODEN/icon.rsi
+    scale: 0.75, 0.75
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    firerate: 7
+    projectileSpeed: 40
+    soundGunshot:
+      path: /Audio/Imperial/Criminality/RCU/oden.ogg
+      params:
+        volume: -7
+  - type: Item
+    sprite: Imperial/CriminalityRCU/ODEN/inhand.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleRCU
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifleRCU
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: MultiHandedItem
+  - type: Speech # Взрывные РИГ'и
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные РИГ'и
+    friendlyFaction: DeathSquad
+    chance: 1
+    minRandomTime: 1
+    maxRandomTime: 5
+
+- type: entity
+  id: CartridgeLightRifleRCU
+  name: cartridge (.20 rifle)
+  suffix: RCU
+  parent: CartridgeRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleRCU
+
+- type: entity
+  id: BulletLightRifleRCU
+  name: bullet (.20 rifle)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+    penetration: 1.5
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesExperimentalVision
+  name: experimental vision googles
+  suffix: RCU
+  description: nuh uh
+  components:
+  - type: Sprite
+    sprite: Imperial/CriminalityRCU/exp.rsi
+  - type: Clothing
+    sprite: Imperial/CriminalityRCU/exp.rsi
+  - type: ExperimentalVision
+
+
+
+## Больше нелетального снаряжения By ArturUr Start
+- type: storeCategory ##Новая категория снаряжения аплинка RCU, направленная на нелетальное воздействие
+  id: ERTUplinkRCUSuppression
+  name: store-category-ert-uplink-suppression
+
+- type: entity
+  parent: WeaponTaser
+  id: RCUTaserID
+  name: RCUTaser
+  description: A low-power stun gun, which had an antique laser battery built into it.
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 40
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkRCUTaser
+  name: ert-uplink-rcutaser-name
+  description: ert-uplink--rcutaser-desc
+  productEntity: RCUTaserID
+  cost:
+    BlueSpaceCube: 5
+  categories:
+  - ERTUplinkRCUSuppression
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - ErtUplinkRCU
+
+- type: listing
+  id: ErtCallUplinkStunbatonRCU
+  name: ert-uplink-melee-stunbaton-name
+  description: ert-uplink-melee-stunbaton-desc
+  productEntity: AdvancedStunbaton
+  cost:
+    BlueSpaceCube: 2
+  categories:
+  - ERTUplinkRCUSuppression
+
+- type: listing
+  id: ErtCallUplinkWeaponDisablerRCU
+  name: ert-uplink-weaponnoncombat-weapondisabler-name
+  description: ert-uplink-weaponnoncombat-weapondisabler-desc
+  productEntity: WeaponDisabler
+  cost:
+    BlueSpaceCube: 2
+  categories:
+  - ERTUplinkRCUSuppression
+
+- type: listing
+  id: ErtCallUplinkHandcuffsRCU
+  name: ert-uplink-utilities-handcuffs-name
+  description: ert-uplink-utilities-handcuffs-desc
+  productEntity: Handcuffs
+  cost:
+    BlueSpaceCube: 1
+  categories:
+  - ERTUplinkRCUSuppression
+
+# - type: listing Закомменчено в связи с ненадобностью. Больше не подавляют революции
+#   id: ErtCallUplinkMineShieldRCU
+#   name: ert-uplink-utilities-cratemineshield-name
+#   description: ert-uplink-utilities-cratemineshield-desc
+#   productEntity: ERTCallCrateMineShieldImplant ##ID введенного мной ящика Artur Ur
+#   cost:
+#     BlueSpaceCube: 1
+#   categories:
+#   - ERTUplinkRCUSuppression
+
+- type: listing
+  id: ErtCallUplinkDeployableBarrierRCU
+  name: ert-uplink-deployablebarrier-name
+  description: ert-uplink-deployablebarrier-desc
+  productEntity: DeployableBarrier
+  cost:
+    BlueSpaceCube: 2
+  categories:
+  - ERTUplinkRCUSuppression
+
+- type: listing
+  id: ErtCallUplinkFlashRCU
+  name: ert-uplink-flash-name
+  description: ert-uplink-flash-desc
+  productEntity: Flash
+  cost:
+    BlueSpaceCube: 1
+  categories:
+  - ERTUplinkRCUSuppression
+
+- type: entity
+  id: IronSkinImplanter
+  name: iron skin implanter
+  parent: BaseImplantOnlyImplanter
+  components:
+    - type: Implanter
+      implant: IronSkinImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: IronSkinImplant
+  name: имплант "Железной Кожи"
+  description: Этот имплант защищает владельца от грубых способов введения реагентов.
+  noSpawn: true
+  components:
+   - type: Tag
+     tags:
+       - IronSkin
+   - type: InjectionCollideBlock

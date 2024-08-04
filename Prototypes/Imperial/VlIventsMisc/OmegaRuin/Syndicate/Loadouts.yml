@@ -1,0 +1,74 @@
+- type: startingGear
+  id: SyndComOmegaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieCommander
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket1: BaseUplinkRadio40TC
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndMedOmegaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieMedic
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiAgentPDA
+    mask: ClothingMaskGasSyndicate
+    pocket1: BaseUplinkRadio40TC
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndEliteOmegaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndieElite
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket1: BaseUplinkRadio40TC
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndDefOmegaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitSyndie
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket1: BaseUplinkRadio40TC
+    pocket2: DoubleEmergencyOxygenTankFilled
+
+- type: startingGear
+  id: SyndJugOmegaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    back: ClothingBackpackDuffelSyndicate
+    shoes: ClothingShoesSwat
+    eyes: ClothingEyesHudSyndicate
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitJuggernaut
+    belt: ClothingBeltMilitaryWebbing
+    id: SyndiPDA
+    mask: ClothingMaskGasSyndicate
+    pocket1: BaseUplinkRadio40TC
+    pocket2: DoubleEmergencyOxygenTankFilled

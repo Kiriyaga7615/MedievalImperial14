@@ -1,0 +1,8 @@
+- type: department
+  id: AI
+  name: department-AI
+  description: department-AI-description
+  color: "#A46106"
+#  roles:
+#  - AI
+#  - BorgImperial

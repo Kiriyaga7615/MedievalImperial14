@@ -1,0 +1,98 @@
+- type: entity
+  name: megafauna
+  id: BaseMobMegaFauna
+  parent: [ SimpleSpaceMobBase, FlyingMobBase ]
+  description: Didn't read it lol.
+  abstract: true
+  components:
+    - type: Damageable
+      damageModifierSet: Megafauna
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHostileCompound
+      blackboard:
+        NavSmash: !type:Bool
+          true
+    - type: NpcFactionMember
+      factions:
+        - SimpleHostile
+    - type: Sprite
+      drawdepth: Mobs
+      sprite: Imperial/Lavaland/96x96megafauna.rsi
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: dragon
+    - type: CombatMode
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.60
+          density: 300
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+    - type: MobState
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        2500: Dead
+    - type: Stamina
+      critThreshold: 100
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: dragon
+          BaseUnshaded: mouth
+        Dead:
+          Base: dragon_dead
+          BaseUnshaded: dead_mouth
+    - type: Butcherable
+      spawned:
+        - id: FoodMeatFish
+          amount: 2
+    - type: MeleeWeapon
+      altDisarm: false
+      hidden: true
+      angle: 0
+      animation: WeaponArcBite
+      soundHit:
+        path: /Audio/Effects/bite.ogg
+      damage:
+        types:
+          Piercing: 5
+          Slash: 20
+    - type: TypingIndicator
+      proto: alien
+    - type: Tag
+      tags:
+        - DoorBumpOpener
+    - type: Speech
+      speechVerb: LargeMob
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 5500
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseMobMegaFauna
+  id: MobAshDrake
+  name: Ash Drake
+  description: Guardians of Necropolis.
+  components:
+  - type: AshDrake
+  - type: Sprite
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: dragon
+  - type: Visibility
+    layer: 1 #ghost vis layer

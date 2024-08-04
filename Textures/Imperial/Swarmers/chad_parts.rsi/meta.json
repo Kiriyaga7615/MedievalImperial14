@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "for imperial space",
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "chad_step_1",
+            "delays": [
+                [
+                  0.1,
+                  0.1,
+                  0.1
+                ]
+              ]
+        },
+        {
+            "name": "chad_step_2"
+        },
+        {
+            "name": "chad_step_3"
+        },
+        {
+            "name": "chad_step_4"
+        },
+        {
+            "name": "chad_step_5"
+        },
+        {
+            "name": "chad_step_6"
+        }
+    ]
+}

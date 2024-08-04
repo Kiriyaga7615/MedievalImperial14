@@ -1,0 +1,89 @@
+#TIER_1
+#TOOL
+- type: technology
+  id: QualityUpgradeTechnology-tier1-tool
+  name: research-technology-quality-upgrade-tier1-tool
+  icon:
+    sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+    state: upgrader-tool-23
+  discipline: Industrial
+  tier: 1
+  cost: 2000
+  recipeUnlocks:
+    - qualityCartrigeTool01Recipe
+    - qualityCartrigeTool12Recipe
+    - qualityCartrigeTool23Recipe
+
+#ARMOR
+- type: technology
+  id: QualityUpgradeTechnology-tier1-armor
+  name: research-technology-quality-upgrade-tier1-armor
+  icon:
+    sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+    state: upgrader-armor-23
+  discipline: Industrial
+  tier: 1
+  cost: 3000
+  recipeUnlocks:
+    - qualityCartrigeArmor01Recipe
+    - qualityCartrigeArmor12Recipe
+    - qualityCartrigeArmor23Recipe
+
+#TIER_2
+#TOOL
+- type: technology
+  id: QualityUpgradeTechnology-tier2-tool
+  name: research-technology-quality-upgrade-tier2-tool
+  icon:
+    sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+    state: upgrader-tool-45
+  discipline: Industrial
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+    - qualityCartrigeTool34Recipe
+    - qualityCartrigeTool45Recipe
+
+#ARMOR
+- type: technology
+  id: QualityUpgradeTechnology-tier2-armor
+  name: research-technology-quality-upgrade-tier2-armor
+  icon:
+    sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+    state: upgrader-armor-45
+  discipline: Industrial
+  tier: 2
+  cost: 12000
+  recipeUnlocks:
+    - qualityCartrigeArmor34Recipe
+    - qualityCartrigeArmor45Recipe
+
+#TIER_3
+#TOOL
+- type: technology
+  id: QualityUpgradeTechnology-tier3-tool
+  name: research-technology-quality-upgrade-tier3-tool
+  icon:
+    sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+    state: upgrader-tool-56
+  discipline: Industrial
+  tier: 3
+  cost: 15000
+  recipeUnlocks:
+    - qualityCartrigeTool56Recipe
+
+#ARMOR
+- type: technology
+  id: QualityUpgradeTechnology-tier3-armor
+  name: research-technology-quality-upgrade-tier3-armor
+  icon:
+    sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+    state: upgrader-armor-56
+  discipline: Industrial
+  tier: 3
+  cost: 18000
+  recipeUnlocks:
+    - qualityCartrigeArmor56Recipe
+
+
+

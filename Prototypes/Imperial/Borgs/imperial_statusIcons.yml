@@ -1,0 +1,6 @@
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconAI
+  icon:
+    sprite: /Textures/Interface/Misc/imperial_job_icons.rsi
+    state: AI

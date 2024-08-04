@@ -1,0 +1,38 @@
+- type: entity
+  parent: MobHumanInvincible
+  id: MobMishanya
+  name: Mishanya
+  description: A strange man
+  components:
+    - type: Loadout
+      prototypes: [ Mishanya ]
+    - type: Access
+      groups:
+        - AllAccess
+
+- type: startingGear
+  id: Mishanya
+  equipment:
+    shoes: ClothingShoesSlippersUnremoveble
+    # eyes: ClothingEyesBinoclardLensesUnremoveble
+    jumpsuit: UniformShortsRedUnremoveble
+
+- type: entity
+  parent: ClothingShoesSlippers
+  id: ClothingShoesSlippersUnremoveble
+  components:
+    - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingEyesBinoclardLenses
+#   id: ClothingEyesBinoclardLensesUnremoveble
+#   components:
+#     - type: Unremoveable
+
+- type: entity
+  parent: UniformShortsRed
+  id: UniformShortsRedUnremoveble
+  components:
+    - type: Unremoveable
+
+

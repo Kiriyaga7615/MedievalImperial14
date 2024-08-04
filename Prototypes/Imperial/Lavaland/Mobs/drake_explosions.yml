@@ -1,0 +1,163 @@
+- type: entity
+  id: DrakeExplosion
+  name: fire
+  description: Hot!
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: FireBomb
+      damage:
+        types:
+          Heat: 10
+    - type: Sprite
+      sprite: Effects/fire.rsi
+      drawdepth: Mobs
+      layers:
+        - state: 1
+    - type: Appearance
+    - type: Transform
+      anchored: true
+
+- type: entity
+  id: DrakeExplosionTarget
+  name: target
+  description: Hot!
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: FireBombTarget
+    - type: Sprite
+      sprite: Imperial/Lavaland/telegraph.rsi
+      drawdepth: Mobs
+      layers:
+        - state: skull
+    - type: Appearance
+    - type: Transform
+      noRot: true
+      anchored: true
+
+- type: entity
+  id: DrakeDownTarget
+  name: RUN
+  description: RUN!
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: DrakeDownTarget
+      damage:
+        types:
+          Blunt: 15
+    - type: Sprite
+      sprite: Imperial/Lavaland/drake_down.rsi
+      drawdepth: FloorTiles
+      layers:
+        - state: drake_down
+    - type: Appearance
+    - type: Transform
+      anchored: true
+
+- type: entity
+  id: DrakeFire
+  name: fire
+  description: Hot!
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: DirectionalMove
+      moveDirection: 1 , 1
+    - type: TimedDespawn
+      lifetime: 1
+    - type: Sprite
+      sprite: Effects/fire.rsi
+      drawdepth: Mobs
+      layers:
+        - state: 1
+    - type: Appearance
+    - type: Transform
+      anchored: true
+    - type: FireBomb
+      damage:
+        types:
+          Heat: 10
+
+- type: entity
+  id: DrakeSafeTile
+  name: stay here
+  noSpawn: true
+  description: Safe!
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: Sprite
+      sprite: Imperial/Lavaland/telegraph.rsi
+      drawdepth: Mobs
+      layers:
+        - state: safe
+    - type: Appearance
+    - type: Transform
+      anchored: true
+    - type: TimedDespawn
+      lifetime: 3.5
+
+- type: entity
+  id: DrakeWall
+  name: fire wall
+  description: Hot!
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: Sprite
+      sprite: Effects/fire.rsi
+      drawdepth: Mobs
+      layers:
+        - state: 1
+    - type: Appearance
+    - type: Physics
+      bodyType: Static
+    - type: Transform
+      anchored: true
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          mask:
+          - FullTileMask
+          layer:
+          - WallLayer
+          density: 1000
+    - type: TimedDespawn
+      lifetime: 10.5
+
+- type: entity
+  id: DrakeMinigameManager
+  name: Shadow
+  description: UwU
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: DrakeMinigameManager
+    - type: Sprite
+      sprite: Imperial/Lavaland/96x96megafauna.rsi
+      drawdepth: Mobs
+      layers:
+        - state: dragon_shadow
+    - type: Appearance
+    - type: Transform
+      noRot: True
+      anchored: true

@@ -1,0 +1,14 @@
+- type: vendingMachineInventory
+  id: MarineUniformStore
+  startingInventory:
+   ClothingHeadHelmetIibada: 36
+   ClothingOuterArmorIibada: 36
+   ClothingHeadHelmetAaltawila: 6
+   ClothingOuterArmorAaltawila: 6
+   ClothingControlModsuitTGMC: 2
+   ClothingEyesHudMarine: 32
+   ClothingMaskGasBalaclava: 24
+   ClothingHeadHatBeret: 4
+   ClothingBeltMilitaryWebbing: 32
+   ClothingMaskBreath: 32
+   YellowOxygenTankFilled: 32

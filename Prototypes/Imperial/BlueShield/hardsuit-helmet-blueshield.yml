@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitBlueshield
+  noSpawn: true
+  name: blueshield officer hardsuit helmet
+  description: A special hardsuit helmet worn by blueshield officers.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hardsuits/blueshield.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hardsuits/blueshield.rsi
+  - type: PointLight
+    color: "#addbff"
+

@@ -1,0 +1,27 @@
+- type: entity
+  id: CrewSkillsBrainInterface
+  name: Brain smart cards interface
+  desc: Cyber thing
+  parent: BaseItem
+  components:
+  - type: CrewSkillsBrainSkillsInterface
+    needSkills:
+      - skillNeuroSurgery
+  - type: Sprite
+    sprite: Imperial/CrewSkills/BrainInterface/BrainInterface.rsi
+    layers:
+      - state: icon
+
+- type: entity
+  id: CrewSkillsBorgUpgradeBoard
+  name: borg upgrade cards
+  desc: Cyber thing
+  parent: BaseItem
+  components:
+  - type: CrewSkillsBorgUpgradeBoard
+    needSkills:
+      - skillRobotics
+  - type: Sprite
+    sprite: Imperial/CrewSkills/BrainInterface/BrainInterface.rsi
+    layers:
+      - state: upgradeBoard

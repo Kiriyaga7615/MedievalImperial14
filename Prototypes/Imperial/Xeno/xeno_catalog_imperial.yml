@@ -1,0 +1,90 @@
+- type: listing
+  id: EvolveToDrone
+  name: evolve-drone
+  description: evolve-drone-desc
+  productAction: EvolveToDroneAction
+  cost:
+    XenoEvolvePoints: 30
+  categories:
+  - XenoLavra
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolveToRunner
+  name: evolve-runner
+  description: evolve-runner-desc
+  productAction: EvolveToRunnerAction
+  cost:
+    XenoEvolvePoints: 30
+  categories:
+  - XenoLavra
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolveToBurrower
+  name: evolve-burrower
+  description: evolve-burrower-desc
+  productAction: EvolveToBurrowerAction
+  cost:
+    XenoEvolvePoints: 30
+  categories:
+  - XenoLavra
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolveToQueen
+  name: evolve-queen
+  description: evolve-queen-desc
+  productAction: EvolveToQueenAction
+  cost:
+    XenoEvolvePoints: 30
+  categories:
+  - XenoDrone
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolveToSpitter
+  name: evolve-spitter
+  description: evolve-spitter-desc
+  productAction: EvolveToSpitterAction
+  cost:
+    XenoEvolvePoints: 30
+  categories:
+  - XenoRunner
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolveToPraetorian
+  name: evolve-praetorian
+  description: evolve-praetorian-desc
+  productAction: EvolveToPraetorianAction
+  cost:
+    XenoEvolvePoints: 30
+  categories:
+  - XenoBurrower
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: EvolveToRavager
+  name: evolve-ravager
+  description: evolve-ravager-desc
+  productAction: EvolveToRavagerAction
+  cost:
+    XenoEvolvePoints: 30
+  categories:
+  - XenoBurrower
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

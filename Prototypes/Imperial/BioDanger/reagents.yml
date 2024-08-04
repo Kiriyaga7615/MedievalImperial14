@@ -1,0 +1,111 @@
+- type: reagent
+  id: HealVirus1
+  pricePerUnit: 20
+  name: reagent-name-virus
+  group: Toxins
+  desc: reagent-desc-virus
+  flavor: bitter
+  color: "#ffe6ff"
+  physicalDesc: reagent-physical-desc-virus
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.25
+      - !type:HealVirus1
+
+- type: reaction
+  id: HealVirus1
+  reactants:
+    SpaceCleaner:
+      amount: 1
+    Spaceacillin:
+      amount: 1
+  products:
+    HealVirus1: 2
+
+- type: reagent
+  id: HealVirus2
+  pricePerUnit: 20
+  name: reagent-name-virus
+  group: Toxins
+  desc: reagent-desc-virus
+  flavor: bitter
+  color: "#ffe6ff"
+  physicalDesc: reagent-physical-desc-virus
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.25
+      - !type:HealVirus2
+
+- type: reaction
+  id: HealVirus2
+  reactants:
+    AdenosineTriPhosphate:
+      amount: 1
+    Spaceacillin:
+      amount: 1
+  products:
+    HealVirus2: 2
+
+- type: reagent
+  id: HealVirus3
+  pricePerUnit: 20
+  name: reagent-name-virus
+  group: Toxins
+  desc: reagent-desc-virus
+  flavor: bitter
+  color: "#ffe6ff"
+  physicalDesc: reagent-physical-desc-virus
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.25
+      - !type:HealVirus3
+
+- type: reaction
+  id: HealVirus3
+  reactants:
+    Rezocillin:
+      amount: 1
+    Spaceacillin:
+      amount: 1
+  products:
+    HealVirus3: 2
+
+- type: reagent
+  id: HealVirus4
+  pricePerUnit: 20
+  name: reagent-name-virus
+  group: Toxins
+  desc: reagent-desc-virus
+  flavor: bitter
+  color: "#ffe6ff"
+  physicalDesc: reagent-physical-desc-virus
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cellular: 0.25
+      - !type:HealVirus4
+
+- type: reaction
+  id: HealVirus4
+  reactants:
+    Citaloporam:
+      amount: 1
+    Spaceacillin:
+      amount: 1
+  products:
+    HealVirus4: 2

@@ -1,0 +1,89 @@
+- type: entity
+  name: gatfruit
+  parent: FoodProduceBase
+  id: FoodGatfruitAdmem
+  description: A delicious, gun-shaped fruit with a thick wooden stem.
+  components:
+    - type: FlavorProfile
+      flavors:
+        - validhunting
+    - type: SolutionContainerManager
+      solutions:
+        food:
+          maxVol: 30
+          reagents:
+            - ReagentId: Amatoxin
+              Quantity: 30
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/gatfruit.rsi
+    - type: Food
+      trash: RevolverCapGun
+
+- type: entity
+  name: explosive grenade admem
+  description: Grenade that creates a small but devastating explosion.
+  parent: GrenadeBaseAntiMat
+  id: ExGrenadeAntiSukaAdmem
+  components:
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 7
+    totalIntensity: 120
+    canCreateVacuum: false
+  - type: TriggerOnVoice
+    isRecording: false
+    minLength: 1
+    maxLength: 50
+    keyPhrase: Сука
+
+- type: entity
+  name: explosive grenade admem
+  description: Grenade that creates a small but devastating explosion.
+  parent: GrenadeBaseAntiMat
+  id: ExGrenadeAntiBlyatAdmem
+  components:
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 10
+    intensitySlope: 7
+    totalIntensity: 120
+    canCreateVacuum: false
+  - type: TriggerOnVoice
+    isRecording: false
+    minLength: 1
+    maxLength: 50
+    keyPhrase: Блять
+
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: GrenadeBaseAntiMat
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/grenade.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: Item
+    size: Tiny
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10000
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Appearance
+  - type: AnimationPlayer

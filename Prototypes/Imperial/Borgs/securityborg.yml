@@ -1,0 +1,24 @@
+- type: job
+  id: SecurityBorg
+  name: job-name-securityborg
+  playTimeTracker: JobBorgSecuriry
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 43200 # Imperial role timers
+  supervisors: job-supervisors-ai
+  startingGear: BorgGear
+  #weight: 20
+  icon: "JobIconAI"
+  canBeAntag: false
+  jobEntity: secborg
+  sponsorsOnly: false
+
+- type: startingGear
+  id: BorgGear
+  equipment:
+    shoes: ClothingShoesColorBlack # Corvax-Resprite
+    outerClothing: ClothingOuterCardborg
+    head: ClothingHeadHatCardborg
+    #id: BorgsPDA
+    jumpsuit: ClothingUniformJumpsuitColorWhite

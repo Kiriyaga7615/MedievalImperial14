@@ -1,0 +1,206 @@
+- type: entity
+  parent: BaseWall
+  id: SwarmerWall
+  name: stone wall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      - RCDDeconstructWhitelist
+      - SwarmerStructure
+      - SwarmerCount
+  - type: Sprite
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_bad
+  - type: Icon
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_bad
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: ExplosionResistance
+    damageCoefficient: 3
+  - type: Construction
+    graph: SwarmerWall
+    node: wall
+  - type: PointLight
+    color: "#BBBBBB"
+    radius: 4
+    energy: 1
+    enabled: true
+    castShadows: false
+
+- type: entity
+  parent: BaseWall
+  id: SwarmerWallReinforced
+  name: stone wall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      - RCDDeconstructWhitelist
+      - SwarmerStructure
+      - SwarmerCount
+  - type: Sprite
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_good
+  - type: Icon
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_good
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: PointLight
+    color: "#BBBBBB"
+    radius: 4
+    energy: 1
+    enabled: true
+    castShadows: false
+
+  - type: ExplosionResistance
+    damageCoefficient: 2
+  - type: Construction
+    graph: SwarmerWallReinforced
+    node: wall
+
+- type: entity
+  parent: BaseStructure
+  id: SwarmerWallLoopHole
+  name: swarmer loophole
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/structures.rsi
+    state: barrier
+  - type: Icon
+    sprite: Imperial/Swarmers/structures.rsi
+    state: barrier
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 70
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 55
+        mask:
+        - TableMask
+        layer:
+        - TableLayer
+  - type: ExplosionResistance
+    damageCoefficient: 4
+  - type: Damageable
+  - type: Construction
+    graph: SwarmerWallLoopHole
+    node: ready
+  - type: Tag
+    tags:
+      - Wall
+      - RCDDeconstructWhitelist
+      - SwarmerStructure
+      - SwarmerCount
+
+- type: entity
+  parent: BaseWall
+  id: SwarmerWallMirror
+  name: mirror wall
+  components:
+  - type: Tag
+    tags:
+      - Wall
+      - RCDDeconstructWhitelist
+      - SwarmerStructure
+      - SwarmerCount
+  - type: Sprite
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_mirror
+  - type: Icon
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_mirror
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    destroySound:
+      path: /Audio/Effects/metalbreak.ogg
+  - type: Reflect
+    reflectProb: 1
+  - type: Construction
+    graph: SwarmerWallMirror
+    node: ready
+  - type: PointLight
+    color: "#BBBBBB"
+    radius: 4
+    energy: 1
+    enabled: true
+    castShadows: false
+
+- type: tile
+  id: FloorSwarmer
+  name: tiles-swarmer-floor
+  sprite: /Textures/Imperial/Swarmers/structures.rsi/tile.png
+  baseTurf: Plating
+  isSubfloor: false
+  canCrowbar: true
+  footstepSounds:
+    collection: FootstepHull
+  itemDrop: PartRodMetal1
+  heatCapacity: 10000
+
+- type: entity
+  id: SwarmerHoloFan
+  parent: HolosignWetFloor
+  name: swarmer-atmos
+  description: A barrier of hard light that blocks air, but nothing else.
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/structures.rsi
+    state: holo
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+  - type: TimedDespawn
+    lifetime: 180
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false

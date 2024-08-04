@@ -1,0 +1,48 @@
+{"version": 1,
+"size": {"x": 32, "y": 32},
+"license": "CC-BY-SA-3.0",
+"copyright": "created by regeton (Discord) for Imperai Space modified by mirton4005 (Discord)",
+"states":
+[
+    {"name": "broken"},
+    {"name": "deny-unshaded",
+    "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]},
+
+    {"name": "normal-unshaded",
+    "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+    ]},
+    {"name": "base2"},
+    {"name": "off"},
+    {"name": "panel"},
+    {"name": "bookA1"},
+    {"name": "bookA2"},
+    {"name": "bookA3"},
+    {"name": "bookA4"},
+    {"name": "bookA5"},
+    {"name": "bookA6"},
+    {"name": "bookA0"},
+    {"name": "bookB1"},
+    {"name": "bookB2"},
+    {"name": "bookB3"},
+    {"name": "bookB4"},
+    {"name": "bookB5"},
+    {"name": "bookB6"},
+    {"name": "bookB0"}
+]
+}

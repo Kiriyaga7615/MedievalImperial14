@@ -1,0 +1,11 @@
+- type: entity
+  parent: ResearchDisk
+  id: xenodnc
+  name: xeno meat (500)
+  description: A disk for the R&D server containing 5000 points.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/xenodnc.rsi
+    state: icon
+  - type: ResearchDisk
+    points: 500

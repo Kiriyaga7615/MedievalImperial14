@@ -1,0 +1,108 @@
+- type: entity
+  name: biodanger
+  id: MobBioDanger
+  description: "aboba"
+  components:
+  - type: Sprite
+    overrideContainerOcclusion: true # Ghosts always show up regardless of where they're contained.
+    drawdepth: Ghosts
+    noRot: true
+    layers:
+      - sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: mob
+  - type: Transform
+    anchored: false
+  #- type: Marker
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 15
+        mask:
+        - GhostImpassable
+  - type: InputMover
+  - type: Input
+    context: "human"
+  - type: LagCompensation
+  - type: MobMover
+  - type: Actions
+  - type: Alerts
+  - type: Appearance
+  - type: RotationVisuals
+    defaultRotation: 0
+    horizontalRotation: 0
+  - type: DoAfter
+  - type: Examiner
+  - type: ContentEye
+  - type: CameraRecoil
+  - type: MindContainer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 6
+    baseSprintSpeed: 6
+  - type: Polymorphable
+  - type: StatusIcon
+  - type: BioDanger
+    reagents:
+    - Косм. очист.
+    - Адезинтриф.
+    - Резоциллин
+    - Циталопор.
+    causticDamage:
+      types:
+        Poison: 0.2
+        Heat: 0.1
+        Caustic: 0.03
+  - type: CargoSellBlacklist
+  - type: Eye
+    drawFov: false
+  #- type: Ghost
+  - type: MovementIgnoreGravity
+  - type: CanMoveInAir
+  - type: Physics
+    bodyType: KinematicController
+    bodyStatus: InAir
+  - type: NoSlip
+  - type: GhostRole
+    allowMovement: true
+    makeSentient: true
+    name: Разумная био угроза
+    description: Plague inc online
+    rules: |
+      Нажмите [color=red]Shift +1 / 2[/color] или [color=red]L[/color] для того, чтобы увидеть все мутации.
+      [color=green]Заражайте[/color] людей и улучшайте себя за счет [color=green]мутагена[/color].
+      Препятствуйте созданию [color=lightblue]лекарства[/color] и [color=lightblue]вакцины[/color].
+      [color=lightblue]Вакцина[/color] дает [color=lightblue]иммунитет[/color] еще здоровым.
+      [color=lightblue]Лекарство[/color] лечит уже [color=green]больных[/color].
+      Не забудьте про гренландию)
+    raffle:
+      settings: default 
+  - type: GhostTakeoverAvailable
+  - type: Visibility
+    layer: 2
+  - type: BioOverlay
+  - type: RandomMetadata
+    nameSegments:
+    - BioDangerFirst
+    - BioDangerSecond
+    - BioDangerThird
+  - type: ReplacementAccent
+    accent: biodanger
+  - type: Speech
+  - type: Tag
+    tags:
+    - AntiSingularity
+
+- type: accent
+  id: biodanger
+  fullReplacements:
+  - " "
+
+- type: Tag
+  id: BioAnalyser
+
+- type: Tag
+  id: BioVaccinePrinter

@@ -1,0 +1,11 @@
+- type: playTimeTracker
+  id: JobBorg
+
+- type: playTimeTracker
+  id: JobBorgEngeneering
+
+- type: playTimeTracker
+  id: JobBorgMedical
+
+- type: playTimeTracker
+  id: JobAI

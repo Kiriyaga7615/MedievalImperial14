@@ -1,0 +1,19 @@
+- type: gameMapPool
+  id: DefaultMapPool
+  maps:
+  - MedievalStation
+  - MedievalStation2
+  - MedievalStation3
+  #- BagelImperial
+  ## BarratryImperial
+  #- ClusterImperial
+  #- FrontierImperial
+  #- MarathonImperial
+  #- MooseImperial
+  ##- SalternImperial
+  #- BoxImperial
+  #- Twinkle
+  #- MiracleImperial
+  #- HephaestusImperial
+  ##- CorgImperial
+#

@@ -1,0 +1,10 @@
+- type: damageModifierSet
+  id: Megafauna
+  coefficients:
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.05
+    Cellular: 0.0
+    Radiation: 0.2
+    Caustic: 0.0
+    Heat: 0.0

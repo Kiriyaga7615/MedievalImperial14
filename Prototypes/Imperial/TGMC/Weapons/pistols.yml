@@ -1,0 +1,47 @@
+- type: entity
+  name: milton
+  parent: BaseWeaponPistol
+  id: WeaponPistolMiltonTGMC
+  description: A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/milton.rsi
+    availableModes:
+    - FullAuto
+    - SemiAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazinePistolMiltonTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazinePistolMiltonTGMC
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Gun
+    minAngle: 2
+    maxAngle: 6
+    angleIncrease: 3
+    angleDecay: 10
+    fireRate: 2
+    projectileSpeed: 35
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path:  /Audio/Weapons/Guns/Gunshots/pistol.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg

@@ -1,0 +1,14 @@
+- type: vendingMachineInventory
+  id: EngArmorInventory
+  startingInventory:
+   ClothingOuterArmorIibada: 2
+   ClothingHeadHelmetIibada: 2
+   ClothingMaskGasBalaclava: 2
+   ClothingHeadHatBeretEngineering: 2
+   ClothingUniformJumpsuitStewardTGMC: 2
+   ClothingUniformJumpsuitEngineerTGMC: 2
+   ClothingMaskBreath: 8
+   YellowOxygenTankFilled: 8
+   ClothingEyesHudMarineEngineer: 8
+   ClothingBeltUtilityEngineeringTGMC: 8
+   RIGCETGMC: 2

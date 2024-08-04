@@ -1,0 +1,37 @@
+{"version": 1,
+"size": {"x": 32, "y": 32},
+"license": "CC-BY-SA-3.0",
+"copyright": "discord .flazerowo",
+"states":
+[
+    {"name": "big_adv_instrumentation"},
+    {"name": "big_Atmospheric_engineering"},
+    {"name": "big_chemistry"},
+    {"name": "big_cover"},
+    {"name": "big_pages"},
+    {"name": "big_piloting"},
+    {"name": "big_research"},
+    {"name": "big_robototics"},
+    {"name": "big_shooting"},
+    {"name": "big_surgery"},
+    {"name": "big_trait0"},
+    {"name": "big_trait1"},
+    {"name": "big_trait2"},
+    {"name": "big_trait3"},
+    {"name": "bigA0"},
+    {"name": "bigA1"},
+    {"name": "bigA2"},
+    {"name": "bigA3"},
+    {"name": "bigA4"},
+    {"name": "bigA5"},
+    {"name": "bigA6"},
+    {"name": "bigCargo"},
+    {"name": "bigEng"},
+    {"name": "bigMed"},
+    {"name": "bigSci"},
+    {"name": "bigSec"},
+    {"name": "bigSrv"},
+    {"name": "bigGray"}
+
+]
+}

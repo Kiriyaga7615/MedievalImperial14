@@ -1,0 +1,412 @@
+- type: entity
+  name: C-20r sub machine gun
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunC12rTGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/c12r.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 7
+    minAngle: 2
+    maxAngle: 26
+    angleIncrease: 3
+    angleDecay: 16
+    projectileSpeed: 26.3333333
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazinePistolSubMachineGunC12RTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazinePistolSubMachineGunC12RTGMC
+
+- type: entity
+  name: Haarabad Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleHaarabadTGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/haarabad.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 6.75
+    minAngle: 17
+    maxAngle: 60
+    angleIncrease: 3
+    angleDecay: 16
+    projectileSpeed: 27.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazineRifleHaarabadTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazineRifleHaarabadTGMC
+  - type: GunWieldBonus
+    minAngle: -15
+    maxAngle: -45
+  - type: Wieldable
+
+- type: entity
+  name: C-20r sub machine gun
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunKhnumTGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/khnum.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 12
+    maxAngle: 45
+    fireRate: 6.5
+    angleIncrease: 3
+    angleDecay: 6
+    projectileSpeed: 23.75
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/smg.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazinePistolSubMachineGunKhnumTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazinePistolSubMachineGunKhnumTGMC
+  - type: GunWieldBonus
+    minAngle: -10
+    maxAngle: -25
+  - type: Wieldable
+
+- type: entity
+  name: BaseWeaponPeaceKeeperTGMC
+  parent: BaseWeaponLightMachineGun
+  id: BaseWeaponPeaceKeeperTGMC
+  description: A rooty tooty point and shooty.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/peacekeeper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-3
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    size: 80
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -5
+    maxAngle: -35
+  - type: Gun
+    minAngle: 12
+    maxAngle: 65
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 8
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/lmg_cock.ogg
+  - type: AmmoCounter
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazineRiflePeaceKeeperTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazineRiflePeaceKeeperTGMC
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - BaseMagazineRiflePeaceKeeperTGMC
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: R79 Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleR79TGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/r79.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 5
+    minAngle: 7
+    maxAngle: 50
+    angleIncrease: 2
+    angleDecay: 16
+    projectileSpeed: 29
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazineRifleR79TGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazineRifleR79TGMC
+  - type: GunWieldBonus
+    minAngle: -3.5
+    maxAngle: -43
+  - type: Wieldable
+
+- type: entity
+  name: C-20r sub machine gun
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunZekeTGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/zeke.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 8.5
+    minAngle: 15
+    maxAngle: 65
+    angleIncrease: 4
+    angleDecay: 16
+    projectileSpeed: 23
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazinePistolSubMachineGunC12RTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazinePistolSubMachineGunC12RTGMC
+  - type: GunWieldBonus
+    minAngle: -8
+    maxAngle: -35
+  - type: Wieldable
+
+- type: entity
+  name: Drennan Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleDrennanTGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/drennan.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 5
+    minAngle: 2
+    maxAngle: 5
+    angleIncrease: 2
+    angleDecay: 16
+    projectileSpeed: 37
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazineRifleR79TGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazineRifleR79TGMC
+  - type: Item
+    sprite: Imperial/TGMC/Weapon/drennan64.rsi
+  - type: MultiHandedItem
+
+- type: entity
+  name: Drennan Rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleYaqutTGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/yaqut.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 5
+    minAngle: 1
+    maxAngle: 2
+    angleIncrease: 2
+    angleDecay: 16
+    projectileSpeed: 50
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazineRifleYaqutTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazineRifleYaqutTGMC
+  - type: Item
+    sprite: Imperial/TGMC/Weapon/yaqut32.rsi
+  - type: MultiHandedItem
+
+- type: entity
+  name: Surea Rifle
+  parent: BaseWeaponRifle
+  id: WeaponSubMachinegunSureaTGMC
+  description: A firearm that is often used by the infamous nuclear operatives. Uses .35 auto ammo.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Weapon/surea.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 7
+    minAngle: 7
+    maxAngle: 17
+    angleIncrease: 3
+    angleDecay: 16
+    projectileSpeed: 28
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: BaseMagazineSubMachinegunSureaTGMC
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - BaseMagazineSubMachinegunSureaTGMC
+  - type: Item
+    sprite: Imperial/TGMC/Weapon/surea32.rsi

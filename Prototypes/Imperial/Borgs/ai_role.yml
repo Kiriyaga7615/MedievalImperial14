@@ -1,0 +1,16 @@
+- type: job
+  id: AI
+  name: job-name-ai
+  playTimeTracker: JobAI
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobBorg
+      time: 10800 #Imperial role timers
+  supervisors: job-supervisors-ai
+  startingGear: BorgGear
+  weight: 5
+  joinNotifyCrew: false
+  icon: "JobIconAI"
+  canBeAntag: false
+  jobEntity: StationAI
+  sponsorsOnly: true

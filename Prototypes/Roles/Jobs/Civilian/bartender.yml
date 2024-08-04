@@ -1,0 +1,39 @@
+- type: job
+  id: Bartender
+  name: job-name-bartender
+  description: job-description-bartender
+  playTimeTracker: JobBartender
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 7200 #Imperial role timers
+  startingGear: BartenderGear
+  icon: "JobIconBartender"
+  #supervisors: job-supervisors-hop
+  #access:
+  #- Service
+  #- Maintenance
+  #- Bar
+  #extendedAccess:
+  #- Kitchen
+  #- Hydroponics
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillBartending
+  - skillShooting
+
+- type: startingGear
+  id: BartenderGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth12
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalShoesSapogi
+    id: MedievalKeyTavern
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    pocket2: MedievalDrugChemistryBottle
+    belt: MedievalCoinBag
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth12
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

@@ -1,0 +1,96 @@
+- type: entity
+  name: borg spray
+  id: BorgSprayBottle
+  parent: SprayBottle
+  suffix: Empty
+  description: A huge spray bottle, capable of unrivaled janitorial power.
+  components:
+  - type: Sprite
+    sprite: Imperial/Borgs/spray.rsi
+    state: base
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 300
+  - type: Spray
+    transferAmount: 15
+    sprayedPrototype: BigVapor
+    sprayVelocity: 3
+    sprayDistance: 4.5
+    spraySound:
+      path: /Audio/Effects/spray2.ogg
+
+- type: entity
+  name: borg spray
+  parent: BorgSprayBottle
+  id: BorgSprayBottleFull
+  suffix: Full
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 300
+        reagents:
+        - ReagentId: SpaceCleaner
+          Quantity: 300
+
+- type: entity
+  parent: AdvMopItem
+  name: borg mop
+  id: BorgMopItem
+  description: Motorized mop that has a bigger reservoir and quickly replaces reagents inside with water. Automatic Clown Countermeasure not included.
+  components:
+    - type: Sprite
+      sprite: Imperial/Borgs/mop.rsi
+      state: base
+    - type: SolutionRegeneration
+      solution: absorbed
+      generated:
+        reagents:
+          - ReagentId: Water
+            Quantity: 50
+    - type: SolutionPurge
+      solution: absorbed
+      preserve:
+        - Water
+      quantity: 20
+    - type: SolutionContainerManager
+      solutions:
+        absorbed:
+          maxVol: 200
+    - type: FootPrintsCleaner #Imperial footprints
+      residue: -1
+      radius: 2
+# imperial quality fix start
+    - type: QualityOfItem
+      qualityWeights:
+        0: 0
+        1: 0
+        2: 0
+        3: 100
+        4: 0
+        5: 0
+        6: 0
+# imperial quality fix end
+
+- type: entity
+  name: borg trash bag
+  id: TrashBagBorg
+  parent: TrashBag
+  components:
+  - type: Sprite
+    sprite: Imperial/Borgs/trashbag.rsi
+    layers:
+      - state: icon-0
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Storage
+    quickInsert: true
+    areaInsert: true
+    storageOpenSound:
+      collection: trashBagRustle
+    storageInsertSound:
+      collection: trashBagRustle
+    whitelist:
+      tags:
+        - Cartridge
+        - Trash

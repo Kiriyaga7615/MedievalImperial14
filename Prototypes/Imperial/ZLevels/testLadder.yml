@@ -1,0 +1,30 @@
+- type: entity
+  id: testLadderUp
+  name: test ladder
+  desc: test ladder
+  components:
+    - type: Sprite
+      drawdepth: FloorObjects
+      sprite: Imperial/ZLevels/testLadder.rsi
+      layers:
+      - state: ladderUp
+    - type: InteractionOutline
+    - type: Clickable
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+      canCollide: false
+    - type: Ladder
+      ladderID: 1
+    - type: LadderGasProvider
+    - type: AtmosDevice
+
+- type: entity
+  id: testLadderDown
+  parent: testLadderUp
+  components:
+    - type: Sprite
+      sprite: Imperial/ZLevels/testLadder.rsi
+      layers:
+      - state: ladderDown

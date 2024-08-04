@@ -1,0 +1,69 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCargoTechnicianTGMC
+  name: cargo tech jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/Cargo_tech.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/Cargo_tech.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCMOTGMC
+  name: cargo tech jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/CMO.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/CMO.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCETGMC
+  name: cargo tech jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/CE.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/CE.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEngineerTGMC
+  name: cargo tech jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/Engineer.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/Engineer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitStewardTGMC
+  name: cargo tech jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/Steward.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/Steward.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMDTGMC
+  name: cargo tech jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/MD.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/MD.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCOTGMC
+  name: cargo tech jumpsuit
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/CO.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Uniforms/Jumpsuit/CO.rsi

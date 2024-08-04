@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "for imperial medieval by thenekron",
+    "size": { "x": 32, "y": 32 },
+    "states": [
+        { "name": "peckish", "directions": 1, "delays": [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]] },
+        { "name": "starving", "directions": 1, "delays": [[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]] },
+        { "name": "overfed", "directions": 1, "delays": [[1.0]] }
+    ]
+}

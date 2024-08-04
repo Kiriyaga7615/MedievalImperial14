@@ -1,0 +1,240 @@
+- type: latheRecipe
+  id: SmartSkillDiskBotanyProtoLathe
+  result: SmartSkillDiskBotany
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10
+
+- type: latheRecipe
+  id: SmartSkillDiskBaseMedProtoLathe
+  result: SmartSkillDiskBaseMed
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10
+
+- type: latheRecipe
+  id: SmartSkillDiskBaseConstractionProtoLathe
+  result: SmartSkillDiskBaseConstraction
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10
+
+- type: latheRecipe
+  id: SmartSkillDiskCookingProtoLathe
+  result: SmartSkillDiskCooking
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10
+
+- type: latheRecipe
+  id: SmartSkillDiskBartendingProtoLathe
+  result: SmartSkillDiskBartending
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10
+
+- type: latheRecipe
+  id: SmartSkillDiskHackingProtoLathe
+  result: SmartSkillDiskHacking
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10
+
+- type: latheRecipe
+  id: SmartSkillDiskInstrumentationProtoLathe
+  result: SmartSkillDiskInstrumentation
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: SmartSkillDiskMaintenanceProtoLathe
+  result: SmartSkillDiskMaintenance
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: SmartSkillDiskMediumConstructionProtoLathe
+  result: SmartSkillDiskMediumConstruction
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: SmartSkillDiskMediumBotanyProtoLathe
+  result: SmartSkillDiskMediumBotany
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: SmartSkillDiskBasicAtmosProtoLathe
+  result: SmartSkillDiskBasicAtmos
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: SmartSkillDiskMedicalEquipmentProtoLathe
+  result: SmartSkillDiskMedicalEquipment
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: SmartSkillDiskPharmacologyProtoLathe
+  result: SmartSkillDiskPharmacology
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 50
+    Silver: 50
+
+- type: latheRecipe
+  id: SmartSkillDiskPilotingProtoLathe
+  result: SmartSkillDiskPiloting
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskAtmosProtoLathe
+  result: SmartSkillDiskAtmos
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskHardInstrumentationProtoLathe
+  result: SmartSkillDiskHardInstrumentation
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskRoboticsProtoLathe
+  result: SmartSkillDiskRobotics
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskResearchProtoLathe
+  result: SmartSkillDiskResearch
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskPharmaceuticalsProtoLathe
+  result: SmartSkillDiskPharmaceuticals
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskShootingProtoLathe
+  result: SmartSkillDiskShooting
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskSurgeryProtoLathe
+  result: SmartSkillDiskSurgery
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: SmartSkillDiskNeuroSurgeryProtoLathe
+  result: SmartSkillDiskNeuroSurgery
+  completetime: 2
+  materials:
+    Steel: 200
+    Plastic: 100
+    Gold: 100
+    Silver: 50
+    Plasma: 100
+
+- type: latheRecipe
+  id: CrewSkillsBrainInterfaceProtoLathe
+  result: CrewSkillsBrainInterface
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10
+
+- type: latheRecipe
+  id: CrewSkillsBorgUpgradeBoardProtoLathe
+  result: CrewSkillsBorgUpgradeBoard
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 100
+    Gold: 10

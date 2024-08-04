@@ -1,0 +1,47 @@
+- type: job
+  id: SeniorPhysician
+  name: job-name-senior-physician
+  description: job-description-senior-physician
+  playTimeTracker: JobSeniorPhysician
+  psychosisGainResist: 0.7 # psychosis
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 7200 #Imperial role timers
+    - !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 7200 #Imperial role timers
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 28800 #Imperial role timers
+  startingGear: SeniorPhysicianGear
+  icon: "JobIconSeniorPhysician"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+  - Chemistry
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillPharmaceuticals
+  - skillPharmacology
+  - skillSurgery
+  - skillMedicalEquipment
+  - skillNeuroSurgery
+
+- type: startingGear
+  id: SeniorPhysicianGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSeniorPhysician
+    back: ClothingBackpackMedicalFilled
+    shoes: ClothingShoesColorBlack
+    outerClothing: ClothingOuterCoatLabSeniorPhysician
+    id: SeniorPhysicianPDA
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
+    pocket1: PsychosisHealPaper # psychosis
+  innerClothingSkirt: ClothingUniformJumpskirtSeniorPhysician
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled

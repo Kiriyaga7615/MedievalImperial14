@@ -1,0 +1,49 @@
+- type: job
+  id: Scientist
+  name: job-name-scientist
+  description: job-description-scientist
+  playTimeTracker: JobScientist
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Science
+  #    time: 10800 #Imperial role timers
+  startingGear: ScientistGear
+  icon: "JobIconScientist"
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Mana
+        maxMana: 160
+        regen: 1.3
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillHardInstrumentation
+  #- skillInstrumentation
+  #- skillRobotics
+  #- skillResearch
+  #- skillPharmaceuticals
+  #- skillPharmacology
+  #- skillMediumConstruction
+  #- skillMedicalEquipment
+  #- skillHacking
+  #- skillBasicAtmos
+  #- skillNeuroSurgery
+
+- type: startingGear
+  id: ScientistGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    back: ClothingBackpackSatchelCharmerMag2
+    shoes: MedievalShoesChamber
+    id: MedievalKeyWizard
+    pocket1: MedievalRevent50
+    pocket2: MedievalDaggerT3
+    gloves: ClothingHandsGlovesColorBlack
+    head: MedievalClothingHeadHelmetCharmerLight
+    outerClothing: MedievalClothingOuterArmorCharmerLight
+    neck: MedievalClothingNeckCloakClanWiz
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth23
+  satchel: ClothingBackpackSatchelCharmerMag1
+  duffelbag: ClothingBackpackSatchelCharmerMag1

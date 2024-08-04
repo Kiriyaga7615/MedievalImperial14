@@ -1,0 +1,232 @@
+﻿- type: entity
+  id: LawsUiOpen
+  name: action-name-open-laws
+  description: action-description-open-laws
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/actions_borg.rsi
+      state: state-laws
+    event: !type:UiLawsEvent
+
+- type: entity
+  id: SendLawsToChat
+  name: action-name-send-laws
+  description: action-description-send-laws
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/borgs_imperial.rsi
+      state: send_laws
+    event: !type:SendLawsToChatEvent
+    useDelay: 10
+
+- type: entity
+  id: SendFakeLawsToChat
+  name: action-name-send-fake-laws
+  description: action-description-send-fake-laws
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/borgs_imperial.rsi
+      state: send_fake_laws
+    event: !type:SendFakeLawsToChatEvent
+    useDelay: 10
+
+- type: entity
+  id: Mimicry
+  name: action-name-mimicry
+  description: action-description-mimicry
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/borgs_imperial.rsi
+      state: mimicry
+    event: !type:MimicryEvent
+    useDelay: 4
+
+- type: entity
+  id: LoadSecurity
+  name: action-name-load-security
+  description: action-description-load-security
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Mobs/Silicon/securityborg.rsi
+      state: idle
+    event: !type:LoadSecurity
+    useDelay: 1
+
+- type: entity
+  id: LoadMedical
+  name: action-name-load-medical
+  description: action-description-load-medical
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Mobs/Silicon/medicalborg.rsi
+      state: idle
+    event: !type:LoadMedical
+    useDelay: 1
+
+- type: entity
+  id: LoadEngineering
+  name: action-name-load-engineering
+  description: action-description-load-enineering
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Mobs/Silicon/engineeringborg.rsi
+      state: idle
+    event: !type:LoadEngineering
+    useDelay: 1
+
+- type: entity
+  id: LoadJanitor
+  name: action-name-load-janitor
+  description: action-description-load-janitor
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Mobs/Silicon/janitorborg.rsi
+      state: idle
+    event: !type:LoadJanitor
+    useDelay: 1
+
+- type: entity
+  id: LoadCargo
+  name: action-name-load-cargo
+  description: action-description-load-cargo
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Mobs/Silicon/cargoborg.rsi
+      state: idle
+    event: !type:LoadCargo
+    useDelay: 1
+
+- type: entity
+  id: ChangeReagent
+  name: action-name-change-reagent
+  description: action-description-change-reagent
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Objects/Specific/Medical/hypospray.rsi
+      state: borghypo
+    event: !type:ChangeReagentAction
+    useDelay: 1
+
+- type: entity
+  id: AIBolting
+  name: action-name-bolting
+  description: action-description-bolting
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/borgs_imperial.rsi
+      state: bolt
+    event: !type:BoltingMode
+
+- type: entity
+  id: AIOpening
+  name: action-name-opening
+  description: action-description-opening
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/borgs_imperial.rsi
+      state: open
+    event: !type:OpenMode
+
+- type: entity
+  id: AIAccessing
+  name: action-name-accessing
+  description: action-description-accesing
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Interface/Actions/borgs_imperial.rsi
+      state: access
+    event: !type:AccessMode
+
+- type: entity
+  id: AIElectrifying
+  name: action-name-electrify
+  description: action-description-electrify
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: Objects/Misc/inflatable_door.rsi
+      state: item_door
+    event: !type:ElectrifyingMode
+
+- type: entity
+  id: SendLawsToRadio
+  name: action-name-send-laws
+  description: action-description-send-laws
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    useDelay: 10
+    icon:
+      sprite: Interface/Actions/borgs_imperial.rsi
+      state: send_laws
+    event: !type:SendLawsToRadioEvent
+
+- type: entity
+  id: WarpToStation
+  name: action-name-warp-station
+  description: action-description-warp-station
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    useDelay: 10
+    icon:
+      sprite: Effects/portal.rsi
+      state: portal-red
+    event: !type:StationWarpActionEvent
+
+- type: entity
+  id: WarpToCore
+  name: action-name-warp-core
+  description: action-description-warp-core
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    useDelay: 10
+    icon:
+      sprite: Effects/portal.rsi
+      state: portal-blue
+    event: !type:CoreWarpActionEvent

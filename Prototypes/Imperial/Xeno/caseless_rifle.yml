@@ -1,0 +1,18 @@
+- type: entity
+  id: CartridgeCaselessRifleMecha
+  name: cartridge (.25 caseless)
+  parent: BaseCartridgeCaselessRifle
+  components:
+  - type: CartridgeAmmo
+    proto: BulletCaselessRifleMecha
+
+- type: entity
+  id: BulletCaselessRifleMecha
+  name: bullet (.25 caseless)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30

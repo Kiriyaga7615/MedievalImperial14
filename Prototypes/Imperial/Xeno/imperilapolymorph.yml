@@ -1,0 +1,84 @@
+- type: reagent #Медицина империал
+  id: Humanisine
+  name: reagent-name-humanisine
+  group: Medicine
+  desc: reagent-desc-humanisine
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: medicine
+  color: "#71bd85"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:PolyEntity
+        polymorphEntity: Human
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+
+- type: reagent 
+  id: Arachnizine
+  name: reagent-name-arachnizine
+  group: Medicine
+  desc: reagent-desc-arachnizine
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: medicine
+  color: "#71bd85"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:PolyEntity
+        polymorphEntity: Arachnid
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+
+- type: reagent 
+  id: Dionizine
+  name: reagent-name-dionizine
+  group: Medicine
+  desc: reagent-desc-dionizine
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: medicine
+  color: "#71bd85"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:PolyEntity
+        polymorphEntity: Diona
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+
+- type: reagent 
+  id: Dwarfizine
+  name: reagent-name-dwarfizine
+  group: Medicine
+  desc: reagent-desc-dwarfizine
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: medicine
+  color: "#71bd85"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:PolyEntity
+        polymorphEntity: Dwarf
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+
+- type: reagent 
+  id: Unathizine
+  name: reagent-name-unathizine
+  group: Medicine
+  desc: reagent-desc-unathizine
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: medicine
+  color: "#71bd85"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:PolyEntity
+        polymorphEntity: Reptilian
+        conditions:
+        - !type:ReagentThreshold
+          min: 1

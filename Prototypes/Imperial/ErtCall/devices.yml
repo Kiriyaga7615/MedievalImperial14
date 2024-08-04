@@ -1,0 +1,91 @@
+- type: entity
+  parent: BasePDA
+  id: DeadSquadPDA
+  name: dead squad PDA
+  description: Oh no ...
+  components:
+    - type: Pda
+      id: DeadSquadIDCard
+      state: pda-bartender
+    - type: PdaBorderColor
+      borderColor: "#242424"
+      accentHColor: "#447987"
+    - type: Icon
+      sprite: Objects/Devices/pda.rsi
+      state: pda-bartender
+
+- type: entity
+  parent: CentcomIDCard
+  id: DeadSquadIDCard
+  name: ERT ID card
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/deadsquad.rsi
+      layers:
+        - state: blackcard
+        - state: deadsquadID # we have the sprites but don't need individual ID entities for now.
+    - type: Item
+      # heldPrefix: gold
+   
+- type: entity
+  id: ThriveninChemistryBottle
+  name: thrivenin bottle
+  parent: BaseChemistryEmptyBottle
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: Thrivenin
+          Quantity: 30
+  - type: Tag
+    tags:
+    - Bottle
+
+- type: entity
+  id: ClothingEyesExperimentalVisionDeathSquad
+  parent: ClothingEyesExperimentalVision
+  name: experimental vision googles DeathSquad
+  description: This visor fills your heart with fear
+  suffix: DeathSquad
+  components:
+  - type: Sprite
+    sprite: Imperial/DeathSquad/deathsquadgoogles.rsi
+  - type: Clothing
+    sprite: Imperial/DeathSquad/deathsquadgoogles.rsi
+  - type: Speech # Взрывные 
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные 
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: entity
+  id: ClothingShoesBootsMagDeathSquad
+  parent: ClothingShoesBootsMagRCU
+  name: DeathSquad magboots
+  description: The blood of Nanotraisen's enemies is visible on them
+  suffix: DeathSquad
+  components:
+  - type: Sprite
+    sprite: Imperial/DeathSquad/ClothingShoesBootsMagDeathSquad.rsi
+  - type: Clothing
+    sprite: Imperial/DeathSquad/ClothingShoesBootsMagDeathSquad.rsi
+  - type: Speech # Взрывные 
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные 
+    friendlyFaction: DeathSquad
+    chance: 1
+
+- type: entity
+  id: WeaponPulseRifleDeathSquad
+  parent: WeaponPulseRifle
+  suffix: Взрывной
+  components:
+  - type: Speech # Взрывные 
+    speechSounds: Pai
+  - type: ClothingFactionExplosion # Взрывные 
+    friendlyFaction: DeathSquad
+    chance: 1
+    minRandomTime: 1
+    maxRandomTime: 5

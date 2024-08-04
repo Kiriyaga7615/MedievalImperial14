@@ -1,0 +1,438 @@
+- type: entity
+  id: GribCoreAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 0.5
+      icon:
+        sprite: /Textures/Imperial/Grib/tiles.rsi
+        state: core
+      event: !type:GribCoreActionEvent
+
+- type: entity
+  id: GribInfectedStartAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 0.5
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: main
+      event: !type:GribInfectedStartActionEvent
+
+- type: entity
+  id: GribMainAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 0.8
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: main
+      event: !type:GribMainActionEvent
+
+- type: entity
+  id: GribFarmAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 15
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: farm
+      event: !type:GribFarmActionEvent
+
+- type: entity
+  id: GribArmyAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 15
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: little_red_mushroom_animation
+      event: !type:GribArmyActionEvent
+
+- type: entity
+  id: GribArmyFastAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 15
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: little_blue_mushroom_animation
+      event: !type:GribArmyFastActionEvent
+
+- type: entity
+  id: GribArmyTankAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 15
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: little_green_mushroom_animation
+      event: !type:GribArmyTankActionEvent
+
+- type: entity
+  id: GribHealAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 15
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: heal
+      event: !type:GribHealActionEvent
+
+- type: entity
+  id: GribArmorAction
+  name: grib
+  description: da
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 4
+      deselectOnMiss: false
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: armor
+      event: !type:GribArmorActionEvent
+      whitelist:
+        tags:
+          - GribTileBase
+
+- type: entity
+  id: GribArmorUpAction
+  name: grib
+  description: da
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 16
+      deselectOnMiss: false
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: armorup
+      event: !type:GribArmorUpActionEvent
+      whitelist:
+        tags:
+          - GribArmor
+
+- type: entity
+  id: GribReflectAction
+  name: grib
+  description: da
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 4
+      deselectOnMiss: false
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: reflect
+      event: !type:GribReflectActionEvent
+      whitelist:
+        tags:
+          - GribTileBase
+
+- type: entity
+  id: GribChadAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 35
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: big
+      event: !type:GribChadActionEvent
+
+- type: entity
+  id: GribHomeAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 1
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: icore
+      event: !type:GribHomeActionEvent
+
+- type: entity
+  id: GribUzelAction
+  name: grib
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 40
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: uzel
+      event: !type:GribUzelActionEvent
+
+- type: entity
+  id: GribDelAction
+  name: grib
+  description: da
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      range: 10
+      useDelay: 0.5
+      deselectOnMiss: false
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: delete
+      event: !type:GribDelActionEvent
+      whitelist:
+        tags:
+          - GribTile
+
+- type: entity
+  id: GribMoveAction
+  name: grib
+  description: da
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      range: 10
+      useDelay: 0.5
+      deselectOnMiss: false
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/Grib/icons.rsi
+        state: move_core
+      event: !type:GribMoveActionEvent
+      whitelist:
+        tags:
+          - GribUzel
+
+- type: alert
+  id: GribInfectedSpores
+  icons:
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores0
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores1
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores2
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores3
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores4
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores5
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores6
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores7
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores8
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores9
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores10
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores11
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores12
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores13
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores14
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores15
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores16
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores17
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores18
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores19
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores20
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores21
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores22
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores23
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores24
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores25
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores26
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores27
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores28
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores29
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores30
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores31
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores32
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores33
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores34
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores35
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores36
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores37
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores38
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores39
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores40
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores41
+  name: Споры
+  description: Количество накопленных спор. Когда вы станете грибом они будут необходимы для строительства различных структур. При поедании еды это количество учеличивается. При достижении 200 спор или по прохождению 30 минут вы преваритесь в гриба.
+  minSeverity: 0
+  maxSeverity: 41
+
+- type: alert
+  id: GribSpores
+  icons:
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores0
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores1
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores2
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores3
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores4
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores5
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores6
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores7
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores8
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores9
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores10
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores11
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores12
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores13
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores14
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores15
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores16
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores17
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores18
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores19
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores20
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores21
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores22
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores23
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores24
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores25
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores26
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores27
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores28
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores29
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores30
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores31
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores32
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores33
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores34
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores35
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores36
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores37
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores38
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores39
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores40
+  - sprite: /Textures/Imperial/Grib/spore_counter.rsi
+    state: spores41
+  name: Споры
+  description: Текущее количество спор. Необходимы для дальнейшей экспансии и постройки различных структур. Лимит - 200 спор. Количество отображается округленным до 5.
+  minSeverity: 0
+  maxSeverity: 41

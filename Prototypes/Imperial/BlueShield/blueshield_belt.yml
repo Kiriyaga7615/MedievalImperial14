@@ -1,0 +1,9 @@
+- type: entity
+  id: ClothingBeltBlueShield
+  parent: ClothingBeltSecurityFilled
+  suffix: Filled
+  components:
+  - type: Sprite
+    sprite: Imperial/BlueShield/blueshieldbelt.rsi
+  - type: Clothing
+    sprite: Imperial/BlueShield/blueshieldbelt.rsi

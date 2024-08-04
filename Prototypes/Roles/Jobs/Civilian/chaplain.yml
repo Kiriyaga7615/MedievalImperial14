@@ -1,0 +1,35 @@
+- type: job
+  id: Chaplain
+  name: job-name-chaplain
+  description: job-description-chaplain
+  playTimeTracker: JobChaplain
+  psychosisGainResist: 1 # psychosis
+  startingGear: ChaplainGear
+  icon: "JobIconChaplain"
+  supervisors: job-supervisors-hop
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 7200 #Imperial role timers
+  access:
+  - Chapel
+  - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: BibleUser #Lets them heal with bibles
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+
+- type: startingGear
+  id: ChaplainGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChaplain
+    back: ClothingBackpackChaplainFilled
+    shoes: ClothingShoesColorBlack
+    id: ChaplainPDA
+    ears: ClothingHeadsetService
+  innerClothingSkirt: ClothingUniformJumpskirtChaplain
+  satchel: ClothingBackpackSatchelChaplainFilled
+  duffelbag: ClothingBackpackDuffelChaplainFilled

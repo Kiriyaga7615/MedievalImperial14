@@ -1,0 +1,74 @@
+- type: entity
+  parent: ClothingOuterArmorBulletproof
+  id: ClothingOuterArmorBulletproofExpclothing
+  name: Expclothing
+  description: Expclothing
+  components:
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 1000
+    intensitySlope: 50
+    maxIntensity: 700
+  - type: ExplodeOnTrigger
+  - type: OnUseTimerTrigger
+    delay: 300
+    startOnStick: true
+    canToggleStartOnStick: true
+    examinable: false
+  - type: TriggerOnSignal
+  - type: Clothing
+    quickEquip: false
+
+- type: entity
+  parent: ClothingOuterHardsuitEVA
+  id: ClothingOuterHardsuitEVAExpclothing
+  name: Expclothing
+  description: Expclothing
+  components:
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 1000
+    intensitySlope: 50
+    maxIntensity: 700
+  - type: ExplodeOnTrigger
+  - type: OnUseTimerTrigger
+    delay: 300
+    startOnStick: true
+    canToggleStartOnStick: true
+    examinable: false
+  - type: TriggerOnSignal
+  - type: Clothing
+    quickEquip: false
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelFilledExEva
+  name: Expclothing
+  description: Expclothing
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterHardsuitEVAExpclothing
+      - id: ClothingHeadHelmetEVA
+
+- type: listing
+  id: UplinkClothingOuterArmorBulletproofExpclothing
+  name: uplink-explosive-vest-name
+  description: uplink-explosive-vest-desc
+  productEntity: ClothingOuterArmorBulletproofExpclothing
+  cost:
+    Telecrystal: 9
+  categories:
+  - UplinkExplosives
+
+- type: listing
+  id: UplinkClothingBackpackSatchelFilledExEva
+  name: uplink-explosive-eva-name
+  description: uplink-explosive-eva-desc
+  productEntity: ClothingBackpackSatchelFilledExEva
+  icon: { sprite: /Textures/Clothing/OuterClothing/Suits/eva.rsi, state: icon }
+  cost:
+    Telecrystal: 11
+  categories:
+  - UplinkExplosives
+

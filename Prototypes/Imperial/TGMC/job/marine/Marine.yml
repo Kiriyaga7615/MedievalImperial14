@@ -1,0 +1,360 @@
+#Cmd
+- type: job
+  id: MarineCmdOper
+  name: job-name-marine-cmd-oper
+  description: job-description-marine-cmd-oper
+  playTimeTracker: JobCmdOper
+  setPreference: false
+  startingGear: MarineCmdOperGear
+  icon: "JobIconMarineCmdOper"
+  supervisors: job-supervisors-marine-cmd-oper
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - MarineLeader
+  - Marinesoldier
+  - MarineMedic
+  - MarineEngineer
+  - MarinePilotMech
+  - Marinepilot
+  - MarineComOper
+  - MarineFieldCommander
+
+- type: job
+  id: MarineCmdField
+  name: job-name-marine-cmd-field
+  description: job-description-marine-cmd-field
+  playTimeTracker: JobCmdField
+  setPreference: false
+  startingGear: MarineCmdFieldGear
+  icon: "JobIconMarineCmdField"
+  supervisors: job-supervisors-marine-cmd-field
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - MarineLeader
+  - Marinesoldier
+  - MarineMedic
+  - MarineEngineer
+  - MarinePilotMech
+  - Marinepilot
+  - MarineFieldCommander
+
+
+- type: job
+  id: MarineCmdA
+  name: job-name-marine-cmd-a
+  description: job-description-marine-cmd-a
+  playTimeTracker: JobSquadLeaderA
+  setPreference: false
+  startingGear: MarineCmdAGear
+  icon: "JobIconMarineCmdA"
+  supervisors: job-supervisors-marine-cmd
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineLeader
+  - Command
+  - External
+
+- type: job
+  id: MarineCmdB
+  name: job-name-marine-cmd-b
+  description: job-description-marine-cmd-b
+  playTimeTracker: JobSquadLeaderB
+  setPreference: false
+  startingGear: MarineCmdBGear
+  icon: "JobIconMarineCmdB"
+  supervisors: job-supervisors-marine-cmd
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineLeader
+  - Command
+  - External
+
+- type: job
+  id: MarineCmdC
+  name: job-name-marine-cmd-c
+  description: job-description-marine-cmd-c
+  playTimeTracker: JobSquadLeaderC
+  setPreference: false
+  startingGear: MarineCmdCGear
+  icon: "JobIconMarineCmdC"
+  supervisors: job-supervisors-marine-cmd
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineLeader
+  - Command
+  - External
+
+- type: job
+  id: MarineCmdD
+  name: job-name-marine-cmd-d
+  description: job-description-marine-cmd-d
+  playTimeTracker: JobSquadLeaderD
+  setPreference: false
+  startingGear: MarineCmdDGear
+  icon: "JobIconMarineCmdD"
+  supervisors: job-supervisors-marine-cmd
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineLeader
+  - Command
+  - External
+
+#Pilot
+- type: job
+  id: MarinePilot
+  name: job-name-marine-pilot
+  description: job-description-marine-pilot
+  playTimeTracker: JobPilotShuttle
+  setPreference: false
+  startingGear: MarinePilotGear
+  icon: "JobIconMarinePilot"
+  supervisors: job-supervisors-marine-pilot
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Marinepilot
+  - Command
+  - External
+
+- type: job
+  id: MarinePilotMechA
+  name: job-name-marine-pilot-mech-a
+  description: job-description-marine-pilot-mech-a
+  playTimeTracker: JobPilotMechA
+  setPreference: false
+  startingGear: MarinePilotMechAGear
+  icon: "JobIconMarinePilotMechA"
+  supervisors: job-supervisors-marine-pilot-mech-a
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarinePilotMech
+
+- type: job
+  id: MarinePilotMechB
+  name: job-name-marine-pilot-mech-b
+  description: job-description-marine-pilot-mech-b
+  playTimeTracker: JobPilotMechB
+  setPreference: false
+  startingGear: MarinePilotMechBGear
+  icon: "JobIconMarinePilotMechB"
+  supervisors: job-supervisors-marine-pilot-mech-b
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarinePilotMech
+
+- type: job
+  id: MarinePilotMechC
+  name: job-name-marine-pilot-mech-c
+  description: job-description-marine-pilot-mech-c
+  playTimeTracker: JobPilotMechC
+  setPreference: false
+  startingGear: MarinePilotMechCGear
+  icon: "JobIconMarinePilotMechC"
+  supervisors: job-supervisors-marine-pilot-mech-c
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarinePilotMech
+
+- type: job
+  id: MarinePilotMechD
+  name: job-name-marine-pilot-mech-d
+  description: job-description-marine-pilot-mech-d
+  playTimeTracker: JobPilotMechD
+  setPreference: false
+  startingGear: MarinePilotMechDGear
+  icon: "JobIconMarinePilotMechD"
+  supervisors: job-supervisors-marine-pilot-mech-d
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarinePilotMech
+
+#Marine
+- type: job
+  id: MarineA
+  name: job-name-marine-a
+  description: job-description-marine-a
+  playTimeTracker: JobMarineA
+  setPreference: false
+  startingGear: MarineAGear
+  icon: "JobIconMarineA"
+  supervisors: job-supervisors-marine-a
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Marinesoldier
+
+- type: job
+  id: MarineB
+  name: job-name-marine-b
+  description: job-description-marine-b
+  playTimeTracker: JobMarineB
+  setPreference: false
+  startingGear: MarineBGear
+  icon: "JobIconMarineB"
+  supervisors: job-supervisors-marine-b
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Marinesoldier
+
+- type: job
+  id: MarineC
+  name: job-name-marine-c
+  description: job-description-marine-c
+  playTimeTracker: JobMarineC
+  setPreference: false
+  startingGear: MarineCGear
+  icon: "JobIconMarineC"
+  supervisors: job-supervisors-marine-c
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Marinesoldier
+
+- type: job
+  id: MarineD
+  name: job-name-marine-d
+  description: job-description-marine-d
+  playTimeTracker: JobMarineD
+  setPreference: false
+  startingGear: MarineDGear
+  icon: "JobIconMarineD"
+  supervisors: job-supervisors-marine-d
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Marinesoldier
+
+#Medic
+- type: job
+  id: MarineMedicA
+  name: job-name-marine-medic-a
+  description: job-description-marine-medic-a
+  playTimeTracker: JobMarineMedA
+  setPreference: false
+  startingGear: MarineMedicAGear
+  icon: "JobIconMedicalA"
+  supervisors: job-supervisors-marine-medic-a
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineMedic
+  - Medical
+
+- type: job
+  id: MarineMedicB
+  name: job-name-marine-medic-b
+  description: job-description-marine-medic-b
+  playTimeTracker: JobMarineMedB
+  setPreference: false
+  startingGear: MarineMedicBGear
+  icon: "JobIconMedicalB"
+  supervisors: job-supervisors-marine-medic-b
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineMedic
+  - Medical
+
+- type: job
+  id: MarineMedicC
+  name: job-name-marine-medic-c
+  description: job-description-marine-medic-c
+  playTimeTracker: JobMarineMedC
+  setPreference: false
+  startingGear: MarineMedicCGear
+  icon: "JobIconMedicalC"
+  supervisors: job-supervisors-marine-medic-c
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineMedic
+  - Medical
+
+- type: job
+  id: MarineMedicD
+  name: job-name-marine-medic-d
+  description: job-description-marine-medic-d
+  playTimeTracker: JobMarineMedD
+  setPreference: false
+  startingGear: MarineMedicDGear
+  icon: "JobIconMedicalD"
+  supervisors: job-supervisors-marine-medic-d
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineMedic
+  - Medical
+
+#engineer
+- type: job
+  id: MarineEngA
+  name: job-name-marine-eng-a
+  description: job-description-marine-eng-a
+  playTimeTracker: JobMarineEndA
+  setPreference: false
+  startingGear: MarineEngAGear
+  icon: "JobIconEngineerA"
+  supervisors: job-supervisors-marine-eng-a
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineEngineer
+  - Engineering
+
+- type: job
+  id: MarineEngB
+  name: job-name-marine-eng-b
+  description: job-description-marine-eng-b
+  playTimeTracker: JobMarineEndB
+  setPreference: false
+  startingGear: MarineEngBGear
+  icon: "JobIconEngineerB"
+  supervisors: job-supervisors-marine-eng-b
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineEngineer
+  - Engineering
+
+- type: job
+  id: MarineEngC
+  name: job-name-marine-eng-c
+  description: job-description-marine-eng-c
+  playTimeTracker: JobMarineEndC
+  setPreference: false
+  startingGear: MarineEngCGear
+  icon: "JobIconEngineerC"
+  supervisors: job-supervisors-marine-eng-c
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineEngineer
+  - Engineering
+
+- type: job
+  id: MarineEngD
+  name: job-name-marine-eng-d
+  description: job-description-marine-eng-d
+  playTimeTracker: JobMarineEndD
+  setPreference: false
+  startingGear: MarineEngDGear
+  icon: "JobIconEngineerD"
+  supervisors: job-supervisors-marine-eng-d
+  canBeAntag: false
+  access:
+  - Maintenance
+  - MarineEngineer
+  - Engineering

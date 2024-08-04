@@ -1,0 +1,219 @@
+- type: parallax
+  id: blue_stars
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/blue/back1.png"
+      slowness: 0.99
+      scale: "1,1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/blue/back2.png"
+      slowness: 0.98
+      scale: "1,1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/blue/stars1.png"
+      slowness: 0.95
+      scale: "1,1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/blue/stars2.png"
+      slowness: 0.96
+      scale: "1,1"
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars.toml"
+      slowness: 0.97
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars_dim"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars_dim.toml"
+      slowness: 0.96
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars_faster"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars-2.toml"
+      slowness: 0.955
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars_dim_faster"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars_dim-2.toml"
+      slowness: 0.95
+  layersLQ:
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: ""
+        configPath: "/Prototypes/Parallaxes/parallax_config.toml"
+        slowness: 0.875
+  layersLQUseHQ: false
+
+- type: parallax
+  id: red_nebula
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/red/back1.png"
+      slowness: 0.99
+      scale: "1,1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/red/nebula.png"
+      slowness: 0.993
+      scale: "1,1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/red/stars1.png"
+      slowness: 0.97
+      scale: "1,1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/red/stars2.png"
+      slowness: 0.96
+      scale: "1,1"
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "red_stars_1"
+        configPath: "/Prototypes/Parallaxes/parallax_config_red_stars-1.toml"
+      slowness: 0.98
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "red_stars_2"
+        configPath: "/Prototypes/Parallaxes/parallax_config_red_stars-2.toml"
+      slowness: 0.96
+
+- type: parallax
+  id: imperial_test
+  layers:
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "red_stars_1"
+        configPath: "/Prototypes/Parallaxes/parallax_config_red_stars-1.toml"
+      slowness: 0.98
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "red_stars_2"
+        configPath: "/Prototypes/Parallaxes/parallax_config_red_stars-2.toml"
+      slowness: 0.95
+
+- type: parallax
+  id: Asteroids
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/layer1.png"
+      slowness: 0.998046875
+      scale: "1, 1"
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars.toml"
+      slowness: 0.996625
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars_dim"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars_dim.toml"
+      slowness: 0.989375
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars_faster"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars-2.toml"
+      slowness: 0.987265625
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars_dim_faster"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars_dim-2.toml"
+      slowness: 0.984352
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/0046.png"
+      slowness: 0.95
+      scale: "1,1"
+      scrolling: "0.05, -0.025"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/0045.png"
+      slowness: 0.85
+      scale: "1,1"
+      scrolling: "0.1, 0.05"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/0044.png"
+      slowness: 0.83
+      scale: "1,1"
+      scrolling: "0.12, 0.03"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/0043.png"
+      slowness: 0.73
+      scale: "1,1"
+      scrolling: "0.13, -0.07"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/00452.png"
+      slowness: 0.7
+      scale: "1,1"
+      scrolling: "0.15, -0.05"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/00442.png"
+      slowness: 0.65
+      scale: "1,1"
+      scrolling: "0.2, 0.05"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/0042.png"
+      slowness: 0.6
+      scale: "1,1"
+      scrolling: "0.25, -0.0"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Imperial/Parallaxes/Asteroids/0041.png"
+      slowness: 0.5
+      scale: "0.8,0.8"
+      scrolling: "0.3, -0.0"
+  # layersLQ:
+  #   - texture:
+  #       !type:GeneratedParallaxTextureSource
+  #       id: ""
+  #       configPath: "/Prototypes/Parallaxes/parallax_config.toml"
+  #       slowness: 0.875
+  # layersLQUseHQ: false
+
+- type: parallax
+  id: ArcaneStation
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/arcane/ArcaneParallax.png"
+      slowness: 0.998046875
+      scale: "1, 1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/arcane/NebulaArcanever.png"
+      slowness: 0.993
+      scale: "1,1"
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/arcane/StarsArcane.png"
+      slowness: 0.997
+      scale: "1,1"
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: "hq_wizard_stars"
+        configPath: "/Prototypes/Parallaxes/parallax_config_stars.toml"
+      slowness: 0.996625
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/Parallaxes/Imperial/arcane/PlanetArcane.png"
+      slowness: 0.998046875
+      scale: "1, 1"
+      tiled: false
+  layersLQ:
+    - texture:
+        !type:GeneratedParallaxTextureSource
+        id: ""
+        configPath: "/Prototypes/Parallaxes/parallax_config.toml"
+        slowness: 0.875
+  layersLQUseHQ: false

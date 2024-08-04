@@ -1,0 +1,41 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitBlueshield
+  name: blueshield officer hardsuit
+  description: Suit used by blue shield officers.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/blueshield.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/blueshield.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.04
+    lowPressureMultiplier: 1000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.25
+        Radiation: 0.4
+        Caustic: 0.6
+        Stamina: 0.6 ## Stamina resistance
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitBlueshield
+# imperial quality fix start
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 20
+      3: 30
+      4: 30
+      5: 20
+      6: 0
+# imperial quality fix end

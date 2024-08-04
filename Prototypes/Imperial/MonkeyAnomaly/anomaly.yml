@@ -1,0 +1,354 @@
+- type: entity
+  id: AnomalyMonkey
+  parent: BaseAnomaly
+  suffix: Monkey
+  components:
+  - type: Sprite
+    sprite: Imperial/MonkeyAnomaly/anomaly.rsi
+    layers:
+    - state: anom
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: anom-pulse
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+  - type: PointLight
+    radius: 2.0
+    energy: 1.5
+    color: yellow
+    castShadows: false
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        maxAmount: 10
+        minRange: 1
+        maxRange: 1.5
+      spawns:
+      - MobMonkeyAnomaly
+      - MobMonkeyAnomaly
+      - MobMonkeyAnomaly
+      - MobMonkeyAnomaly
+      - TrashBananaPeel
+      - TrashBananaPeel
+      - TrashBananaPeel
+      - TrashBananaPeel
+      - TrashBananiumPeel
+      - TrashBananaPeelExplosiveUnarmed
+      - TrashMimanaPeel
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 5
+        maxAmount: 10
+        maxRange: 1
+      spawns:
+      - MobGigaMonkeyAnomaly
+    - settings:
+        spawnOnShutdown: true
+        maxAmount: 4
+        maxRange: 1
+      spawns:
+      - MobGigaMonkeyAnomaly
+      - MobMonkeyAnomaly
+      - MobMonkeyAnomaly
+  - type: ExplosionAnomaly
+    supercriticalExplosion: Default
+    explosionTotalIntensity: 12
+    explosionDropoff: 4
+    explosionMaxTileIntensity: 1
+  - type: Anomaly
+    corePrototype: AnomalyCoreMonkey
+    coreInertPrototype: AnomalyCoreMonkeyInert
+
+- type: entity
+  parent: BaseAnomalyCore
+  id: AnomalyCoreMonkey
+  suffix: Gravity
+  components:
+  - type: Sprite
+    sprite: Imperial/MonkeyAnomaly/core.rsi
+  - type: PointLight
+    radius: 1.5
+    energy: 10
+    color: yellow
+    castShadows: false
+
+- type: entity
+  parent: BaseAnomalyInertCore
+  id: AnomalyCoreMonkeyInert
+  suffix: Gravity, Inert
+  components:
+  - type: Sprite
+    sprite: Imperial/MonkeyAnomaly/core.rsi
+  - type: PointLight
+    radius: 1.5
+    energy: 10
+    color: yellow
+    castShadows: false
+
+
+
+- type: entity
+  id: MobMonkeyAnomaly
+  parent: SimpleMobBase
+  components:
+  - type: CombatMode
+  - type: NameIdentifier
+    group: Monkey
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-primate
+  - type: Inventory
+    templateId: monkey
+    speciesId: monkey
+  - type: InventorySlots
+  - type: Cuffable
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Stripping
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: monkey
+      sprite: Mobs/Animals/monkey.rsi
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "id" ]
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: Hands
+  - type: GenericVisualizer
+    visuals:
+      enum.CreamPiedVisuals.Creamed:
+        clownedon: # Not 'creampied' bc I can already see Skyrat complaining about conflicts.
+          True: {visible: true}
+          False: {visible: false}
+  - type: Speech
+    speechSounds: Monkey
+    speechVerb: Monkey
+  - type: Body
+    prototype: Primate
+    requiredLegs: 1 # TODO: More than 1 leg
+  - type: CreamPied
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Monkey_burning
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 3
+  - type: GigaMonkeyAccent
+  - type: Puller
+  - type: CanHostGuardian
+  - type: FactionException
+  - type: NpcFactionMember
+    factions:
+      - Passive
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: GhostRole
+    prob: 0.2
+    makeSentient: true
+    name: ghost-role-information-monkey-name
+    description: ghost-role-information-monkey-description
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: IdExaminable
+  - type: AlwaysRevolutionaryConvertible
+  - type: NPCRetaliation
+    attackMemoryLength: 30
+  - type: Advertise
+    pack: MonkeyAnomalyAdvertise
+    minWait: 15
+    maxWait: 140
+  - type: ThrowSpamStop #imperial throw spam stop
+  - type: CrewSkills #imperial skills
+    skillPoints: 6
+
+- type: messagePack
+  id: MonkeyAnomalyAdvertise
+  messages:
+  - monkey-anomaly-1
+  - monkey-anomaly-2
+  - monkey-anomaly-3
+  - monkey-anomaly-4
+  - monkey-anomaly-5
+  - monkey-anomaly-6
+  - monkey-anomaly-7
+  - monkey-anomaly-8
+  - monkey-anomaly-9
+  - monkey-anomaly-10
+  - monkey-anomaly-11
+  - monkey-anomaly-12
+  - monkey-anomaly-13
+  - monkey-anomaly-14
+  - monkey-anomaly-15
+  - monkey-anomaly-16
+  - monkey-anomaly-17
+  - monkey-anomaly-18
+  - monkey-anomaly-19
+  - monkey-anomaly-20
+
+- type: entity
+  name: Urist GigaMonkey
+  id: MobGigaMonkeyAnomaly
+  parent: SimpleMobBase
+  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  components:
+  - type: CombatMode
+  - type: NameIdentifier
+    group: Monkey
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-primate
+  - type: Inventory
+  - type: InventorySlots
+  - type: Cuffable
+  - type: RotationVisuals
+    defaultRotation: 90
+    horizontalRotation: 90
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Stripping
+  - type: Strippable
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: monkey
+      sprite: Imperial/MonkeyAnomaly/monkey.rsi
+    - map: ["jumpsuit"]
+    - map: [ "id" ]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "neck" ]
+    - map: [ "back" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: Hands
+  - type: GenericVisualizer
+    visuals:
+      enum.CreamPiedVisuals.Creamed:
+        clownedon:
+          True: {visible: true}
+          False: {visible: false}
+  - type: Speech
+    speechSounds: Monkey
+    speechVerb: Monkey
+  - type: Body
+    prototype: Reptilian
+    requiredLegs: 2
+  - type: CreamPied
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Standing
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 3
+  - type: Puller
+  - type: CanHostGuardian
+  - type: NPCRetaliation
+    attackMemoryLength: 40
+  - type: FactionException
+  - type: NpcFactionMember
+    factions:
+      - Passive
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: GhostRole
+    prob: 1
+    makeSentient: true
+    name: ghost-role-information-giga-monkey-name
+    description: ghost-role-information-giga-monkey-description
+    raffle:
+      settings: default
+  - type: GhostTakeoverAvailable
+  - type: IdExaminable
+  - type: AlwaysRevolutionaryConvertible
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      85: 0.7
+      125: 0.5
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1.7
+    damage:
+      types:
+        Blunt: 11
+  - type: GigaMonkeyAccent
+  - type: Advertise
+    pack: MonkeyAnomalyAdvertise
+    minWait: 150
+    maxWait: 1640
+  - type: ThrowSpamStop
+  - type: CrewSkills #imperial skills
+    skillPoints: 8
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      110: Wounded
+      130: Critical
+      230: Dead

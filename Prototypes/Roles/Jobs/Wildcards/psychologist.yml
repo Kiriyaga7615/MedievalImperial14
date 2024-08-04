@@ -1,0 +1,35 @@
+- type: job
+  id: Psychologist
+  name: job-name-psychologist
+  description: job-description-psychologist
+  playTimeTracker: JobPsychologist
+  startingGear: PsychologistGear
+  psychosisGainResist: 0.70 # psychosis
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 #Imperial role timers
+  icon: "JobIconPsychologist"
+  supervisors: job-supervisors-cmo
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillPharmacology
+
+- type: startingGear
+  id: PsychologistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPsychologist
+    back: ClothingBackpackMedicalFilled
+    shoes: ClothingShoesLeather
+    id: PsychologistPDA
+    ears: ClothingHeadsetMedical
+    pocket1: PsychosisHealPaper # psychosis
+  innerClothingSkirt: ClothingUniformJumpskirtPsychologist
+  satchel: ClothingBackpackSatchelMedicalFilled
+  duffelbag: ClothingBackpackDuffelMedicalFilled

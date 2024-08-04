@@ -1,0 +1,168 @@
+- type: entity
+  save: false
+  name: Urist McHands
+  parent: BaseMobHuman
+  id: MobHuman
+  components:
+  #Imperial foot prints
+  - type: FootPrints
+  - type: ThrowSpamStop #imperial throw spam stop
+  - type: GrantPacified #imperial pacified new players
+  - type: AntispamProtectGhostVisibiity #imperial eye protect system
+
+#Syndie
+- type: entity
+  parent: MobHuman
+  id: MobHumanSyndicateAgentBase
+  name: syndicate agent
+  suffix: Human, Base
+  components:
+    - type: Loadout
+      prototypes: [SyndicateOperativeGearExtremelyBasic]
+    - type: RandomMetadata
+      nameSegments: [names_death_commando]
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: CrewSkills #imperial skills
+      skillPoints: 12
+      isAntag: true
+      skills:
+      - skillBotany #base
+      - skillBaseMed
+      - skillBaseConstraction
+      antagSkills:
+      - skillBotany #base
+      - skillBaseMed
+      - skillBaseConstraction
+      - skillCooking  #Easy
+      - skillBartending
+      - skillHacking
+      - skillInstrumentation #Medium
+      - skillMaintenance
+      - skillMediumConstruction
+      - skillMediumBotany
+      - skillBasicAtmos
+      - skillMedicalEquipment
+      - skillPharmacology
+      - skillPiloting #Hard
+      - skillAtmos
+      - skillHardInstrumentation
+      - skillRobotics
+      - skillResearch
+      - skillPharmaceuticals
+      - skillShooting
+      - skillSurgery
+      - skillNeuroSurgery
+
+
+- type: entity
+  parent: MobHumanSyndicateAgentBase
+  id: MobHumanSyndicateAgent
+  name: syndicate agent
+  suffix: Human, Traitor
+  components:
+    # make the player a traitor once its taken
+    - type: AutoTraitor
+      giveUplink: false
+      giveObjectives: false
+
+- type: entity
+  parent: MobHumanSyndicateAgentBase
+  id: MobHumanSyndicateAgentNukeops # Reinforcement exclusive to nukeops uplink
+  suffix: Human, NukeOps
+  components:
+    - type: NukeOperative
+    - type: CrewSkills #imperial skills
+      skillPoints: 12
+      isAntag: true
+      antagSkills:
+      - skillBotany #base
+      - skillBaseMed
+      - skillBaseConstraction
+      - skillCooking  #Easy
+      - skillBartending
+      - skillHacking
+      - skillInstrumentation #Medium
+      - skillMaintenance
+      - skillMediumConstruction
+      - skillMediumBotany
+      - skillBasicAtmos
+      - skillMedicalEquipment
+      - skillPharmacology
+      - skillPiloting #Hard
+      - skillAtmos
+      - skillHardInstrumentation
+      - skillRobotics
+      - skillResearch
+      - skillPharmaceuticals
+      - skillShooting
+      - skillSurgery
+      - skillNeuroSurgery
+
+
+
+# Nuclear Operative
+- type: entity
+  noSpawn: true
+  name: Nuclear Operative
+  parent: MobHuman
+  id: MobHumanNukeOp
+  components:
+    - type: NukeOperative
+    - type: RandomHumanoidAppearance
+
+- type: entity
+  noSpawn: true
+  parent: MobHuman
+  id: MobHumanLoneNuclearOperative
+  name: Lone Operative
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NukeOperative
+    - type: Loadout
+      prototypes: [SyndicateLoneOperativeGearFull]
+    - type: RandomMetadata
+      nameSegments:
+      - SyndicateNamesPrefix
+      - SyndicateNamesNormal
+    - type: NpcFactionMember
+      factions:
+      - Syndicate
+    - type: CrewSkills #imperial skills
+    - type: CrewSkillsAntagSkillsOnStart
+      antagSkillsGroup: skillGroupStandartSS14All
+      dublicateToStandartList: true
+
+
+# Space Ninja
+- type: entity
+  noSpawn: true
+  name: Space Ninja
+  parent: MobHuman
+  id: MobHumanSpaceNinja
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: Loadout
+    prototypes: [SpaceNinjaGear]
+  - type: NpcFactionMember
+    factions:
+    - Syndicate
+  - type: SpaceNinja
+  - type: GenericAntag
+    rule: Ninja
+  - type: AutoImplant
+    implants:
+    - DeathAcidifierImplant
+  - type: RandomMetadata
+    nameSegments:
+    - names_ninja_title
+    - names_ninja
+  - type: CrewSkills #imperial skills
+  - type: CrewSkillsAntagSkillsOnStart
+    antagSkillsGroup: skillGroupStandartSS14All
+    dublicateToStandartList: true
+
+

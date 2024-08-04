@@ -1,0 +1,228 @@
+- type: entity
+  id: BaseClarkePart
+  parent: BaseMechPart
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Items
+    noRot: false
+    sprite: Imperial/Mech/mech_construct.rsi
+
+- type: entity
+  id: BaseClarkePartItem
+  parent: BaseClarkePart
+  abstract: true
+  components:
+  - type: Item
+    size: 50
+
+- type: entity
+  parent: BaseClarkePart
+  id: ClarkeHarness
+  name: clarke harness
+  description: The core of the Clarke APLU.
+  components:
+  - type: Appearance
+  - type: ItemMapper
+    mapLayers:
+      clarke_l_arm+o:
+        whitelist:
+          tags:
+          - ClarkeLArm
+      clarke_r_arm+o:
+        whitelist:
+          tags:
+          - ClarkeRArm
+      clarke_treads+o:
+        whitelist:
+          tags:
+          - ClarkeLeg
+    sprite: Imperial/Mech/mech_construct.rsi
+  - type: ContainerContainer
+    containers:
+      mech-assembly-container: !type:Container
+  - type: MechAssembly
+    finishedPrototype: ClarkeChassis
+    requiredParts:
+      ClarkeLArm: false
+      ClarkeRArm: false
+      ClarkeLeg: false
+  - type: Sprite
+    state: clarke_harness+o
+    noRot: true
+
+- type: entity
+  parent: BaseClarkePartItem
+  id: ClarkeLArm
+  name: clarke left arm
+  description: The left arm of the Clarke APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: clarke_l_arm
+  - type: Tag
+    tags:
+    - ClarkeLArm
+
+- type: entity
+  parent: BaseClarkePartItem
+  id: ClarkeLeg
+  name: clarke left leg
+  description: The left leg of the Clarke APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: clarke_treads+o
+  - type: Tag
+    tags:
+    - ClarkeLeg
+
+- type: entity
+  parent: BaseClarkePartItem
+  id: ClarkeRArm
+  name: clarke right arm
+  description: The right arm of the Clarke APLU. It belongs on the chassis of the mech.
+  components:
+  - type: Sprite
+    state: clarke_r_arm
+  - type: Tag
+    tags:
+    - ClarkeRArm
+
+- type: entity
+  id: ClarkeChassis
+  parent: BaseClarkePart
+  name: clarke chassis
+  description: An in-progress construction of the Clarke APLU mech.
+  components:
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      battery-container: !type:Container
+  - type: MechAssemblyVisuals
+    statePrefix: clarke
+  - type: Sprite
+    noRot: true
+    state: clarke_chassis
+  - type: Construction
+    graph: Clarke
+    node: start
+    defaultTarget: clarke
+
+- type: constructionGraph
+  id: Clarke
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: clarke
+      steps:
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Cable
+        doAfter: 1
+
+      - tool: Cutting
+        doAfter: 1
+
+      - tag: ClarkeCentralControlModule
+        name: clarke central control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: "mainboard"
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - tag: ClarkePeripheralsControlModule
+        name: clarke peripherals control module
+        icon:
+          sprite: "Objects/Misc/module.rsi"
+          state: id_mod
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - component: PowerCell
+        name: power cell
+        store: battery-container
+        icon:
+          sprite: Objects/Power/power_cells.rsi
+          state: small
+        doAfter: 1
+
+      - tool: Screwing
+        doAfter: 1
+
+      - material: Steel
+        amount: 5
+        doAfter: 1
+
+      - tool: Anchoring
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+      - material: MetalRod
+        amount: 10
+        doAfter: 1
+
+      - tool: Welding
+        doAfter: 1
+
+  - node: clarke
+    actions:
+    - !type:BuildMech
+      mechPrototype: MechClarke
+
+- type: Tag
+  id: ClarkeCentralControlModule
+
+- type: Tag
+  id: ClarkePeripheralsControlModule
+
+- type: Tag
+  id: ClarkeLArm
+
+- type: Tag
+  id: ClarkeLeg
+
+- type: Tag
+  id: ClarkeRArm
+
+- type: entity
+  id: ClarkeCentralElectronics
+  parent: BaseElectronics
+  name: clarke central control module
+  description: The electrical control center for the clarke mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - ClarkeCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: ClarkePeripheralsElectronics
+  parent: BaseElectronics
+  name: clarke peripherals control module
+  description: The electrical peripherals control for the clarke mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - ClarkePeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics

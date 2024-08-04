@@ -1,0 +1,277 @@
+- type: entity
+  name: RandomTimeTravellerSpawn
+  id: TimeTravellerSpawn
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - SpawnTimeTravellerAncient
+        - SpawnTimeTravellerKnight
+        - SpawnTimeTraveller4024
+        - SpawnTimeTravellerSoviet
+        - SpawnTimeTravellerPeasant
+        - SpawnTimeTravellerCowboy
+      chance: 1
+      offset: 0
+
+- type: entity
+  #noSpawn: false
+  id: SpawnTimeTravellerAncient
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: timetravell-ancient-name
+      description: timetravell-desc
+      rules: timetravell-ancient-rules
+      raffle:
+        settings: default 
+    - type: GhostRoleMobSpawner
+      prototype: TimeTravellerAncientPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: green
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: TimeTravellerAncientPreset
+  name: Ancient traveller
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MedievalNothingWerwolf ]
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+    - type: CrewSkills
+
+
+- type: entity
+  id: SpawnTimeTravellerKnight
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: timetravell-knight-name
+      description: timetravell-desc
+      rules: timetravell-knight-rules
+      raffle:
+        settings: default 
+    - type: GhostRoleMobSpawner
+      prototype: TimeTravellerKnightPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: green
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: TimeTravellerKnightPreset
+  name: Knight traveller
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MedievalMediumSword ]
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+    - type: CrewSkills
+
+- type: entity
+  id: SpawnTimeTraveller4024
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: timetravell-4024-name
+      description: timetravell-desc
+      raffle:
+        settings: default 
+      rules: timetravell-4024-rules
+    - type: GhostRoleMobSpawner
+      prototype: TimeTraveller4024Preset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: green
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: TimeTraveller4024Preset
+  name: 4024 traveller
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ 4024Gear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: CrewSkills
+      skills:
+        - skillPiloting
+        - skillHacking
+        - skillShooting
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillMediumConstruction
+        - skillBasicAtmos
+
+- type: startingGear
+  id: 4024Gear
+  equipment:
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHelmetArgeo
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorArgeo
+    mask: ClothingMaskGasSwat
+    eyes: ClothingEyesHudMarine
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    back: WeaponPulseTalos
+
+- type: entity
+  id: SpawnTimeTravellerSoviet
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: timetravell-soviet-name
+      description: timetravell-desc
+      rules: timetravell-soviet-rules
+      raffle:
+        settings: default 
+    - type: GhostRoleMobSpawner
+      prototype: TimeTravellerSovietPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: green
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: TimeTravellerSovietPreset
+  name: Soviet traveller
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ SovietTravellerGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+    - type: CrewSkills
+      skills:
+        - skillShooting
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillBotany
+
+
+- type: startingGear
+  id: SovietTravellerGear
+  equipment:
+    shoes: MedievalShoesValenki
+    head: ClothingHeadHelmetMerc
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    back: WeaponSniperMosin
+    pocket1: MagazineBoxLightRifle
+    pocket2: ExGrenade
+
+- type: entity
+  id: SpawnTimeTravellerPeasant
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: timetravell-peasant-name
+      description: timetravell-desc
+      rules: timetravell-peasant-rules
+      raffle:
+        settings: default 
+    - type: GhostRoleMobSpawner
+      prototype: TimeTravellerPeasantPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: green
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: TimeTravellerPeasantPreset
+  name: Peasant traveller
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MedievalPeasant ]
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+    - type: CrewSkills
+      skills:
+        - skillBotany
+
+- type: entity
+  id: SpawnTimeTravellerCowboy
+  name: ghost role spawn point
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: timetravell-cowboy-name
+      description: timetravell-desc
+      rules: timetravell-cowboy-rules
+      raffle:
+        settings: default 
+    - type: GhostRoleMobSpawner
+      prototype: TimeTravellerCowboyPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: green
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: TimeTravellerCowboyPreset
+  name: Cowboy traveller
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ CowboyGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+    - type: CrewSkills
+      skills:
+        - skillShooting
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillBotany
+
+- type: startingGear
+  id: CowboyGear
+  equipment:
+    shoes: MedievalClothingShoesLeather
+    head: ClothingHeadHatOutlawHat
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth18
+    belt: WeaponRevolverInspector
+    pocket1: SpeedLoaderMagnum
+    pocket2: MagazineBoxMagnum
+    gloves: MedievalClothingHandsGlovesColorBrown
+    mask: MedievalMaskFace

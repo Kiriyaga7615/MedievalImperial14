@@ -1,0 +1,65 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "for imperial space",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "mob"
+        },
+        {
+            "name": "infect"
+        },
+        {
+            "name": "dnk"
+        },
+        {
+            "name": "progress"
+        },
+        {
+            "name": "infection"
+        },
+        {
+            "name": "lethal"
+        },
+        {
+            "name": "blood"
+        },
+        {
+            "name": "genom"
+        },
+        {
+            "name": "heal"
+        },
+        {
+            "name": "cough"
+        },
+        {
+            "name": "rvota"
+        },
+        {
+            "name": "sleep"
+        },
+        {
+            "name": "stun"
+        },
+        {
+            "name": "mute"
+        },
+        {
+            "name": "bleed"
+        },
+        {
+            "name": "slow"
+        },
+        {
+            "name": "blind"
+        },
+        {
+            "name": "defend"
+        }
+    ]
+}

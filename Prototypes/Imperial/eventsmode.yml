@@ -1,0 +1,32 @@
+- type: gamePreset
+  id: Events
+  alias:
+  - events
+  - eventsmode
+  name: events-title
+  showInVote: true
+  description: events-description
+  rules:
+    - TDM
+
+- type: gamePreset
+  id: Events2
+  alias:
+  - events2
+  - eventsmode2
+  name: events-title
+  showInVote: true
+  description: events-description
+  rules:
+    - TDM
+
+- type: gamePreset
+  id: Events3
+  alias:
+  - events3
+  - eventsmode3
+  name: events-title
+  showInVote: true
+  description: events-description
+  rules:
+    - TDM

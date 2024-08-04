@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "created by mirton4005 (Discord) for Imperai Space",
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "onBrain"
+        },
+        {
+            "name": "upgradeBoard"
+        },
+        {
+            "name": "brain"
+        }
+    ]
+}

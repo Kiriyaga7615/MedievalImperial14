@@ -1,0 +1,4 @@
+- type: emote
+  id: CoughBloody
+  category: Vocal
+  chatMessages: [кашляет кровью]

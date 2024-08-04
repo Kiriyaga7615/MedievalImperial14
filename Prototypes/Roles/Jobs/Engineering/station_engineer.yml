@@ -1,0 +1,47 @@
+- type: job
+  id: StationEngineer
+  name: job-name-engineer
+  description: job-description-engineer
+  playTimeTracker: JobStationEngineer
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Engineering
+  #    time: 7200 #Imperial role timers
+  startingGear: StationEngineerGear
+  icon: "JobIconStationEngineer"
+  #supervisors: job-supervisors-ce
+  #access:
+  #- Maintenance
+  #- Engineering
+  #- External
+  #extendedAccess:
+  #- Atmospherics
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillPiloting
+  #- skillBasicAtmos
+  #- skillInstrumentation
+  #- skillHardInstrumentation
+  #- skillMaintenance
+  #- skillMediumConstruction
+  #- skillHacking
+
+- type: startingGear
+  id: StationEngineerGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth5
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalShoesValenki
+    id: MedievalKeyGuard
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    pocket2: MedievalBrutepack
+    neck: MedievalClothingNeckCloakClanFox
+    belt: MedievalFalshionT3Fox
+    gloves: ClothingHandsGlovesColorLightBrown
+    head: MedievalClothingHeadHelmetFox2
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth5
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

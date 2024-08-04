@@ -1,0 +1,29 @@
+- type: gameMap
+  id: TalosImperial
+  mapName: 'Talos'
+  mapPath: /Maps/imperial/TGMC/talas_imperial.yml
+  minPlayers: 35
+  maxPlayers: 70
+  stations:
+    Tal:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Talos {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency_box.yml
+        - type: StationJobs
+          availableJobs:
+            CargoTechnician: [ 3, 3 ]
+            ChiefEngineer: [ 1, 1 ]
+            StationEngineer: [ 3, 3 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            MedicalDoctor: [ 3, 3 ]
+            Chemist: [ 2, 2 ]
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 2, 2 ]
+            Quartermaster: [ 1, 1 ]
+            Surgeon: [ 2, 2]

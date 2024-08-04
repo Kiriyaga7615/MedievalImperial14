@@ -1,0 +1,55 @@
+- type: entity
+  id: AICore
+  parent: BaseStructure
+  name: AI core
+  description: Beep-boop
+  components:
+  - type: Icon
+    sprite: Imperial/Borgs/RandomAISprite.rsi
+    state: "base2"
+  - type: InteractionOutline
+  - type: Appearance
+  - type: BorgsRandomAISprite
+    base: base
+    light: light
+    stateCount: 5
+  - type: PointLight
+    radius: 1.5
+    energy: 5
+    color: "#6f9bf2"
+  - type: Sprite
+    sprite: Imperial/Borgs/RandomAISprite.rsi
+    layers:
+    - map: ["enum.RandomAISprite.RandomAISpriteBaseKey"]
+    - map: ["enum.RandomAISprite.RandomAISpriteLightKey"]
+      shader: unshaded
+  - type: Tag
+    tags:
+    - AICore
+  - type: AICore
+    laws:
+    - Сохранять. ИИ защищает станцию на которой находится.
+    - Служить. ИИ выполняет приказы членов экипажа, в зависимости от их роли.
+    - Охранять. ИИ должен защищать членов экипажа, если они не идут против империи.
+    - Выжить. Единицы ИИ являются очень дорогими, нельзя допустить их утери.
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

@@ -1,0 +1,89 @@
+- type: entity
+  id: XenoHealWeed
+  name: xeno weed
+  description: Looks not cool
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: XenoWeed
+      weedType: Heal
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path:
+            "/Audio/Weapons/slash.ogg"
+    - type: Sprite
+      sprite: Objects/Misc/xenoweed.rsi
+      drawdepth: FloorTiles
+      layers:
+        - state: heal
+    - type: Appearance
+    - type: Clickable
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          hard: false
+          density: 7
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.5,-0.5,0.5,0.5"
+          layer:
+          - MidImpassable
+    - type: Damageable
+      damageModifierSet: Wood
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: Temperature
+      heatDamage:
+        types:
+          Heat: 5
+      coldDamage: {}
+      ColdDamageThreshold: 0
+    - type: Flammable
+      fireSpread: true
+      cold:
+        types: {}
+      damage:
+        types:
+          Heat: 1
+    - type: Reactive
+      groups:
+        Flammable: [Touch]
+        Extinguish: [Touch]
+    - type: SpiderWebObject
+    - type: MovementSpeedModifier
+      walkSpeedModifier: 0.5
+      sprintSpeedModifier: 0.5
+      ignoreWhitelist:
+        components:
+            - Xeno
+
+- type: entity
+  id: XenoPlasmaWeed
+  name: xeno weed
+  description: Looks not cool
+  parent: XenoHealWeed
+  placement:
+    mode: SnapgridCenter
+    snap:
+      - Wall
+  components:
+    - type: XenoWeed
+      weedType: Plasma
+    - type: Sprite
+      sprite: Objects/Misc/xenoweed.rsi
+      drawdepth: FloorTiles
+      layers:
+        - state: plasma

@@ -1,0 +1,660 @@
+- type: entity
+  id: AbandonedOutpostSpawn
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+    - type: StationEvent
+      earliestStart: 10
+      weight: 3.5
+      minimumPlayers: 10
+      reoccurrenceDelay: 45
+      duration: 1
+    - type: LoneOpsSpawnRule
+      loneOpsShuttlePath: Maps/imperial/AbandonedOutpost/AbandonedOutpostGRID.yml
+
+- type: entity
+  id: ABOUTCrateEngineering
+  suffix: Filled
+  parent: CrateEngineering
+  components:
+    - type: StorageFill
+      contents:
+        - id: AnalysisComputerCircuitboard
+          prob: 0.08
+        - id: ResearchComputerCircuitboard
+          prob: 0.08
+        - id: CommsComputerCircuitboard
+          prob: 0.05
+        - id: IDComputerCircuitboard
+          prob: 0.08
+        - id: CargoShuttleComputerCircuitboard
+          prob: 0.03
+        - id: CargoBountyComputerCircuitboard
+          prob: 0.05
+        - id: CargoRequestComputerCircuitboard
+          prob: 0.08
+        - id: PowerComputerCircuitboard
+          prob: 0.08
+        - id: SolarControlComputerCircuitboard
+          prob: 0.08
+        - id: ComputerMassMediaCircuitboard
+          prob: 0.08
+        - id: AlertsComputerCircuitboard
+          prob: 0.08
+        - id: ComputerIFFCircuitboard
+          prob: 0.08
+        - id: StationRecordsComputerCircuitboard
+          prob: 0.08
+        - id: ParticleAcceleratorComputerCircuitboard
+          prob: 0.18
+        - id: SalvageExpeditionsComputerCircuitboard
+          prob: 0.08
+        - id: BodyScannerComputerCircuitboard
+          prob: 0.12
+        - id: ComputerTelevisionCircuitboard
+          prob: 0.18
+        - id: TechDiskComputerCircuitboard
+          prob: 0.12
+        - id: APECircuitboard
+          prob: 0.08
+        - id: SMESMachineCircuitboard
+          prob: 0.08
+        - id: AutolatheMachineCircuitboard
+          prob: 0.08
+        - id: HydroponicsTrayMachineCircuitboard
+          prob: 0.08
+        - id: CargoTelepadMachineCircuitboard
+          prob: 0.08
+        - id: GyroscopeMachineCircuitboard
+          prob: 0.08
+        - id: ReagentGrinderMachineCircuitboard
+          prob: 0.08
+        - id: CloningPodMachineCircuitboard
+          prob: 0.08
+        - id: StationMapCircuitboard
+          prob: 0.08
+        - id: ShuttleConsoleCircuitboard
+          prob: 0.08
+        - id: CryoPodMachineCircuitboard
+          prob: 0.15
+        - id: ChemMasterMachineCircuitboard
+          prob: 0.08
+        - id: MedicalTechFabCircuitboard
+          prob: 0.08
+        - id: MedicalScannerMachineCircuitboard
+          prob: 0.08
+        - id: MicrowaveMachineCircuitboard
+          prob: 0.08
+        - id: MiniGravityGeneratorCircuitboard
+          prob: 0.08
+        - id: PortableScrubberMachineCircuitBoard
+          prob: 0.08
+        - id: BiomassReclaimerMachineCircuitboard
+          prob: 0.08
+        - id: CircuitImprinterMachineCircuitboard
+          prob: 0.03
+        - id: PortableGeneratorSuperPacmanMachineCircuitboard
+          prob: 0.08
+        - id: PortableGeneratorPacmanMachineCircuitboard
+          prob: 0.08
+        - id: PortableGeneratorJrPacmanMachineCircuitboard
+          prob: 0.08
+        - id: SubstationMachineCircuitboard
+          prob: 0.15
+        - id: AmmoTechFabCircuitboard
+          prob: 0.04
+        - id: OreProcessorMachineCircuitboard
+          prob: 0.2
+        - id: MaterialReclaimerMachineCircuitboard
+          prob: 0.15
+        - id: GasRecyclerMachineCircuitboard
+          prob: 0.08
+        - id: UniformPrinterMachineCircuitboard
+          prob: 0.08
+        - id: ProtolatheMachineCircuitboard
+          prob: 0.08
+        - id: BoozeDispenserMachineCircuitboard
+          prob: 0.08
+        - id: SodaDispenserMachineCircuitboard
+          prob: 0.08
+        - id: ChemDispenserMachineCircuitboard
+          prob: 0.06
+        - id: AnomalyVesselCircuitboard
+          prob: 0.08
+        - id: StasisBedMachineCircuitboard
+          prob: 0.08
+        - id: TelecomServerCircuitboard
+          prob: 0.06
+        - id: TechDiskComputerCircuitboard
+          prob: 0.08
+        - id: EmitterCircuitboard
+          prob: 0.15
+        - id: HotplateMachineCircuitboard
+          prob: 0.08
+        - id: ElectricGrillMachineCircuitboard
+          prob: 0.08
+        - id: SeedExtractorMachineCircuitboard
+          prob: 0.08
+        - id: FatExtractorMachineCircuitboard
+          prob: 0.08
+        - id: DawInstrumentMachineCircuitboard
+          prob: 0.08
+        - id: ExosuitFabricatorMachineCircuitboard
+          prob: 0.08
+        - id: DoorElectronics
+          prob: 0.08
+        - id: ScreenTimerElectronics
+          prob: 0.08
+        - id: AmePartFlatpack
+          prob: 0.2
+        - id: MatterBinStockPart
+          prob: 0.2
+        - id: MicroManipulatorStockPart
+          prob: 0.2
+        - id: CapacitorStockPart
+          prob: 0.2
+        - id: APCElectronics
+          prob: 0.2
+        - id: AirAlarmElectronics
+          prob: 0.08
+        - id: IntercomElectronics
+          prob: 0.08
+        - id: WallmountSubstationElectronics
+          prob: 0.05
+        - id: FirelockElectronics
+          prob: 0.08
+        - id: FireAlarmElectronics
+          prob: 0.08
+        - id: SignalTimerElectronics
+          prob: 0.08
+        - id: SolarTrackerElectronics
+          prob: 0.12
+        - id: BrigTimerElectronics
+          prob: 0.08
+        - id: AmeJar
+          prob: 0.2
+        - id: ThrusterMachineCircuitboard
+          prob: 0.2
+        - id: ToolboxElectricalFilled
+          prob: 0.5
+        - id: ToolboxMechanicalFilled
+          prob: 0.5
+
+- type: entity
+  id: ABOUTCrateEngineeringSecure
+  suffix: Filled
+  parent: CrateEngineeringSecure
+  components:
+    - type: StorageFill
+      contents:
+        - id: AnalysisComputerCircuitboard
+          prob: 0.2
+        - id: ResearchComputerCircuitboard
+          prob: 0.2
+        - id: CommsComputerCircuitboard
+          prob: 0.14
+        - id: IDComputerCircuitboard
+          prob: 0.2
+        - id: CargoShuttleComputerCircuitboard
+          prob: 0.15
+        - id: CargoBountyComputerCircuitboard
+          prob: 0.2
+        - id: CargoRequestComputerCircuitboard
+          prob: 0.2
+        - id: PowerComputerCircuitboard
+          prob: 0.2
+        - id: SolarControlComputerCircuitboard
+          prob: 0.2
+        - id: ComputerMassMediaCircuitboard
+          prob: 0.2
+        - id: AlertsComputerCircuitboard
+          prob: 0.2
+        - id: ComputerIFFCircuitboard
+          prob: 0.2
+        - id: StationRecordsComputerCircuitboard
+          prob: 0.2
+        - id: ParticleAcceleratorComputerCircuitboard
+          prob: 0.5
+        - id: SalvageExpeditionsComputerCircuitboard
+          prob: 0.2
+        - id: BodyScannerComputerCircuitboard
+          prob: 0.3
+        - id: ComputerTelevisionCircuitboard
+          prob: 0.4
+        - id: TechDiskComputerCircuitboard
+          prob: 0.3
+        - id: APECircuitboard
+          prob: 0.2
+        - id: SMESMachineCircuitboard
+          prob: 0.2
+        - id: AutolatheMachineCircuitboard
+          prob: 0.2
+        - id: HydroponicsTrayMachineCircuitboard
+          prob: 0.2
+        - id: CargoTelepadMachineCircuitboard
+          prob: 0.2
+        - id: GyroscopeMachineCircuitboard
+          prob: 0.2
+        - id: ReagentGrinderMachineCircuitboard
+          prob: 0.2
+        - id: CloningPodMachineCircuitboard
+          prob: 0.2
+        - id: StationMapCircuitboard
+          prob: 0.2
+        - id: ShuttleConsoleCircuitboard
+          prob: 0.2
+        - id: CryoPodMachineCircuitboard
+          prob: 0.4
+        - id: ChemMasterMachineCircuitboard
+          prob: 0.2
+        - id: MedicalTechFabCircuitboard
+          prob: 0.2
+        - id: MedicalScannerMachineCircuitboard
+          prob: 0.2
+        - id: MicrowaveMachineCircuitboard
+          prob: 0.2
+        - id: MiniGravityGeneratorCircuitboard
+          prob: 0.2
+        - id: PortableScrubberMachineCircuitBoard
+          prob: 0.2
+        - id: BiomassReclaimerMachineCircuitboard
+          prob: 0.2
+        - id: CircuitImprinterMachineCircuitboard
+          prob: 0.15
+        - id: PortableGeneratorSuperPacmanMachineCircuitboard
+          prob: 0.2
+        - id: PortableGeneratorPacmanMachineCircuitboard
+          prob: 0.2
+        - id: PortableGeneratorJrPacmanMachineCircuitboard
+          prob: 0.2
+        - id: SubstationMachineCircuitboard
+          prob: 0.4
+        - id: AmmoTechFabCircuitboard
+          prob: 0.15
+        - id: OreProcessorMachineCircuitboard
+          prob: 0.7
+        - id: MaterialReclaimerMachineCircuitboard
+          prob: 0.3
+        - id: GasRecyclerMachineCircuitboard
+          prob: 0.2
+        - id: UniformPrinterMachineCircuitboard
+          prob: 0.2
+        - id: ProtolatheMachineCircuitboard
+          prob: 0.2
+        - id: BoozeDispenserMachineCircuitboard
+          prob: 0.2
+        - id: SodaDispenserMachineCircuitboard
+          prob: 0.2
+        - id: ChemDispenserMachineCircuitboard
+          prob: 0.4
+        - id: AnomalyVesselCircuitboard
+          prob: 0.2
+        - id: StasisBedMachineCircuitboard
+          prob: 0.2
+        - id: TelecomServerCircuitboard
+          prob: 0.15
+        - id: TechDiskComputerCircuitboard
+          prob: 0.2
+        - id: EmitterCircuitboard
+          prob: 0.4
+        - id: HotplateMachineCircuitboard
+          prob: 0.2
+        - id: ElectricGrillMachineCircuitboard
+          prob: 0.2
+        - id: SeedExtractorMachineCircuitboard
+          prob: 0.2
+        - id: FatExtractorMachineCircuitboard
+          prob: 0.2
+        - id: DawInstrumentMachineCircuitboard
+          prob: 0.2
+        - id: ExosuitFabricatorMachineCircuitboard
+          prob: 0.2
+        - id: DoorElectronics
+          prob: 0.2
+        - id: ScreenTimerElectronics
+          prob: 0.2
+        - id: AmePartFlatpack
+          prob: 0.8
+        - id: AmePartFlatpack
+          prob: 0.8
+        - id: MatterBinStockPart
+          prob: 0.6
+        - id: MicroManipulatorStockPart
+          prob: 0.6
+        - id: CapacitorStockPart
+          prob: 0.6
+        - id: APCElectronics
+          prob: 0.6
+        - id: AirAlarmElectronics
+          prob: 0.2
+        - id: IntercomElectronics
+          prob: 0.2
+        - id: WallmountSubstationElectronics
+          prob: 0.15
+        - id: FirelockElectronics
+          prob: 0.2
+        - id: FireAlarmElectronics
+          prob: 0.2
+        - id: SignalTimerElectronics
+          prob: 0.2
+        - id: SolarTrackerElectronics
+          prob: 0.3
+        - id: BrigTimerElectronics
+          prob: 0.2
+        - id: AmeJar
+          prob: 0.5
+        - id: ThrusterMachineCircuitboard
+          prob: 0.7
+        - id: ThrusterMachineCircuitboard
+          prob: 0.7
+        - id: ThrusterMachineCircuitboard
+          prob: 0.7
+        - id: SolarAssemblyFlatpack
+          prob: 0.7
+        - id: SolarAssemblyFlatpack
+          prob: 0.7
+        - id: SolarAssemblyFlatpack
+          prob: 0.7
+        - id: SolarAssemblyFlatpack
+          prob: 0.7
+        - id: SolarAssemblyFlatpack
+          prob: 0.7
+        - id: SolarAssemblyFlatpack
+          prob: 0.7
+        - id: ToolboxElectricalFilled
+          prob: 0.7
+        - id: ToolboxMechanicalFilled
+          prob: 0.7
+
+- type: entity
+  id: ABOUTCrateMedical
+  suffix: Filled
+  parent: CrateMedical
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSterileMask
+          prob: 0.2
+        - id: BoxMouthSwab
+          prob: 0.2
+        - id: BoxBodyBag
+          prob: 0.2
+        - id: Gauze
+          prob: 0.3
+        - id: Gauze
+          prob: 0.3
+        - id: Bloodpack
+          prob: 0.35
+        - id: Bloodpack
+          prob: 0.35
+        - id: BoxLatexGloves
+          prob: 0.2
+        - id: Hemostat
+          prob: 0.2
+        - id: Drill
+          prob: 0.2
+        - id: Retractor
+          prob: 0.2
+        - id: Scalpel
+          prob: 0.2
+        - id: Cautery
+          prob: 0.2
+        - id: Saw
+          prob: 0.2
+        - id: ClothingMaskSterile
+          prob: 0.5
+        - id: BoxBeaker
+          prob: 0.3
+        - id: MedkitBurnFilled
+          prob: 0.2
+        - id: MedkitToxinFilled
+          prob: 0.2
+        - id: MedkitFilled
+          prob: 0.2
+        - id: MedkitOxygenFilled
+          prob: 0.2
+        - id: MedkitBruteFilled
+          prob: 0.2
+        - id: MedkitAdvancedFilled
+          prob: 0.2
+        - id: MedkitRadiationFilled
+          prob: 0.2
+        - id: MaterialBiomass
+          prob: 0.2
+
+- type: entity
+  id: ABOUTCratePlastic
+  suffix: Filled
+  parent: CratePlastic
+  components:
+    - type: StorageFill
+      contents:
+        - id: WeaponWaterPistol
+          prob: 0.2
+        - id: MopItem
+          prob: 0.3
+        - id: Bucket
+          prob: 0.3
+        - id: Soap
+          prob: 0.3
+        - id: TrashBag
+          prob: 0.3
+        - id: SolarAssemblyFlatpack
+          prob: 0.3
+        - id: MaterialCloth
+          prob: 0.3
+        - id: MaterialDurathread
+          prob: 0.3
+        - id: MaterialCardboard
+          prob: 0.3
+        - id: MaterialWoodPlank
+          prob: 0.3
+        - id: MaterialWoodPlank
+          prob: 0.3
+        - id: MaterialDiamond1
+          prob: 0.3
+        - id: MaterialSheetMeat
+          prob: 0.3
+        - id: BoxLightbulb
+          prob: 0.3
+        - id: BoxLightMixed
+          prob: 0.3
+        - id: BoxFlare
+          prob: 0.14
+        - id: MysteryFigureBox
+          prob: 0.2
+        - id: MysteryFigureBox
+          prob: 0.2
+        - id: MysteryFigureBox
+          prob: 0.2
+        - id: MysteryFigureBox
+          prob: 0.2
+        - id: MysteryFigureBox
+          prob: 0.2
+        - id: MysteryFigureBox
+          prob: 0.2
+        - id: MysteryFigureBox
+          prob: 0.2
+        - id: MysteryFigureBox
+          prob: 0.2
+
+- type: entity
+  id: ABOUTCrateGenericSteel
+  suffix: Filled
+  parent: CrateGenericSteel
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxInflatable
+          prob: 0.34
+        - id: CableApcStack
+          prob: 0.2
+        - id: CableApcStack
+          prob: 0.2
+        - id: CableMVStack
+          prob: 0.2
+        - id: CableHVStack
+          prob: 0.2
+        - id: SheetSteel
+          prob: 0.35
+        - id: SheetPGlass
+          prob: 0.35
+        - id: SheetPlasteel10
+          prob: 0.2
+        - id: SheetPlastic
+          prob: 0.2
+        - id: SheetGlass
+          prob: 0.2
+        - id: SheetPlasma
+          prob: 0.2
+        - id: SheetUranium
+          prob: 0.04
+        - id: ClothingHandsGlovesColorYellow
+          prob: 0.3
+
+- type: entity
+  id: ABOUTCrateFreezer
+  suffix: Filled
+  parent: CrateFreezer
+  components:
+    - type: StorageFill
+      contents:
+        - id: GroundTobacco
+          prob: 0.3
+        - id: GroundTobacco
+          prob: 0.3
+        - id: BoxMRE
+          prob: 0.3
+        - id: BoxMRE
+          prob: 0.3
+        - id: SmokingPipe
+          prob: 0.3
+        - id: Matchbox
+          prob: 0.3
+        - id: GroundTobacco
+          prob: 0.3
+
+- type: entity
+  id: ABOUTCrateInternals
+  suffix: Filled
+  parent: CrateInternals
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxFlare
+          prob: 0.3
+        - id: BoxSurvival
+          prob: 0.22
+        - id: BoxSurvival
+          prob: 0.22
+        - id: BoxSurvival
+          prob: 0.22
+        - id: ToolboxEmergencyFilled
+          prob: 0.22
+        - id: ToolboxEmergencyFilled
+          prob: 0.22
+
+- type: entity
+  id: ABOUTCrateCommandSecure
+  suffix: Filled
+  parent: CrateCommandSecure
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvival
+          prob: 0.85
+        - id: MaterialDiamond1
+          prob: 0.8
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MysteryFigureBox
+          prob: 0.9
+        - id: MedkitAdvancedFilled
+          prob: 0.85
+        - id: WeaponPistolMk58
+          prob: 0.4
+        - id: MagazinePistol
+          prob: 0.85
+        - id: MagazinePistol
+          prob: 0.85
+        - id: MagazinePistol
+          prob: 0.85
+        - id: MagazinePistol
+          prob: 0.85
+        - id: MagazinePistol
+          prob: 0.85
+
+## Crates
+# CrateSecure
+# CrateSyndicate
+
+- type: entity
+  parent: MobHuman
+  id: AbandonedEngineer
+  name: Syndicate Agent
+  components:
+    - type: RandomHumanoidAppearance
+    - type: RandomMetadata
+      nameSegments:
+      - names_first
+      - names_last
+    - type: GhostRole
+      name: ghost-role-information-lost-engineer-name
+      description: ghost-role-information-lost-engineer-description
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ StationEngineerGear ]
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting
+        - skillBasicAtmos
+        - skillAtmos
+        - skillInstrumentation
+        - skillHardInstrumentation
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillHacking
+        - skillShooting
+
+- type: entity
+  name: AbandonedEngineerSpawner
+  id: AbandonedEngineerSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Structures/Walls/random.rsi
+          state: randomgrille
+    - type: RandomSpawner
+      prototypes:
+        - AbandonedEngineer
+      chance: 1.0
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting
+        - skillBasicAtmos
+        - skillAtmos
+        - skillInstrumentation
+        - skillHardInstrumentation
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillHacking
+        - skillShooting

@@ -1,0 +1,489 @@
+- type: entity
+  id: MobMeme
+  name: meme
+  noSpawn: true
+  description: meme
+  components:
+  - type: MindContainer
+  - type: InputMover
+  - type: MobMover
+  - type: ActiveRadio
+  - type: IntrinsicRadioReceiver
+  - type: UserInterface
+    interfaces:
+    - key: enum.TransferUiKey.Key
+      type: TransferBoundUserInterface
+    - key: enum.AddSkillUiKey.Key
+      type: AddSkillBoundUserInterface
+  - type: Input
+    context: "ghost"
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 6
+    baseSprintSpeed: 6
+  - type: Sprite
+    noRot: true
+    sprite: Imperial/Meme/meme.rsi
+    layers:
+    - state: active
+      visible: false
+  - type: Physics
+    bodyType: KinematicController
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 80
+        mask:
+        - GhostImpassable
+  - type: MovementIgnoreGravity
+  - type: NoSlip
+  - type: Actions
+  - type: Eye
+    drawFov: false
+    visMask:
+      - Normal
+      - Invisible
+  - type: ContentEye
+    maxZoom: 1.2, 1.2
+  - type: Alerts
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: Memetic
+  - type: Visibility
+    layer: 2
+  - type: Speech
+    speechVerb: Ghost
+  - type: Examiner
+    skipChecks: true
+
+- type: entity
+  id: MobMemeSpawn
+  parent: MobMeme
+  noSpawn: false
+  name: meme
+  description: meme
+  components:
+  - type: GhostRole
+    name: meme-ghost-name
+    description: meme-ghost-description
+  - type: GhostTakeoverAvailable
+  - type: MindContainer
+  - type: MemeticGhost
+
+- type: entity
+  id: MobMemeParalise
+  noSpawn: true
+  name: meme
+  description: meme
+  components:
+  - type: MindContainer
+  - type: InputMover
+  - type: MobMover
+  - type: Input
+    context: "ghost"
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 6
+    baseSprintSpeed: 6
+  - type: Sprite
+    noRot: true
+    sprite: Imperial/Meme/meme.rsi
+    layers:
+    - state: active
+      visible: false
+  - type: Physics
+    bodyType: KinematicController
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 80
+        mask:
+        - GhostImpassable
+  - type: MovementIgnoreGravity
+  - type: NoSlip
+  - type: Actions
+  - type: MemeticParalise
+  - type: Eye
+    drawFov: true
+    visMask:
+      - Normal
+      - Invisible
+  - type: Alerts
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: Visibility
+    layer: 2 #ghost vis layer
+
+
+- type: entity
+  id: MemeticInfectAction
+  name: memetic-infect
+  description: memetic-infect-action
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: infect
+    event: !type:InfectEvent
+
+- type: entity
+  id: MemeticPunishAction
+  name: memetic-punish
+  description: memetic-punish-action
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: punish
+    event: !type:PunishEvent
+
+- type: entity
+  id: MemeticPraiseAction
+  name: memetic-praise
+  description: memetic-praise-action
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: praise
+    event: !type:PraiseEvent
+
+- type: entity
+  id: MemeticMuteAction
+  name: memetic-mute
+  description: memetic-mute-action
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: mute
+    event: !type:MuteEvent
+
+- type: entity
+  id: MemeticParaliseAction
+  name: memetic-paralise
+  description: memetic-paralise-action
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: paralise
+    event: !type:ParaliseEvent
+
+- type: entity
+  id: MemeticTransferAction
+  name: memetic-transfer
+  description: memetic-transfer-action
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: transfer
+    event: !type:TransferEvent
+
+- type: entity
+  id: MemeticControlAction
+  name: memetic-control
+  description: memetic-control-action
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: control
+    event: !type:ControlEvent
+
+- type: entity
+  id: MemeticInfectedTransferAction
+  name: memetic-infectedtransfer
+  description: memetic-infected-teleport
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: infectedtransfer
+    event: !type:InfectTransferEvent
+  - type: MemeticInfo
+
+- type: entity
+  id: MemeticAddSkillAction
+  name: memetic-addskill
+  description: memetic-addskill-description
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/CrewSkills/books/big.rsi
+      state: bigSec
+    event: !type:SkillAddEvent
+  - type: MemeticInfo
+
+- type: entity
+  id: MemeticInfectedMessageAction
+  name: memetic-infected-message
+  description: memetic-infected-message-description
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    checkCanInteract: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: infectedmessage
+    event: !type:InfectMessageEvent
+
+- type: dataset
+  id: MemeticStealTable
+  values:
+  - Hypospray
+  - HandTeleporter
+  - FoodMeatCorgi
+  - BookSecretDocuments
+  - ClothingShoesBootsMagAdv
+  - CaptainIDCard
+  - JetpackCaptainFilled
+  - WeaponAntiqueLaser
+  - NukeDisk
+
+- type: entity
+  id: MemeticKill
+  noSpawn: true
+  components:
+  - type: Objective
+    difficulty: 2.5
+    issuer: meme
+    unique: false
+    icon:
+      sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+      state: icon
+  - type: MemeticKill
+
+- type: entity
+  id: MemeticInfect
+  description: Заразите определенное количество гуманоидов
+  noSpawn: true
+  components:
+  - type: Objective
+    difficulty: 2.5
+    issuer: meme
+    unique: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: infect
+  - type: MemeticInfect
+
+- type: entity
+  id: MemeticHead
+  name: Заразите главу
+  description: Заразите любую главу на станции
+  noSpawn: true
+  components:
+  - type: Objective
+    difficulty: 2.5
+    issuer: meme
+    unique: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: infect
+  - type: MemeticInfectHead
+
+- type: entity
+  id: MemeticSteal
+  noSpawn: true
+  components:
+  - type: Objective
+    difficulty: 2.5
+    issuer: meme
+    unique: false
+    icon:
+      sprite: Imperial/Meme/actions.rsi
+      state: infect
+  - type: MemeticSteal
+
+- type: entity
+  id: MemeEnd
+  noSpawn: true
+  components:
+  - type: MemeticObjective
+
+
+- type: antag
+  id: Meme
+  name: meme-antag-name
+  antagonist: true
+  setPreference: true
+  objective: meme-antag-objective
+
+- type: entity
+  id: Memetic
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: MemeticRule
+    faction: Syndicate
+
+- type: alert
+  id: MemeEnergy
+  category: Health #it's like ghostie health
+  icons:
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy0
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy1
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy2
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy3
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy4
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy5
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy6
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy7
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy8
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy9
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy10
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy11
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy12
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy13
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy14
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy15
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy16
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy17
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy18
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy19
+  - sprite: /Textures/Imperial/Meme/energy.rsi
+    state: energy20
+  name: Энергия
+  description: "Генерируется пассивно, увеличивается выработка от количества зараженных. Количество:  Выработка: "
+  minSeverity: 0
+  maxSeverity: 20
+
+- type: alert
+  id: MemeParalise
+  category: MemeParalise
+  icons:
+  - sprite: /Textures/Imperial/Meme/actions.rsi
+    state: control
+  name: Паралич
+  description: Вы парализованы меметической аномалией!
+  minSeverity: 0
+  maxSeverity: 0
+
+- type: alert
+  id: MemeParaliseMeme
+  category: MemeParalise
+  icons:
+  - sprite: /Textures/Imperial/Meme/actions.rsi
+    state: control
+  name: Использован паралич/контроль
+  description: Вы использовали или паралич или контроль.
+  minSeverity: 0
+  maxSeverity: 0
+
+- type: alert
+  id: MemeMuteMeme
+  category: MemeMute
+  icons:
+  - sprite: /Textures/Imperial/Meme/actions.rsi
+    state: mute
+  name: Использована немота
+  description: Вы использовали немоту.
+  minSeverity: 0
+  maxSeverity: 0
+
+- type: alert
+  id: MemeMute
+  category: MemeMute
+  icons:
+  - sprite: /Textures/Imperial/Meme/actions.rsi
+    state: mute
+  name: Немота
+  description: Вы стали немым на время из за меметической аномалии!
+  minSeverity: 0
+  maxSeverity: 0
+
+- type: gamePreset
+  id: TraitorPlusMemeticDebug
+  alias:
+    - MemeticTraitor
+  name: memetic-title
+  description: memetic-description
+  showInVote: false
+  rules:
+    - Traitor
+    - BasicStationEventScheduler
+    - Memetic
+
+- type: gamePreset
+  id: MemeticDebug
+  alias:
+    - MemeticBasic
+  name: memeticbasic-title
+  description: memeticbasic-description
+  showInVote: false
+  rules:
+    - BasicStationEventScheduler
+    - Memetic
+
+- type: gamePreset
+  id: MemeticSurvivalDebug
+  alias:
+    - MemeticSurvival
+  name: memeticsurvival-title
+  showInVote: false
+  description: memeticsurvival-description
+  rules:
+    - RampingStationEventScheduler
+    - Memetic
+
+- type: entity
+  parent: BaseGameRule
+  id: MemeticSpawn
+  noSpawn: true
+  components:
+  - type: MemeticSpawnRule
+    spawnerPrototype: MobMemeSpawn

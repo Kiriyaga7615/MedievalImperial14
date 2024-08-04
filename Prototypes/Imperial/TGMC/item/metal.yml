@@ -1,0 +1,76 @@
+- type: entity
+  parent: SheetMetalBase
+  id: SheetSteelTGMC
+  name: steel
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      SteelTgmc: 100
+  - type: Stack
+    stackType: SteelTgmc
+    baseLayer: base
+    layerStates:
+    - steel
+    - steel_2
+    - steel_3
+  - type: Sprite
+    state: steel_3
+    layers:
+    - state: steel_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: steeltgmc
+  - type: Appearance
+  - type: FloorTile
+    outputs:
+    - Plating
+  - type: Extractable
+    grindableSolutionName: steeltgmc
+  - type: SolutionContainerManager
+    solutions:
+      steeltgmc:
+        reagents:
+        - ReagentId: Iron
+          Quantity: 22
+        - ReagentId: Carbon
+          Quantity: 2.5
+        - ReagentId: Lead
+          Quantity: 0.5
+
+- type: entity
+  parent: SheetSteelTGMC
+  id: SheetSteel10TGMC
+  name: steel
+  suffix: 10
+  components:
+  - type: Item
+    size: 10
+  - type: Sprite
+    state: steel
+  - type: Stack
+    stackType: Steel
+    count: 10
+
+- type: entity
+  parent: SheetSteelTGMC
+  id: SheetSteel1TGMC
+  name: steel
+  suffix: Single
+  components:
+  - type: Item
+    size: 1
+  - type: Sprite
+    state: steel
+  - type: Stack
+    stackType: Steel
+    count: 1
+
+- type: stack
+  id: SteelTgmc
+  name: бронированная сталь
+  icon: { sprite: /Textures/Objects/Materials/Sheets/metal.rsi, state: steel }
+  spawn: SheetSteel1TGMC
+  maxCount: 30
+  itemSize: 1

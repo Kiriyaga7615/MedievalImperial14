@@ -1,0 +1,184 @@
+- type: entity #автоинъекторы
+  name: combat medipen
+  parent: ChemicalMedipen
+  id: TGMCombatMedipen
+  description: A rapid and safe way to stabilize patients in critical condition for personnel without advanced medical knowledge. Beware, as it's easy to overdose on epinephrine and tranexamic acid.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 20
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 12
+        - ReagentId: TranexamicAcid
+          Quantity: 3
+        - ReagentId: Saline
+          Quantity: 5
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 20
+  - type: Sprite
+    sprite: Imperial/TGMC/item/marineautoinjectors.rsi
+    layers:
+    - state: combat
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: combat_empty
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: funny medipen
+  parent: ChemicalMedipen
+  id: TGMCFunnyMedipen
+  description: A rapid and safe way to stabilize patients in critical condition for personnel without advanced medical knowledge. Beware, as it's easy to overdose on epinephrine and tranexamic acid.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 10
+        - ReagentId: Ephedrine
+          Quantity: 10
+        - ReagentId: Ethanol
+          Quantity: 2
+        - ReagentId: Stimulants
+          Quantity: 5
+        - ReagentId: Ultravasculine
+          Quantity: 3
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 30
+  - type: Sprite
+    sprite: Imperial/TGMC/item/marineautoinjectors.rsi
+    layers:
+    - state: drugs
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: drugs_empty
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: MEGA MEDIPEN
+  parent: ChemicalMedipen
+  id: TGMCMegaMedipen
+  description: A rapid and safe way to stabilize patients in critical condition for personnel without advanced medical knowledge. Beware, as it's easy to overdose on epinephrine and tranexamic acid.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Thrivenin
+          Quantity: 10
+        - ReagentId: Saline
+          Quantity: 5
+  - type: Sprite
+    sprite: Imperial/TGMC/item/marineautoinjectors.rsi
+    layers:
+    - state: advanced
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: advanced_empty
+  - type: Tag
+    tags: []
+
+- type: entity
+  name: Caustic MEDIPEN
+  parent: ChemicalMedipen
+  id: TGMCausticMedipen
+  description: A rapid and safe way to stabilize patients in critical condition for personnel without advanced medical knowledge. Beware, as it's easy to overdose on epinephrine and tranexamic acid.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Sigynate
+          Quantity: 15
+  - type: Tag
+    tags: []
+  - type: Sprite
+    sprite: Imperial/TGMC/item/marineautoinjectors.rsi
+    layers:
+    - state: caustic
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: caustic_empty
+
+- type: entity
+  name: crowbar
+  parent: Crowbar
+  id: CrowbarTGMC
+  description: A multipurpose tool to pry open doors and fight interdimensional invaders.
+  components:
+  - type: Tag
+    tags:
+    - Crowbar
+  - type: ItemCooldown
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+        Structural: 3
+  - type: Tool
+    qualities:
+      - Prying
+    speed: 2
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: TilePrying
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 22
+
+- type: entity
+  name: wrench
+  parent: Wrench
+  id: WrenchTGMC
+  description: 'A common tool for assembly and disassembly. Remember: righty tighty, lefty loosey.'
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/item/wrenchopfor.rsi
+    state: icon
+  - type: Item
+    sprite: Imperial/TGMC/item/wrenchopfor.rsi
+  - type: ItemCooldown
+  - type: MeleeWeapon
+    attackRate: 1.5
+    damage:
+      types:
+        Blunt: 4.5
+  - type: Tool
+    qualities:
+      - Anchoring
+    speed: 2
+    useSound:
+      path: /Audio/Items/ratchet.ogg
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: StaticPrice
+    price: 22
+
+- type: entity
+  name: advanced industrial welding tool
+  parent: WelderIndustrialAdvanced
+  id: WelderIndustrialAdvancedTGMC
+  components:
+  - type: Tool
+    speed: 1.7

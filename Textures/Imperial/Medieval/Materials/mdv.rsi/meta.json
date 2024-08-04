@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "by dantanat#7095",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "stone"
+    },
+    {
+      "name": "topaz"
+    },
+    {
+      "name": "revent"
+    },
+    {
+      "name": "revent_2"
+    },
+    {
+      "name": "revent_3"
+    },
+    {
+      "name": "revent_4"
+    },
+    {
+      "name": "revent_5"
+    },
+    {
+      "name": "revent_6"
+    },
+    {
+      "name": "revent_7"
+    },
+    {
+      "name": "gear"
+    },
+    {
+      "name": "rope"
+    },
+    {
+      "name": "coal"
+    },
+    {
+      "name": "spider_hair"
+    },
+    {
+      "name": "serdolick_ore"
+    },
+    {
+      "name": "serdolick"
+    },
+    {
+      "name": "adam_ore"
+    },
+    {
+      "name": "essence"
+    },
+    {
+      "name": "adam"
+    },
+    {
+      "name": "iron_ingot"
+    },
+    {
+      "name": "steel_ingot"
+    },
+    {
+      "name": "money"
+    },
+    {
+      "name": "topaz_ore"
+    }
+  ]
+}

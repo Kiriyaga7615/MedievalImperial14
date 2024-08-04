@@ -1,0 +1,7 @@
+- type: radioChannel
+  id: XenoHiveMind
+  name: chat-xeno-hive-mind
+  keycode: "х"
+  frequency: 9278
+  color: "#E03FCE"
+  longRange: true

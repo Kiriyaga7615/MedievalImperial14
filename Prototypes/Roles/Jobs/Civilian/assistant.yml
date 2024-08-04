@@ -1,0 +1,28 @@
+- type: job
+  id: Passenger
+  name: job-name-passenger
+  description: job-description-passenger
+  playTimeTracker: JobPassenger
+  startingGear: PassengerGear
+  icon: "JobIconPassenger"
+  supervisors: job-supervisors-everyone
+  access:
+  - Maintenance
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+
+- type: startingGear
+  id: PassengerGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth24
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalShoesSapogi
+    #id: PassengerPDA
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent25
+    pocket2: MedievalBrutepack
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth24
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

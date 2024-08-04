@@ -1,0 +1,47 @@
+- type: construction
+  name: barricade
+  hide: true
+  id: BarricadeMarineCons
+  graph: BarricadeMarineGraph
+  startNode: start
+  targetNode: barricadnode
+  category: construction-category-structures
+  description: Basic railing meant to protect idiots like you from falling.
+  icon:
+    sprite: Imperial/TGMC/barricade.rsi
+    state: side
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+  needSkills: #Imperial skills
+    - skillBaseConstraction
+
+- type: constructionGraph
+  id: BarricadeMarineGraph
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: barricadnode
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SteelTgmc
+              amount: 5
+              doAfter: 2
+
+    - node: barricadnode
+      entity: BarricadeMarine
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SteelTgmc
+              amount: 5
+            - !type:DeleteEntity
+          steps:
+            - tool: Screwing
+              doAfter: 2

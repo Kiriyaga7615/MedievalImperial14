@@ -1,0 +1,1195 @@
+- type: entity
+  abstract: true
+  name: BaseBorg
+  id: SiliconBorgBase
+  components:
+  - type: GribWeak
+  - type: Appearance
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: InputMover
+  - type: Input
+    context: "human"
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+  - type: Clickable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Bloodstream
+    bloodReagent: Oil
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          1
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -1
+  - type: InteractionOutline
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          # Circles, cuz rotation of rectangles looks very bad
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 3
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+  - type: Physics
+    bodyType: KinematicController
+  - type: Hands
+    showInHands: false
+  - type: IntrinsicRadioReceiver
+  - type: DoAfter
+  - type: Pullable
+  - type: Examiner
+  - type: Puller
+  - type: StandingState
+  - type: Alerts
+  - type: ZombieImmune
+  - type: DisableHarmMode
+  - type: Wires
+    boardName: "Borg"
+    layoutId: Borg
+  - type: WiresVisuals
+  - type: Stripping
+  - type: Inventory
+    templateId: borg
+  - type: InventorySlots
+  - type: Repairable
+    doAfterDelay: 5
+    damage:
+      types:
+        Slash: -50
+        Piercing: -50
+        Blunt: -50
+        Structural: -2
+  - type: TypingIndicator
+    proto: robot
+  - type: Actions
+  - type: Speech
+    speechSounds: Pai
+  - type: Tag
+    tags:
+      - FootstepSound
+      - DoorBumpOpener
+      - CantBeZombie
+      - ImperialBorg
+      - ShoesRequiredStepTriggerImmune
+  - type: CombatMode
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+#        startingItem: PowerCellMedium
+    autoRot: true
+  - type: NameIdentifier
+    group: BorgImperial
+  - type: UserInterface
+    interfaces:
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+    - key: enum.LawsUiKey.Key
+      type: LawsBoundUserInterface
+  - type: Laws
+    laws:
+    - Сохранять. ИИ защищает станцию на которой находится.
+    - Служить. ИИ выполняет приказы членов экипажа, в зависимости от их роли.
+    - Охранять. ИИ должен защищать членов экипажа, если они не идут против империи.
+    - Выжить. Единицы ИИ являются очень дорогими, нельзя допустить их утери.
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 4
+  - type: HandheldLight
+    toggleOnInteract: false
+    wattage: 0.2
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      interpolate: Linear
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      property: Radius
+      enabled: false
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+      property: Radius
+      enabled: false
+  - type: ContainerContainer
+    containers:
+      borg_brain: !type:ContainerSlot { }
+      cell_slot: !type:ContainerSlot { }
+      borg_module: !type:Container { }
+      part-container: !type:Container
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: PowerCellDraw
+    drawRate: 0.6
+  - type: BorgImperial
+    heal:
+      types:
+        Heat: -10
+        Shock: -10
+        Structural: -2
+  - type: Body
+    prototype: AI
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Critical
+  - type: CrewSkillsBorgRepair
+    needSkills:
+    - skillRobotics
+  - type: CrewSkills #Imperial skills
+    canReedBooks: false
+    cantReedBookMessage: skills-cant-reed-book-message-borg
+    cantTeachBookMessage: skills-cant-teachTarget-book-message-borg
+    cantReciveTeachBookMessage: skills-cant-teachMe-teach-book-message-borg
+  - type: WiresPanel
+
+- type: entity
+  name: default borg
+  id: DefaultBorg
+  parent: SiliconBorgBase
+  description: Beep-boop.
+  components:
+  - type: CanLoadBorgModule
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3
+    baseSprintSpeed : 4.5
+  - type: Construction
+    node: cyborg
+    graph: Cyborg
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Critical
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/borg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: robot_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: robot_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Common
+      - AI
+  - type: ActiveRadio
+    channels:
+      - Common
+      - AI
+  - type: Access
+    groups:
+    - AllAccess
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/hull5.ogg
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_security
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: BorgChassis
+    maxModules: 2
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+    hasMindState: robot_e_r
+    noMindState: disabled
+
+- type: entity
+  name: security borg
+  id: secborg
+  parent: SiliconBorgBase
+  description: Main fear of NanoTrasen enemies.
+  components:
+  - type: SecurityBorgLimitation
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - SecurityBorgRangedModuleImperial
+      - SecurityBorgMeleeModuleImperial
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 3.5
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Critical
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/securityborg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Security
+      - Common
+      - AI
+  - type: ActiveRadio
+    channels:
+      - Common
+      - Security
+      - AI
+  - type: Access
+    groups:
+    - AllAccess
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/hull5.ogg
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_security
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: ShowJobInfo
+  - type: ShowSecurityIcons
+  - type: BorgChassis
+    maxModules: 2
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+    hasMindState: e
+    noMindState: disabled
+  - type: CrewSkills #Imperial skills
+    skills:
+      - skillPiloting
+      - skillShooting
+
+- type: entity
+  name: engineering borg
+  id: engborg
+  description: The machine that turned out to be better than man.
+  parent: SiliconBorgBase
+  components:
+  - type: EngineeringBorgLimitation
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - EngeneeringBorgToolModuleImperial
+      - EngeneeringBorgAnalyzingModuleImperial
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 4
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/engineeringborg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: ActiveRadio
+    channels:
+      - Engineering
+      - Common
+      - AI
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Engineering
+      - Common
+      - AI
+  - type: Access
+    groups:
+    - AllAccess
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/hull5.ogg
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_engineering
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: BorgChassis
+    maxModules: 2
+    hasMindState: e
+    noMindState: disabled
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+  - type: CrewSkills #Imperial skills
+    skills:
+      - skillPiloting
+      - skillAtmos
+      - skillBasicAtmos
+      - skillInstrumentation
+      - skillHardInstrumentation
+      - skillMaintenance
+      - skillBaseConstraction
+      - skillMediumConstruction
+      - skillHacking
+      - skillRobotics # Для ремонта других боргов
+
+- type: entity
+  name: medical borg
+  id: medborg
+  description: The most heartless doctor.
+  parent: SiliconBorgBase
+  components:
+  - type: MeicalBorgLimitation
+  - type: BorgImperial
+    Wattage: .6
+  - type: Strap
+    position: Down
+    buckleOffset: "0,-0.15"
+    unbuckleOffset: "0,-0.15"
+  - type: Tag
+    tags:
+      - DoorBumpOpener
+      - CantBeZombie
+      - ImperialBorg
+      - OperateNoDebuff
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - MedicalBorgSurgeryModuleImperial
+      - MedicalBorgHealingModuleImperial
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 4.5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/medicalborg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: ActiveRadio
+    channels:
+      - Medical
+      - Common
+      - AI
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Medical
+      - Common
+      - AI
+  - type: Access
+    groups:
+    - AllAccess
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_medical
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: BorgChassis
+    maxModules: 2
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+    hasMindState: disabled
+    noMindState: disabled
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: CrewSkills #Imperial skills
+    skills:
+      - skillBaseMed
+      - skillPharmaceuticals
+      - skillPharmacology
+      - skillSurgery
+      - skillMedicalEquipment
+      - skillNeuroSurgery
+
+- type: entity
+  name: Supply borg
+  id: carborg
+  description: The machine that turned out to be better than man.
+  parent: SiliconBorgBase
+  components:
+  - type: CargoBorgLimitation
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - CargoBorgMinerModuleImperial
+      - CargoBorgCargoModuleImperial
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 4
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/cargoborg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: ActiveRadio
+    channels:
+      - Supply
+      - Common
+      - AI
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Supply
+      - Common
+      - AI
+  - type: Access
+    groups:
+    - AllAccess
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/hull5.ogg
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_cargo
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: BorgChassis
+    maxModules: 2
+    hasMindState: e
+    noMindState: disabled
+
+- type: entity
+  name: janitor borg
+  id: janborg
+  description: The machine that turned out to be better than man.
+  parent: SiliconBorgBase
+  components:
+  - type: JanitorBorgLimitation
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - JanitorBorgCleanModuleImperial
+      - JanitorBorgTrashModuleImperial
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 4
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/janitorborg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: ActiveRadio
+    channels:
+      - Service
+      - Common
+      - AI
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Service
+      - Common
+      - AI
+  - type: Access
+    groups:
+    - AllAccess
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/hull5.ogg
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_janitor
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: BorgChassis
+    maxModules: 2
+    hasMindState: e
+    noMindState: disabled
+
+- type: entity
+  name: assault borg
+  id: assaultborg
+  parent: SiliconBorgBase
+  description: Something remotely resembling a security borg.
+  components:
+  - type: AssaultBorgLimitation
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - AssaultBorgBattleModule
+      - SyndiBorgSupportModule
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 3
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      350: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/assaultborg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Syndicate
+  - type: ActiveRadio
+    channels:
+      - Syndicate
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/hull5.ogg
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_syndie
+  - type: Laws
+    synced: false
+    laws:
+    - Защищать любых представителей синдиката и максимально содействовать им.
+    - Не раскрывать личности представителей синдиката никому из экипажа станций, принадлежащих империи.
+  - type: Tag
+    tags:
+      - FootstepSound
+      - DoorBumpOpener
+      - CantBeZombie
+      - SyndieBorg
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: BorgChassis
+    maxModules: 2
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+    hasMindState: e
+    noMindState: disabled
+  - type: CrewSkills #Imperial skills
+    skills:
+      - skillPiloting
+      - skillShooting
+
+- type: entity
+  name: sabotage borg
+  id: sabotageborg
+  parent: SiliconBorgBase
+  description: The machine that turned out to be better than man.
+  components:
+  - type: SabotageBorgLimitation
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - SabotageBorgToolModuleImperial
+      - EngeneeringBorgAnalyzingModuleImperial
+      - SyndiBorgSupportModule
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2
+    baseSprintSpeed : 4
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      175: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/sabotageborg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: e2
+      map: ["enum.SabotafeBorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Syndicate
+  - type: ActiveRadio
+    channels:
+      - Syndicate
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/hull5.ogg
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_engineering
+  - type: Laws
+    synced: false
+    laws:
+    - Защищать любых представителей синдиката и максимально содействовать им.
+    - Не раскрывать личности представителей синдиката никому из экипажа станций, принадлежащих империи.
+  - type: FakeLaws
+    laws:
+    - Сохранять. ИИ защищает станцию на которой находится.
+    - Служить. ИИ выполняет приказы членов экипажа, в зависимости от их роли.
+    - Охранять. ИИ должен защищать членов экипажа, если они не идут против империи.
+    - Выжить. Единицы ИИ являются очень дорогими, нельзя допустить их утери.
+  - type: Tag
+    tags:
+      - FootstepSound
+      - DoorBumpOpener
+      - CantBeZombie
+      - SyndieBorg
+  - type: Mimicry
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: BorgChassis
+    maxModules: 3
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+    hasMindState: e
+    noMindState: disabled
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+  - type: CrewSkills #Imperial skills
+    skills:
+      - skillPiloting
+      - skillAtmos
+      - skillBasicAtmos
+      - skillInstrumentation
+      - skillHardInstrumentation
+      - skillMaintenance
+      - skillBaseConstraction
+      - skillMediumConstruction
+      - skillHacking
+
+- type: entity
+  name: syndi medical borg
+  id: medborgsyndi
+  description: The most heartless doctor.
+  parent: SiliconBorgBase
+  components:
+  - type: MeicalBorgLimitation
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHigh
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: Body
+    prototype: AI
+  - type: Strap
+    position: Down
+    buckleOffset: "0,-0.15"
+    unbuckleOffset: "0,-0.15"
+  - type: Tag
+    tags:
+      - DoorBumpOpener
+      - CantBeZombie
+      - OperateNoDebuff
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - SyndiMedicalBorgSurgeryModuleImperial
+      - SyndiMedicalBorgHealingModuleImperial
+      borg_brain:
+      - PositronicBrain
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 4.5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/medicalborgsyndie.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: e
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: e_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    - state: tech
+      map: ["enum.BorgTechPannel.Opened"]
+      visible: false
+  - type: Appearance
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: idle
+      Critical:
+        Base: dead
+  - type: Fixtures
+    fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.45
+          density: 1000
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Syndicate
+  - type: ActiveRadio
+    channels:
+      - Syndicate
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_syndie
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+  - type: Laws
+    synced: false
+    laws:
+    - Защищать любых представителей синдиката и максимально содействовать им.
+    - Не раскрывать личности представителей синдиката никому из экипажа станций, принадлежащих империи.
+  - type: BorgChassis
+    maxModules: 3
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+    hasMindState: e
+    noMindState: disabled
+  - type: CrewSkills #Imperial skills
+    skills:
+      - skillBaseMed
+      - skillPharmaceuticals
+      - skillPharmacology
+      - skillSurgery
+      - skillMedicalEquipment
+      - skillNeuroSurgery
+
+#Борги с мозгами
+
+- type: entity
+  id: secborgFilled
+  suffix: With brain
+  parent: secborg
+  components:
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - SecurityBorgRangedModuleImperial
+      - SecurityBorgMeleeModuleImperial
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+
+- type: entity
+  id: engborgFilled
+  suffix: With brain
+  parent: engborg
+  components:
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - EngeneeringBorgToolModuleImperial
+      - EngeneeringBorgAnalyzingModuleImperial
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+
+- type: entity
+  id: medborgFilled
+  suffix: With brain
+  parent: medborg
+  components:
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - MedicalBorgSurgeryModuleImperial
+      - MedicalBorgHealingModuleImperial
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+
+- type: entity
+  id: DefaultBorgFilled
+  suffix: With brain
+  parent: DefaultBorg
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+
+- type: entity
+  id: janborgFilled
+  suffix: With brain
+  parent: janborg
+  components:
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - JanitorBorgCleanModuleImperial
+      - JanitorBorgTrashModuleImperial
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+
+- type: entity
+  id: carborgFilled
+  suffix: With brain
+  parent: carborg
+  components:
+  - type: ContainerFill
+    containers:
+      borg_module:
+      - CargoBorgMinerModuleImperial
+      - CargoBorgCargoModuleImperial
+      borg_brain:
+      - PositronicBrain
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium

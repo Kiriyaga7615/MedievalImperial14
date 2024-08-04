@@ -1,0 +1,50 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "created by mirton4005 (Discord) for Imperai Space",
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "cargo"
+        },
+        {
+            "name": "cc"
+        },
+        {
+            "name": "command"
+        },
+        {
+            "name": "common"
+        },
+        {
+            "name": "contacts"
+        },
+        {
+            "name": "engineering"
+        },
+        {
+            "name": "gold"
+        },
+        {
+            "name": "med"
+        },
+        {
+            "name": "science"
+        },
+        {
+            "name": "security"
+        },
+        {
+            "name": "service"
+        },
+        {
+            "name": "syndi"
+        }
+    ]
+}

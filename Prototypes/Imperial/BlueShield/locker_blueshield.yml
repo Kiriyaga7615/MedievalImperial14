@@ -1,0 +1,12 @@
+- type: entity
+  id: LockerBlueshield
+  parent: LockerBaseSecure
+  name: blueshield officer's locker
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: hop
+    stateDoorOpen: hop_open
+    stateDoorClosed: hop_door
+  - type: AccessReader
+    access: [["Blueshield"]]

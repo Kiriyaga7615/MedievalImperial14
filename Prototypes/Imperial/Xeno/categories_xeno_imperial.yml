@@ -1,0 +1,28 @@
+- type: storeCategory
+  id: XenoLavra
+  name: store-category-evolve
+
+- type: storeCategory
+  id: XenoBurrower
+  name: store-category-evolve
+
+- type: storeCategory
+  id: XenoPraetorian
+  name: store-category-evolve
+
+- type: storeCategory
+  id: XenoDrone
+  name: store-category-evolve
+
+- type: storeCategory
+  id: XenoRavager
+  name: store-category-evolve
+
+- type: storeCategory
+  id: XenoRunner
+  name: store-category-evolve
+
+- type: storeCategory
+  id: XenoSpitter
+  name: store-category-evolve
+

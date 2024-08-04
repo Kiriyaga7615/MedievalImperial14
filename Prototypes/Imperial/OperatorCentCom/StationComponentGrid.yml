@@ -1,0 +1,5 @@
+- type: entity
+  id: BaseStationOperatorCentComGrid
+  noSpawn: true
+  components:
+    - type: OperatorCentComGrid

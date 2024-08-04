@@ -1,0 +1,79 @@
+- type: technology
+  id: CrewSkillsBrainInterfaceResearch
+  name: research-techonology-CrewSkillsBrainInterface
+  icon:
+    sprite: Imperial/CrewSkills/BrainInterface/BrainInterface.rsi
+    state: icon
+  discipline: Experimental
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - CrewSkillsBrainInterfaceProtoLathe
+
+- type: technology
+  id: CrewSkillsBorgUpgradeBoardResearch
+  name: research-techonology-CrewSkillsBorgUpgradeBoard
+  icon:
+    sprite: Imperial/CrewSkills/BrainInterface/BrainInterface.rsi
+    state: upgradeBoard
+  discipline: Experimental
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - CrewSkillsBorgUpgradeBoardProtoLathe
+
+- type: technology
+  id: SmartCardEasyResearch
+  name: research-technology-SmartCardEasy
+  icon:
+    sprite: Imperial/CrewSkills/BrainInterface/SkillCards.rsi
+    state: service
+  discipline: Experimental
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - SmartSkillDiskBotanyProtoLathe
+  - SmartSkillDiskBaseMedProtoLathe
+  - SmartSkillDiskBaseConstractionProtoLathe
+  - SmartSkillDiskCookingProtoLathe
+  - SmartSkillDiskBartendingProtoLathe
+  - SmartSkillDiskHackingProtoLathe
+
+- type: technology
+  id: SmartCardMediumResearch
+  name: research-technology-SmartCardMedium
+  icon:
+    sprite: Imperial/CrewSkills/BrainInterface/SkillCards.rsi
+    state: engineering
+  discipline: Experimental
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - SmartSkillDiskInstrumentationProtoLathe
+  - SmartSkillDiskMaintenanceProtoLathe
+  - SmartSkillDiskMediumConstructionProtoLathe
+  - SmartSkillDiskMediumBotanyProtoLathe
+  - SmartSkillDiskBasicAtmosProtoLathe
+  - SmartSkillDiskMedicalEquipmentProtoLathe
+  - SmartSkillDiskPharmacologyProtoLathe
+
+- type: technology
+  id: SmartCardHardResearch
+  name: research-technology-SmartCardHard
+  icon:
+    sprite: Imperial/CrewSkills/BrainInterface/SkillCards.rsi
+    state: command
+  discipline: Experimental
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - SmartSkillDiskPilotingProtoLathe
+  - SmartSkillDiskAtmosProtoLathe
+  - SmartSkillDiskHardInstrumentationProtoLathe
+  - SmartSkillDiskRoboticsProtoLathe
+  - SmartSkillDiskResearchProtoLathe
+  - SmartSkillDiskPharmaceuticalsProtoLathe
+  - SmartSkillDiskShootingProtoLathe
+  - SmartSkillDiskSurgeryProtoLathe
+  - SmartSkillDiskNeuroSurgeryProtoLathe
+

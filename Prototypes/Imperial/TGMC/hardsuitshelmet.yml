@@ -1,0 +1,59 @@
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitAtmosTGMC
+  noSpawn: true
+  name: captain's hardsuit helmet
+  description: Special hardsuit helmet, made for the captain of the station.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Head/atmospheric.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Head/atmospheric.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitEngineerTGMC
+  noSpawn: true
+  name: captain's hardsuit helmet
+  description: Special hardsuit helmet, made for the captain of the station.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Head/engineer.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Head/engineer.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitAdvancedTGMC
+  noSpawn: true
+  name: captain's hardsuit helmet
+  description: Special hardsuit helmet, made for the captain of the station.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Head/advanced.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Head/advanced.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitMedicalTGMC
+  noSpawn: true
+  name: captain's hardsuit helmet
+  description: Special hardsuit helmet, made for the captain of the station.
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Head/medical.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Head/medical.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000

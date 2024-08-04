@@ -1,0 +1,23 @@
+- type: playTimeTracker
+  id: JobCmdOper
+
+- type: playTimeTracker
+  id: JobCmdField
+
+- type: playTimeTracker
+  id: JobPilotShuttle
+
+- type: playTimeTracker
+  id: JobSquadLeader
+
+- type: playTimeTracker
+  id: JobPilotMech
+
+- type: playTimeTracker
+  id: JobMarineMed
+
+- type: playTimeTracker
+  id: JobMarineEnd
+
+- type: playTimeTracker
+  id: JobMarine

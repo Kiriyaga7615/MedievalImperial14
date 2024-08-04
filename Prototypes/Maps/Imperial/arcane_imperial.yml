@@ -1,0 +1,77 @@
+- type: gameMap
+  id: Arcane
+  mapName: 'Arcane'
+  mapPath: /Maps/imperial/Arcane/imperial_arcane.yml
+  minPlayers: 0
+  stations:
+    ArcaneStation:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Arcane Station {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/imperial/Arcane/imperial_arcane_evac.yml
+        - type: StationCargoShuttle
+          path: /Maps/imperial/Arcane/imperial_arcane_cargo.yml
+        - type: GridSpawn
+          groups:
+            mining:
+              paths:
+                - /Maps/imperial/Arcane/imperial_arcane_salvage.yml #Imperial Space salvage shuttle
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            CargoTechnician: [ 2, 2 ] 
+            Passenger: [ -1, -1 ]
+            Bartender: [ 1, 1 ] 
+            Botanist: [ 2, 2 ] 
+            Chef: [ 1, 1 ] 
+            Clown: [ 1, 1 ] 
+            Janitor: [ 2, 2 ] 
+            Mime: [ 1, 1 ] 
+            Captain: [ 1, 1 ] 
+            HeadOfPersonnel: [ 1, 1 ] 
+            ChiefEngineer: [ 1, 1 ] 
+            StationEngineer: [ 1, 1 ] 
+            ChiefMedicalOfficer: [ 1, 1 ] 
+            MedicalDoctor: [ 1, 1 ] 
+            Chemist: [ 1, 1 ] 
+            ResearchDirector: [ 1, 1 ] 
+            Scientist: [ 1, 1 ] 
+            HeadOfSecurity: [ 1, 1 ]
+            SecurityOfficer: [ 2, 2 ] 
+            Chaplain: [ 1, 1 ] 
+            Warden: [ 1, 1 ] 
+            Librarian: [ 1, 1 ] 
+            Lawyer: [ 1, 1 ] 
+            Quartermaster: [ 1, 1 ] 
+            SalvageSpecialist: [ 2, 2 ] 
+            Musician: [ 1, 1 ] 
+            AtmosphericTechnician: [ 1, 1 ] 
+            TechnicalAssistant: [ 1, 1 ] 
+            MedicalIntern: [ 1, 1 ] 
+            ServiceWorker: [ 2, 2 ] 
+            SecurityCadet: [ 2, 2 ] 
+            Detective: [ 1, 1 ] 
+            ResearchAssistant: [ 1, 1 ] 
+            Paramedic: [ 1, 1 ] 
+            Coroner: [1, 1] 
+            BlueShieldOfficer: [1, 1] 
+            Brigmedic: [ 1, 1 ] 
+            IAA: [ 1, 1 ] 
+            BorgImperial: [3, 3] 
+            Boxer: [1, 1] 
+            Reporter: [1, 1] 
+            AI: [ 1, 1 ] 
+            SeniorOfficer: [ 1, 1] 
+            SeniorEngineer: [ 1, 1] 
+            SeniorPhysician: [ 1, 1] 
+            SeniorResearcher: [ 1, 1] 
+            Surgeon: [ 2, 2] 
+            Robotech: [1, 1] 
+            Psychologist: [ 1, 1 ] 
+            Zookeeper: [1, 1] 

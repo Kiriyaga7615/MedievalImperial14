@@ -1,0 +1,12 @@
+- type: entity
+  id: BorgCentralControlModule
+  parent: BaseMachineCircuitboard
+  name: borg central control module
+  description: A machine printed circuit board for a borg.
+  components:
+  - type: Tag
+    tags:
+      - BorgCentralControlModule
+  - type: CrewSkillsInstrumentation #Imperial instrumentation skill
+    needSkills:
+      - skillRobotics

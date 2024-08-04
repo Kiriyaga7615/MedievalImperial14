@@ -1,0 +1,392 @@
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: SwarmerFoundryBase
+  name: swarmer foundry
+  description: It produces swarmers using materials.
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/swarmer_factory.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - RawMaterial
+        - Sheet
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.LatheUiKey.Key
+      type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - SwarmerUniversal
+      - SwarmerBuilder
+      - SwarmerFighter
+      - SwarmerSniper
+      - SwarmerShield
+  - type: ApcPowerReceiver
+    needsPower: false
+
+- type: latheRecipe
+  id: SwarmerUniversal
+  result: SwarmerUniversal
+  applyMaterialDiscount: false
+  completetime: 15
+  materials:
+    SwarmerMetal: 400
+
+- type: latheRecipe
+  id: SwarmerBuilder
+  result: SwarmerBuilder
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    SwarmerMetal: 800
+    SwarmerSteel: 400
+
+- type: latheRecipe
+  id: SwarmerFighter
+  result: SwarmerFighter
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    SwarmerMetal: 800
+    SwarmerSteel: 600
+
+- type: latheRecipe
+  id: SwarmerSniper
+  result: SwarmerSniper
+  applyMaterialDiscount: false
+  completetime: 35
+  materials:
+    SwarmerMetal: 200
+    SwarmerSteel: 900
+
+- type: latheRecipe
+  id: SwarmerShield
+  result: SwarmerShield
+  applyMaterialDiscount: false
+  completetime: 35
+  materials:
+    SwarmerMetal: 700
+    SwarmerSteel: 1000
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: SwarmerMetalImproveFactory
+  name: metal improve factory
+  description: It produces swarmers using materials.
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/iron_factory.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - RawMaterial
+        - Sheet
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.LatheUiKey.Key
+      type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - SwarmerSteel1
+  - type: ApcPowerReceiver
+    needsPower: false
+
+- type: latheRecipe
+  id: SwarmerSteel1
+  result: SwarmerSteel1
+  applyMaterialDiscount: false
+  completetime: 9
+  materials:
+    SwarmerMetal: 200
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: SwarmerDoubleFactory
+  name: metal double factory
+  description: It produces swarmers using materials.
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/x_factory.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 180
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - RawMaterial
+        - Sheet
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.LatheUiKey.Key
+      type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - SwarmerMetal2
+  - type: ApcPowerReceiver
+    needsPower: false
+
+- type: latheRecipe
+  id: SwarmerMetal2
+  result: SwarmerMetal2
+  applyMaterialDiscount: false
+  completetime: 14
+  materials:
+    SwarmerMetal: 100
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: SwarmerChadFactory
+  name: metal chad factory
+  description: It produces swarmers using materials.
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_factory.rsi
+    snapCardinals: true
+    netsync: false
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 280
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metalbreak.ogg
+  - type: Machine
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Ore
+        - RawMaterial
+        - Sheet
+  - type: ActivatableUI
+    key: enum.LatheUiKey.Key
+  - type: UserInterface
+    interfaces:
+    - key: enum.LatheUiKey.Key
+      type: LatheBoundUserInterface
+  - type: Transform
+    anchored: true
+  - type: Pullable
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - SwarmerChad1
+      - SwarmerChad2
+      - SwarmerChad3
+      - SwarmerChad4
+      - SwarmerChad5
+      - SwarmerChad6
+  - type: ApcPowerReceiver
+    needsPower: false
+
+- type: latheRecipe
+  id: SwarmerChad1
+  result: SwarmerChadStep1
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    SwarmerSteel: 1400
+
+- type: latheRecipe
+  id: SwarmerChad2
+  result: SwarmerChadPart2
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    SwarmerSteel: 1300
+
+- type: latheRecipe
+  id: SwarmerChad3
+  result: SwarmerChadPart3
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    SwarmerSteel: 1100
+
+- type: latheRecipe
+  id: SwarmerChad4
+  result: SwarmerChadPart4
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    SwarmerSteel: 600
+
+- type: latheRecipe
+  id: SwarmerChad5
+  result: SwarmerChadPart5
+  applyMaterialDiscount: false
+  completetime: 12
+  materials:
+    SwarmerSteel: 400
+
+- type: latheRecipe
+  id: SwarmerChad6
+  result: SwarmerChadPart6
+  applyMaterialDiscount: false
+  completetime: 20
+  materials:
+    SwarmerSteel: 1100

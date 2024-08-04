@@ -1,0 +1,217 @@
+#BASE
+- type: entity
+  id: qualityCartrigeBase
+  name: upgrader base
+  description: upgrade Items
+  abstract: true
+  parent: BaseItem
+  components:
+    - type: UpgraderCartrige
+
+- type: entity
+  id: qualityCartrigeBaseTool
+  name: upgrader base tool
+  abstract: true
+  description: upgrade Items
+  parent: qualityCartrigeBase
+  components:
+    - type: UpgraderCartrige
+      typeTool: true
+
+- type: entity
+  id: qualityCartrigeBaseArmor
+  name: upgrader base armor
+  abstract: true
+  description: upgrade Items
+  parent: qualityCartrigeBase
+  components:
+    - type: UpgraderCartrige
+      typeArmor: true
+
+#UNIVERSAL
+- type: entity
+  id: qualityCartrigeUniversal
+  name: universal upgrader
+  description: universal upgrader
+  parent: qualityCartrigeBase
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: color
+    - type: UpgraderCartrige
+      universalUpgrade: true
+      chanceUpgrade: 1
+      typeArmor: true
+      typeTool: true
+
+#TOOL
+- type: entity
+  id: qualityCartrigeTool01
+  name: upgrader tool 01
+  description: upgrade Items
+  parent: qualityCartrigeBaseTool
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-tool-01
+    - type: UpgraderCartrige
+      qualityFrom: 0
+      qualityTo: 1
+
+- type: entity
+  id: qualityCartrigeTool12
+  name: upgrader tool 12
+  description: upgrade Items
+  parent: qualityCartrigeBaseTool
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-tool-12
+    - type: UpgraderCartrige
+      qualityFrom: 1
+      qualityTo: 2
+
+- type: entity
+  id: qualityCartrigeTool23
+  name: upgrader tool 23
+  description: upgrade Items
+  parent: qualityCartrigeBaseTool
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-tool-23
+    - type: UpgraderCartrige
+      qualityFrom: 2
+      qualityTo: 3
+
+- type: entity
+  id: qualityCartrigeTool34
+  name: upgrader tool 34
+  description: upgrade Items
+  parent: qualityCartrigeBaseTool
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-tool-34
+    - type: UpgraderCartrige
+      qualityFrom: 3
+      qualityTo: 4
+
+- type: entity
+  id: qualityCartrigeTool45
+  name: upgrader tool 45
+  description: upgrade Items
+  parent: qualityCartrigeBaseTool
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-tool-45
+    - type: UpgraderCartrige
+      qualityFrom: 4
+      qualityTo: 5
+
+- type: entity
+  id: qualityCartrigeTool56
+  name: upgrader tool 56
+  description: upgrade Items
+  parent: qualityCartrigeBaseTool
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-tool-56
+    - type: UpgraderCartrige
+      qualityFrom: 5
+      qualityTo: 6
+
+#ARMOR
+- type: entity
+  id: qualityCartrigeArmor01
+  name: upgrader armor 01
+  description: upgrade Items
+  parent: qualityCartrigeBaseArmor
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-armor-01
+    - type: UpgraderCartrige
+      qualityFrom: 0
+      qualityTo: 1
+
+- type: entity
+  id: qualityCartrigeArmor12
+  name: upgrader armor 12
+  description: upgrade Items
+  parent: qualityCartrigeBaseArmor
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-armor-12
+    - type: UpgraderCartrige
+      qualityFrom: 1
+      qualityTo: 2
+
+- type: entity
+  id: qualityCartrigeArmor23
+  name: upgrader armor 23
+  description: upgrade Items
+  parent: qualityCartrigeBaseArmor
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-armor-23
+    - type: UpgraderCartrige
+      qualityFrom: 2
+      qualityTo: 3
+
+- type: entity
+  id: qualityCartrigeArmor34
+  name: upgrader armor 34
+  description: upgrade Items
+  parent: qualityCartrigeBaseArmor
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-armor-34
+    - type: UpgraderCartrige
+      qualityFrom: 3
+      qualityTo: 4
+
+- type: entity
+  id: qualityCartrigeArmor45
+  name: upgrader armor 45
+  description: upgrade Items
+  parent: qualityCartrigeBaseArmor
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-armor-45
+    - type: UpgraderCartrige
+      qualityFrom: 4
+      qualityTo: 5
+
+- type: entity
+  id: qualityCartrigeArmor56
+  name: upgrader armor 56
+  description: upgrade Items
+  parent: qualityCartrigeBaseArmor
+  components:
+    - type: Sprite
+      sprite: Imperial/QualityOfItem/quialityCartrige.rsi
+      layers:
+        - state: upgrader-armor-56
+    - type: UpgraderCartrige
+      qualityFrom: 5
+      qualityTo: 6
+

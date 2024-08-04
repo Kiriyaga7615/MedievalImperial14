@@ -1,0 +1,31 @@
+{"version": 1,
+"size": {"x": 32, "y": 32},
+"license": "CC-BY-SA-3.0",
+"copyright": "discord .flazerowo",
+"states":
+[
+    {"name": "ultraSmall_basic_botany"},
+    {"name": "ultraSmall_basic_building"},
+    {"name": "ultraSmall_basicmedicine"},
+    {"name": "ultraSmall_cover"},
+    {"name": "ultraSmallCargo"},
+    {"name": "ultraSmallEng"},
+    {"name": "ultraSmallMed"},
+    {"name": "ultraSmallSci"},
+    {"name": "ultraSmallSec"},
+    {"name": "ultraSmallSrv"},
+    {"name": "ultraSmall"},
+    {"name": "ultraSmall_trait0"},
+    {"name": "ultraSmall_trait1"},
+    {"name": "ultraSmall_trait2"},
+    {"name": "ultraSmall_trait3"},
+    {"name": "ultraSmallA0"},
+    {"name": "ultraSmallA1"},
+    {"name": "ultraSmallA2"},
+    {"name": "ultraSmallA3"},
+    {"name": "ultraSmallA4"},
+    {"name": "ultraSmallA5"},
+    {"name": "ultraSmallA6"},
+    {"name": "ultraSmall_pages"}
+]
+}

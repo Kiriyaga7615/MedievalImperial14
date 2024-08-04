@@ -1,0 +1,16 @@
+- type: entity
+  parent: BasePDA
+  id: BlueshieldPDA
+  name: blushield officer PDA
+  description: Loocks cool.
+  components:
+  - type: Pda
+    id: BlueShieldIDCard
+    state: pda-blueshield
+  - type: PdaBorderColor
+    borderColor: "#78B0B0"
+    accentHColor: "#145454"
+    accentVColor: "#145454"
+  - type: Icon
+    state: pda-blueshield
+

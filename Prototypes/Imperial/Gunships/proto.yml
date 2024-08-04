@@ -1,0 +1,479 @@
+- type: entity
+  name: cannon bolt
+  id: RocketAqueron
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/aqueron.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 290
+    intensitySlope: 8
+    maxIntensity: 15
+  - type: TimedDespawn
+    lifetime: 15
+  - type: PointLight
+    radius: 5
+    color: orange
+    energy: 4
+  - type: ShuttleRender
+    radius: 3.5
+    color: red
+    filled: false
+
+- type: entity
+  name: cannon bolt
+  id: RocketPegas
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/pegas.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 175
+    intensitySlope: 12
+    maxIntensity: 15
+  - type: TimedDespawn
+    lifetime: 7
+  - type: PointLight
+    radius: 5
+    color: orange
+    energy: 4
+  - type: ShuttleRender
+    radius: 3.5
+    color: red
+    filled: false
+
+- type: entity
+  name: cannon bolt
+  id: RocketOrion
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/orion.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 435
+    intensitySlope: 4
+    maxIntensity: 22
+  - type: TimedDespawn
+    lifetime: 30
+  - type: PointLight
+    radius: 5
+    color: orange
+    energy: 4
+  - type: ShuttleRender
+    radius: 3.5
+    color: red
+    filled: false
+
+- type: entity
+  name: cannon bolt
+  id: RocketIkar
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/ikar.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 230
+    intensitySlope: 5
+    maxIntensity: 3
+  - type: TimedDespawn
+    lifetime: 10
+  - type: PointLight
+    radius: 5
+    color: orange
+    energy: 4
+  - type: ShuttleRender
+    radius: 3.5
+    color: red
+    filled: false
+
+- type: entity
+  name: cannon bolt
+  id: ShrapChaos
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/chaos.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 3
+    intensitySlope: 1
+    maxIntensity: 3
+  - type: TimedDespawn
+    lifetime: 5
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 70
+        Structural: 140
+  - type: StaminaDamageOnCollide
+    damage: 90
+  - type: ShuttleRender
+    radius: 2.5
+    color: white
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: ShrapStorm
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Shrap/storm.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 3
+    intensitySlope: 1
+    maxIntensity: 3
+  - type: TimedDespawn
+    lifetime: 4
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 90
+        Structural: 180
+  - type: StaminaDamageOnCollide
+    damage: 90
+  - type: ShuttleRender
+    radius: 2.5
+    color: white
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: IonZeus
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/zeus.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: TimedDespawn
+    lifetime: 12
+  - type: Projectile
+    damage:
+      types:
+        Heat: 15
+  - type: EmpOnTrigger
+    range: 1
+    energyConsumption: 5000000
+  - type: FlashOnTrigger
+    range: 15
+    duration: 50
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: ShuttleRender
+    radius: 4
+    color: yellow
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: IonElec
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/elec.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: TimedDespawn
+    lifetime: 7
+  - type: Projectile
+    damage:
+      types:
+        Heat: 15
+  - type: EmpOnTrigger
+    range: 1
+    energyConsumption: 20000
+  - type: FlashOnTrigger
+    range: 15
+    duration: 30
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: ShuttleRender
+    radius: 4
+    color: yellow
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: IonLight
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Ion/elec.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: TimedDespawn
+    lifetime: 6
+  - type: Projectile
+    damage:
+      types:
+        Heat: 15
+  - type: EmpOnTrigger
+    range: 1
+    energyConsumption: 60000
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: FlashOnTrigger
+    range: 15
+    duration: 30
+  - type: ShuttleRender
+    radius: 4
+    color: yellow
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: LaserAvangard
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: TimedDespawn
+    lifetime: 9
+  - type: Projectile
+    damage:
+      types:
+        Heat: 55
+        Structural: 125
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: ShuttleRender
+    radius: 3
+    color: "#00e7ff"
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: LaserFenix
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: TimedDespawn
+    lifetime: 5
+  - type: Projectile
+    damage:
+      types:
+        Heat: 90
+        Structural: 200
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: ShuttleRender
+    radius: 3.5
+    color: orange
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: LaserGroza
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/avangard.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: TimedDespawn
+    lifetime: 15
+  - type: Projectile
+    damage:
+      types:
+        Heat: 150
+        Structural: 840
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 40
+    intensitySlope: 5
+    maxIntensity: 5
+  - type: ShuttleRender
+    radius: 3.5
+    color: violet
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: LaserDemon
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/demon.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 60
+    intensitySlope: 5
+    maxIntensity: 5
+  - type: TimedDespawn
+    lifetime: 20
+  - type: PointLight
+    radius: 7
+    color: red
+    energy: 6
+  - type: Projectile
+    damage:
+      types:
+        Heat: 300
+        Structural: 940
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: ShuttleRender
+    radius: 4.5
+    color: red
+    filled: true
+  - type: GunshipShieldBlockable
+
+- type: entity
+  name: cannon bolt
+  id: LaserBSA
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Laser/bsa.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 1380000
+    intensitySlope: 0.7
+    maxIntensity: 220
+  - type: TimedDespawn
+    lifetime: 6000
+  - type: PointLight
+    radius: 400
+    color: blue
+    energy: 4000
+    castShadows: false
+  - type: Projectile
+    damage:
+      types:
+        Heat: 5000
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: SingularityDistortion
+    FalloffPower: 0.7
+    Intensity: 100
+  - type: RadiationSource
+    intensity: 50
+  - type: ShuttleRender
+    radius: 6.5
+    color: blue
+    filled: true
+
+- type: explosion
+  id: GunshipBiobomb
+  damagePerIntensity:
+    types:
+      Caustic: 40
+  lightColor: Green
+  fireColor: Green
+  texturePath: /Textures/Effects/fire_greyscale.rsi
+  fireStates: 3
+  tileBreakChance: [0, 0, 0]
+  tileBreakIntensity: [0, 0, 0]
+  tileBreakRerollReduction: 0
+
+- type: entity
+  name: cannon bolt
+  id: LaserBioGun
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Sprite
+    sprite: Imperial/Gunships/Cannons/Rocket/ikar.rsi
+    layers:
+      - state: projectile
+        shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: GunshipBiobomb
+    totalIntensity: 150
+    intensitySlope: 0.5
+    maxIntensity: 20
+  - type: TimedDespawn
+    lifetime: 60
+  - type: PointLight
+    radius: 5
+    color: green
+    energy: 40
+    castShadows: false
+  - type: Projectile
+    damage:
+      types:
+        Caustic: 70
+  - type: StaminaDamageOnCollide
+    damage: 550
+  - type: SingularityDistortion
+    FalloffPower: 0.7
+    Intensity: 100
+  - type: ShuttleRender
+    radius: 3.5
+    color: green
+    filled: false

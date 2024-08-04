@@ -1,0 +1,27 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBlueshieldOfficerFilled
+  name: ERT security backpack
+  description: A spacious backpack with lots of pockets, worn by Security Officers of an Emergency Response Team.
+  components:
+  - type: Sprite
+    sprite: Imperial/BlueShield/blueshieldbackpack.rsi
+  - type: Storage
+    grid:
+    - 0,0,10,3
+  - type: StorageFill
+    contents:
+      - id: BoxSurvival
+      - id: WeaponPulsePistol
+      - id: WeaponDisabler
+      - id: Handcuffs
+      - id: DeathAlarmImplanter
+      - id: DeathAlarmImplanter
+      - id: DeathAlarmImplanter
+      - id: TrackingImplanter
+      - id: TrackingImplanter
+      - id: TrackingImplanter
+      - id: TrackingImplanter
+      - id: TrackingImplanter
+      - id: TrackingImplanter
+      - id: HandheldCrewMonitor

@@ -1,0 +1,43 @@
+﻿- type: technology
+  id: Upgrade1
+  name: research-technology-borg-upgrade1
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: cyborg_upgrade
+  discipline: Experimental
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - BorgHealthUpgrader
+  - BorgSpeedUpgrader
+  - BorgBatteryUpgrader
+
+- type: technology
+  id: Upgrade2
+  name: research-technology-borg-upgrade2
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: cyborg_upgrade1
+  discipline: Experimental
+  tier: 2
+  cost: 20000
+  recipeUnlocks:
+  - BorgHealthUpgrader2
+  - BorgSpeedUpgrader2
+  - BorgBatteryUpgrader2
+  - BorgLaserUpgrader
+
+- type: technology
+  id: Upgrade3
+  name: research-technology-borg-upgrade3
+  icon:
+    sprite: Objects/Misc/module.rsi
+    state: cyborg_upgrade2
+  discipline: Experimental
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - BorgHealthUpgrader3
+  - BorgSpeedUpgrader3
+  - BorgBatteryUpgrader3
+  - BorgLaserUpgrader2

@@ -1,0 +1,327 @@
+- type: construction
+  id: SwarmerWall
+  name: стена
+  description: desc
+  graph: SwarmerWall
+  startNode: start
+  targetNode: wall
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_bad
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerWall
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: wall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerMetal
+              amount: 1
+              doAfter: 0.2
+    - node: wall
+      entity: SwarmerWall
+
+- type: construction
+  id: SwarmerWallReinforced
+  name: стена
+  description: desc
+  graph: SwarmerWallReinforced
+  startNode: start
+  targetNode: wall
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_good
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerWallReinforced
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: wall
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerMetal
+              amount: 2
+              doAfter: 5
+    - node: wall
+      entity: SwarmerWallReinforced
+
+- type: construction
+  id: SwarmerFoundry
+  name: Фабрика свармеров
+  description: SwarmerFoundry
+  graph: SwarmerFoundry
+  startNode: start
+  targetNode: foundry
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: /Textures/Imperial/Swarmers/swarmer_factory.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerFoundry
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: foundry
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerMetal
+              amount: 12
+              doAfter: 22
+    - node: foundry
+      entity: SwarmerFoundryBase
+
+- type: swarmerStructure
+  id: SwarmerFoundry
+  name: Фабрика свармеров
+  structureId: SwarmerFoundry
+  icon: "/Textures/Imperial/Swarmers/swarmer_factory.rsi/icon.png"
+
+- type: swarmerStructure
+  id: SwarmerWall
+  name: Слабая стена
+  structureId: SwarmerWall
+  icon: "/Textures/Imperial/Swarmers/structures.rsi/wall_bad.png"
+
+- type: swarmerStructure
+  id: SwarmerWallReinforced
+  name: Укрепленная стена
+  structureId: SwarmerWallReinforced
+  icon: "/Textures/Imperial/Swarmers/structures.rsi/wall_good.png"
+
+- type: construction
+  id: SwarmerMetalImproveFactory
+  name: Фабрика обработки металла
+  description: desc
+  graph: SwarmerMetalImproveFactory
+  startNode: start
+  targetNode: ready
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Swarmers/iron_factory.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerMetalImproveFactory
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: ready
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerMetal
+              amount: 10
+              doAfter: 15
+    - node: ready
+      entity: SwarmerMetalImproveFactory
+
+- type: swarmerStructure
+  id: SwarmerMetalImproveFactory
+  name: Фабрика улучшения металла
+  structureId: SwarmerMetalImproveFactory
+  icon: "/Textures/Imperial/Swarmers/iron_factory.rsi/icon.png"
+
+- type: construction
+  id: SwarmerWallLoopHole
+  name: барьер
+  description: desc
+  graph: SwarmerWallLoopHole
+  startNode: start
+  targetNode: ready
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Swarmers/structures.rsi
+    state: barrier
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerWallLoopHole
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: ready
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerSteel
+              amount: 1
+              doAfter: 3
+    - node: ready
+      entity: SwarmerWallLoopHole
+
+- type: swarmerSteelStructure
+  id: SwarmerWallLoopHole
+  name: Барьер
+  structureId: SwarmerWallLoopHole
+  icon: "/Textures/Imperial/Swarmers/structures.rsi/barrier.png"
+
+- type: construction
+  id: SwarmerWallMirror
+  name: стена
+  description: desc
+  graph: SwarmerWallMirror
+  startNode: start
+  targetNode: ready
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Swarmers/structures.rsi
+    state: wall_mirror
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerWallMirror
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: ready
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerSteel
+              amount: 2
+              doAfter: 4
+    - node: ready
+      entity: SwarmerWallMirror
+
+- type: swarmerSteelStructure
+  id: SwarmerWallMirror
+  name: Отражающая стена
+  structureId: SwarmerWallMirror
+  icon: "/Textures/Imperial/Swarmers/structures.rsi/wall_mirror.png"
+
+- type: construction
+  id: SwarmerDoubleFactory
+  name: Фабрика дубликации энергометалла
+  description: desc
+  graph: SwarmerDoubleFactory
+  startNode: start
+  targetNode: ready
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Swarmers/x_factory.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerDoubleFactory
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: ready
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerSteel
+              amount: 4
+              doAfter: 22
+    - node: ready
+      entity: SwarmerDoubleFactory
+
+- type: swarmerSteelStructure
+  id: SwarmerDoubleFactory
+  name: Фабрика дубликации энергометалла
+  structureId: SwarmerDoubleFactory
+  icon: "/Textures/Imperial/Swarmers/x_factory.rsi/icon.png"
+
+- type: construction
+  id: SwarmerChadFactory
+  name: Фабрика запчастей NEMESIS
+  description: desc
+  graph: SwarmerChadFactory
+  startNode: start
+  targetNode: ready
+  hide: true
+  category: construction-category-structures
+  icon:
+    sprite: Imperial/Swarmers/chad_factory.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: constructionGraph
+  id: SwarmerChadFactory
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: ready
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: SwarmerSteel
+              amount: 16
+              doAfter: 22
+    - node: ready
+      entity: SwarmerChadFactory
+
+- type: swarmerSteelStructure
+  id: SwarmerChadFactory
+  name: Фабрика запчастей NEMESIS
+  structureId: SwarmerChadFactory
+  icon: "/Textures/Imperial/Swarmers/chad_factory.rsi/icon.png"

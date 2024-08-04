@@ -1,0 +1,19 @@
+- type: entity
+  id: WarpPointAIStation
+  parent: MarkerBase
+  name: ai station warp point
+  components:
+  - type: AIWarp
+    IsCoreWarp: false
+  - type: Sprite
+    state: pink
+
+- type: entity
+  id: WarpPointAICore
+  parent: MarkerBase
+  name: ai core warp point
+  components:
+  - type: AIWarp
+    IsCoreWarp: true
+  - type: Sprite
+    state: pink

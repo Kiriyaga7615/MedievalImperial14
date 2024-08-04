@@ -1,0 +1,592 @@
+- type: entity
+  id: MechMauler
+  parent: BaseMech
+  name: Mauler
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: mauler
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    maxEquipmentAmount: 5
+    airtight: false
+    maxIntegrity: 500
+    baseState: mauler
+    openState: mauler-open
+    brokenState: mauler-broken
+    mechToPilotDamageMultiplier: 0.2
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 35
+        Structural: 55
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.2
+    baseSprintSpeed: 2
+  - type: Repairable
+    doAfterDelay: 12
+    damage:
+      types:
+        Slash: -50
+        Piercing: -50
+        Blunt: -50
+        Structural: -30
+  - type: SpeedMech
+    baseSpeed: 1.8
+  - type: PilotDef
+    baseDef: 0.25
+  - type: MechUpgradeHp
+    baseHp: 500
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: MovementAlwaysTouching
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+
+- type: entity
+  id: MechMarauder
+  parent: BaseMech
+  name: Marauder
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: marauder
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    maxEquipmentAmount: 5
+    airtight: false
+    maxIntegrity: 500
+    baseState: marauder
+    openState: marauder-open
+    brokenState: marauder-broken
+    mechToPilotDamageMultiplier: 0.2
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechBattleEqipment
+      - MechMedEqipment
+      - MechIndustrialEqipment
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 35
+        Structural: 55
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.2
+    baseSprintSpeed: 2
+  - type: Repairable
+    doAfterDelay: 12
+    damage:
+      types:
+        Slash: -50
+        Piercing: -50
+        Blunt: -50
+        Structural: -30
+  - type: SpeedMech
+    baseSpeed: 1.8
+  - type: PilotDef
+    baseDef: 0.25
+  - type: MechUpgradeHp
+    baseHp: 500
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: MovementAlwaysTouching
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  id: MechSeraph
+  parent: BaseMech
+  name: Seraph
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: seraph
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    maxEquipmentAmount: 6
+    airtight: false
+    maxIntegrity: 750
+    baseState: seraph
+    openState: seraph-open
+    brokenState: seraph-broken
+    mechToPilotDamageMultiplier: 0.12
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechBattleEqipment
+      - MechMedEqipment
+      - MechIndustrialEqipment
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 55
+        Structural: 95
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.5
+    baseSprintSpeed: 2.5
+  - type: Repairable
+    doAfterDelay: 12
+    damage:
+      types:
+        Slash: -50
+        Piercing: -50
+        Blunt: -50
+        Structural: -30
+  - type: SpeedMech
+    baseSpeed: 2.25
+  - type: PilotDef
+    baseDef: 0.25
+  - type: MechUpgradeHp
+    baseHp: 750
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: MovementAlwaysTouching
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  id: MechGygaxDantanat
+  parent: BaseMech
+  name: Gygax
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: gygax
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    maxEquipmentAmount: 3
+    airtight: false
+    maxIntegrity: 250
+    baseState: gygax
+    openState: gygax-open
+    brokenState: gygax-broken
+    mechToPilotDamageMultiplier: 0.3
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechBattleEqipment
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 30
+        Structural: 25
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.2
+    baseSprintSpeed: 3.7
+  - type: Repairable
+    fuelCost: 11
+    doAfterDelay: 8
+  - type: SpeedMech
+    baseSpeed: 3.7
+  - type: PilotDef
+    baseDef: 0.33
+  - type: MechUpgradeHp
+    baseHp: 250
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: MovementAlwaysTouching
+
+- type: entity
+  id: MechGygaxDantanatBattery
+  parent: MechGygaxDantanat
+  name: Gygax
+  description: Default battle mecha.
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  id: MechGygaxDark
+  parent: MechGygaxDantanatBattery
+  name: Gygax
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: darkgygax
+  - type: Mech
+    baseState: darkgygax
+    openState: darkgygax-open
+    brokenState: darkgygax-broken
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechBattleEqipment
+      - MechMedEqipment
+      - MechIndustrialEqipment
+  - type: NpcFactionMember
+    factions:
+      - Syndicate
+
+- type: entity
+  id: MechGygaxERT
+  parent: MechGygaxDantanatBattery
+  name: Gygax
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: ertgygax
+  - type: Mech
+    baseState: ertgygax
+    openState: ertgygax-open
+    brokenState: ertgygax-broken
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechBattleEqipment
+      - MechMedEqipment
+      - MechIndustrialEqipment
+
+- type: entity
+  id: MechDurand
+  parent: BaseMech
+  name: Mauler
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: durand
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    maxEquipmentAmount: 4
+    airtight: false
+    maxIntegrity: 400
+    baseState: durand
+    openState: durand-open
+    brokenState: durand-broken
+    mechToPilotDamageMultiplier: 0.25
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechBattleEqipment
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 32
+        Structural: 35
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1
+    baseSprintSpeed: 1.5
+  - type: Repairable
+    doAfterDelay: 12
+    damage:
+      types:
+        Slash: -50
+        Piercing: -50
+        Blunt: -50
+        Structural: -30
+  - type: SpeedMech
+    baseSpeed: 1.4
+  - type: PilotDef
+    baseDef: 0.25
+  - type: MechUpgradeHp
+    baseHp: 400
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: MovementAlwaysTouching
+
+- type: entity
+  id: MechDurandBattery
+  parent: MechDurand
+  name: Mauler
+  description: Default battle mecha.
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  id: MechClarke
+  parent: BaseMech
+  name: clarke
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: clarke
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    maxEquipmentAmount: 3
+    airtight: false
+    maxIntegrity: 200
+    baseState: clarke
+    openState: clarke-open
+    brokenState: clarke-broken
+    mechToPilotDamageMultiplier: 0.5
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechIndustrialEqipment
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 20
+        Structural: 15
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4.5
+  - type: Repairable
+    doAfterDelay: 12
+    damage:
+      types:
+        Slash: -50
+        Piercing: -50
+        Blunt: -50
+        Structural: -30
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: PilotDef
+    baseDef: 0.5
+  - type: MovementAlwaysTouching
+  - type: SpeedMech
+    baseSpeed: 4.2
+  - type: MechUpgradeHp
+    baseHp: 200
+
+- type: entity
+  id: MechClarkeBattery
+  parent: MechClarke
+  name: clarke
+  description: Default battle mecha.
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  id: MechOdissey
+  parent: BaseMech
+  name: odissey
+  description: Default battle mecha.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: odysseus
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    maxEquipmentAmount: 4
+    airtight: false
+    maxIntegrity: 200
+    baseState: odysseus
+    openState: odysseus-open
+    brokenState: odysseus-broken
+    mechToPilotDamageMultiplier: 0.5
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechMedEqipment
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 14
+        Structural: 15
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4.5
+  - type: Repairable
+    doAfterDelay: 12
+    damage:
+      types:
+        Slash: -50
+        Piercing: -50
+        Blunt: -50
+        Structural: -30
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: PilotDef
+    baseDef: 0.55
+  - type: MovementAlwaysTouching
+  - type: SpeedMech
+    baseSpeed: 4.2
+  - type: MechUpgradeHp
+    baseHp: 200
+
+- type: entity
+  id: MechOdisseyBattery
+  parent: MechOdissey
+  name: odissey
+  description: Default battle mecha.
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+
+- type: entity
+  id: MechRipleyFire
+  parent: BaseMech
+  name: Ripley APLU
+  description: Versatile and lightly armored, the Ripley is useful for almost any heavy work scenario. The "APLU" stands for Autonomous Power Loading Unit.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    noRot: true
+    sprite: Imperial/Mech/mecha.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: firefighter
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    airtight: false
+    baseState: firefighter
+    openState: firefighter-open
+    brokenState: firefighter-broken
+    mechToPilotDamageMultiplier: 0.6
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+    equipmentWhitelist:
+      tags:
+      - MechBaseEqipment
+      - MechIndustrialEqipment
+  - type: MeleeWeapon
+    hidden: true
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 14
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.35
+    baseSprintSpeed: 3.9
+  - type: SpeedMech
+    baseSpeed: 3.8
+  - type: PilotDef
+    baseDef: 0.5
+  - type: MechUpgradeHp
+    baseHp: 150
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: MechThruster
+  - type: MovementAlwaysTouching
+
+- type: entity
+  id: MechRipleyFireBattery
+  parent: MechRipleyFire
+  name: Ripley APLU
+  description: Versatile and lightly armored, the Ripley is useful for almost any heavy work scenario. The "APLU" stands for Autonomous Power Loading Unit.
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh

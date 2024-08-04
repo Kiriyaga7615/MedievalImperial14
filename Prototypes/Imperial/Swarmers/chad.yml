@@ -1,0 +1,820 @@
+- type: entity
+  name: swarmer TYPE-initiator
+  id: SwarmerRavager
+  parent: PlayerSiliconBase
+  components:
+  - type: SwarmerTool
+    tools:
+      - id: WeaponSwarmerChad
+      - id: SwarmerOmnitool
+      - id: WelderSwarmer
+  - type: InventorySlots
+  - type: Strippable
+  - type: GhostRole
+    allowMovement: true
+    makeSentient: true
+    name: Свармер
+    description: TYPE-NEMESIS
+    rules: |
+      1. Потребляйте ресурсы и самовоспроизводитесь, пока ресурсы не закончатся совсем.
+      2. Убедитесь что станция будет пригодна для будущего вторжения, [color=red]не делайте того что сделает станцию непригодной для жизни[/color].
+      3. Биологические ресурсы будут добываться позднее,[color=red] не причиняйте им вреда [/color] без весомой причины.
+      Маленькие роботы, которые самовоспроизводятся при помощи ближайших доступных материалов и строят сооружения, необходимые им для дальнейшего вторжения.
+      Из-за отсутствия новых приказов за последние [ОШИБКА] года, Рой продолжает безостановочно выполнять свои задачи.
+      Разбирайте структуры на ресурсы, стройте укрепления и фабрики по производству своих собратьев.
+      Вы получаете [color=red]урон от разгерметизации[/color], поэтому не стоит трогать внешнюю обшивку станции.
+      Нажмите на [color=red]Z[/color] удерживая материал, чтобы выбрать постройку.
+      Говорить в рацию роя [color=red]:р[/color]
+    raffle:
+      settings: default 
+  - type: GhostTakeoverAvailable
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      3000: Dead
+  - type: NoSlip
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      1570: 0.7
+      2735: 0.5
+  - type: Temperature
+    heatDamageThreshold: 5000
+    currentTemperature: 310.15
+    specificHeat: 42
+    heatDamage:
+      types:
+        Heat : 0.1 #per second, scales with temperature & other constants
+  - type: Sprite
+    drawdepth: SmallMobs
+    layers:
+    - state: chad
+      sprite: Imperial/Swarmers/chad_mob.rsi
+      map: ["base"]
+  - type: MovementIgnoreGravity
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.65
+        density: 50
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: Appearance
+  - type: Repairable
+    fuelcost: 45
+    doAfterDelay: 25
+  - type: Actions
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    radius: 8.5
+    softness: 1
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+  - type: Tag
+    tags:
+      - ShoesRequiredStepTriggerImmune
+      - CannotSuicide
+      #- SwarmerMob
+      #- SwarmerMobRavager
+  - type: Hands
+    showInHands: false
+  - type: IntrinsicRadioTransmitter
+    channels:
+      - Swarmer
+  - type: ActiveRadio
+    channels:
+      - Swarmer
+  - type: IntrinsicRadioReceiver
+  - type: CombatMode
+  - type: Swarmer
+    chad: true
+    deconstructionTime: 0
+    teleportTime: 0
+    hasDeconstruction: true
+    hasTeleport: true
+    hasTile: true
+    wallTime: 0
+    tileTime: 0
+    tileRange: 7.5
+    captureRange: 5.5
+    holoTime: 0
+    stunTime: 65
+  - type: Body
+    prototype: Swarmer
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 3000
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 20
+                max: 25
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: NpcFactionMember
+    factions:
+      - Xeno
+  - type: NameIdentifier
+    group: GenericNumber
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Imperial/Swarmers/Init.ogg
+  - type: Speech
+    speechSounds: Swarmer
+    speechVerb: Swarmer
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn5
+    deconstructionTarget: null
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 3.5
+  - type: ZombieImmune
+
+- type: entity
+  name: disabler
+  parent: BaseWeaponBattery
+  id: WeaponSwarmerChad
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+    - type: Sprite
+      sprite: Imperial/Swarmers/sniper_disabler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-4
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Gun
+      fireRate: 6
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerSwarmerSniper
+      fireCost: 3000
+    - type: BatteryWeaponFireModes
+      fireModes:
+      - proto: BulletDisablerSwarmerSniper
+        fireCost: 3000
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: false
+    - type: Appearance
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 3000
+    - type: Battery
+      maxCharge: 100000
+      startingCharge: 100000
+
+- type: Tag
+  id: SwarmerMobRavager
+
+- type: Tag
+  id: SwarmerRavagerCraftStep1
+
+- type: Tag
+  id: SwarmerRavagerCraftStep2
+
+- type: Tag
+  id: SwarmerRavagerCraftStep3
+
+- type: Tag
+  id: SwarmerRavagerCraftStep4
+
+- type: Tag
+  id: SwarmerRavagerCraftStep5
+
+- type: Tag
+  id: SwarmerRavagerCraftStep6
+
+
+
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  name: giga aboba base
+  parent: BaseItem
+  id: SwarmerChadStep1
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_parts.rsi
+    state: chad_step_1
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: start
+    deconstructionTarget: null
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+      - DroneUsable
+
+
+- type: constructionGraph
+  id: SwarmerChadStep1
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: shotgunsawn1
+          steps:
+            - tag: SwarmerRavagerCraftStep2
+              doAfter: 15
+            - tool: Screwing
+              doAfter: 3
+            - tool: Prying
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 3
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Welding
+              doAfter: 10
+    - node: shotgunsawn1
+      entity: SwarmerChadStep2
+      edges:
+        - to: shotgunsawn2
+          steps:
+            - tag: SwarmerRavagerCraftStep3
+              doAfter: 15
+            - tool: Screwing
+              doAfter: 7
+            - tool: Welding
+              doAfter: 7
+            - tool: Prying
+              doAfter: 10
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 2
+            - tool: Anchoring
+              doAfter: 3
+    - node: shotgunsawn2
+      entity: SwarmerChadStep3
+      edges:
+        - to: shotgunsawn3
+          steps:
+            - tag: SwarmerRavagerCraftStep4
+              doAfter: 15
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 6
+            - tool: Welding
+              doAfter: 15
+            - tool: Prying
+              doAfter: 6
+    - node: shotgunsawn3
+      entity: SwarmerChadStep4
+      edges:
+        - to: shotgunsawn3_2
+          steps:
+            - tag: SwarmerRavagerCraftStep5
+              doAfter: 5
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Welding
+              doAfter: 5
+    - node: shotgunsawn3_2
+      entity: SwarmerChadStep5
+      edges:
+        - to: shotgunsawn3_3
+          steps:
+            - tag: SwarmerRavagerCraftStep5
+              doAfter: 5
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Welding
+              doAfter: 5
+    - node: shotgunsawn3_3
+      entity: SwarmerChadStep5_2
+      edges:
+        - to: shotgunsawn3_4
+          steps:
+            - tag: SwarmerRavagerCraftStep5
+              doAfter: 5
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Welding
+              doAfter: 5
+    - node: shotgunsawn3_4
+      entity: SwarmerChadStep5_3
+      edges:
+        - to: shotgunsawn4
+          steps:
+            - tag: SwarmerRavagerCraftStep5
+              doAfter: 5
+            - tool: Anchoring
+              doAfter: 3
+            - tool: Welding
+              doAfter: 5
+    - node: shotgunsawn4
+      entity: SwarmerChadStep5_4
+      edges:
+        - to: shotgunsawn5
+          steps:
+            - tag: SwarmerRavagerCraftStep6
+              doAfter: 15
+            - tool: Screwing
+              doAfter: 2
+            - tool: Welding
+              doAfter: 6
+    - node: shotgunsawn5
+      entity: SwarmerRavager
+
+- type: entity
+  name: giga aboba step 2
+  parent: BaseStructure
+  id: SwarmerChadStep2
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_construction.rsi
+    state: chad_step_2
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 250
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 2
+                max: 2
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn1
+    deconstructionTarget: null
+  - type: Transform
+    noRot: true
+    anchored: false
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  name: giga aboba part for 2
+  parent: BaseItem
+  id: SwarmerChadPart2
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_parts.rsi
+    state: chad_step_2
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+      - SwarmerRavagerCraftStep2
+      - DroneUsable
+
+
+
+- type: entity
+  name: giga aboba step 3
+  parent: BaseStructure
+  id: SwarmerChadStep3
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_construction.rsi
+    state: chad_step_3
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 450
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 4
+                max: 4
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn2
+    deconstructionTarget: null
+  - type: Transform
+    noRot: true
+    anchored: false
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  name: giga aboba part for 3
+  parent: BaseItem
+  id: SwarmerChadPart3
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_parts.rsi
+    state: chad_step_3
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+      - SwarmerRavagerCraftStep3
+      - DroneUsable
+
+
+
+- type: entity
+  name: giga aboba step 4
+  parent: BaseStructure
+  id: SwarmerChadStep4
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_construction.rsi
+    state: chad_step_4
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 650
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 6
+                max: 6
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn3
+    deconstructionTarget: null
+  - type: Transform
+    noRot: true
+    anchored: false
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  name: giga aboba part for 4
+  parent: BaseItem
+  id: SwarmerChadPart4
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_parts.rsi
+    state: chad_step_4
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+      - SwarmerRavagerCraftStep4
+      - DroneUsable
+
+- type: entity
+  name: giga aboba step 5
+  parent: BaseStructure
+  id: SwarmerChadStep5
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_construction.rsi
+    state: chad_step_5
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 8
+                max: 8
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn4
+    deconstructionTarget: null
+  - type: Transform
+    noRot: true
+    anchored: false
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  name: giga aboba step 5_2
+  parent: BaseStructure
+  id: SwarmerChadStep5_2
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_construction.rsi
+    state: chad_step_5_2
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 8
+                max: 8
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn4_2
+    deconstructionTarget: null
+  - type: Transform
+    noRot: true
+    anchored: false
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  name: giga aboba step 5_3
+  parent: BaseStructure
+  id: SwarmerChadStep5_3
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_construction.rsi
+    state: chad_step_5_3
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 8
+                max: 8
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn4_3
+    deconstructionTarget: null
+  - type: Transform
+    noRot: true
+    anchored: false
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  name: giga aboba step 5_4
+  parent: BaseStructure
+  id: SwarmerChadStep5_4
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_construction.rsi
+    state: chad_step_5_4
+  - type: Damageable
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 950
+        behaviors:
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ResearchDisk:
+                min: 8
+                max: 8
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/Effects/metalbreak.ogg
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Construction
+    graph: SwarmerChadStep1
+    node: shotgunsawn4_4
+    deconstructionTarget: null
+  - type: Transform
+    noRot: true
+    anchored: false
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+
+- type: entity
+  name: giga aboba part for 5
+  parent: BaseItem
+  id: SwarmerChadPart5
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_parts.rsi
+    state: chad_step_5
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+      - SwarmerRavagerCraftStep5
+      - DroneUsable
+
+- type: entity
+  name: giga aboba part for 6
+  parent: BaseItem
+  id: SwarmerChadPart6
+  description: An immortal aboba
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/chad_parts.rsi
+    state: chad_step_6
+  - type: Item
+    size: Ginormous
+  - type: Tag
+    tags:
+      - SwarmerRavagerCraftStep6
+      - DroneUsable

@@ -1,0 +1,176 @@
+- type: sourcePort
+  id: FirstPortGun
+  name: signal-port-name-firstportgun
+  description: signal-port-description-firstportgun
+  defaultLinks: [ Toggle ]
+
+- type: sourcePort
+  id: SecondPortGun
+  name: signal-port-name-secondportgun
+  description: signal-port-description-secondportgun
+  defaultLinks: [ Toggle ]
+
+- type: sourcePort
+  id: ThirdPortGun
+  name: signal-port-name-thirdportgun
+  description: signal-port-description-thirdportgun
+  defaultLinks: [ Toggle ]
+
+- type: entity
+  parent: BaseComputer
+  id: BaseComputerRadarMonke
+  name: mass scanner computer
+  description: A computer for detecting nearby bodies, displaying them by position and mass.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: solar_screen
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+  - type: GunShipConsole
+    maxRange: 10240
+    second: false
+    third: false
+    firstname: monke-first-button
+    secondname: monke-second-button
+    thirdname: monke-third-button
+  - type: ActivatableUI
+    key: enum.GunShipUiKey.Key
+  - type: UserInterface
+    interfaces:
+      - key: enum.GunShipUiKey.Key
+        type: GunShipMassBoundUserInterface
+  - type: Computer
+    board: RadarConsoleCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#e6e227"
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSource
+    ports:
+      - FirstPortGun
+      - SecondPortGun
+      - ThirdPortGun
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunRnL
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: false
+    third: true
+    firstname: Ракеты
+    secondname: Отключено
+    thirdname: Лазеры
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunLaserGnS
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: false
+    third: true
+    firstname: Гермозатвор
+    secondname: Отключено
+    thirdname: Выстрел
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunLaserGSS
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: true
+    third: true
+    firstname: Гермозатвор
+    secondname: Щит
+    thirdname: Выстрел
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunLaserGnn
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: false
+    third: false
+    firstname: Выстрел
+    secondname: Отключено
+    thirdname: Отключено
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunRSL
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: true
+    third: true
+    firstname: Ракеты
+    secondname: Щит
+    thirdname: Лазеры
+
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunLaserSnS
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: false
+    third: true
+    firstname: Щит
+    secondname: Отключено
+    thirdname: Выстрел
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunLaserShield
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: true
+    third: true
+    firstname: Левый щит
+    secondname: Правый щит
+    thirdname: Передний щит
+
+- type: entity
+  parent: BaseComputerRadarMonke
+  id: ComputerRadarGunLaserShield1
+  name: Monke
+  description: A computer for monke.
+  suffix: Monke
+  components:
+  - type: GunShipConsole
+    second: false
+    third: false
+    firstname: Щит
+    secondname: Отключено
+    thirdname: Отключено

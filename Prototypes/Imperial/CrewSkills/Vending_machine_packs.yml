@@ -1,0 +1,26 @@
+- type: vendingMachineInventory
+  id: VendingMachineManualsAllInvenroty
+  startingInventory:
+    CrewSkillManualBotany: 8
+    CrewSkillManualBaseMed: 8
+    CrewSkillManualBaseConstraction: 8
+    CrewSkillManualBartending: 6
+    CrewSkillManualCooking: 6
+    CrewSkillManualHacking: 6
+    CrewSkillManualBasicAtmos: 4
+    CrewSkillManualInstrumentation: 4
+    CrewSkillManualMaintenance: 4
+    CrewSkillManualMedicalEquipment: 4
+    CrewSkillManualPharmacology: 4
+    CrewSkillManualMediumBotany: 4
+    CrewSkillManualMediumConstruction: 4
+    CrewSkillManualPharmaceuticals: 2
+    CrewSkillManualResearch: 2
+    CrewSkillManualRobotics: 2
+    CrewSkillManualSurgery: 2
+    CrewSkillManualNeuroSurgery: 2
+    CrewSkillManualAtmos: 2
+    CrewSkillManualHardInstrumentation: 2
+    CrewSkillManualPiloting: 2
+    CrewSkillManualShooting: 2
+

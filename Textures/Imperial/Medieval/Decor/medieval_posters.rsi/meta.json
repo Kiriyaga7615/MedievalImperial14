@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "byКощка#8794, wiz and merc are for imperial space",
+    "states": [
+        {
+            "name": "black"
+        },
+        {
+            "name": "wiz"
+        },
+        {
+            "name": "merc"
+        },
+        {
+            "name": "blul"
+        },
+        {
+            "name": "fish"
+        },
+        {
+            "name": "green"
+        },
+        {
+            "name": "hell"
+        },
+        {
+            "name": "red"
+        },
+        {
+            "name": "white"
+        },
+        {
+            "name": "yll"
+        }
+    ]
+}

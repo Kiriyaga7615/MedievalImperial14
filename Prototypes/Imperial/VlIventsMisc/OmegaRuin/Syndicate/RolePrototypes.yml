@@ -1,0 +1,234 @@
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: ComNukeOmegaPreset
+  name: Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Командир
+      - SyndicateNamesNormal
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: hos
+    - type: Loadout
+      prototypes: [ SyndComOmegaGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MedNukeOmegaPreset
+  name: Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Медик
+      - SyndicateNamesNormal
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: brigmedic
+    - type: Loadout
+      prototypes: [ SyndMedOmegaGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: EliteNukeOmegaPreset
+  name: Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Оперативник
+      - SyndicateNamesNormal
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: seniorofficer
+    - type: Loadout
+      prototypes: [ SyndEliteOmegaGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: DefNukeOmegaPreset
+  name: Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Боец
+      - SyndicateNamesNormal
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: security_officer
+    - type: Loadout
+      prototypes: [ SyndDefOmegaGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: JugNukeOmegaPreset
+  name: Preset
+  suffix: Vl, Потерянные
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - Джаггернаут
+      - SyndicateNamesNormal
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: ertsecurityeva
+    - type: Loadout
+      prototypes: [ SyndJugOmegaGear ]
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: CrewSkills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery

@@ -1,0 +1,199 @@
+- type: entity
+  #noSpawn: true
+  id: SpawnComNukeUnUp
+  name: Nuke Spawner
+  suffix: Vl, Без Аплинка, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukecom-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: ComNukeNoUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: hos
+
+- type: entity
+  #noSpawn: true
+  id: SpawnComNukeUp
+  name: Nuke Spawner
+  suffix: Vl, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukecom-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: ComNukeUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: hos
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMedNukeUnUp
+  name: Nuke Spawner
+  suffix: Vl, Без Аплинка, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukemed-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: MedNukeNoUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: brigmedic
+
+- type: entity
+  #noSpawn: true
+  id: SpawnMedNukeUp
+  name: Nuke Spawner
+  suffix: Vl, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukemed-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: MedNukeUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: brigmedic
+
+- type: entity
+  #noSpawn: true
+  id: SpawnEliteNukeUnUp
+  name: Nuke Spawner
+  suffix: Vl, Без Аплинка, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukeelite-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: EliteNukeUnUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: seniorofficer
+
+- type: entity
+  #noSpawn: true
+  id: SpawnEliteNukeUp
+  name: Nuke Spawner
+  suffix: Vl, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukeelite-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: EliteNukeUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: seniorofficer
+
+- type: entity
+  #noSpawn: true
+  id: SpawnDefNukeUnUp
+  name: Nuke Spawner
+  suffix: Vl, Без Аплинка, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukedef-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: DefNukeUnUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: security_officer
+
+- type: entity
+  #noSpawn: true
+  id: SpawnDefNukeUp
+  name: Nuke Spawner
+  suffix: Vl, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukedef-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: DefNukeUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: security_officer
+
+- type: entity
+  #noSpawn: true
+  id: SpawnJugNukeUnUp
+  name: Nuke Spawner
+  suffix: Vl, Без Аплинка, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukejug-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: JugNukeNoUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertsecurityeva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnJugNukeUp
+  name: Nuke Spawner
+  suffix: Vl, Всячина
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-nukejug-name
+      description: vl-gm-desc
+      rules: vl-gm-rules
+    - type: GhostRoleMobSpawner
+      prototype: JugNukeUpPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertsecurityeva

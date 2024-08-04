@@ -1,0 +1,139 @@
+- type: entity
+  name: SkillBooks Spawner
+  id: SkillBooksSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Imperial/CrewSkills/Books.rsi
+          state: bigEng
+    - type: RandomSpawner
+      rarePrototypes:
+        - CrewSkillManualPharmaceuticals
+        - CrewSkillManualPiloting
+        - CrewSkillManualShooting
+        - CrewSkillManualSurgery
+        - CrewSkillManualPiloting
+        - CrewSkillManualAtmos
+        - CrewSkillManualHardInstrumentation
+        - CrewSkillManualRobotics
+        - CrewSkillManualResearch
+        - CrewSkillManualNeuroSurgery
+      rareChance: 0.05
+      prototypes:
+        - CrewSkillManualBotany
+        - CrewSkillManualBaseMed
+        - CrewSkillManualBaseConstraction
+        - CrewSkillManualCooking
+        - CrewSkillManualBartending
+        - CrewSkillManualHacking
+        - CrewSkillManualInstrumentation
+        - CrewSkillManualMaintenance
+        - CrewSkillManualMediumConstruction
+        - CrewSkillManualMediumBotany
+        - CrewSkillManualBasicAtmos
+        - CrewSkillManualMedicalEquipment
+        - CrewSkillManualPharmacology
+      chance: 0.5
+      offset: 0.2
+
+- type: entity
+  name: SmartSkillCard Spawner
+  id: SmartSkillCardSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Imperial/CrewSkills/BrainInterface/SkillCards.rsi
+          state: base
+    - type: RandomSpawner
+      rarePrototypes:
+        - SmartSkillDiskPiloting
+        - SmartSkillDiskAtmos
+        - SmartSkillDiskHardInstrumentation
+        - SmartSkillDiskRobotics
+        - SmartSkillDiskResearch
+        - SmartSkillDiskPharmaceuticals
+        - SmartSkillDiskShooting
+        - SmartSkillDiskSurgery
+      rareChance: 0.05
+      prototypes:
+        - SmartSkillDiskBotany
+        - SmartSkillDiskBaseMed
+        - SmartSkillDiskBaseConstraction
+        - SmartSkillDiskCooking
+        - SmartSkillDiskBartending
+        - SmartSkillDiskHacking
+        - SmartSkillDiskInstrumentation
+        - SmartSkillDiskMaintenance
+        - SmartSkillDiskMediumConstruction
+        - SmartSkillDiskMediumBotany
+        - SmartSkillDiskBasicAtmos
+        - SmartSkillDiskMedicalEquipment
+        - SmartSkillDiskPharmacology
+        - SmartSkillDiskNeuroSurgery
+      chance: 0.5
+      offset: 0.2
+
+- type: entity
+  name: SmartSkillCard Spawner
+  id: SkillCardsAndBooksExpeditionSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Imperial/CrewSkills/BrainInterface/SkillCards.rsi
+          state: base
+    - type: RandomSpawner
+      prototypes:
+        - SmartSkillDiskBotany
+        - SmartSkillDiskBaseMed
+        - SmartSkillDiskBaseConstraction
+        - SmartSkillDiskCooking
+        - SmartSkillDiskBartending
+        - SmartSkillDiskHacking
+        - SmartSkillDiskInstrumentation
+        - SmartSkillDiskMaintenance
+        - SmartSkillDiskMediumConstruction
+        - SmartSkillDiskMediumBotany
+        - SmartSkillDiskBasicAtmos
+        - SmartSkillDiskMedicalEquipment
+        - SmartSkillDiskPharmacology
+        - SmartSkillDiskNeuroSurgery
+        - SmartSkillDiskPiloting
+        - SmartSkillDiskAtmos
+        - SmartSkillDiskHardInstrumentation
+        - SmartSkillDiskRobotics
+        - SmartSkillDiskResearch
+        - SmartSkillDiskPharmaceuticals
+        - SmartSkillDiskShooting
+        - SmartSkillDiskSurgery
+        - SmartSkillDiskNeuroSurgery
+        - CrewSkillManualPharmaceuticals
+        - CrewSkillManualPiloting
+        - CrewSkillManualShooting
+        - CrewSkillManualSurgery
+        - CrewSkillManualPiloting
+        - CrewSkillManualAtmos
+        - CrewSkillManualHardInstrumentation
+        - CrewSkillManualRobotics
+        - CrewSkillManualResearch
+        - CrewSkillManualNeuroSurgery
+        - CrewSkillManualBotany
+        - CrewSkillManualBaseMed
+        - CrewSkillManualBaseConstraction
+        - CrewSkillManualCooking
+        - CrewSkillManualBartending
+        - CrewSkillManualHacking
+        - CrewSkillManualInstrumentation
+        - CrewSkillManualMaintenance
+        - CrewSkillManualMediumConstruction
+        - CrewSkillManualMediumBotany
+        - CrewSkillManualBasicAtmos
+        - CrewSkillManualMedicalEquipment
+        - CrewSkillManualPharmacology
+      chance: 0.5
+      offset: 0.2

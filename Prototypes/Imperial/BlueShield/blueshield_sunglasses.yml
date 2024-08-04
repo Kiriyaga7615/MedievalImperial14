@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesGlassesBlueshield
+  name: Blueshield sunglasses
+  description: Looking through these lenses, every head feels safe!
+  components:
+  - type: Sprite
+    sprite: Imperial/BlueShield/blushieldglass.rsi
+  - type: Clothing
+    sprite: Imperial/BlueShield/blushieldglass.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: ShowSecurityIcons
+  - type: Tag
+    tags:
+    - HudSecurity

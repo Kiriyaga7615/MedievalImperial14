@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: BlueShieldMantle
+  name: BlueShield officer mantle
+  description: Inspires confidence in the person who wears it
+  components:
+  - type: Sprite
+    sprite: Imperial/BlueShield/blueshieldmantle.rsi
+  - type: Clothing
+    sprite: Imperial/BlueShield/blueshieldmantle.rsi

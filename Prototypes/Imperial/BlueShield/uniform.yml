@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBlushieldOfficer
+  name: Blueshield Officer Uniform
+  description: Blueshield Officer Suit.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/blueshield.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/blueshield.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.85

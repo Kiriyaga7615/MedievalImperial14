@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "for imperial space",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "spores0"
+    },
+    {
+      "name": "spores1"
+    },
+    {
+      "name": "spores2"
+    },
+    {
+      "name": "spores3"
+    },
+    {
+      "name": "spores4"
+    },
+    {
+      "name": "spores5"
+    },
+    {
+      "name": "spores6"
+    },
+    {
+      "name": "spores7"
+    },
+    {
+      "name": "spores8"
+    },
+    {
+      "name": "spores9"
+    },
+    {
+      "name": "spores10"
+    },
+    {
+      "name": "spores11"
+    },
+    {
+    "name": "spores12"
+    },
+    {
+    "name": "spores13"
+    },
+    {
+    "name": "spores14"
+    },
+    {
+    "name": "spores15"
+    },
+    {
+    "name": "spores16"
+    },
+    {
+    "name": "spores17"
+    },
+    {
+    "name": "spores18"
+    },
+    {
+    "name": "spores19"
+    },
+    {
+    "name": "spores20"
+    },
+    {
+    "name": "spores21"
+    },
+    {
+    "name": "spores22"
+    },
+    {
+    "name": "spores23"
+    },
+    {
+    "name": "spores24"
+    },
+    {
+    "name": "spores25"
+    },
+    {
+    "name": "spores26"
+    },
+    {
+    "name": "spores27"
+    },
+    {
+    "name": "spores28"
+    },
+    {
+    "name": "spores29"
+    },
+    {
+    "name": "spores30"
+    },
+    {
+    "name": "spores31"
+    },
+    {
+    "name": "spores32"
+    },
+    {
+    "name": "spores33"
+    },
+    {
+    "name": "spores34"
+    },
+    {
+    "name": "spores35"
+    },
+    {
+    "name": "spores36"
+    },
+    {
+    "name": "spores37"
+    },
+    {
+    "name": "spores38"
+    },
+    {
+    "name": "spores39"
+    },
+    {
+    "name": "spores40"
+    },
+    {
+    "name": "spores41"
+    }
+  ]
+}

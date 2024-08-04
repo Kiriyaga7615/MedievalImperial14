@@ -1,0 +1,23 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineEngGun
+  name: Eng weapons store
+  description: It seems he wants to fix you
+  components:
+  - type: VendingMachine
+    pack: EngGunInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: Imperial/TGMC/Vending/marinengi.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["MarineEngineer"]]

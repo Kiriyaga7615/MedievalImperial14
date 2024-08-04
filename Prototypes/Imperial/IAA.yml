@@ -1,0 +1,69 @@
+- type: entity
+  id: SpawnPointIAA
+  parent: SpawnPointJobBase
+  name: IAA
+  components:
+  - type: SpawnPoint
+    job_id: IAA
+  - type: Sprite
+    layers:
+      - state: green
+      - state: lawyer
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconIAA
+  icon:
+    sprite: /Textures/Interface/Misc/imperial_job_icons.rsi
+    state: IAA
+
+- type: job
+  id: IAA
+  name: job-name-iaa
+  description: job-description-iaa
+  playTimeTracker: JobIAA
+  #requirements:
+  #  - !type:RoleTimeRequirement
+  #    role: JobLawyer
+  #    time: 3600 #Imperial role timers
+  #  - !type:RoleTimeRequirement
+  #    role: JobWarden
+  #    time: 7200 #Imperial role timers
+  startingGear: IAAGear
+  icon: JobIconIAA
+  #supervisors: job-supervisors-centcom
+  #canBeAntag: false
+  #access:
+  #  - Service
+  #  - Brig
+  #  - Maintenance
+  #  - Command
+  #  - External
+  #  - Lawyer
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: BibleUser
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+
+- type: startingGear
+  id: IAAGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth22  # TODO change jumpsuit to randomiser of the 4 variants
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsCowboyBlack
+    #id: IAAPDA
+    #eyes: ClothingEyesGlassesSunglasses
+    #ears: ClothingHeadsetIAA
+    #neck: ClothingNeckLawyerbadge
+    belt: Bible
+    pocket1: MedievalRevent25
+    pocket2: MedievalHandheldHealthAnalyzer
+    head: ClothingHeadHatPlaguedoctor
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth22
+  satchel: ClothingBackpackSatchelIAAFilled
+  duffelbag: ClothingBackpackDuffelIAAFilled
+

@@ -1,0 +1,13 @@
+- type: vendingMachineInventory
+  id: LeaderUniformStore
+  startingInventory:
+   ClothingHeadHelmetArgeo: 4
+   ClothingOuterArmorArgeo: 4
+   ClothingEyesHudMarineCMD: 4
+   ClothingBeltMilitaryWebbing: 4
+   ClothingMaskGasBalaclava: 4
+   ClothingHeadHatBeretCaptainSheriff: 4
+   ClothingMaskBreath: 4
+   YellowOxygenTankFilled: 4
+
+

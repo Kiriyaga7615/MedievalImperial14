@@ -1,0 +1,43 @@
+- type: entity
+  id: RIGCETGMC
+  parent: BaseJetpack
+  name: jetpack
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Clothing/Backpacks/RIG/ce.rsi
+  - type: Clothing
+    sprite: Imperial/TGMC/Clothing/Backpacks/RIG/ce.rsi
+    slots:
+      - Back
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 13 minutes of thrust
+      volume: 5
+      temperature: 293.15
+      moles:
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+    enabled: false
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: Storage
+    grid:
+    - 0,0,6,6
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: Item
+    size: Ginormous

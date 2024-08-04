@@ -1,0 +1,54 @@
+- type: job
+  id: SeniorOfficer
+  name: job-name-senior-officer
+  description: job-description-senior-officer
+  playTimeTracker: JobSeniorOfficer
+  #psychosisGainResist: 0.75 # psychosis
+  #requirements:
+  #  - !type:RoleTimeRequirement
+  #    role: JobWarden
+  #    time: 10800 #Imperial role timers
+  startingGear: SeniorOfficerGear
+  icon: "JobIconSeniorOfficer"
+  supervisors: job-supervisors-hos
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Mana
+        maxMana: 160
+        regen: 1.2
+  #canBeAntag: false
+  #access:
+  #- Security
+  #- Brig
+  #- Maintenance
+  #- Service
+  #- External
+  #special:
+  #- !type:AddImplantSpecial
+  #  implants: [ MindShieldImplant ]
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillPiloting
+  #- skillShooting
+
+- type: startingGear
+  id: SeniorOfficerGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    back: MedievalClothingBackpackSatchelLeatherLegionMagic
+    shoes: MedievalShoesChamber
+    #id: PassengerPDA
+    #ears: ClothingHeadsetGrey
+    outerClothing: MedievalClothingOuterArmorCharmerLight
+    pocket1: MedievalRevent50
+    pocket2: MedievalBrutepack
+    neck: MedievalClothingNeckCloakClanEagle
+    #belt: MedievalFalshionT3Legion
+    head: MedievalClothingHeadHelmetCharmerLight
+    id: MedievalLeatherKey
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth23
+  satchel: MedievalClothingBackpackSatchelLeatherLegionMagic
+  duffelbag: MedievalClothingBackpackSatchelLeatherLegionMagic

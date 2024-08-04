@@ -1,0 +1,10 @@
+- type: entity
+  name: library point
+  id: LibraryPoint
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: green
+    - type: CrewSkillsLibraryPoint
+      radius: 3

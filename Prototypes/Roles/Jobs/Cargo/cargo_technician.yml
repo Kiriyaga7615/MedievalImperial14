@@ -1,0 +1,43 @@
+- type: job
+  id: CargoTechnician
+  name: job-name-cargotech
+  description: job-description-cargotech
+  playTimeTracker: JobCargoTechnician
+  startingGear: CargoTechGear
+  icon: "JobIconCargoTechnician"
+  supervisors: лидер
+  #requirements:
+  #- !type:OverallPlaytimeRequirement
+  #    time: 7200 #Imperial role timers
+  #access:
+  #- Cargo
+  #- Maintenance
+  #- External # upstream transfered idk need or not
+  #extendedAccess:
+  #- Salvage
+  skills:
+    #- skillPiloting
+    - skillBotany
+    - skillBaseMed
+    - skillBaseConstraction
+
+- type: startingGear
+  id: CargoTechGear
+  equipment:
+    head: MedievalClothingHeadHelmetHood
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth1
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsSalvage
+    #eyes: ClothingEyesGlassesSunglasses #Imperial
+    #outerClothing: ClothingOuterArmorQMCoat #Imperial
+    id: MedievalFarmerKey
+    #ears: ClothingHeadsetQM
+    belt: MedievalCoinBag
+    pocket1: MedievalDaggerT3
+    pocket2: MedievalRevent50
+    gloves: ClothingHandsGlovesColorBrown
+    mask: MedievalMaskFace
+    neck: MedievalClothingNeckCloakClanMerc
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth1
+  satchel: ClothingBackpackSatchelQuartermasterFilled
+  duffelbag: ClothingBackpackDuffelQuartermasterFilled

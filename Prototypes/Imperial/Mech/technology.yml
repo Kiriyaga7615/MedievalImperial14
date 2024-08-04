@@ -1,0 +1,185 @@
+- type: technology
+  id: MechMed1
+  name: research-technology-mech-med1
+  icon:
+    sprite: Imperial/Mech/mecha.rsi
+    state: odysseus
+  discipline: CivilianServices
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - OdysseusArmor
+  - OdysseusHarness
+  - OdysseusLLeg
+  - OdysseusRLeg
+  - OdysseusLArm
+  - OdysseusRArm
+  - OdysseusPeripheralsElectronics
+  - OdysseusCentralElectronics
+  - MechEquipmentGrabberMed
+  - MechEquipmentMedNanobotBurn1
+  - MechEquipmentMedNanobotAirloss1
+  - MechEquipmentMedNanobotBrute1
+
+- type: technology
+  id: MechMed2
+  name: research-technology-mech-med2
+  icon:
+    sprite: Imperial/Mech/mecha_equipment.rsi
+    state: atmos
+  discipline: CivilianServices
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - MechEquipmentMedNanobotBurn2
+  - MechEquipmentMedNanobotAirloss2
+  - MechEquipmentMedNanobotBrute2
+  - MechEquipmentAtmos
+
+- type: technology
+  id: MechMed3
+  name: research-technology-mech-med2
+  icon:
+    sprite: Imperial/Mech/mecha_equipment.rsi
+    state: mednanobot
+  discipline: CivilianServices
+  tier: 3
+  cost: 12000
+  recipeUnlocks:
+  - MechEquipmentMedNanobotBurn3
+  - MechEquipmentMedNanobotAirloss3
+  - MechEquipmentMedNanobotBrute3
+
+- type: technology
+  id: MechSec1
+  name: research-technology-mech-sec1
+  icon:
+    sprite: Imperial/Mech/mecha.rsi
+    state: gygax
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - GygaxArmor
+  - GygaxHarness
+  - GygaxLLeg
+  - GygaxRLeg
+  - GygaxLArm
+  - GygaxRArm
+  - GygaxPeripheralsElectronics
+  - GygaxCentralElectronics
+  - MechEquipmentPilotDef
+  - WeaponDisablerMech
+  - WeaponAdvancedLaserMech
+  - CyberneticMechMachineGunIonHeavy
+  - CyberneticMechMachineGunFlare
+
+
+- type: technology
+  id: MechSec2
+  name: research-technology-mech-sec2
+  icon:
+    sprite: Imperial/Mech/mecha.rsi
+    state: durand
+  discipline: Arsenal
+  tier: 3
+  cost: 18000
+  recipeUnlocks:
+  - DurandArmor
+  - DurandHarness
+  - DurandLLeg
+  - DurandRLeg
+  - DurandLArm
+  - DurandRArm
+  - DurandPeripheralsElectronics
+  - DurandCentralElectronics
+  - CyberneticMechMachineGun
+  - CyberneticMechMachineGunHeavy
+  - MechEquipmentMachineGunIronStorm
+  - MagazineMechaIronStorm
+  - WeaponLauncherMultipleRocketMech
+  - CartridgeRocketMech
+  - MechEquipmentFistNT
+
+- type: technology
+  id: MechExp1
+  name: research-technology-mech-exp1
+  icon:
+    sprite: Imperial/Mech/mecha_equipment.rsi
+    state: tesla
+  discipline: Experimental
+  tier: 1
+  cost: 3500
+  recipeUnlocks:
+  - MechEquipmentSpeed1
+  - MechEquipmentHp1
+
+- type: technology
+  id: MechExp2
+  name: research-technology-mech-exp2
+  icon:
+    sprite: Imperial/Mech/mecha_equipment.rsi
+    state: mecha_abooster_ccw
+  discipline: Experimental
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - MechEquipmentSpeed2
+  - MechEquipmentHp2
+  - MechEquipmentSmoke
+
+- type: technology
+  id: MechExp3
+  name: research-technology-mech-exp3
+  icon:
+    sprite: Imperial/Mech/mecha_equipment.rsi
+    state: mecha_teleport
+  discipline: Experimental
+  tier: 3
+  cost: 12000
+  recipeUnlocks:
+  - MechEquipmentSpeed3
+  - MechEquipmentHp3
+  - MechEquipmentTeleport
+
+- type: technology
+  id: MechInd2
+  name: research-technology-mech-ind2
+  icon:
+    sprite: Imperial/Mech/mecha.rsi
+    state: clarke
+  discipline: Industrial
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - ClarkeHarness
+  - ClarkeLeg
+  - ClarkeLArm
+  - ClarkeRArm
+  - ClarkePeripheralsElectronics
+  - ClarkeCentralElectronics
+  - MechEquipmentDrille
+  - FireHarness
+  - FireLLeg
+  - FireRLeg
+  - FireLArm
+  - FireRArm
+  - FirePeripheralsElectronics
+  - FireCentralElectronics
+  - MechEquipmentThruster
+  - WeaponProtoKineticAcceleratorMech
+  - MechEquipmentRemdrone2
+
+- type: technology
+  id: MechInd3
+  name: research-technology-mech-ind3
+  icon:
+    sprite: Imperial/Mech/mecha_equipment.rsi
+    state: mecha_diamond_drill
+  discipline: Industrial
+  tier: 3
+  cost: 12000
+  recipeUnlocks:
+  - MechEquipmentDrilleDiamond
+  - MechEquipmentRemdrone3
+

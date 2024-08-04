@@ -1,0 +1,12 @@
+- type: job
+  id: JanitorBorg
+  name: job-name-janitorborg
+  playTimeTracker: JobBorgJanitor
+  setPreference: false
+  supervisors: job-supervisors-ai
+  startingGear: BorgGear
+  #weight: 20
+  icon: "JobIconAI"
+  canBeAntag: false
+  jobEntity: janborg
+  sponsorsOnly: false

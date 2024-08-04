@@ -1,0 +1,32 @@
+- type: accessLevel
+  id: MarineLeader
+  name: id-card-access-level-marine-leader
+
+- type: accessLevel
+  id: Marinesoldier
+  name: id-card-access-level-marine-soldier
+
+- type: accessLevel
+  id: MarineMedic
+  name: id-card-access-level-marine-medic
+
+- type: accessLevel
+  id: MarineEngineer
+  name: id-card-access-level-marine-engineer
+
+- type: accessLevel
+  id: MarinePilotMech
+  name: id-card-access-level-pilot-mech
+
+- type: accessLevel
+  id: Marinepilot
+  name: id-card-access-level-pilot
+
+- type: accessLevel
+  id: MarineComOper
+  name: id-card-access-level-com-oper
+
+- type: accessLevel
+  id: MarineFieldCommander
+  name: id-card-access-level-field-commander
+

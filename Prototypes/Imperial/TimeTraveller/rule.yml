@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseGameRule
+  id: TimeTraveller
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 7.5
+    duration: 1
+    earliestStart: 15
+    reoccurrenceDelay: 600
+    minimumPlayers: 20
+  - type: TimeTravellerSpawnRule
+    spawnerPrototype: TimeTravellerSpawn

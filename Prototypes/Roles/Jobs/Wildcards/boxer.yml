@@ -1,0 +1,32 @@
+- type: job
+  id: Boxer
+  name: job-name-boxer
+  description: job-description-boxer
+  playTimeTracker: JobBoxer
+  startingGear: BoxerGear
+  icon: "JobIconBoxer"
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 #Imperial role timers
+  supervisors: job-supervisors-hop
+  access:
+    - Service
+    - Maintenance
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+
+- type: startingGear
+  id: BoxerGear
+  equipment:
+    jumpsuit: UniformShortsRed
+    back: ClothingBackpackFilled
+    id: BoxerPDA
+    ears: ClothingHeadsetService
+    gloves: ClothingHandsGlovesBoxingRed
+    shoes: ClothingShoesColorRed
+    belt: ClothingBeltChampion
+  innerClothingSkirt: UniformShortsRedWithTop
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled

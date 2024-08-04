@@ -1,0 +1,52 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/tgstation/tgstation/blob/master/ and edited by TopBat",
+    "states": [
+        {
+            "name": "idle",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "dead"
+        },
+        {
+            "name": "e_l",
+            "directions": 4
+        },
+        {
+            "name": "e",
+            "directions": 4
+        },
+        {
+            "name": "tech",
+            "directions": 4
+        },
+        {
+            "name": "disabled",
+            "directions": 4
+        }
+    ]
+}

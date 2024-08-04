@@ -1,0 +1,114 @@
+- type: entity
+  parent: PosterBase
+  name: Постер #PROSTITE NO TAK NUJNO...
+  id: TGMCPosterAres
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: Ares
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterCybersun
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: cybersun
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterEnlist
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: Enlist
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterKepler
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: Kepler
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterLoski
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: Loski
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterLuna
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: Luna
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterNT
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: nanotrasen
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterSyndicate
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: syndicate
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterTerra
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: Terra
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: TGMCPosterAres
+  id: TGMCPosterTG
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Posters/posters.rsi
+    state: TG
+    scale: 0.85, 0.85
+
+- type: entity
+  parent: MarkerBase
+  id: RandomTGMCPoster
+  name: random tgmc poster spawner
+  components:
+  - type: Sprite
+    layers:
+      - sprite: Imperial/TGMC/Posters/posters.rsi
+        state: TG
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+      - TGMCPosterAres
+      - TGMCPosterCybersun
+      - TGMCPosterEnlist
+      - TGMCPosterKepler
+      - TGMCPosterLoski
+      - TGMCPosterLuna
+      - TGMCPosterNT
+      - TGMCPosterSyndicate
+      - TGMCPosterTerra
+      - TGMCPosterTG
+    chance: 1

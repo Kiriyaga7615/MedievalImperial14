@@ -1,0 +1,80 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "imperial",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "LeaderA"
+        },
+        {
+            "name": "LeaderB"
+        },
+        {
+            "name": "LeaderC"
+        },
+        {
+            "name": "LeaderD"
+        },
+        {
+            "name": "MarineA"
+        },
+        {
+            "name": "MarineB"
+        },
+        {
+            "name": "MarineC"
+        },
+        {
+            "name": "MarineD"
+        },
+        {
+            "name": "EngineerA"
+        },
+        {
+            "name": "EngineerB"
+        },
+        {
+            "name": "EngineerC"
+        },
+        {
+            "name": "EngineerD"
+        },
+        {
+            "name": "MedicalA"
+        },
+        {
+            "name": "MedicalB"
+        },
+        {
+            "name": "MedicalC"
+        },
+        {
+            "name": "MedicalD"
+        },
+        {
+            "name": "CommanderOperation"
+        },
+        {
+            "name": "FieldCommander"
+        },
+        {
+            "name": "PilotShuttle"
+        },
+        {
+            "name": "PilotMechA"
+        },
+        {
+            "name": "PilotMechB"
+        },
+        {
+            "name": "PilotMechC"
+        },
+        {
+            "name": "PilotMechD"
+        }
+    ]
+}

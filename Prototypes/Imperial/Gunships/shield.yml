@@ -1,0 +1,135 @@
+- type: entity
+  parent: BaseStructure
+  id: ContainmentFieldGeneratorShieldMk1
+  name: containment field generator
+  description: A machine that generates a containment field when powered by an emitter. Keeps the Singularity docile.
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.4
+        density: 190
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+  - type: InteractionOutline
+  - type: Anchorable
+  - type: Sprite
+    sprite: Structures/Power/Generation/Singularity/containment.rsi
+    state: icon
+    noRot: true
+    layers:
+      - state: icon
+      - state: p1
+        map: ["powerLight"]
+        visible: true
+        shader: unshaded
+      - state: a1
+        map: ["fieldLight"]
+        visible: true
+        shader: unshaded
+      - state: on
+        map: ["connectedLight"]
+        visible: true
+        shader: unshaded
+  - type: Icon
+    sprite: Structures/Power/Generation/Singularity/containment.rsi
+    state: icon
+  - type: PointLight
+    enabled: true
+    color: "#4080FF"
+    radius: 2
+    energy: 82.5
+    softness: 32.0
+    castShadows: false
+  - type: Appearance
+  - type: GunshipShield
+    baseActiveFieldTime: 2.5
+    Radius: 6
+    reloadTime: 20
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 800
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Damageable
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Toggle
+  - type: ShuttleRender
+    radius: 0
+
+- type: entity
+  parent: ContainmentFieldGeneratorShieldMk1
+  id: ContainmentFieldGeneratorShieldMk2
+  name: containment field generator
+  description: A machine that generates a containment field when powered by an emitter. Keeps the Singularity docile.
+  components:
+  - type: GunshipShield
+    baseActiveFieldTime: 3.5
+    Radius: 6.5
+    reloadTime: 16
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 1400
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Damageable
+
+- type: entity
+  parent: ContainmentFieldGeneratorShieldMk1
+  id: ContainmentFieldGeneratorShieldMk3
+  name: containment field generator
+  description: A machine that generates a containment field when powered by an emitter. Keeps the Singularity docile.
+  components:
+  - type: GunshipShield
+    baseActiveFieldTime: 4
+    Radius: 7
+    reloadTime: 14
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 2500
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Effects/metalbreak.ogg
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetSteel1:
+              min: 5
+              max: 5
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+  - type: Damageable

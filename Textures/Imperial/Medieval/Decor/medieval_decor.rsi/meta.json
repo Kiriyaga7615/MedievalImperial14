@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "by dantanat#7095",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "box"
+    },
+    {
+      "name": "booktable_fire"
+    },
+    {
+      "name": "booktable_base"
+    },
+    {
+      "name": "booktable_light"
+    },
+    {
+      "name": "booktable_water"
+    },
+    {
+      "name": "barier"
+    },
+    {
+      "name": "trapdoor"
+    },
+    {
+      "name": "ladder"
+    },
+    {
+      "name": "mogila1"
+    },
+    {
+      "name": "mogila2"
+    },
+    {
+      "name": "mogila3"
+    },
+    {
+      "name": "scroll1"
+    },
+    {
+      "name": "scroll2"
+    },
+    {
+      "name": "scroll3"
+    },
+    {
+      "name": "bags1"
+    },
+    {
+      "name": "bags2"
+    },
+    {
+      "name": "bags3"
+    },
+    {
+      "name": "bags4"
+    },
+    {
+      "name": "bags5"
+    },
+    {
+      "name": "ohapka"
+    },
+    {
+      "name": "wheat1"
+    },
+    {
+      "name": "bed"
+    },
+    {
+      "name": "bed2"
+    },
+    {
+      "name": "wheat2"
+    },
+    {
+      "name": "torch"
+    },
+    {
+      "name": "sign_1"
+    },
+    {
+      "name": "sign_2"
+    },
+    {
+      "name": "sign_3"
+    },
+    {
+      "name": "plushie_necro"
+    },
+    {
+      "name": "plushie_traveller"
+    },
+    {
+      "name": "plushie_archer"
+    },
+    {
+      "name": "plushie_wizard"
+    },
+    {
+      "name": "danger"
+    },
+    {
+      "name": "danger2"
+    },
+    {
+      "name": "danger3"
+    },
+    {
+      "name": "rack"
+    },
+    {
+      "name": "jar1"
+    },
+    {
+      "name": "jar2"
+    },
+    {
+      "name": "jar3"
+    },
+    {
+      "name": "jar4"
+    },
+    {
+      "name": "map1"
+    },
+    {
+      "name": "map2"
+    },
+    {
+      "name": "paint1"
+    },
+    {
+      "name": "paint2"
+    },
+    {
+      "name": "shield1"
+    },
+    {
+      "name": "shield2"
+    },
+    {
+      "name": "pero"
+    },
+    {
+      "name": "torch_colone",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "kolka"
+    }
+  ]
+}

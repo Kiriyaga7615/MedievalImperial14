@@ -1,0 +1,401 @@
+- type: entity
+  name: disabler
+  parent: BaseWeaponBattery
+  id: WeaponSwarmerUniversal
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+    - type: Sprite
+      sprite: Imperial/Swarmers/small_disabler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-4
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Gun
+      fireRate: 1.4
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerSwarmer
+      fireCost: 12000
+    - type: BatteryWeaponFireModes
+      fireModes:
+      - proto: BulletDisablerSwarmer
+        fireCost: 12000
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: false
+    - type: Appearance
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 2400
+    - type: Battery
+      maxCharge: 80000
+      startingCharge: 80000
+
+- type: entity
+  name: disabler
+  parent: BaseWeaponBattery
+  id: WeaponSwarmerUniversalBad
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+    - type: Sprite
+      sprite: Imperial/Swarmers/small_disabler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-4
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Gun
+      fireRate: 1
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerSwarmer
+      fireCost: 12000
+    - type: BatteryWeaponFireModes
+      fireModes:
+      - proto: BulletDisablerSwarmer
+        fireCost: 12000
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: false
+    - type: Appearance
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 1400
+    - type: Battery
+      maxCharge: 60000
+      startingCharge: 60000
+
+- type: entity
+  name: disabler
+  parent: BaseWeaponBattery
+  id: WeaponSwarmer
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+    - type: Sprite
+      sprite: Imperial/Swarmers/big_disabler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-4
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Gun
+      fireRate: 3
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerSwarmer
+      fireCost: 7000
+    - type: BatteryWeaponFireModes
+      fireModes:
+      - proto: BulletDisablerSwarmer
+        fireCost: 7000
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: false
+    - type: Appearance
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 2500
+    - type: Battery
+      maxCharge: 80000
+      startingCharge: 80000
+
+- type: entity
+  name: disabler
+  parent: BaseWeaponBattery
+  id: WeaponSwarmerSniper
+  description: A self-defense weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+    - type: Sprite
+      sprite: Imperial/Swarmers/sniper_disabler.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-4
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Gun
+      fireRate: 0.35
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerSwarmerSniper
+      fireCost: 14000
+    - type: BatteryWeaponFireModes
+      fireModes:
+      - proto: BulletDisablerSwarmerSniper
+        fireCost: 14000
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: false
+    - type: Appearance
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 2000
+    - type: Battery
+      maxCharge: 80000
+      startingCharge: 80000
+
+- type: entity
+  name: stun baton
+  parent: BaseItem
+  id: SwarmerStunbaton
+  description: A stun baton for incapacitating people with. Actively harming with this is considered bad tone.
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/swarmbaton.rsi
+    layers:
+    - state: stunbaton_off
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: Stunbaton
+    energyPerUse: 10
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0.1
+    bluntStaminaDamageFactor: 2.0
+    angle: 60
+    animation: WeaponArcSlash
+  - type: StaminaDamageOnHit
+    damage: 35
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 35
+    sound: /Audio/Weapons/egloves.ogg
+  - type: Battery
+    maxCharge: 20000
+    startingCharge: 20000
+  - type: Item
+    size: Small
+  - type: DisarmMalus
+    malus: 0.225
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+     enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: {state: stunbaton_on}
+          False: {state: stunbaton_off}
+  - type: StaticPrice
+    price: 100
+  - type: Riggable
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Explosive
+    explosionType: Default
+    intensitySlope: 1.5
+    maxIntensity: 2
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 3000
+
+
+
+
+
+- type: entity
+  id: BulletDisablerSwarmer
+  name: proto
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 1
+    soundHit:
+      path: "/Audio/Weapons/tap.ogg"
+    soundForce: true
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: EmpOnTrigger
+    range: 0.4
+    energyConsumption: 500
+  - type: StaminaDamageOnCollide
+    damage: 30
+
+- type: entity
+  id: BulletDisablerSwarmerSniper
+  name: proto
+  parent: BaseBulletTrigger
+  noSpawn: true
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 1
+    soundHit:
+      path: "/Audio/Weapons/tap.ogg"
+    soundForce: true
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: EmpOnTrigger
+    range: 0.4
+    energyConsumption: 1200
+  - type: StaminaDamageOnCollide
+    damage: 55
+
+- type: entity
+  name: omnitool
+  parent: BaseItem
+  id: SwarmerOmnitool
+  description: A swarmer's best friend.
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/swarmnitool.rsi
+    state: omnitool-screwing
+  - type: Item
+    sprite: Imperial/Swarmers/swarmnitool.rsi
+    size: Small
+  - type: Tag
+    tags:
+    - Multitool
+    - DroneUsable
+  - type: Prying
+    enabled: false
+  - type: Tool
+    qualities:
+      - Screwing
+    speed: 1.2
+    useSound: /Audio/Items/drill_use.ogg
+  - type: MultipleTool
+    statusShowBehavior: true
+    entries:
+      - behavior: Screwing
+        sprite:
+          sprite: Imperial/Swarmers/swarmnitool.rsi
+          state: omnitool-screwing
+        useSound:
+          path: /Audio/Items/drill_use.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Prying
+        sprite:
+          sprite: Imperial/Swarmers/swarmnitool.rsi
+          state: omnitool-prying
+        useSound:
+          path: /Audio/Items/jaws_pry.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Anchoring
+        sprite:
+          sprite: Imperial/Swarmers/swarmnitool.rsi
+          state: omnitool-wrenching
+        useSound:
+          path: /Audio/Items/ratchet.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: Imperial/Swarmers/swarmnitool.rsi
+          state: omnitool-snipping
+        useSound:
+          path: /Audio/Items/jaws_cut.ogg
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+      - behavior: Pulsing
+        sprite:
+          sprite: Imperial/Swarmers/swarmnitool.rsi
+          state: omnitool-pulsing
+        changeSound:
+          path: /Audio/Items/change_drill.ogg
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+
+- type: entity
+  name: experimental welding tool
+  parent: Welder
+  id: WelderSwarmer
+  description: "An experimental welder capable of self-fuel generation and less harmful to the eyes."
+  components:
+  - type: Sprite
+    sprite: Imperial/Swarmers/welder_swarmer.rsi
+  - type: Item
+  - type: SolutionContainerManager
+    solutions:
+      Welder:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1000
+        maxVol: 1000
+  - type: PointLight
+    enabled: false
+    radius: 1.5
+    color: lightblue
+  - type: SolutionRegeneration
+    solution: Welder
+    generated:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 50
+  - type: QualityOfItem
+    qualityWeights:
+      0: 0
+      1: 0
+      2: 0
+      3: 100
+      4: 0
+      5: 0
+      6: 0
+  - type: MeleeWeapon
+    damage:
+      types:
+        Structural: 15
+  - type: Welder
+    litMeleeDamageBonus:
+      types:
+        Structural: 5

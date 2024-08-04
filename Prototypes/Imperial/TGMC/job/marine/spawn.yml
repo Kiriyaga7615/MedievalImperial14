@@ -1,0 +1,257 @@
+#Cmd
+- type: entity
+  id: SpawnMarineCmdOperTGMC
+  parent: SpawnPointJobBase
+  name: CommanderOperationSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineCmdOper
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineCmdFieldTGMC
+  parent: SpawnPointJobBase
+  name: FieldCommanderSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineCmdField
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineCmdATGMC
+  parent: SpawnPointJobBase
+  name: MarineCmdASpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineCmdA
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineCmdBTGMC
+  parent: SpawnPointJobBase
+  name: MarineCmdBSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineCmdB
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineCmdCTGMC
+  parent: SpawnPointJobBase
+  name: MarineCmdCSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineCmdC
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineCmdDTGMC
+  parent: SpawnPointJobBase
+  name: MarineCmdDSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineCmdD
+  - type: Sprite
+    layers:
+      - state: green
+
+#Pilot
+- type: entity
+  id: SpawnPilotTGMC
+  parent: SpawnPointJobBase
+  name: PilotShuttleSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarinePilot
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnPilotATGMC
+  parent: SpawnPointJobBase
+  name: PilotMechASpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarinePilotMechA
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnPilotBTGMC
+  parent: SpawnPointJobBase
+  name: PilotMechBSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarinePilotMechB
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnPilotCTGMC
+  parent: SpawnPointJobBase
+  name: PilotMechCSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarinePilotMechC
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnPilotDTGMC
+  parent: SpawnPointJobBase
+  name: PilotMechDSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarinePilotMechD
+  - type: Sprite
+    layers:
+      - state: green
+
+#Marine
+- type: entity
+  id: SpawnMarineATGMC
+  parent: SpawnPointJobBase
+  name: MarineASpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineA
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineBTGMC
+  parent: SpawnPointJobBase
+  name: MarineBSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineB
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineCTGMC
+  parent: SpawnPointJobBase
+  name: MarineCSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineC
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineDTGMC
+  parent: SpawnPointJobBase
+  name: MarineDSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineD
+  - type: Sprite
+    layers:
+      - state: green
+
+#Medic
+- type: entity
+  id: SpawnMarineMedicATGMC
+  parent: SpawnPointJobBase
+  name: MarineMedicASpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineMedicA
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineMedicBTGMC
+  parent: SpawnPointJobBase
+  name: MarineMedicBSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineMedicB
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineMedicCTGMC
+  parent: SpawnPointJobBase
+  name: MarineMedicCSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineMedicC
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineMedicDTGMC
+  parent: SpawnPointJobBase
+  name: MarineMedicDSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineMedicD
+  - type: Sprite
+    layers:
+      - state: green
+
+#Eng
+- type: entity
+  id: SpawnMarineEngATGMC
+  parent: SpawnPointJobBase
+  name: MarineEngASpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineEngA
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineEngBTGMC
+  parent: SpawnPointJobBase
+  name: MarineEngBSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineEngB
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineEngCTGMC
+  parent: SpawnPointJobBase
+  name: MarineEngCSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineEngC
+  - type: Sprite
+    layers:
+      - state: green
+
+- type: entity
+  id: SpawnMarineEngDTGMC
+  parent: SpawnPointJobBase
+  name: MarineEngDSpawn
+  components:
+  - type: SpawnPoint
+    job_id: MarineEngD
+  - type: Sprite
+    layers:
+      - state: green

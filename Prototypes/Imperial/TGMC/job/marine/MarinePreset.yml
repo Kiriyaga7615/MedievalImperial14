@@ -1,0 +1,619 @@
+#Pilot
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarinePilotPreset
+  name: Pilot shuttle
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarinePilotGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarinePilotMechAPreset
+  name: Pilot Mech A
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarinePilotMechAGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillRobotics #Hard
+        - skillShooting
+
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarinePilotMechBPreset
+  name: Pilot Mech B
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarinePilotMechBGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillRobotics #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarinePilotMechCPreset
+  name: Pilot Mech C
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarinePilotMechCGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillRobotics #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarinePilotMechDPreset
+  name: Pilot Mech D
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarinePilotMechDGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillRobotics #Hard
+        - skillShooting
+
+#Cmd
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineCmdOperPreset
+  name: Oper CMD
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryLeader
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineCmdOperGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting #Hard
+        - skillShooting
+
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineCmdFCPreset
+  name: FC
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryLeader
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineCmdFieldGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineCmdAPreset
+  name: Leader Marine A
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryLeader
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineCmdAGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineCmdBPreset
+  name: Leader Marine B
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryLeader
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineCmdBGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineCmdCPreset
+  name: Leader Marine C
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryLeader
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineCmdCGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineCmdDPreset
+  name: Leader Marine D
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitaryLeader
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineCmdDGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillPiloting #Hard
+        - skillShooting
+
+#Marine
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineAPreset
+  name: Marine A
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineAGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineBPreset
+  name: Marine B
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineBGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineCPreset
+  name: Marine C
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineCGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineDPreset
+  name: Marine D
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineDGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillShooting
+
+#Medic
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineMedicAPreset
+  name: Marine Medic A
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineMedicAGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillMedicalEquipment #Medium
+        - skillPharmacology
+        - skillShooting #Hard
+        - skillSurgery
+        - skillNeuroSurgery
+
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineMedicBPreset
+  name: Marine Medic B
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineMedicBGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillMedicalEquipment #Medium
+        - skillPharmacology
+        - skillShooting #Hard
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineMedicCPreset
+  name: Marine Medic C
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineMedicCGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillMedicalEquipment #Medium
+        - skillPharmacology
+        - skillShooting #Hard
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineMedicDPreset
+  name: Marine Medic D
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineMedicDGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillMedicalEquipment #Medium
+        - skillPharmacology
+        - skillShooting #Hard
+        - skillSurgery
+        - skillNeuroSurgery
+
+#engineer
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineEngAPreset
+  name: Marine Eng A
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineEngAGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking #Easy
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillBasicAtmos
+        - skillHardInstrumentation #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineEngBPreset
+  name: Marine Eng B
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineEngBGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking #Easy
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillBasicAtmos
+        - skillHardInstrumentation #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineEngCPreset
+  name: Marine Eng C
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineEngCGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking #Easy
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillBasicAtmos
+        - skillHardInstrumentation #Hard
+        - skillShooting
+
+- type: entity
+  noSpawn: false
+  parent: MobHuman
+  id: MarineEngDPreset
+  name: Marine Eng D
+  suffix: TGMC
+  components:
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstMilitary
+      - names_last
+    - type: Sprite
+      netsync: false
+      sprite: Markers/jobs.rsi
+      state: green
+    - type: Loadout
+      prototypes: [ MarineEngDGear ]
+    - type: CrewSkills #imperial skills
+      skills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillHacking #Easy
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillBasicAtmos
+        - skillHardInstrumentation #Hard
+        - skillShooting
+

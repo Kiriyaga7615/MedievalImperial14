@@ -1,0 +1,6 @@
+﻿- type: antag
+  id: Cultist
+  name: cultist-name
+  antagonist: true
+  setPreference: false
+  objective: cultist-objective

@@ -1,0 +1,58 @@
+- type: job
+  id: HeadOfSecurity
+  name: Легат синего орла
+  description: Командуйте этими олухами и приведите их к победе!
+  playTimeTracker: JobHeadOfSecurity
+  psychosisGainResist: 0.85 # psychosis
+  requirements:
+    #- !type:RoleTimeRequirement
+    #  role: JobWarden
+    #  time: 10800 #Imperial role timers
+  weight: 10
+  startingGear: HoSGear
+  icon: "JobIconHeadOfSecurity"
+  requireAdminNotify: true
+  supervisors: никто
+  #canBeAntag: false
+  #access:
+  #- HeadOfSecurity
+  #- Command
+  #- Brig
+  #- Security
+  #- Armory
+  #- Maintenance
+  #- Service
+  #- External
+  #- Detective
+  #- Cryogenics
+  #special:
+  #- !type:AddImplantSpecial
+  #  implants: [ MindShieldImplant ]
+  #- !type:AddComponentSpecial
+  #  components:
+  #    - type: CommandStaff
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  - skillPiloting
+  - skillShooting
+
+- type: startingGear
+  id: HoSGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth26
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalClothingFeetSteel
+    #id: PassengerPDA
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent100
+    pocket2: MedievalBrutepack
+    neck: MedievalClothingNeckCloakClanEagle
+    belt: MedievalFalshionT3Legion
+    head: MedievalClothingHeadHelmetLegionLegat
+    id: MedievalLeatherKey
+    gloves: MedievalIronGloves
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth26
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

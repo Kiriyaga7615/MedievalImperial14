@@ -1,0 +1,18 @@
+- type: entity
+  parent: BaseGameRule
+  id: Virusinfection
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 7.5
+    duration: 400
+    earliestStart: 25
+    reoccurrenceDelay: 600
+    minimumPlayers: 20
+    #startAnnouncement: station-biodanger-start-announcement
+    #startAudio: # Corvax-Announcements
+    #  path: /Audio/Imperial/BioDanger/virus.ogg
+    #  params:
+    #    volume: -4
+  - type: BioDangerSpawnRule
+    spawnerPrototype: MobBioDanger

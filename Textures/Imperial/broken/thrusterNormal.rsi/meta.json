@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "copyright": "Made for Imperial Space project. Autor's Discord: Aautor",
+  "license": "CC-BY-SA-4.0",
+  "states": [
+    {
+      "name": "base",
+      "directions": 4
+    }
+  ]
+}

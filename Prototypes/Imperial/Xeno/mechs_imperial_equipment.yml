@@ -1,0 +1,50 @@
+- type: entity
+  id: MechEquipmentMachineGun
+  parent: BaseMechEquipment
+  name: mech machinegun
+  description: Pew-pew-pew.
+  components:
+  - type: Sprite
+    state: mecha_carbine
+  - type: MechMachineGun
+  - type: Item
+    size: 60
+  - type: Gun
+    minAngle: 4
+    maxAngle: 8
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 8
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/lmg_cock.ogg
+  - type: AmmoCounter
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineMecha
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineMecha
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeCaselessRifleMecha
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeCaselessRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot

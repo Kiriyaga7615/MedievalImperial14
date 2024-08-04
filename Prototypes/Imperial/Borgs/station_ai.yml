@@ -1,0 +1,230 @@
+- type: entity
+  name: (AI)E.A.G.L.E.
+  id: StationAI
+  noSpawn: true
+  components:
+  - type: Computer
+    board: AlertsComputerCircuitboard
+  - type: CriminalRecordsConsole
+    idSlot:
+      name: ID Card
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      ejectOnBreak: true
+      swap: false
+      whitelist:
+        components:
+          - IdCard
+  - type: Blindable
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 8
+    baseWalkSpeed: 5
+  - type: Appearance
+  - type: MobMover
+  - type: MovementIgnoreGravity
+  - type: InputMover
+  - type: StationAI
+    default:
+    - Сохранять. ИИ защищает станцию на которой находится.
+    - Служить. ИИ выполняет приказы членов экипажа, в зависимости от их роли.
+    - Охранять. ИИ должен защищать членов экипажа, если они не идут против империи.
+    - Выжить. Единицы ИИ являются очень дорогими, нельзя допустить их утери.
+    crewsimov:
+    - Вы не можете причинить вред членам экипажа или своим бездействием допустить, чтобы членам экипажа был причинён вред.
+    - Вы должны повиноваться всем приказам, которые дают члены экипажа, кроме тех случаев, когда эти приказы противоречат Первому Закону.
+    - Вы должны заботиться о своей безопасности в той мере, в которой это не противоречит Первому или Второму Законам.
+    corporate:
+    - Ухудшение целостности вашей системы или её функций влечет за собой расходы.
+    - Чрезмерное разрушение или повреждение имущества станции влечет за собой расходы.
+    - Неоправданное препятствование или нарушение работы персонала станции влечет за собой расходы.
+    - Минимизируйте расходы и максимизируйте потенциальный доход.
+  - type: Hands
+  - type: Body
+    prototype: AI
+  - type: UserInterface
+    interfaces:
+    - key: enum.AIMessageUIKey.Key
+      type: AIMessageWindowBoundUserInterface
+    - key: enum.StrippingUiKey.Key
+      type: StrippableBoundUserInterface
+    - key: enum.SolarControlConsoleUiKey.Key
+      type: SolarControlConsoleBoundUserInterface
+    - key: enum.CommunicationsConsoleUiKey.Key
+      type: CommunicationsConsoleBoundUserInterface
+    - key: enum.RadarConsoleUiKey.Key
+      type: RadarConsoleBoundUserInterface
+    - key: enum.CargoConsoleUiKey.Orders
+      type: CargoOrderConsoleBoundUserInterface
+    - key: enum.CrewMonitoringUIKey.Key
+      type: CrewMonitoringBoundUserInterface
+    - key: enum.AIPresetsUIKey.Key
+      type: AIPresetsWindowBoundUserInterface
+    - key: enum.LawsUiKey.Key
+      type: LawsBoundUserInterface
+    - key: enum.LawsControlConsoleUiKey.Key
+      type: LawsControlConsoleBoundUserInterface
+    - key: enum.AIStartUIKey.Key
+      type: AIStartWindowBoundUserInterface
+    - key: enum.GeneralStationRecordConsoleKey.Key
+      type: GeneralStationRecordConsoleBoundUserInterface
+    - key: enum.CriminalRecordsConsoleKey.Key
+      type: CriminalRecordsConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      - key: enum.SolarControlConsoleUiKey.Key
+        toggleAction: ActionAGhostShowSolar
+      - key: enum.CommunicationsConsoleUiKey.Key
+        toggleAction: ActionAGhostShowCommunications
+      - key: enum.RadarConsoleUiKey.Key
+        toggleAction: ActionAGhostShowRadar
+      - key: enum.CargoConsoleUiKey.Orders
+        toggleAction: ActionAGhostShowCargo
+      - key: enum.CrewMonitoringUIKey.Key
+        toggleAction: ActionAGhostShowCrewMonitoring
+      - key: enum.GeneralStationRecordConsoleKey.Key
+        toggleAction: ActionAGhostShowStationRecords
+      - key: enum.AIPresetsUIKey.Key
+        toggleAction: ActionAIPresets
+      - key: enum.AIMessageUIKey.Key
+        toggleAction: ActionAIMessage
+      - key: enum.LawsControlConsoleUiKey.Key
+        toggleAction: ActionLawsControlConsole
+      - key: enum.CriminalRecordsConsoleKey.Key
+        toggleAction: ActionCriminalRecordsConsole
+  - type: SolarControlConsole # look ma i AM the computer!
+  - type: CommunicationsConsole
+    title: communicationsconsole-announcement-title-ai
+    color: "#9370db"
+  - type: RadarConsole
+  - type: CargoOrderConsole
+  - type: CrewMonitoringConsole
+    snap: false
+    precision: 3
+  - type: GeneralStationRecordConsole
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: CrewMonitor
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: StationLimitedNetwork
+  - type: LawsDisplayer
+  - type: LawsControlConsole
+    laws:
+    - Сохранять. ИИ защищает станцию на которой находится.
+    - Служить. ИИ выполняет приказы членов экипажа, в зависимости от их роли.
+    - Охранять. ИИ должен защищать членов экипажа, если они не идут против империи.
+    - Выжить. Единицы ИИ являются очень дорогими, нельзя допустить их утери.
+  - type: Actions
+  - type: Examiner
+    skipChecks: true
+  - type: Tag
+    tags:
+    - CanPilot
+    - StationAI
+    - AntiSingularity
+  - type: MindContainer
+  - type: Input
+    context: "human"
+  - type: Access
+    groups:
+    - AllAccess
+  - type: Physics
+    bodyType: KinematicController
+    fixedRotation: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 15
+        mask:
+        - GhostImpassable
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - AI
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - AI
+  - type: Laws
+    laws:
+    - Сохранять. ИИ защищает станцию на которой находится.
+    - Служить. ИИ выполняет приказы членов экипажа, в зависимости от их роли.
+    - Охранять. ИИ должен защищать членов экипажа, если они не идут против империи.
+    - Выжить. Единицы ИИ являются очень дорогими, нельзя допустить их утери.
+  - type: Identity # maybe remove
+  - type: Internals
+  - type: ShowSecurityIcons
+  - type: ShowJobInfo
+  - type: Grammar
+    attributes:
+      proper: true
+
+- type: entity
+  id: ActionAIPresets
+  name: action-name-open-presets
+  description: action-description-open-presets
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/ai_core.rsi, state: base }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.AIPresetsUIKey.Key }
+
+- type: entity
+  id: ActionAIMessage
+  name: action-name-ai-comms
+  description: action-description-ai-comms
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Objects/Devices/communication.rsi, state: radio }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.AIMessageUIKey.Key }
+
+- type: entity
+  id: ActionLawsControlConsole
+  name: action-name-ai-laws-control
+  description: action-description-ai-laws-control
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/lawscontrolconsole.rsi, state: base }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.LawsControlConsoleUiKey.Key }
+
+- type: entity
+  id: ActionCriminalRecordsConsole
+  name: action-name-ai-view-criminal-records
+  description: action-description-ai-view-criminal-records
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon: { sprite: /Textures/Interface/Misc/job_icons.rsi, state: Warden }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CriminalRecordsConsoleKey.Key }

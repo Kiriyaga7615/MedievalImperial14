@@ -1,0 +1,53 @@
+- type: job
+  id: Janitor
+  name: job-name-janitor
+  description: job-description-janitor
+  playTimeTracker: JobJanitor
+  startingGear: JanitorGear
+  icon: "JobIconJanitor"
+  supervisors: job-supervisors-hop
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 #Imperial role timers
+  access:
+  - Janitor
+  - Maintenance
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: GarbageDay
+    prototype: WeaponRevolverInspector
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+
+- type: startingGear
+  id: JanitorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitJanitor
+    back: ClothingBackpackFilled
+    shoes: ClothingShoesGaloshes
+    head: ClothingHeadHatPurplesoft
+    id: JanitorPDA
+    gloves: ClothingHandsGlovesJanitor
+    ears: ClothingHeadsetService
+    belt: ClothingBeltJanitorFilled
+  innerClothingSkirt: ClothingUniformJumpskirtJanitor
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled
+
+- type: startingGear
+  id: JanitorMaidGear #NewMaidClothing mode
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanimaid
+    back: ClothingBackpackMaidBackbow
+    id: JanimaidPDA
+    head: ClothingHeadHatCatEars
+    ears: ClothingHeadsetJanimaid
+    neck: ClothingNeckMaidChoker
+    shoes: ClothingShoesColorBlack
+    gloves: ClothingHandsGlovesColorWhite
+    belt: ClothingBeltJanimaidFilled
+  innerClothingSkirt: ClothingUniformJumpskirtJanimaid
+  satchel: ClothingBackpackMaidBackbow
+  duffelbag: ClothingBackpackMaidBackbow

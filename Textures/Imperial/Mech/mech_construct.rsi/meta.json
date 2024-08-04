@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "backbone"
+    },
+    {
+      "name": "gygax_harness"
+    },
+    {
+      "name": "gygax_harness\u002Bo"
+    },
+    {
+      "name": "gygax_harness2\u002Bo"
+    },
+    {
+      "name": "gygax_harness3\u002Bo"
+    },
+    {
+      "name": "gygax_l_arm"
+    },
+    {
+      "name": "gygax_l_arm\u002Bo"
+    },
+    {
+      "name": "gygax_r_arm"
+    },
+    {
+      "name": "gygax_r_arm\u002Bo"
+    },
+    {
+      "name": "gygax_l_leg"
+    },
+    {
+      "name": "gygax_l_leg\u002Bo"
+    },
+    {
+      "name": "gygax_r_leg"
+    },
+    {
+      "name": "gygax_r_leg\u002Bo"
+    },
+    {
+      "name": "gygax_head"
+    },
+    {
+      "name": "gygax_head\u002Bo"
+    },
+    {
+      "name": "gygax_head2\u002Bo"
+    },
+    {
+      "name": "gygax_head3\u002Bo"
+    },
+    {
+      "name": "gygax_chassis"
+    },
+    {
+      "name": "gygax_armor"
+    },
+    {
+      "name": "gygax\u002Bo"
+    },
+    {
+      "name": "blank"
+    },
+    {
+      "name": "ripley_harness"
+    },
+    {
+      "name": "ripley_harness\u002Bo"
+    },
+    {
+      "name": "ripley_harness2\u002Bo"
+    },
+    {
+      "name": "ripley_r_arm"
+    },
+    {
+      "name": "ripley_r_arm\u002Bo"
+    },
+    {
+      "name": "ripley_l_arm"
+    },
+    {
+      "name": "ripley_l_arm\u002Bo"
+    },
+    {
+      "name": "ripley_r_leg"
+    },
+    {
+      "name": "ripley_r_leg\u002Bo"
+    },
+    {
+      "name": "ripley_l_leg"
+    },
+    {
+      "name": "ripley_l_leg\u002Bo"
+    },
+    {
+      "name": "ripley_harness3\u002Bo"
+    },
+    {
+      "name": "honker_harness"
+    },
+    {
+      "name": "honker_harness\u002Bo"
+    },
+    {
+      "name": "honker_harness2\u002Bo"
+    },
+    {
+      "name": "honker_head"
+    },
+    {
+      "name": "honker_head\u002Bo"
+    },
+    {
+      "name": "honker_head2\u002Bo"
+    },
+    {
+      "name": "honker_l_arm"
+    },
+    {
+      "name": "honker_l_arm\u002Bo"
+    },
+    {
+      "name": "honker_r_arm"
+    },
+    {
+      "name": "honker_r_arm\u002Bo"
+    },
+    {
+      "name": "honker_l_leg"
+    },
+    {
+      "name": "honker_l_leg\u002Bo"
+    },
+    {
+      "name": "honker_r_leg"
+    },
+    {
+      "name": "honker_r_leg\u002Bo"
+    },
+    {
+      "name": "ripley\u002Bo"
+    },
+    {
+      "name": "honker\u002Bo"
+    },
+    {
+      "name": "ripley_chassis"
+    },
+    {
+      "name": "honker_chassis"
+    },
+    {
+      "name": "durand_harness"
+    },
+    {
+      "name": "durand_chassis"
+    },
+    {
+      "name": "durand_harness\u002Bo"
+    },
+    {
+      "name": "durand_l_arm"
+    },
+    {
+      "name": "durand_l_arm\u002Bo"
+    },
+    {
+      "name": "durand_r_arm"
+    },
+    {
+      "name": "durand_r_arm\u002Bo"
+    },
+    {
+      "name": "durand_l_leg"
+    },
+    {
+      "name": "durand_l_leg\u002Bo"
+    },
+    {
+      "name": "durand_r_leg"
+    },
+    {
+      "name": "durand_r_leg\u002Bo"
+    },
+    {
+      "name": "durand_head"
+    },
+    {
+      "name": "durand_head\u002Bo"
+    },
+    {
+      "name": "durand_armor"
+    },
+    {
+      "name": "phazon_head\u002Bo"
+    },
+    {
+      "name": "phazon_head"
+    },
+    {
+      "name": "phazon_harness\u002Bo"
+    },
+    {
+      "name": "phazon_harness"
+    },
+    {
+      "name": "phazon_l_arm\u002Bo"
+    },
+    {
+      "name": "phazon_l_arm"
+    },
+    {
+      "name": "phazon_r_arm\u002Bo"
+    },
+    {
+      "name": "phazon_r_arm"
+    },
+    {
+      "name": "phazon_l_leg\u002Bo"
+    },
+    {
+      "name": "phazon_l_leg"
+    },
+    {
+      "name": "phazon_r_leg\u002Bo"
+    },
+    {
+      "name": "phazon_r_leg"
+    },
+    {
+      "name": "odysseus_head"
+    },
+    {
+      "name": "odysseus_chassis"
+    },
+    {
+      "name": "odysseus_head\u002Bo"
+    },
+    {
+      "name": "odysseus_l_arm"
+    },
+    {
+      "name": "odysseus_l_arm\u002Bo"
+    },
+    {
+      "name": "odysseus_l_leg"
+    },
+    {
+      "name": "odysseus_l_leg\u002Bo"
+    },
+    {
+      "name": "odysseus_r_arm"
+    },
+    {
+      "name": "odysseus_r_arm\u002Bo"
+    },
+    {
+      "name": "odysseus_r_leg"
+    },
+    {
+      "name": "odysseus_r_leg\u002Bo"
+    },
+    {
+      "name": "odysseus_torso"
+    },
+    {
+      "name": "odysseus_torso\u002Bo"
+    },
+    {
+      "name": "odysseus_armor"
+    },
+    {
+      "name": "firesuit\u002Bo"
+    },
+    {
+      "name": "darkgygax_harness"
+    },
+    {
+      "name": "darkgygax_harness\u002Bo"
+    },
+    {
+      "name": "darkgygax_head"
+    },
+    {
+      "name": "darkgygax_head\u002Bo"
+    },
+    {
+      "name": "phazon_armor"
+    },
+    {
+      "name": "clarke_harness"
+    },
+    {
+      "name": "clarke_chassis"
+    },
+    {
+      "name": "clarke_harness\u002Bo"
+    },
+    {
+      "name": "clarke_head"
+    },
+    {
+      "name": "clarke_head\u002Bo"
+    },
+    {
+      "name": "clarke_r_arm"
+    },
+    {
+      "name": "clarke_r_arm\u002Bo"
+    },
+    {
+      "name": "clarke_l_arm"
+    },
+    {
+      "name": "clarke_l_arm\u002Bo"
+    },
+    {
+      "name": "clarke_treads\u002Bo"
+    },
+    {
+      "name": "savannah_ivanov_armor"
+    },
+    {
+      "name": "savannah_ivanov_l_arm"
+    },
+    {
+      "name": "savannah_ivanov_l_arm\u002Bo"
+    },
+    {
+      "name": "savannah_ivanov_r_arm"
+    },
+    {
+      "name": "savannah_ivanov_r_arm\u002Bo"
+    },
+    {
+      "name": "savannah_ivanov_l_leg"
+    },
+    {
+      "name": "savannah_ivanov_l_leg\u002Bo"
+    },
+    {
+      "name": "savannah_ivanov_r_leg"
+    },
+    {
+      "name": "savannah_ivanov_r_leg\u002Bo"
+    },
+    {
+      "name": "savannah_ivanov_harness"
+    },
+    {
+      "name": "savannah_ivanov_harness\u002Bo"
+    },
+    {
+      "name": "savannah_ivanov_head"
+    },
+    {
+      "name": "savannah_ivanov_head\u002Bo"
+    }
+  ]
+}

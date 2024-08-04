@@ -1,0 +1,41 @@
+- type: entity
+  id: EventsStation
+  parent:
+    #- BaseStation
+    - BaseStationJobsSpawning
+  noSpawn: true
+  components:
+    - type: Transform
+
+- type: gameMap
+  id: EventsStation
+  mapName: 'Events'
+  mapPath: /Maps/Test/dev_map.yml
+  minPlayers: 100
+  maxPlayers: 120
+  fallback: true
+  stations:
+    EventsStation:
+      stationProto: EventsStation
+      components:
+        - type: StationJobs
+          overflowJobs:
+          - Passenger
+          availableJobs:
+            Passenger: [ 0, 0 ]
+
+
+- type: entity
+  parent: MobHuman
+  id: MobHumanEvent
+  name: event human
+  components:
+    - type: RandomHumanoidAppearance
+    - type: RandomMetadata
+      nameSegments:
+      - names_first
+      - names_last
+    - type: GhostRole
+      name: Event
+    - type: GhostTakeoverAvailable
+

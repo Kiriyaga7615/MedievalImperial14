@@ -1,0 +1,26 @@
+- type: entity
+  id: LockerBlueshieldFilled
+  suffix: Filled
+  parent: LockerBlueshield
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHeadHatBlueshieldBeret
+      - id: ClothingUniformBlushieldOfficer
+      - id: ClothingShoesBootsCombatFilled
+      - id: ClothingEyesGlassesBlueshield
+      - id: ClothingOuterVestKevlarBlueshield
+      - id: ClothingBeltBlueShield
+      - id: BlueShieldMantle
+      - id: ClothingHeadsetAltCommand
+      - id: ClothingHandsGlovesCombat
+      - id: DeathAlarmImplanter
+      - id: DeathAlarmImplanter
+      - id: DeathAlarmImplanter
+      - id: ClothingOuterHardsuitBlueshield
+      - id: PinpointerHeads
+      - id: PinpointerHeads
+      - id: ClothingMaskGasSecurity
+      - id: TrackingImplanter
+      - id: TrackingImplanter
+      - id: TrackingImplanter

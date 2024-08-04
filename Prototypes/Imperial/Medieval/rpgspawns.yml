@@ -1,0 +1,573 @@
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobAnt
+  id: MedievalTimedSpawnerMedievalMobAnt
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobAnt
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobAnt
+    #  chance: 0.023
+    #  intervalSeconds: 250
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobSkeletWeakGhostResp
+  id: MedievalTimedSpawnerMedievalMobSkeletWeakGhostResp
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: Timer
+    - type: TimedSpawner
+      prototypes:
+      - MedievalMobSkeletWeakGhostResp
+      chance: 1
+      intervalSeconds: 450
+      minimumEntitiesSpawned: 2
+      maximumEntitiesSpawned: 160
+
+- type: entity
+  name: MedievalTimedSpawnerFlowers
+  id: MedievalTimedSpawnerFlowers
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: red
+    - type: Timer
+    - type: TimedSpawner
+      prototypes:
+      - MedievalSpawnerFlower
+      chance: 0.1
+      intervalSeconds: 180
+      minimumEntitiesSpawned: 2
+      maximumEntitiesSpawned: 160
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobWolf
+  id: MedievalTimedSpawnerMedievalMobWolf
+  parent: MarkerBase
+  components:
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobWolfGhost
+    - type: Sprite
+      layers:
+      - state: blue
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobWolf
+    #  - MedievalMobWolfGhost
+    #  chance: 0.0235
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobBear
+  id: MedievalTimedSpawnerMedievalMobBear
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobBear
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobBear
+    #  - MedievalMobBear
+    #  - MedievalMobBear
+    #  - MedievalMobBearGhost
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobHog
+  id: MedievalTimedSpawnerMedievalMobHog
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobHog
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobHog
+    #  - MedievalMobHog
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobGoblin
+  id: MedievalTimedSpawnerMedievalMobGoblin
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: Timer
+    - type: TimedSpawner
+      prototypes:
+      - MedievalMobGoblin
+      chance: 0.04
+      intervalSeconds: 150
+      minimumEntitiesSpawned: 2
+      maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobSpiderCave
+  id: MedievalTimedSpawnerMedievalMobSpiderCave
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobSpiderCave
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobSpiderCave
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobSkeletWeak
+  id: MedievalTimedSpawnerMedievalMobSkeletWeak
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobSkeletWeak
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobSkeletWeak
+    #  - MedievalMobSkeletWeak
+    #  - MedievalMobSkeletWeak
+    #  - MedievalMobSkeletWeak
+    #  - MedievalMobSkeletWeak
+    #  - MedievalMobSkeletWeakGhost
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobSkeletMeat
+  id: MedievalTimedSpawnerMedievalMobSkeletMeat
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobSkeletMeat
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeat
+    #  - MedievalMobSkeletMeatGhost
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobSkeletFighter
+  id: MedievalTimedSpawnerMedievalMobSkeletFighter
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobSkeletFighter
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighter
+    #  - MedievalMobSkeletFighterGhost
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobSkeletLegion
+  id: MedievalTimedSpawnerMedievalMobSkeletLegion
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobSkeletLegion
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegion
+    #  - MedievalMobSkeletLegionGhost
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobHunter
+  id: MedievalTimedSpawnerMedievalMobHunter
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobHunterGhost
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobHunterGhost
+    #  chance: 0.02
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobDevilMouse
+  id: MedievalTimedSpawnerMedievalMobDevilMouse
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobDevilMouseGhost
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobDevilMouse
+    #  - MedievalMobDevilMouseGhost
+    #  - MedievalMobDevilMouseGhost
+    #  - MedievalMobDevilMouseGhost
+    #  - MedievalMobDevilMouseGhost
+    #  chance: 0.04
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobCrab
+  id: MedievalTimedSpawnerMedievalMobCrab
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobCrab
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobCrab
+    #  - MedievalMobCrab
+    #  - MedievalMobCrab
+    #  - MedievalMobCrab
+    #  - MedievalMobCrab
+    #  - MedievalMobCrab
+    #  - MedievalMobCrabGhost
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobCrabDevil
+  id: MedievalTimedSpawnerMedievalMobCrabDevil
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: MedievalMobSpawner
+      spawnedEntity: MedievalMobCrabDevil
+    #- type: Timer
+    #- type: TimedSpawner
+    #  prototypes:
+    #  - MedievalMobCrabDevil
+    #  - MedievalMobCrabDevil
+    #  - MedievalMobCrabDevil
+    #  - MedievalMobCrabDevil
+    #  - MedievalMobCrabDevil
+    #  - MedievalMobCrabDevil
+    #  - MedievalMobCrabDevil
+    #  - MedievalMobCrabDevilGhost
+    #  chance: 0.023
+    #  intervalSeconds: 150
+    #  minimumEntitiesSpawned: 2
+    #  maximumEntitiesSpawned: 16
+
+- type: entity
+  name: MedievalShopHoleWizard
+  id: MedievalSpawnerMedievalShopHoleWizard
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalShopHoleWizard
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalShopHoleWolf
+  id: MedievalSpawnerMedievalShopHoleWolf
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalShopHoleWolf
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalShopHoleFish
+  id: MedievalSpawnerMedievalShopHoleFish
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalShopHoleFish
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalShopHoleFlame
+  id: MedievalSpawnerMedievalShopHoleFlame
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalShopHoleFlame
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalShopHoleNecro
+  id: MedievalSpawnerMedievalShopHoleNecro
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalShopHoleNecro
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalShopHoleEagle
+  id: MedievalSpawnerMedievalShopHoleEagle
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalShopHoleEagle
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalShopHole
+  id: MedievalSpawnerMedievalShopHole
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalShopHole
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalWeaponTurretNanoTrasen
+  id: MedievalSpawnerMedievalWeaponTurretNanoTrasen
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalWeaponTurretNanoTrasen
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: MedievalAirlock
+  id: MedievalSpawnerMedievalAirlock
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalAirlock
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: BlastDoor
+  id: MedievalSpawnerBlastDoor
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - BlastDoor
+      chance: 1
+      offset: 0
+
+
+- type: entity
+  name: MedievalTimedSpawnerMedievalMobHumanTraveller
+  id: MedievalTimedSpawnerMedievalMobHumanTraveller
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+      - state: blue
+    - type: Timer
+    - type: TimedSpawner
+      prototypes:
+      - MedievalMobHumanTraveller
+      - MedievalMobHumanTraveller
+      - MedievalMobHumanTraveller
+      - MedievalRandomHumanoidSpawnerTraveller
+      chance: 0.9
+      intervalSeconds: 2700
+      minimumEntitiesSpawned: 10
+      maximumEntitiesSpawned: 100
+
+- type: entity
+  name: BlastDoor
+  id: MedievalSpawnerFlower
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalFlowerVetr
+        - MedievalFlowerLipad
+        - MedievalFlowerLava
+        - MedievalFlowerCryo
+      chance: 1
+      offset: 8
+
+- type: entity
+  name: BlastDoor
+  id: MedievalCrystalIceCharm1Spawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalCrystalIceCharm1
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: BlastDoor
+  id: MedievalCrystalIceCharm2Spawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalCrystalIceCharm2
+      chance: 1
+      offset: 0
+
+- type: entity
+  name: BlastDoor
+  id: MedievalCrystalIceCharm3Spawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+    - type: RandomSpawner
+      prototypes:
+        - MedievalCrystalIceCharm3
+      chance: 1
+      offset: 0

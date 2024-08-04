@@ -1,0 +1,53 @@
+# - type: entity
+#   id: MedievalActionFireball3
+#   name: action-name-spell-fireball3
+#   description: action-description-spell-fireball3
+#   noSpawn: true
+#   components:
+#   - type: WorldTargetAction
+#     useDelay: 100
+#     itemIconStyle: BigAction
+#     checkCanAccess: false
+#     range: 60
+#     sound: !type:SoundPathSpecifier
+#       path: /Audio/Weapons/Guns/Gunshots/Magic/staff_healing.ogg
+#     icon:
+#       sprite: Imperial/Medieval/Gun/Charmer/fireball.rsi
+#       state: 3
+#     event: !type:ProjectileSpellEvent
+#       prototype: MedievalProjectileFireball3
+#       posData: !type:TargetInFrontImperial
+#         width: 0
+#       speech: medieval-cahrm-speech-fireball1
+#       preventCollide: true
+
+- type: entity
+  id: chronoTuggleVisibilityAction
+  name: chrono-tuggle-visibility-name
+  description: chrono-tuggle-visibility-desc
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    useDelay: -11
+    icon:
+      sprite: Interface/Actions/actions_rat_king.rsi
+      state: ratKingArmy
+    event: !type:ChronoLegionnareImperialToggleVisibilityActionEvent
+  - type: Visibility
+
+- type: entity
+  id: blinkAction
+  name: chrono-blink-action-name
+  description: chrono-blink-action-desc
+  noSpawn: true
+  components:
+  - type: WorldTargetAction
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: blink
+    itemIconStyle: NoItem
+    priority: -12
+    event: !type:BlinkEvent
+    checkCanAccess: false
+    range: 0

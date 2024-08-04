@@ -1,0 +1,71 @@
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMarineGlassLocked
+  suffix: Marine, Locked
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Door/marine.rsi
+  - type: PaintableAirlock
+    group: Glass
+  - type: AccessReader
+    access: [["Marinesoldier"]]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMarEngGlassLocked
+  suffix: Eng, Locked
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Door/eng.rsi
+  - type: PaintableAirlock
+    group: Glass
+  - type: AccessReader
+    access: [["MarineEngineer"]]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMarMedicGlassLocked
+  suffix: Medic, Locked
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Door/med.rsi
+  - type: PaintableAirlock
+    group: Glass
+  - type: AccessReader
+    access: [["MarineMedic"]]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMarLeaderGlassLocked
+  suffix: Leader, Locked
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Door/leader.rsi
+  - type: PaintableAirlock
+    group: Glass
+  - type: AccessReader
+    access: [["MarineLeader"]]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMarPilotGlassLocked
+  suffix: Pilot, Locked
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Door/pilot.rsi
+  - type: PaintableAirlock
+    group: Glass
+  - type: AccessReader
+    access: [["Marinepilot"]]
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMarPilotMechGlassLocked
+  suffix: Pilot Mech, Locked
+  components:
+  - type: Sprite
+    sprite: Imperial/TGMC/Door/pilotmech.rsi
+  - type: PaintableAirlock
+    group: Glass
+  - type: AccessReader
+    access: [["MarinePilotMech"]]

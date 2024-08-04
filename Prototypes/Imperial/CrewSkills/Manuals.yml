@@ -1,0 +1,709 @@
+# srv   a5ff85
+# cargo 9C7141
+# eng   ffce52
+# sci   df73fa
+# sec   F73636
+# med   8fb4ff
+
+- type: entity
+  id: CrewSkillsmanualTest
+  name: test manual name
+  desc: test manual desc
+  parent: CrewSkillsManualBase
+  components:
+    - type: RandomBookVisual
+      attribute1: ultraBigA
+      maxVariations1: 7
+      chance1: 0.3
+    - type: Sprite
+      layers:
+      - state: ultraBig
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBotany #base
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking  #Easy
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation #Medium
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting #Hard
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  id: CrewSkillsManualBase
+  abstract: true
+  name: skill manual
+  desc: skill manual
+  parent: BookBase
+  components:
+    - type: Appearance
+    - type: CrewSkillsManual
+      grandSkills:
+        - type: CrewSkillsManual
+    - type: Sprite
+      sprite: Imperial/CrewSkills/Books.rsi
+
+#Base
+- type: entity
+  id: CrewSkillsManualUltraSmallBase
+  parent: CrewSkillsManualBase
+  abstract: true
+  components:
+    - type: RandomBookVisual
+      attribute1: ultraSmall_trait
+      maxVariations1: 4
+      attribute2: ultraSmallA
+      maxVariations2: 7
+      randomColor1: false
+      chance1: 0.7
+      chance2: 0.7
+
+- type: entity
+  id: CrewSkillManualBotany
+  parent: CrewSkillsManualUltraSmallBase
+  name: Botany manual
+  desc: Teach you to base work with plants
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBotany
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/ultraSmall.rsi
+      layers:
+      - state: ultraSmallSrv
+      - state: ultraSmall_pages
+      - state: ultraSmall_cover
+        color: "#a5ff85"
+      - state: ultraSmall_basic_botany
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualBaseMed
+  parent: CrewSkillsManualUltraSmallBase
+  name: Base med manual
+  desc: Teach you basics of medcine
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBaseMed
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/ultraSmall.rsi
+      layers:
+      - state: ultraSmallMed
+      - state: ultraSmall_pages
+      - state: ultraSmall_cover
+        color: "#8fb4ff"
+      - state: ultraSmall_basicmedicine
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualBaseConstraction
+  parent: CrewSkillsManualUltraSmallBase
+  name: Base construction manual
+  desc: Teach you basics consturcion
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBaseConstraction
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/ultraSmall.rsi
+      layers:
+      - state: ultraSmallEng
+      - state: ultraSmall_pages
+      - state: ultraSmall_cover
+        color: "#ffce52"
+      - state: ultraSmall_basic_building
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+#Easy
+- type: entity
+  parent: CrewSkillsManualBase
+  id: CrewSkillsManualSmallBase
+  abstract: true
+  components:
+    - type: RandomBookVisual
+      attribute1: small_trait
+      maxVariations1: 4
+      attribute2: smallA
+      maxVariations2: 7
+      randomColor1: false
+      chance1: 0.7
+      chance2: 0.7
+
+- type: entity
+  id: CrewSkillManualCooking
+  parent: CrewSkillsManualSmallBase
+  name: Cooking manual
+  desc: Teach you to cook
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillCooking
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/small.rsi
+      layers:
+      - state: smallSrv
+      - state: small_pages
+      - state: small_cover
+        color: "#a5ff85"
+      - state: Small_cooking
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualBartending
+  parent: CrewSkillsManualSmallBase
+  name: Bartending manual
+  desc: Teach you to bartending
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBartending
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/small.rsi
+      layers:
+      - state: smallSrv
+      - state: small_pages
+      - state: small_cover
+        color: "#a5ff85"
+      - state: Small_coctail_makeng
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualHacking
+  parent: CrewSkillsManualSmallBase
+  name: Hacking manual
+  desc: Teach you to hacking
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillHacking
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/small.rsi
+      layers:
+      - state: smallEng
+      - state: small_pages
+      - state: small_cover
+        color: "#ffce52"
+      - state: Small_lockpicking
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+#Medium
+- type: entity
+  parent: CrewSkillsManualBase
+  id: CrewSkillsManualMediumBase
+  abstract: true
+  components:
+    - type: RandomBookVisual
+      attribute1: medium_trait
+      maxVariations1: 4
+      attribute2: mediumA
+      maxVariations2: 7
+      randomColor1: false
+      chance1: 0.7
+      chance2: 0.7
+
+- type: entity
+  id: CrewSkillManualInstrumentation
+  parent: CrewSkillsManualMediumBase
+  name: Instrumentation craft manual
+  desc: Teach you to craft instrumentation
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillInstrumentation
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/medium.rsi
+      layers:
+      - state: mediumEng
+      - state: medium_pages
+      - state: medium_cover
+        color: "#ffce52"
+      - state: medium_instrumentation
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualMaintenance
+  parent: CrewSkillsManualMediumBase
+  name: Maintenance manual
+  desc: Teach you to Maintenance
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillMaintenance
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/medium.rsi
+      layers:
+      - state: mediumEng
+      - state: medium_pages
+      - state: medium_cover
+        color: "#ffce52"
+      - state: medium_Tech_maintenance
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualMediumConstruction
+  parent: CrewSkillsManualMediumBase
+  name: Medium Construction manual
+  desc: Teach you to Medium Construction
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillMediumConstruction
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/medium.rsi
+      layers:
+      - state: mediumEng
+      - state: medium_pages
+      - state: medium_cover
+        color: "#ffce52"
+      - state: medium_adv_building
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualMediumBotany
+  parent: CrewSkillsManualMediumBase
+  name: Medium Botany manual
+  desc: Teach you to Medium Botany
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillMediumBotany
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/medium.rsi
+      layers:
+      - state: mediumSrv
+      - state: medium_pages
+      - state: medium_cover
+        color: "#a5ff85"
+      - state: medium_adv_botany
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualBasicAtmos
+  parent: CrewSkillsManualMediumBase
+  name: Basic Atmos manual
+  desc: Teach you to Basic Atmos
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBasicAtmos
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/medium.rsi
+      layers:
+      - state: mediumEng
+      - state: medium_pages
+      - state: medium_cover
+        color: "#ffce52"
+      - state: medium_basic_atmospheric
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualMedicalEquipment
+  parent: CrewSkillsManualMediumBase
+  name: Medical Equipment manual
+  desc: Teach you to Medical Equipment
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillMedicalEquipment
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/medium.rsi
+      layers:
+      - state: mediumMed
+      - state: medium_pages
+      - state: medium_cover
+        color: "#8fb4ff"
+      - state: medium_medical_equipment
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualPharmacology
+  parent: CrewSkillsManualMediumBase
+  name: Pharmacology manual
+  desc: Teach you to Pharmacology
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillPharmacology
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/medium.rsi
+      layers:
+      - state: mediumMed
+      - state: medium_pages
+      - state: medium_cover
+        color: "#8fb4ff"
+      - state: medium_pharmacology
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+#Hard
+- type: entity
+  id: CrewSkillsManualBigBase
+  abstract: true
+  parent: CrewSkillsManualBase
+  components:
+    - type: RandomBookVisual
+      attribute1: big_trait
+      maxVariations1: 4
+      attribute2: bigA
+      maxVariations2: 7
+      randomColor1: false
+      chance1: 0.7
+      chance2: 0.7
+
+- type: entity
+  id: CrewSkillManualPiloting
+  parent: CrewSkillsManualBigBase
+  name: Piloting manual
+  desc: Teach you to Piloting
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillPiloting
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigSec
+      - state: big_pages
+      - state: big_cover
+        color: "#F73636"
+      - state: big_piloting
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualAtmos
+  parent: CrewSkillsManualBigBase
+  name: Atmos manual
+  desc: Teach you to Atmos
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillAtmos
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigEng
+      - state: big_pages
+      - state: big_cover
+        color: "#ffce52"
+      - state: big_Atmospheric_engineering
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualHardInstrumentation
+  parent: CrewSkillsManualBigBase
+  name: Hard Instrumentation manual
+  desc: Teach you to Hard Instrumentation
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillHardInstrumentation
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigEng
+      - state: big_pages
+      - state: big_cover
+        color: "#ffce52"
+      - state: big_adv_instrumentation
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualRobotics
+  parent: CrewSkillsManualBigBase
+  name: Robotics manual
+  desc: Teach you to Robotics
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillRobotics
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigSci
+      - state: big_pages
+      - state: big_cover
+        color: "#df73fa"
+      - state: big_robototics
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualResearch
+  parent: CrewSkillsManualBigBase
+  name: Research manual
+  desc: Teach you to Research
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillResearch
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigSci
+      - state: big_pages
+      - state: big_cover
+        color: "#df73fa"
+      - state: big_research
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+
+- type: entity
+  id: CrewSkillManualPharmaceuticals
+  parent: CrewSkillsManualBigBase
+  name: Pharmaceuticals manual
+  desc: Teach you to Pharmaceuticals
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillPharmaceuticals
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigMed
+      - state: big_pages
+      - state: big_cover
+        color: "#8fb4ff"
+      - state: big_chemistry
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualShooting
+  parent: CrewSkillsManualBigBase
+  name: Shooting manual
+  desc: Teach you to Shooting
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillShooting
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigSec
+      - state: big_pages
+      - state: big_cover
+        color: "#F73636"
+      - state: big_shooting
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualSurgery
+  parent: CrewSkillsManualBigBase
+  name: Surgery manual
+  desc: Teach you to Surgery
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillSurgery
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigMed
+      - state: big_pages
+      - state: big_cover
+        color: "#8fb4ff"
+      - state: big_surgery
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+- type: entity
+  id: CrewSkillManualNeuroSurgery
+  parent: CrewSkillsManualBigBase
+  name: NeuroSurgery manual
+  desc: Teach you to NeuroSurgery
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillNeuroSurgery
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigMed
+      - state: big_pages
+      - state: big_cover
+        color: "#8fb4ff"
+      - state: big_surgery
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+#Full guides
+#Med
+- type: entity
+  id: CrewSkillManualMedFullGuide
+  parent: CrewSkillsManualBigBase
+  name: Full medical manual
+  desc: Teach you all medical skills
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBaseMed
+        - skillSurgery
+        - skillPharmacology
+        - skillPharmaceuticals
+        - skillMedicalEquipment
+        - skillNeuroSurgery
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigMed
+      - state: big_pages
+      - state: big_cover
+        color: "#8fb4ff"
+      #- state: big_surgery
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+#Sec
+- type: entity
+  id: CrewSkillManualSecFullGuide
+  parent: CrewSkillsManualBigBase
+  name: Full medical manual
+  desc: Teach you all medical skills
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillPiloting
+        - skillShooting
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigSec
+      - state: big_pages
+      - state: big_cover
+        color: "#F73636"
+      #- state: big_shooting
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+#Sci
+- type: entity
+  id: CrewSkillManualSciFullGuide
+  parent: CrewSkillsManualBigBase
+  name: Full science manual
+  desc: Teach you all science skills
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillMediumConstruction
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillHacking
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigSci
+      - state: big_pages
+      - state: big_cover
+        color: "#df73fa"
+      #- state: big_research
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+#Eng
+- type: entity
+  id: CrewSkillManualEngFullGuide
+  parent: CrewSkillsManualBigBase
+  name: Full engineering manual
+  desc: Teach you all engineering skills
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillPiloting
+        - skillAtmos
+        - skillBasicAtmos
+        - skillInstrumentation
+        - skillHardInstrumentation
+        - skillMaintenance
+        - skillBaseConstraction
+        - skillMediumConstruction
+        - skillHacking
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigEng
+      - state: big_pages
+      - state: big_cover
+        color: "#ffce52"
+      #- state: big_adv_instrumentation
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+#Cargo
+- type: entity
+  id: CrewSkillManualCargoFullGuide
+  parent: CrewSkillsManualBigBase
+  name: Full cargo manual
+  desc: Teach you all cargo skills
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillPiloting
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigCargo
+      - state: big_pages
+      - state: big_cover
+        color: "#9C7141"
+      #- state: big_adv_instrumentation
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]
+
+#Service
+- type: entity
+  id: CrewSkillManualServiceFullGuide
+  parent: CrewSkillsManualBigBase
+  name: Full service manual
+  desc: Teach you all service skills
+  components:
+    - type: CrewSkillsManual
+      grandSkills:
+        - skillBotany
+        - skillMediumBotany
+        - skillCooking
+        - skillBartending
+    - type: Sprite
+      sprite: Imperial/CrewSkills/books/big.rsi
+      layers:
+      - state: bigSrv
+      - state: big_pages
+      - state: big_cover
+        color: "#a5ff85"
+      #- state: big_adv_instrumentation
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr1StateKey"]
+      - map: ["enum.RandomBookVisuals.RandomBookVisualsAtr2StateKey"]

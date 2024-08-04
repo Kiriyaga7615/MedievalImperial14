@@ -1,0 +1,247 @@
+#Cmd
+- type: startingGear
+  id: MarineCmdOperGear
+  equipment:
+    jumpsuit: ClothingUniformCommanderOperation
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineCmdOperCard
+    eyes: ClothingEyesHudMarine
+    ears: ClothingHeadsetMarineCmd
+    gloves: ClothingHandsGlovesColorBlack
+    neck: ClothingNeckCmdOper
+    head: ClothingHeadCommanderOperation
+
+- type: startingGear
+  id: MarineCmdFieldGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitFieldCommander
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineCmdFieldCard
+    eyes: ClothingEyesHudMarine
+    ears: ClothingHeadsetMarineCmd
+    gloves: ClothingHandsGlovesColorBlack
+    head: ClothingHeadHatFieldCommander
+
+- type: startingGear
+  id: MarineCmdAGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineCmdACard
+    ears: ClothingHeadsetMarineComA
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineCmdBGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorYellow
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineCmdBCard
+    ears: ClothingHeadsetMarineComB
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineCmdCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineCmdCCard
+    ears: ClothingHeadsetMarineComC
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineCmdDGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineCmdDCard
+    ears: ClothingHeadsetMarineComD
+    gloves: ClothingHandsGlovesColorBlack
+
+#Pilot
+- type: startingGear
+  id: MarinePilotGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitTGMC
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarinePilotCard
+    eyes: ClothingEyesHudMarine
+    ears: ClothingHeadsetMarinePilot
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpack
+    head: ClothingHeadHelmetPilot
+    pocket1: WeaponPistolMiltonTGMC
+    pocket2: BaseMagazinePistolMiltonTGMC
+    belt: ClothingBeltMilitaryWebbing
+
+- type: startingGear
+  id: MarinePilotMechAGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarinePilotMechACard
+    eyes: ClothingEyesHudMarine
+    ears: ClothingHeadsetMarineA
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpack
+    head: ClothingHeadHelmetPilot
+    pocket1: WeaponPistolMiltonTGMC
+    pocket2: BaseMagazinePistolMiltonTGMC
+    belt: ClothingBeltMilitaryWebbing
+
+- type: startingGear
+  id: MarinePilotMechBGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorYellow
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarinePilotMechBCard
+    eyes: ClothingEyesHudMarine
+    ears: ClothingHeadsetMarineB
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpack
+    head: ClothingHeadHelmetPilot
+    pocket1: WeaponPistolMiltonTGMC
+    pocket2: BaseMagazinePistolMiltonTGMC
+    belt: ClothingBeltMilitaryWebbing
+
+- type: startingGear
+  id: MarinePilotMechCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarinePilotMechCCard
+    eyes: ClothingEyesHudMarine
+    ears: ClothingHeadsetMarineC
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpack
+    head: ClothingHeadHelmetPilot
+    pocket1: WeaponPistolMiltonTGMC
+    pocket2: BaseMagazinePistolMiltonTGMC
+    belt: ClothingBeltMilitaryWebbing
+
+- type: startingGear
+  id: MarinePilotMechDGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarinePilotMechDCard
+    eyes: ClothingEyesHudMarine
+    ears: ClothingHeadsetMarineD
+    gloves: ClothingHandsGlovesColorBlack
+    back: ClothingBackpack
+    head: ClothingHeadHelmetPilot
+    pocket1: WeaponPistolMiltonTGMC
+    pocket2: BaseMagazinePistolMiltonTGMC
+    belt: ClothingBeltMilitaryWebbing
+
+#Marine
+- type: startingGear
+  id: MarineAGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineACard
+    ears: ClothingHeadsetMarineA
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineBGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorYellow
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineBCard
+    ears: ClothingHeadsetMarineB
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineCCard
+    ears: ClothingHeadsetMarineC
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineDGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    shoes: ClothingShoesBootsCombatFilled
+    id: MarineDCard
+    ears: ClothingHeadsetMarineD
+    gloves: ClothingHandsGlovesColorBlack
+
+#Medic
+- type: startingGear
+  id: MarineMedicAGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    shoes: ClothingShoesBootsCombatFilled
+    id: MedicACard
+    ears: ClothingHeadsetMarineA
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineMedicBGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorYellow
+    shoes: ClothingShoesBootsCombatFilled
+    id: MedicBCard
+    ears: ClothingHeadsetMarineB
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineMedicCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+    shoes: ClothingShoesBootsCombatFilled
+    id: MedicCCard
+    ears: ClothingHeadsetMarineC
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineMedicDGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    shoes: ClothingShoesBootsCombatFilled
+    id: MedicDCard
+    ears: ClothingHeadsetMarineD
+    gloves: ClothingHandsGlovesColorBlack
+
+#engineer
+- type: startingGear
+  id: MarineEngAGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorWhite
+    shoes: ClothingShoesBootsCombatFilled
+    id: EngineerACard
+    ears: ClothingHeadsetMarineA
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineEngBGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorYellow
+    shoes: ClothingShoesBootsCombatFilled
+    id: EngineerBCard
+    ears: ClothingHeadsetMarineB
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineEngCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorGreen
+    shoes: ClothingShoesBootsCombatFilled
+    id: EngineerCCard
+    ears: ClothingHeadsetMarineC
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: startingGear
+  id: MarineEngDGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    shoes: ClothingShoesBootsCombatFilled
+    id: EngineerDCard
+    ears: ClothingHeadsetMarineD
+    gloves: ClothingHandsGlovesColorBlack
+

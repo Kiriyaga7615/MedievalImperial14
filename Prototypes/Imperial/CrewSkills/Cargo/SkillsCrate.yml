@@ -1,0 +1,113 @@
+- type: entity
+  id: MedicalSkillsCrate  ## Ящик медицинской литературы
+  name: A set of medical literature
+  description: It contains many medical notes and treatises.
+  parent: CrateMedicalSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualBaseMed
+        amount: 1
+      - id: CrewSkillManualMedicalEquipment
+        amount: 1
+      - id: CrewSkillManualPharmacology
+        amount: 1
+      - id: CrewSkillManualPharmaceuticals
+        amount: 1
+      - id: CrewSkillManualSurgery
+        amount: 1
+      - id: CrewSkillManualNeuroSurgery
+        amount: 1
+
+- type: entity
+  id: EngSkillsCrate ## Ящик инженерной литературы
+  name: A set of engineering literature
+  description: It looks like a canister of welding fuel was spilled on him
+  parent: CrateEngineeringSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualBaseConstraction
+        amount: 1
+      - id: CrewSkillManualHacking
+        amount: 1
+      - id: CrewSkillManualInstrumentation
+        amount: 1
+      - id: CrewSkillManualMediumConstruction
+        amount: 1
+      - id: CrewSkillManualBasicAtmos
+        amount: 1
+      - id: CrewSkillManualPiloting
+        amount: 1
+      - id: CrewSkillManualAtmos
+        amount: 1
+      - id: CrewSkillManualHardInstrumentation
+        amount: 1
+      - id: CrewSkillManualMaintenance
+        amount: 1
+
+- type: entity
+  id: SecSkillsCrate ## Ящик литературы сотрудников СБ
+  name: A set of combat literature necessary for fighting
+  description: It shows traces of the blood of the enemies of the NT
+  parent: CrateSecgear
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualPiloting
+        amount: 1
+      - id: CrewSkillManualShooting
+        amount: 1
+
+- type: entity
+  id: SciSkillsCrate ## Ящик литературы РНД
+  name: A set of scientific literature
+  description: Is it your imagination, or does this box smell like plasma?
+  parent: CrateScienceSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualHardInstrumentation
+        amount: 1
+      - id: CrewSkillManualResearch
+        amount: 1
+      - id: CrewSkillManualRobotics
+        amount: 1
+      - id: CrewSkillManualPharmaceuticals
+        amount: 1
+      - id: CrewSkillManualMediumConstruction
+        amount: 1
+      - id: CrewSkillManualBasicAtmos
+        amount: 1
+      - id: CrewSkillManualMedicalEquipment
+        amount: 1
+
+- type: entity
+  id: ServiceSkillsCrate ## Ящик литературы сервиса
+  name: A set of literature from the service department
+  description: Why are there clown hammer marks on it?
+  parent: CrateHydroponics
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualBotany
+        amount: 1
+      - id: CrewSkillManualCooking
+        amount: 1
+      - id: CrewSkillManualMediumBotany
+        amount: 1
+      - id: CrewSkillManualBartending
+        amount: 1
+
+- type: entity
+  id: CargoSkillsCrate ## Ящик литературы карго
+  name: A set of literature from the supply department
+  description: It gives off a pleasant smell of beer and ore. The Dwarves will be pleased!
+  parent: CratePirate
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualPiloting
+        amount: 1
+      - id: DrinkBottleBeer
+        amount: 5

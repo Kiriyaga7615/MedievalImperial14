@@ -1,0 +1,55 @@
+- type: entity
+  parent: BaseGameRule
+  id: GribSpawn
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 0 #7.5
+    duration: 400
+    earliestStart: 25
+    reoccurrenceDelay: 600
+    minimumPlayers: 20
+  - type: GribSpawnRule
+    spawnerPrototype: MobGribCamera
+
+- type: entity
+  parent: BaseGameRule
+  id: GribInfected
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 0
+    duration: 400
+    reoccurrenceDelay: 600
+    minimumPlayers: 1
+  - type: GribInfectedRule
+
+- type: antag
+  id: Grib
+  name: Зараженный грибом
+  antagonist: true
+  setPreference: true
+  objective: захватите станцию
+
+- type: polymorph
+  id: GribCamera
+  configuration:
+    entity: MobGribCamera
+    inventory: Drop
+    revertOnCrit: false
+    revertOnDeath: false
+    delay: 1
+    forced: true
+
+- type: gamePreset
+  id: GribInfectedPresetAndTraitors
+  alias:
+    - grib
+  name: grib-title
+  description: grib-description
+  showInVote: false
+  rules:
+    - Traitor
+    - BasicStationEventScheduler
+    - GribInfected
+    #- Memetic # memetic antag

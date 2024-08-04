@@ -1,0 +1,167 @@
+#Cmd
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineCmdOper
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: CommanderOperation
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineCmdField
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: FieldCommander
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineCmdA
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: LeaderA
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineCmdB
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: LeaderB
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineCmdC
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: LeaderC
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineCmdD
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: LeaderD
+
+#Pilot
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarinePilot
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: PilotShuttle
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarinePilotMechA
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: PilotMechA
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarinePilotMechB
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: PilotMechB
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarinePilotMechC
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: PilotMechC
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarinePilotMechD
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: PilotMechD
+
+#Marine
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineA
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MarineA
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineB
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MarineB
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineC
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MarineC
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMarineD
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MarineD
+
+#Medic
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMedicalA
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MedicalA
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMedicalB
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MedicalB
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMedicalC
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MedicalC
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconMedicalD
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: MedicalD
+
+#Engineer
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconEngineerA
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: EngineerA
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconEngineerB
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: EngineerB
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconEngineerC
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: EngineerC
+
+- type: statusIcon
+  parent: JobIcon
+  id: JobIconEngineerD
+  icon:
+    sprite: /Textures/Imperial/TGMC/job_icons.rsi
+    state: EngineerD
+
+

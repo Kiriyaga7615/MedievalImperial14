@@ -1,0 +1,104 @@
+- type: entity
+  name: fixOVein
+  id: FixOVein
+  parent: BaseToolSurgery
+  description: Fix veins.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/fixovein.rsi
+    state: fixovein
+  - type: Item
+    sprite: Objects/Specific/Medical/fixovein.rsi
+  - type: FixOVein
+
+- type: entity
+  name: bone gel
+  id: BoneGel
+  parent: BaseToolSurgery
+  description: Fix bones.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/bonegel.rsi
+    state: bonegel
+  - type: Item
+    sprite: Objects/Specific/Medical/bonegel.rsi
+  - type: BoneGel
+
+- type: entity
+  name: DNA manipulator
+  id: DNAInjector
+  parent: BaseToolSurgery
+  description: Manipulates with DNA
+  components:
+  - type: Sprite
+    sprite: Imperial/Surgery/dnamanip.rsi
+    state: icon
+  - type: Item
+    sprite: Imperial/Surgery/dnamanip.rsi
+  - type: DNAInjector
+
+- type: entity
+  name: organ healer
+  id: OrganHealer
+  parent: BaseToolSurgery
+  description: Fix organs.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/organgel.rsi
+    state: organgel
+  - type: Item
+    sprite: Objects/Specific/Medical/organgel.rsi
+  - type: OrganHealer
+
+- type: entity
+  name: borg's surgery tool
+  id: SurgeryToolBorg
+  parent: Scalpel
+  description: Made of more expensive materials, sharper and generally more reliable.
+  components:
+  - type: Cautery
+    useTime: 8
+    failDamage:
+      types:
+        Heat: 5
+  - type: ItemCooldown
+  - type: Retractor
+    useTime: 8
+    failDamage:
+      types:
+        Blunt: 5
+  - type: Hemostat
+    useTime: 8
+    failDamage:
+      types:
+        Piercing: 5
+  - type: Sprite
+    sprite: Imperial/Surgery/borgtool.rsi
+    state: icon
+  - type: Item
+    sprite: Imperial/Surgery/borgtool.rsi
+
+- type: entity
+  name: borg's surgery tool
+  id: SurgeryToolBorgSyndi
+  parent: Scalpel
+  description: Made of more expensive materials, sharper and generally more reliable.
+  components:
+  - type: Cautery
+    failDamage:
+      types:
+        Heat: 5
+  - type: ItemCooldown
+  - type: Retractor
+    failDamage:
+      types:
+        Blunt: 5
+  - type: Hemostat
+    failDamage:
+      types:
+        Piercing: 5
+  - type: Sprite
+    sprite: Imperial/Surgery/borgtool.rsi
+    state: icon
+  - type: Item
+    sprite: Imperial/Surgery/borgtool.rsi

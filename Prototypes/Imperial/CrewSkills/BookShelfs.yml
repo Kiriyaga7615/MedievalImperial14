@@ -1,0 +1,225 @@
+- type: entity
+  id: crewSkillsBookShelfManualAllSkills
+  parent: Bookshelf
+  suffix: Skills AllBooks
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualBotany
+        amount: 3
+      - id: CrewSkillManualBaseMed
+        amount: 3
+      - id: CrewSkillManualBaseConstraction
+        amount: 3
+      - id: CrewSkillManualCooking
+        amount: 3
+      - id: CrewSkillManualBartending
+        amount: 3
+      - id: CrewSkillManualHacking
+        amount: 3
+      - id: CrewSkillManualInstrumentation
+        amount: 2
+      - id: CrewSkillManualMaintenance
+        amount: 2
+      - id: CrewSkillManualMediumConstruction
+        amount: 2
+      - id: CrewSkillManualMediumBotany
+        amount: 2
+      - id: CrewSkillManualBasicAtmos
+        amount: 2
+      - id: CrewSkillManualMedicalEquipment
+        amount: 2
+      - id: CrewSkillManualPharmacology
+        amount: 2
+      - id: CrewSkillManualPiloting
+      - id: CrewSkillManualAtmos
+      - id: CrewSkillManualHardInstrumentation
+      - id: CrewSkillManualRobotics
+      - id: CrewSkillManualResearch
+      - id: CrewSkillManualPharmaceuticals
+      - id: CrewSkillManualShooting
+      - id: CrewSkillManualSurgery
+      - id: CrewSkillManualNeuroSurgery
+
+- type: entity
+  id: crewSkillsBookShelfManualBase
+  parent: Bookshelf
+  suffix: Skills Base
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualBotany
+        amount: 5
+      - id: CrewSkillManualBaseMed
+        amount: 5
+      - id: CrewSkillManualBaseConstraction
+        amount: 5
+
+- type: entity
+  id: crewSkillsBookShelfManualEasy
+  parent: Bookshelf
+  suffix: Skills Easy
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualCooking
+        amount: 3
+      - id: CrewSkillManualBartending
+        amount: 3
+      - id: CrewSkillManualHacking
+        amount: 3
+
+- type: entity
+  id: crewSkillsBookShelfManualMedium
+  parent: Bookshelf
+  suffix: Skills Medium
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualInstrumentation
+        amount: 2
+      - id: CrewSkillManualMaintenance
+        amount: 2
+      - id: CrewSkillManualMediumConstruction
+        amount: 2
+      - id: CrewSkillManualMediumBotany
+        amount: 2
+      - id: CrewSkillManualBasicAtmos
+        amount: 2
+      - id: CrewSkillManualMedicalEquipment
+        amount: 2
+      - id: CrewSkillManualPharmacology
+        amount: 2
+
+- type: entity
+  id: crewSkillsBookShelfManualHard
+  parent: Bookshelf
+  suffix: Skills Hard
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrewSkillManualPiloting
+      - id: CrewSkillManualAtmos
+      - id: CrewSkillManualHardInstrumentation
+      - id: CrewSkillManualRobotics
+      - id: CrewSkillManualResearch
+      - id: CrewSkillManualPharmaceuticals
+      - id: CrewSkillManualShooting
+      - id: CrewSkillManualSurgery
+      - id: CrewSkillManualNeuroSurgery
+
+- type: entity
+  id: crewSkillsBookShelfRandomWithManualsAll
+  parent: Bookshelf
+  suffix: Skills All Random
+  components:
+  - type: StorageFill
+    contents:
+      - id: BookRandom
+        prob: 0.4
+        amount: 1
+        maxAmount: 4
+      - id: BookNarsieLegend
+        prob: 0.1
+      - id: BookTruth
+        prob: 0.1
+      - id: BookWorld
+        prob: 0.1
+      - id: BookIanAntarctica
+        prob: 0.1
+      - id: BookSlothClownSSS
+        prob: 0.1
+      - id: BookSlothClownPranks
+        prob: 0.1
+      - id: BookSlothClownMMD
+        prob: 0.1
+      - id: BookStruck
+        prob: 0.1
+      - id: BookSun
+        prob: 0.1
+      - id: BookPossum
+        prob: 0.1
+      - id: BookCafe
+        prob: 0.1
+      - id: BookFeather
+        prob: 0.1
+      - id: BookIanLostWolfPup
+        prob: 0.1
+      - id: BookIanRanch
+        prob: 0.1
+      - id: BookIanOcean
+        prob: 0.1
+      - id: BookIanMountain
+        prob: 0.1
+      - id: BookIanCity
+        prob: 0.1
+      - id: BookIanArctic
+        prob: 0.1
+      - id: BookIanDesert
+        prob: 0.1
+      - id: BookNames
+        prob: 0.1
+      - id: BookEarth
+        prob: 0.1
+      - id: BookAurora
+        prob: 0.1
+      - id: BookTemple
+        prob: 0.1
+      - id: BookWatched
+        prob: 0.1
+      - id: BookMedicalOfficer
+        prob: 0.1
+      - id: BookMorgue
+        prob: 0.1
+      - id: BookRufus
+        prob: 0.1
+      - id: BookMap
+        prob: 0.1
+      - id: BookJourney
+        prob: 0.1
+      - id: BookInspiration
+        prob: 0.1
+      - id: CrewSkillManualBotany
+        prob: 0.15
+      - id: CrewSkillManualBaseMed
+        prob: 0.15
+      - id: CrewSkillManualBaseConstraction
+        prob: 0.15
+      - id: CrewSkillManualCooking
+        prob: 0.125
+      - id: CrewSkillManualBartending
+        prob: 0.125
+      - id: CrewSkillManualHacking
+        prob: 0.125
+      - id: CrewSkillManualInstrumentation
+        prob: 0.075
+      - id: CrewSkillManualMaintenance
+        prob: 0.075
+      - id: CrewSkillManualMediumConstruction
+        prob: 0.075
+      - id: CrewSkillManualMediumBotany
+        prob: 0.075
+      - id: CrewSkillManualBasicAtmos
+        prob: 0.075
+      - id: CrewSkillManualMedicalEquipment
+        prob: 0.075
+      - id: CrewSkillManualPharmacology
+        prob: 0.075
+      - id: CrewSkillManualPiloting
+        prob: 0.05
+      - id: CrewSkillManualAtmos
+        prob: 0.05
+      - id: CrewSkillManualHardInstrumentation
+        prob: 0.05
+      - id: CrewSkillManualRobotics
+        prob: 0.05
+      - id: CrewSkillManualResearch
+        prob: 0.05
+      - id: CrewSkillManualPharmaceuticals
+        prob: 0.05
+      - id: CrewSkillManualShooting
+        prob: 0.05
+      - id: CrewSkillManualSurgery
+        prob: 0.05
+      - id: CrewSkillManualNeuroSurgery
+        prob: 0.05

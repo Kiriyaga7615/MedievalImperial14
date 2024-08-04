@@ -1,0 +1,105 @@
+- type: entity
+  name: borg hypospray
+  parent: BaseItem
+  description: A sterile injector for rapid administration of drugs to patients.
+  id: HyposprayBorg
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/hypospray.rsi
+    state: borghypo
+  - type: Item
+    sprite: Objects/Specific/Medical/hypospray.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 30
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+  - type: UseDelay
+    delay: 0.5
+  - type: StaticPrice
+    price: 750
+  - type: BorgHypo
+    Solutions:
+      - reagents:
+        - ReagentId: Bicaridine
+          Quantity: 1
+      - reagents:
+        - ReagentId: Dermaline
+          Quantity: 1
+      - reagents:
+        - ReagentId: Dexalin
+          Quantity: 1
+      - reagents:
+        - ReagentId: Inaprovaline
+          Quantity: 1
+      - reagents:
+        - ReagentId: Hyronalin
+          Quantity: 1
+      - reagents:
+        - ReagentId: Dylovene
+          Quantity: 1
+  - type: SolutionRegeneration
+    solution: hypospray
+    generated:
+      reagents:
+        - ReagentId: Epinephrine
+          Quantity: 10
+  - type: CrewSkillsHypospraySkill #Imperial skills
+    needSkills:
+      - skillMedicalEquipment
+
+- type: entity
+  name: syndi borg hypospray
+  parent: BaseItem
+  description: Using reverse engineered designs from NT, Cybersun produced these in limited quantities for Gorlex Marauder operatives.
+  id: SyndiHypoBorg
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/hypospray.rsi
+    state: borghypo_s
+  - type: Item
+    sprite: Objects/Specific/Medical/hypospray.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 20
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+  - type: UseDelay
+    delay: 0.5
+  - type: BorgHypo
+    Solutions:
+      - reagents:
+        - ReagentId: Bicaridine
+          Quantity: 1
+      - reagents:
+        - ReagentId: Dermaline
+          Quantity: 1
+      - reagents:
+        - ReagentId: Dexalin
+          Quantity: 1
+      - reagents:
+        - ReagentId: Inaprovaline
+          Quantity: 1
+      - reagents:
+        - ReagentId: Hyronalin
+          Quantity: 1
+      - reagents:
+        - ReagentId: Dylovene
+          Quantity: 1
+  - type: SolutionRegeneration
+    solution: hypospray
+    generated:
+      reagents:
+        - ReagentId: Epinephrine
+          Quantity: 10
+  - type: CrewSkillsHypospraySkill #Imperial skills
+    needSkills:
+      - skillMedicalEquipment

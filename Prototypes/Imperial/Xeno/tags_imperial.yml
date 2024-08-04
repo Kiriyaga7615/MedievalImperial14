@@ -1,0 +1,11 @@
+- type: Tag
+  id: OperateNoDebuff
+
+- type: Tag
+  id: Sterile
+
+- type: Tag
+  id: SterileAll
+
+- type: Tag
+  id: MagazineMecha

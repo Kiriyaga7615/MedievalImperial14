@@ -1,0 +1,12 @@
+- type: job
+  id: CargoBorg
+  name: job-name-cargoborg
+  playTimeTracker: JobBorgCarggo
+  setPreference: false
+  supervisors: job-supervisors-ai
+  startingGear: BorgGear
+  #weight: 20
+  icon: "JobIconAI"
+  canBeAntag: false
+  jobEntity: carborg
+  sponsorsOnly: false

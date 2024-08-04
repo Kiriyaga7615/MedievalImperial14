@@ -1,0 +1,59 @@
+- type: polymorph
+  id: secborg
+  configuration:
+    entity: secborg
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: medborg
+  configuration:
+    entity: medborg
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: engborg
+  configuration:
+    entity: engborg
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: janborg
+  configuration:
+    entity: janborg
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: carborg
+  configuration:
+    entity: carborg
+    forced: true
+    transferName: false
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false

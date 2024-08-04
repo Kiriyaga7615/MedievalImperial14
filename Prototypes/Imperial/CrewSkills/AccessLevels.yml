@@ -1,0 +1,43 @@
+- type: accessLevel
+  id: ImperialLibrary
+  name: skills-id-card-access-level-library
+
+- type: entity
+  parent: Airlock
+  id: AirlockImperialLibraryLocked
+  suffix: library, Locked
+  components:
+    - type: AccessReader
+      access: [["ImperialLibrary"]]
+
+- type: entity
+  parent: AirlockMaint
+  id: AirlockImperialLibraryMaintLocked
+  suffix: library, Locked
+  components:
+    - type: AccessReader
+      access: [["ImperialLibrary"]]
+
+- type: entity
+  parent: AirlockMaintGlass
+  id: AirlockImperialLibraryMaintGlassLocked
+  suffix: library, Locked
+  components:
+    - type: AccessReader
+      access: [["ImperialLibrary"]]
+
+- type: entity
+  parent: Windoor
+  id: WindoorImperialLibraryLocked
+  suffix: library, locked
+  components:
+  - type: AccessReader
+    access: [["ImperialLibrary"]]
+
+- type: entity
+  parent: WindoorSecure
+  id: WindoorSecureImperialLibraryLocked
+  suffix: library, locked
+  components:
+  - type: AccessReader
+    access: [["ImperialLibrary"]]

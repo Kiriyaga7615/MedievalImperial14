@@ -1,0 +1,118 @@
+#TOOL
+- type: latheRecipe
+  id: qualityCartrigeTool01Recipe
+  result: qualityCartrigeTool01
+  completetime: 4
+  materials:
+     Steel: 75
+
+- type: latheRecipe
+  id: qualityCartrigeTool12Recipe
+  result: qualityCartrigeTool12
+  completetime: 4
+  materials:
+     Steel: 125
+     Plastic: 50
+
+- type: latheRecipe
+  id: qualityCartrigeTool23Recipe
+  result: qualityCartrigeTool23
+  completetime: 4
+  materials:
+     Steel: 250
+     Plastic: 150
+     Glass: 50
+
+- type: latheRecipe
+  id: qualityCartrigeTool34Recipe
+  result: qualityCartrigeTool34
+  completetime: 4
+  materials:
+     Steel: 750
+     Plastic: 250
+     Silver: 100
+     Glass: 100
+
+- type: latheRecipe
+  id: qualityCartrigeTool45Recipe
+  result: qualityCartrigeTool45
+  completetime: 4
+  materials:
+     Steel: 1000
+     Plastic: 350
+     Silver: 200
+     Gold: 250
+     Uranium: 100
+     Glass: 150
+
+- type: latheRecipe
+  id: qualityCartrigeTool56Recipe
+  result: qualityCartrigeTool56
+  completetime: 4
+  materials:
+     Steel: 1500
+     Plastic: 500
+     Silver: 200
+     Gold: 500
+     Uranium: 200
+     Glass: 200
+
+#ARMOR
+
+- type: latheRecipe
+  id: qualityCartrigeArmor01Recipe
+  result: qualityCartrigeArmor01
+  completetime: 4
+  materials:
+     Steel: 100
+
+- type: latheRecipe
+  id: qualityCartrigeArmor12Recipe
+  result: qualityCartrigeArmor12
+  completetime: 4
+  materials:
+     Steel: 200
+     Plastic: 150
+
+- type: latheRecipe
+  id: qualityCartrigeArmor23Recipe
+  result: qualityCartrigeArmor23
+  completetime: 4
+  materials:
+     Steel: 500
+     Plastic: 250
+     Glass: 100
+
+- type: latheRecipe
+  id: qualityCartrigeArmor34Recipe
+  result: qualityCartrigeArmor34
+  completetime: 4
+  materials:
+     Steel: 1000
+     Plastic: 800
+     Silver: 100
+     Glass: 150
+
+- type: latheRecipe
+  id: qualityCartrigeArmor45Recipe
+  result: qualityCartrigeArmor45
+  completetime: 4
+  materials:
+     Steel: 2000
+     Plastic: 1000
+     Silver: 300
+     Gold: 300
+     Glass: 250
+     Uranium: 200
+
+- type: latheRecipe
+  id: qualityCartrigeArmor56Recipe
+  result: qualityCartrigeArmor56
+  completetime: 4
+  materials:
+     Steel: 2400
+     Plastic: 2200
+     Silver: 600
+     Gold: 500
+     Uranium: 300
+     Glass: 300

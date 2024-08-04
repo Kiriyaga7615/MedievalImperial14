@@ -1,0 +1,7 @@
+﻿- type: alert
+  id: NewLaw
+  icons:
+  - sprite: /Textures/Interface/Alerts/newlaw.rsi
+    state: newlaw
+  name: "Новые законы"
+  description: У вас появились новые законы!

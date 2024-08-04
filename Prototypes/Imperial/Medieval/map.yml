@@ -1,0 +1,159 @@
+- type: gameMap
+  id: MedievalStation
+  mapName: Medieval
+  mapPath: /Maps/imperial/Medieval/Sector8V27.yml
+  minPlayers: 0
+  stations:
+    Medieval:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Medieval"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            SecurityOfficer: [ 4, 4 ]
+            SecurityCadet: [ 5, 5 ]
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            Lawyer: [ 5, 5 ]
+            Librarian: [ 1, 5 ]
+            Bartender: [ 1, 2 ]
+            MedicalIntern: [ 3, 3 ]
+            MedicalDoctor: [ 2, 2 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            SeniorOfficer: [ 1, 1]
+            StationEngineer: [ 4, 4 ]
+            TechnicalAssistant: [ 5, 5 ]
+            ChiefEngineer: [ 1, 1 ]
+            SeniorEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            CargoTechnician: [ 4, 4 ]
+            Quartermaster: [ 1, 1 ]
+            IAA: [ 2, 2 ]
+            ResearchAssistant: [ 3, 3 ]
+            Scientist: [ 2, 2 ]
+            ResearchDirector: [ 1, 1 ]
+
+- type: gameMap
+  id: MedievalStation2
+  mapName: Medieval
+  mapPath: /Maps/imperial/Medieval/Sector8V27.yml
+  minPlayers: 0
+  stations:
+    Medieval:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Medieval"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            SecurityOfficer: [ 4, 4 ]
+            SecurityCadet: [ 5, 5 ]
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            Lawyer: [ 5, 5 ]
+            Librarian: [ 1, 5 ]
+            Bartender: [ 1, 2 ]
+            MedicalIntern: [ 3, 3 ]
+            MedicalDoctor: [ 2, 2 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            SeniorOfficer: [ 1, 1]
+            StationEngineer: [ 4, 4 ]
+            TechnicalAssistant: [ 5, 5 ]
+            ChiefEngineer: [ 1, 1 ]
+            SeniorEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            CargoTechnician: [ 4, 4 ]
+            Quartermaster: [ 1, 1 ]
+            IAA: [ 2, 2 ]
+            ResearchAssistant: [ 3, 3 ]
+            Scientist: [ 2, 2 ]
+            ResearchDirector: [ 1, 1 ]
+
+- type: gameMap
+  id: MedievalStation3
+  mapName: Medieval
+  mapPath: /Maps/imperial/Medieval/Sector8V27.yml
+  minPlayers: 0
+  stations:
+    Medieval:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Medieval"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            SecurityOfficer: [ 4, 4 ]
+            SecurityCadet: [ 5, 5 ]
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            Lawyer: [ 5, 5 ]
+            Librarian: [ 1, 5 ]
+            Bartender: [ 1, 2 ]
+            MedicalIntern: [ 3, 3 ]
+            MedicalDoctor: [ 2, 2 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            SeniorOfficer: [ 1, 1]
+            StationEngineer: [ 4, 4 ]
+            TechnicalAssistant: [ 5, 5 ]
+            ChiefEngineer: [ 1, 1 ]
+            SeniorEngineer: [ 1, 1 ]
+            AtmosphericTechnician: [ 1, 1 ]
+            CargoTechnician: [ 4, 4 ]
+            Quartermaster: [ 1, 1 ]
+            IAA: [ 2, 2 ]
+            ResearchAssistant: [ 3, 3 ]
+            Scientist: [ 2, 2 ]
+            ResearchDirector: [ 1, 1 ]
+
+- type: gameMap
+  id: MedievalStationNoFox
+  mapName: Medieval
+  mapPath: /Maps/imperial/Medieval/Sector8V27.yml
+  minPlayers: 0
+  stations:
+    Medieval:
+      stationProto: StandardStationArena
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Medieval"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            Passenger: [ -1, -1 ]
+            SecurityOfficer: [ 4, 4 ]
+            SecurityCadet: [ 5, 5 ]
+            HeadOfSecurity: [ 1, 1 ]
+            Warden: [ 1, 1 ]
+            Lawyer: [ 5, 5 ]
+            Librarian: [ 1, 5 ]
+            Bartender: [ 1, 2 ]
+            MedicalIntern: [ 3, 3 ]
+            MedicalDoctor: [ 2, 2 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            Musician: [ 1, 1 ]
+            SeniorOfficer: [ 1, 1]
+            #StationEngineer: [ 4, 4 ]
+            #TechnicalAssistant: [ 5, 5 ]
+            #ChiefEngineer: [ 1, 1 ]
+            #SeniorEngineer: [ 1, 1 ]
+            #AtmosphericTechnician: [ 1, 1 ]
+            CargoTechnician: [ 4, 4 ]
+            Quartermaster: [ 1, 1 ]
+            IAA: [ 2, 2 ]
+            ResearchAssistant: [ 3, 3 ]
+            Scientist: [ 2, 2 ]
+            ResearchDirector: [ 1, 1 ]

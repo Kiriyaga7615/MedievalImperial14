@@ -1,0 +1,79 @@
+- type: entity
+  #noSpawn: true
+  id: SpawnERTLeaderEVAPresetOmega
+  name: ERT Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-ertcom-name
+      description: vl-pot-desc
+      rules: vl-potert-rules
+    - type: GhostRoleMobSpawner
+      prototype: ComERTOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertleadereva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnERTMedEVAPresetOmega
+  name: ERT Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-ertmed-name
+      description: vl-pot-desc
+      rules: vl-potert-rules
+    - type: GhostRoleMobSpawner
+      prototype: MedERTOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertmedicaleva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnERTSecEVAPresetOmega
+  name: ERT Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-ertsec-name
+      description: vl-pot-desc
+      rules: vl-potert-rules
+    - type: GhostRoleMobSpawner
+      prototype: SecERTOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertsecurityeva
+
+- type: entity
+  #noSpawn: true
+  id: SpawnERTEngEVAPresetOmega
+  name: ERT Spawner
+  suffix: Vl, Потерянные
+  parent: MarkerBase
+  components:
+    - type: GhostRole
+      name: vl-erteng-name
+      description: vl-pot-desc
+      rules: vl-potert-rules
+    - type: GhostRoleMobSpawner
+      prototype: EngERTOmegaPreset
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      layers:
+        - state: green
+        - sprite: Markers/jobs.rsi
+          state: ertengineereva

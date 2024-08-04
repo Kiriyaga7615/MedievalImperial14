@@ -1,0 +1,62 @@
+- type: entity
+  parent: MobHuman
+  id: testSkills
+  name: testSkillsObj all
+  desc: test
+  components:
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseMed
+        - skillBaseConstraction
+        - skillCooking
+        - skillBartending
+        - skillHacking
+        - skillInstrumentation
+        - skillMaintenance
+        - skillMediumConstruction
+        - skillMediumBotany
+        - skillBasicAtmos
+        - skillMedicalEquipment
+        - skillPharmacology
+        - skillPiloting
+        - skillAtmos
+        - skillHardInstrumentation
+        - skillRobotics
+        - skillResearch
+        - skillPharmaceuticals
+        - skillShooting
+        - skillSurgery
+        - skillNeuroSurgery
+
+- type: entity
+  parent: testSkills
+  id: testSkillsNotAll
+  name: testSkillsObj not all
+  components:
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseConstraction
+        - skillCooking
+        - skillHacking
+        - skillInstrumentation
+        - skillMaintenance
+        - skillMediumBotany
+        - skillPharmacology
+        - skillPiloting
+        - skillAtmos
+        - skillRobotics
+        - skillResearch
+        - skillSurgery
+
+- type: entity
+  parent: testSkills
+  id: testSkillsEmpty
+  name: testSkillsObj Empty
+  components:
+    - type: CrewSkills
+      skills:
+        - skillBotany
+        - skillBaseConstraction
+        - skillCooking

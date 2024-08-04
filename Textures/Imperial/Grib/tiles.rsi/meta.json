@@ -1,0 +1,118 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "for imperial space",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "mob"
+        },
+        {
+            "name": "core",
+            "delays": [
+              [
+                0.2,
+                0.15,
+                0.15,
+                0.15,
+                0.2
+              ]
+            ]
+        },
+        {
+            "name": "farm"
+        },
+        {
+            "name": "icore"
+        },
+        {
+            "name": "move_core"
+        },
+
+        {
+            "name": "heal"
+        },
+        {
+            "name": "army"
+        },
+        {
+            "name": "small"
+        },
+        {
+            "name": "armor"
+        },
+        {
+            "name": "armorup"
+        },
+        {
+            "name": "reflect"
+        },
+        {
+            "name": "big",
+            "delays": [
+              [
+                0.2,
+                0.15,
+                0.15,
+                0.2
+              ]
+            ]
+        },
+        {
+            "name": "little_red_mushroom_animation",
+            "delays": [
+              [
+                0.2,
+                0.15,
+                0.15,
+                0.2
+              ]
+            ]
+        },
+        {
+            "name": "little_green_mushroom_animation",
+            "delays": [
+              [
+                0.2,
+                0.15,
+                0.15,
+                0.2
+              ]
+            ]
+        },
+        {
+            "name": "little_blue_mushroom_animation",
+            "delays": [
+              [
+                0.2,
+                0.15,
+                0.15,
+                0.2
+              ]
+            ]
+        },
+        {
+            "name": "big_green_mushroom_animation",
+            "delays": [
+              [
+                0.2,
+                0.15,
+                0.15,
+                0.2
+              ]
+            ]
+        },
+        {
+            "name": "uzel"
+        },
+        {
+            "name": "delete"
+        },
+        {
+            "name": "main"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+- type: job
+  id: Librarian
+  name: job-name-librarian
+  description: job-description-librarian
+  playTimeTracker: JobLibrarian
+  startingGear: LibrarianGear
+  icon: "JobIconLibrarian"
+  #requirements:
+  #  - !type:OverallPlaytimeRequirement
+  #    time: 7200 #Imperial role timers
+  #supervisors: job-supervisors-hop
+  #access:
+  #- Service
+  #- Maintenance
+  #- ImperialLibrary #imperial skills
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CrewSkillsLibrarian
+    - type: Access
+      tags:
+      - ImperialLibrary
+
+- type: startingGear
+  id: LibrarianGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth17
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalBastShoes
+    #id: PassengerPDA
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent50
+    pocket2: MedievalRevent25
+    belt: MedievalCoinBag
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth17
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

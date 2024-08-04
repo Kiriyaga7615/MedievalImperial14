@@ -1,0 +1,11 @@
+- type: entity
+  id: SwarmersInvasion
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: StationEvent
+    earliestStart: 32
+    weight: 7
+    duration: 30
+  - type: SwarmerSpawnRule
+    swarmerSpawnerPrototype: SwarmerGhostRole

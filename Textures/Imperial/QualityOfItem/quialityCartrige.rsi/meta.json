@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "Discord #mirton4005",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "color"
+    },
+    {
+        "name": "sticker-armor"
+    },
+    {
+        "name": "sticker-tool"
+    },
+    {
+        "name": "upgrader-armor-01"
+    },
+    {
+        "name": "upgrader-armor-12"
+    },
+    {
+        "name": "upgrader-armor-23"
+    },
+    {
+        "name": "upgrader-armor-34"
+    },
+    {
+        "name": "upgrader-armor-45"
+    },
+    {
+        "name": "upgrader-armor-56"
+    },
+    {
+        "name": "upgrader-tool-01"
+    },
+    {
+        "name": "upgrader-tool-12"
+    },
+    {
+        "name": "upgrader-tool-23"
+    },
+    {
+        "name": "upgrader-tool-34"
+    },
+    {
+        "name": "upgrader-tool-45"
+    },
+    {
+        "name": "upgrader-tool-56"
+    }
+  ]
+}

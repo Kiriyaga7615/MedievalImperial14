@@ -1,0 +1,113 @@
+
+- type: entity
+  name: default borg
+  id: SpaceBattleTip
+  description: Beep-boop.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Silicon/borg.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: idle
+    - state: robot_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: true
+    - state: robot_l
+      shader: unshaded
+      map: ["light"]
+      visible: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: RandomMetadata
+    nameSegments:
+    - names_ai_imperial_security
+  - type: Speech
+
+- type: entity
+  name: SpaceBattleTipPDA
+  id: SpaceBattleTipAutoSayPda
+  parent: SpaceBattleTip
+  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  components:
+  - type: Advertise
+    pack: SpaceBattlePda
+    minWait: 3
+    maxWait: 10
+
+- type: messagePack
+  id: SpaceBattlePda
+  messages:
+  - space-battle-pda-tip
+  thankyous:
+  - vending-machine-thanks
+  
+- type: entity
+  name: SpaceBattleTipPDA
+  id: SpaceBattleTipAutoSayFight
+  parent: SpaceBattleTip
+  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  components:
+  - type: Advertise
+    pack: SpaceBattleFight
+    minWait: 3
+    maxWait: 10
+
+- type: messagePack
+  id: SpaceBattleFight
+  messages:
+  - space-battle-fight-tip
+  thankyous:
+  - vending-machine-thanks
+
+- type: entity
+  name: SpaceBattleTipPDA
+  id: SpaceBattleTipAutoSayLadder
+  parent: SpaceBattleTip
+  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  components:
+  - type: Advertise
+    pack: SpaceBattleLadder
+    minWait: 3
+    maxWait: 10
+
+- type: messagePack
+  id: SpaceBattleLadder
+  messages:
+  - space-battle-ladder-tip
+  thankyous:
+  - vending-machine-thanks
+
+- type: entity
+  name: SpaceBattleTipPDA
+  id: SpaceBattleTipAutoSayMain
+  parent: SpaceBattleTip
+  description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
+  components:
+  - type: Advertise
+    pack: SpaceBattleMain
+    minWait: 10
+    maxWait: 20
+
+- type: messagePack
+  id: SpaceBattleMain
+  messages:
+  - space-battle-tip-maint-1
+  - space-battle-tip-maint-2
+  - space-battle-tip-maint-3
+  - space-battle-tip-maint-4
+  - space-battle-tip-maint-5
+  - space-battle-tip-maint-6
+  - space-battle-tip-maint-7
+  - space-battle-tip-maint-8
+  - space-battle-tip-maint-9
+  - space-battle-tip-maint-10
+  - space-battle-tip-maint-11
+  - space-battle-tip-maint-12
+  - space-battle-tip-maint-13
+  - space-battle-tip-maint-14
+  - space-battle-tip-maint-15
+  - space-battle-tip-maint-16
+  thankyous:
+  - vending-machine-thanks

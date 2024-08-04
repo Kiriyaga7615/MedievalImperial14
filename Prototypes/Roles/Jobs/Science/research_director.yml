@@ -1,0 +1,62 @@
+- type: job
+  id: ResearchDirector
+  name: job-name-rd
+  description: job-description-rd
+  playTimeTracker: JobResearchDirector
+  #psychosisGainResist: 0.6 # psychosis
+  #requirements:
+  #  - !type:DepartmentTimeRequirement
+  #    department: Science
+  #    time: 21600 #Imperial role timers
+  #  - !type:RoleTimeRequirement
+  #    role: JobScientist
+  #    time: 10800 #Imperial role timers
+  weight: 10
+  startingGear: ResearchDirectorGear
+  icon: "JobIconResearchDirector"
+  #requireAdminNotify: true
+  #supervisors: job-supervisors-captain
+  #canBeAntag: false
+  #access:
+  #- Research
+  #- Command
+  #- Maintenance
+  #- ResearchDirector
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Mana
+        maxMana: 250
+        regen: 1.5
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillHardInstrumentation
+  #- skillInstrumentation
+  #- skillRobotics
+  #- skillResearch
+  #- skillPharmaceuticals
+  #- skillPharmacology
+  #- skillMediumConstruction
+  #- skillMedicalEquipment
+  #- skillHacking
+  #- skillBasicAtmos
+  #- skillNeuroSurgery
+
+- type: startingGear
+  id: ResearchDirectorGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth23
+    back: ClothingBackpackSatchelCharmerMag3
+    shoes: MedievalShoesChamber
+    id: MedievalKeyWizard
+    pocket1: MedievalRevent50
+    pocket2: MedievalDaggerT3
+    gloves: ClothingHandsGlovesColorBlack
+    head: MedievalClothingHeadHelmetCharmer
+    outerClothing: MedievalClothingOuterArmorCharmer
+    neck: MedievalClothingNeckCloakClanWiz
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth23
+  satchel: ClothingBackpackSatchelCharmerMag1
+  duffelbag: ClothingBackpackSatchelCharmerMag1

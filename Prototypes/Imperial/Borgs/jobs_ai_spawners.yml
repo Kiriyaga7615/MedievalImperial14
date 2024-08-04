@@ -1,0 +1,74 @@
+- type: entity
+  id: SpawnSecurityBorg
+  parent: SpawnPointJobBase
+  name: SecurityBorg
+  components:
+  - type: SpawnPoint
+    job_id: SecurityBorg
+  - type: Sprite
+    layers:
+      - state: green
+      - state: secborg
+
+- type: entity
+  id: SpawnMedicalBorg
+  parent: SpawnPointJobBase
+  name: MedicalBorg
+  components:
+  - type: SpawnPoint
+    job_id: MedicalBorg
+  - type: Sprite
+    layers:
+      - state: green
+      - state: medborg
+
+- type: entity
+  id: SpawnEngineeringBorg
+  parent: SpawnPointJobBase
+  name: EngineeringBorg
+  components:
+  - type: SpawnPoint
+    job_id: EngineeringBorg
+  - type: Sprite
+    layers:
+      - state: green
+      - state: engborg
+
+- type: entity
+  id: SpawnJanitorBorg
+  parent: SpawnPointJobBase
+  name: JanitorBorg
+  components:
+  - type: SpawnPoint
+    job_id: JanitorBorg
+  - type: Sprite
+    layers:
+      - state: green
+      - state: janitorborg
+
+- type: entity
+  id: SpawnCargoBorg
+  parent: SpawnPointJobBase
+  name: CargoBorg
+  components:
+  - type: SpawnPoint
+    job_id: CargoBorg
+  - type: Sprite
+    layers:
+      - state: green
+      - state: cargoborg
+
+- type: entity
+  id: SpawnPointBorgImperial
+  parent: SpawnPointJobBase
+  name: cyborg
+  components:
+  - type: SpawnPoint
+    job_id: BorgImperial
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Silicon/chassis.rsi
+      state: robot
+    - sprite: Mobs/Silicon/chassis.rsi
+      state: robot_e

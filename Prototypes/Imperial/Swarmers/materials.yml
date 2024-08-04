@@ -1,0 +1,255 @@
+- type: entity
+  id: SwarmerCaptureEffect
+  name: effect
+  components:
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: EvaporationSparkle
+  - type: Transform
+    noRot: true
+    anchored: true
+  - type: Sprite
+    layers:
+      - sprite: Imperial/Swarmers/actions.rsi
+        state: deconstruction_effect
+        shader: unshaded
+    netsync: false
+    drawdepth: Effects
+  - type: PointLight
+    color: "#FF0000"
+    castShadows: false
+
+- type: entity
+  id: SwarmerDeconstructEffect
+  name: effect
+  components:
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: EvaporationSparkle
+  - type: Transform
+    noRot: true
+    anchored: true
+  - type: Sprite
+    layers:
+      - sprite: Imperial/Swarmers/actions.rsi
+        state: deconstruction_effect
+        shader: unshaded
+    netsync: false
+    drawdepth: Effects
+  - type: PointLight
+    color: "#FF0000"
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Imperial/Swarmers/Deconstruction.ogg
+
+- type: entity
+  id: SwarmerTileEffect
+  name: effect
+  components:
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: EvaporationSparkle
+  - type: Transform
+    noRot: true
+    anchored: true
+  - type: Sprite
+    layers:
+      - sprite: Imperial/Swarmers/actions.rsi
+        state: deconstruction_effect
+        shader: unshaded
+    netsync: false
+    drawdepth: Effects
+  - type: PointLight
+    color: "#FF0000"
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Imperial/Swarmers/Tile.ogg
+
+- type: entity
+  id: SwarmerWallEffect
+  name: effect
+  components:
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: EvaporationSparkle
+  - type: Transform
+    noRot: true
+    anchored: true
+  - type: Sprite
+    layers:
+      - sprite: Imperial/Swarmers/actions.rsi
+        state: deconstruction_effect
+        shader: unshaded
+    netsync: false
+    drawdepth: Effects
+  - type: PointLight
+    color: "#FF0000"
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Imperial/Swarmers/Wall.ogg
+
+- type: entity
+  id: SwarmerHoloEffect
+  name: effect
+  components:
+  - type: TimedDespawn
+    lifetime: 0.7
+  - type: EvaporationSparkle
+  - type: Transform
+    noRot: true
+    anchored: true
+  - type: Sprite
+    layers:
+      - sprite: Imperial/Swarmers/actions.rsi
+        state: deconstruction_effect
+        shader: unshaded
+    netsync: false
+    drawdepth: Effects
+  - type: PointLight
+    color: "#FF0000"
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Imperial/Swarmers/Holo.ogg
+
+
+
+- type: stack
+  id: SwarmerMetal
+  name: swarmer metal
+  icon: { sprite: /Textures/Imperial/Swarmers/bad_metal.rsi, state: runic}
+  spawn: SwarmerMetal1
+  maxCount: 30
+  itemSize: 1
+
+- type: material
+  id: SwarmerMetal
+  stackEntity: SwarmerMetal1
+  name: materials-swarmer-metal
+  icon: { sprite: /Textures/Imperial/Swarmers/bad_metal.rsi, state: runic }
+  color: "#9d2b39"
+  price: 0.05
+
+- type: entity
+  parent: SheetOtherBase
+  id: SwarmerMetal
+  name: swarmer metal
+  description: An unusual sheet of metal with a pulsating rune.
+  suffix: Full
+  components:
+    - type: Sprite
+      sprite: "Imperial/Swarmers/bad_metal.rsi"
+      layers:
+        - state: runic_3
+          map: [ "base" ]
+    - type: Tag
+      tags:
+        - Sheet
+        - DroneUsable
+    - type: Material
+    - type: PhysicalComposition
+      materialComposition:
+        SwarmerMetal: 100
+    - type: Stack
+      stackType: SwarmerMetal
+      baseLayer: base
+      layerStates:
+        - runic
+        - runic_2
+        - runic_3
+      sizeMultiplier: 0.17
+    - type: Appearance
+    - type: SwarmerMetal
+    - type: UserInterface
+      interfaces:
+        - key: enum.SwarmerStructureCraftUiKey.Key
+          type: SwarmerStructureCraftBoundUserInterface
+    - type: Item
+
+- type: entity
+  parent: SwarmerMetal
+  id: SwarmerMetal1
+  suffix: Single
+  components:
+    - type: Sprite
+      state: runic
+    - type: Stack
+      count: 1
+      sizeMultiplier: 0.17
+    - type: Item
+      size: 1
+
+- type: entity
+  parent: SwarmerMetal
+  id: SwarmerMetal2
+  suffix: Single
+  components:
+    - type: Sprite
+      state: runic
+    - type: Stack
+      count: 2
+      sizeMultiplier: 0.17
+
+- type: stack
+  id: SwarmerSteel
+  name: swarmer steel
+  icon: { sprite: /Textures/Imperial/Swarmers/good_metal.rsi, state: runic}
+  spawn: SwarmerSteel1
+  maxCount: 30
+  itemSize: 1
+
+- type: material
+  id: SwarmerSteel
+  stackEntity: SwarmerSteel1
+  name: materials-swarmer-steel
+  icon: { sprite: /Textures/Imperial/Swarmers/good_metal.rsi, state: runic }
+  color: "#9d2b39"
+  price: 0.05
+
+- type: entity
+  parent: SheetOtherBase
+  id: SwarmerSteel
+  name: swarmer steel
+  description: An unusual sheet of metal with a pulsating rune.
+  suffix: Full
+  components:
+    - type: Sprite
+      sprite: "Imperial/Swarmers/good_metal.rsi"
+      layers:
+        - state: runic_3
+          map: [ "base" ]
+    - type: Tag
+      tags:
+        - Sheet
+        - DroneUsable
+    - type: Material
+    - type: PhysicalComposition
+      materialComposition:
+        SwarmerSteel: 100
+    - type: Stack
+      stackType: SwarmerSteel
+      baseLayer: base
+      layerStates:
+        - runic
+        - runic_2
+        - runic_3
+      sizeMultiplier: 0.17
+    - type: Appearance
+    - type: SwarmerSteelMetal
+    - type: UserInterface
+      interfaces:
+        - key: enum.SwarmerSteelStructureCraftUiKey.Key
+          type: SwarmerSteelStructureCraftBoundUserInterface
+    - type: Item
+
+- type: entity
+  parent: SwarmerSteel
+  id: SwarmerSteel1
+  suffix: Single
+  components:
+    - type: Sprite
+      state: runic
+    - type: Stack
+      count: 1
+      sizeMultiplier: 0.17
+    - type: Item
+      size: 1

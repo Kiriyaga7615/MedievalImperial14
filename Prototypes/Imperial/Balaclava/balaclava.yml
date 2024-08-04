@@ -1,0 +1,24 @@
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasBalaclava
+  name: Balaclaca
+  description: A standard issue syndie gas mask.
+  components:
+    - type: Sprite
+      sprite: Imperial/Balaclava/balaclava.rsi
+    - type: Clothing
+      sprite: Imperial/Balaclava/balaclava.rsi
+    - type: Tag
+      tags:
+      - HidesHair
+
+- type: listing
+  id: UplinkClothingMaskGasBalaclava
+  name: uplink-balaclava-name
+  description: uplink-balaclava-desc
+  icon: { sprite: /Textures/Imperial/Balaclava/balaclava.rsi, state: icon }
+  productEntity: ClothingMaskGasBalaclava
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkWearables

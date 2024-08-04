@@ -1,0 +1,168 @@
+- type: entity
+  name: светящаяся уведомляшка для греха
+  id: GrehAlarmLightingnorth
+  suffix: север
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: GrehLightPoint
+    LinkedSide: north
+  - type: PointLight
+    color: red
+    energy: 0
+    radius: 2
+    castShadows: false
+
+- type: entity
+  name: светящаяся уведомляшка для греха
+  id: GrehAlarmLightingeast
+  suffix: восток
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: GrehLightPoint
+    LinkedSide: east
+  - type: PointLight
+    color: red
+    energy: 0
+    radius: 2
+    castShadows: false
+
+
+- type: entity
+  name: светящаяся уведомляшка для греха
+  id: GrehAlarmLightingsouth
+  suffix: юг
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: GrehLightPoint
+    LinkedSide: south
+  - type: PointLight
+    color: red
+    energy: 0
+    radius: 1.1
+    castShadows: false
+
+
+- type: entity
+  name: светящаяся уведомляшка для греха
+  id: GrehAlarmLightingwest
+  suffix: запад
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: GrehLightPoint
+    LinkedSide: west
+  - type: PointLight
+    color: red
+    energy: 0
+    radius: 2
+    castShadows: false
+
+
+
+- type: entity
+  name: звуковой эффект греха
+  id: LightGrehEffect
+  parent: MarkerBase
+  noSpawn: true
+  components:
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Effects/radpulse1.ogg
+  - type: PointLight
+    color: red
+    energy: 5
+    radius: 2.5
+    castShadows: false
+  - type: TimedDespawn
+    lifetime: 3
+
+- type: entity
+  name: триггер людей для греха
+  id: GrehAlarmLightingnorthTrigger
+  suffix: север
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: Alarm
+    LinkedSide: north
+
+- type: entity
+  name: триггер людей для греха
+  id: GrehAlarmLightingeastTrigger
+  suffix: восток
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: Alarm
+    LinkedSide: east
+
+- type: entity
+  name: триггер людей для греха
+  id: GrehAlarmLightingsouthTrigger
+  suffix: юг
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: Alarm
+    LinkedSide: south
+
+- type: entity
+  name: триггер людей для греха
+  id: GrehAlarmLightingwestTrigger
+  suffix: запад
+  parent: MarkerBase
+  placement:
+    mode: PlaceFree
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - state: blue
+  - type: Alarm
+    LinkedSide: west

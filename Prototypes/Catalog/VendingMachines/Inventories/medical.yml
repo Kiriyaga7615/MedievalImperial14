@@ -1,0 +1,18 @@
+- type: vendingMachineInventory
+  id: NanoMedPlusInventory
+  startingInventory:
+    HandheldHealthAnalyzer: 5 #было 3 стало 5
+    Brutepack: 8 #было 5 стало 8
+    Ointment: 8 #было 5 стало 8
+    Bloodpack: 8 #было 5 стало 8
+    Syringe: 8 #было 5 стало 8
+    HardBurnKit: 2 #наше, @sentryprimies
+    HardTraumapack: 2 #наше, @sentryprimies
+    EpinephrineChemistryBottle: 5 #было 3 стало 5
+    SalineGlucoseChemistryBottle: 5 #наше, @sentryprimies
+    SilverSulfadiazineChemistryBottle: 5 #наше, @sentryprimies
+    SalbutamolChemistryBottle: 5 #наше, @sentryprimies
+    AntiholChemistryBottle: 5 #наше, @sentryprimies
+    ClothingEyesHudMedical: 2
+    ClothingEyesEyepatchHudMedical: 2
+    Ampula: 10 # hardsuit injection

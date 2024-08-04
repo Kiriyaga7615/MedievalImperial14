@@ -1,0 +1,276 @@
+#colors
+#med #6598e5FF
+#sec #b53c3cFF
+#eng #dbaf3dFF
+#sci #9d3cb5FF
+#srv #8cd672FF
+
+#Base
+- type: skill
+  id: skillBotany
+  name: skill-botany-name
+  desc: skill-Botany-desc
+  difficulty: 0
+  color: "#8cd672FF"
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/sprout.png"
+  skillPointsCost: 0
+
+- type: skill
+  id: skillBaseMed
+  name: skill-baseMed-name
+  desc: skill-baseMed-desc
+  difficulty: 0
+  color: "#6598e5FF"
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/bandage.png"
+  skillPointsCost: 0
+
+- type: skill
+  id: skillBaseConstraction
+  name: skill-baseConstraction-name
+  desc: skill-baseConstraction-desc
+  difficulty: 0
+  color: "#dbaf3dFF"
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/hammer.png"
+  skillPointsCost: 0
+
+#Easy
+- type: skill
+  id: skillCooking
+  name: skill-cooking-name
+  desc: skill-cooking-desc
+  difficulty: 1
+  color: "#8cd672FF"
+  timeToLearn: 30
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/chef-hat.png"
+  skillPointsCost: 1
+
+- type: skill
+  id: skillBartending
+  name: skill-bartending-name
+  desc: skill-bartending-desc
+  difficulty: 1
+  color: "#8cd672FF"
+  timeToLearn: 30
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/glass-cocktail.png"
+  skillPointsCost: 1
+
+- type: skill
+  id: skillHacking
+  name: skill-hacking-name
+  desc: skill-hacking-desc
+  difficulty: 1
+  color: "#b53c3cFF"
+  timeToLearn: 30
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/lock-open-alert.png"
+  skillPointsCost: 1
+
+#Medium
+- type: skill
+  id: skillInstrumentation
+  name: skill-instrumentation-name
+  desc: skill-instrumentation-desc
+  difficulty: 2
+  color: "#dbaf3dFF"
+  needTeacher: true
+  timeToLearn: 60
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/hammer.png"
+  requirements:
+    - skillBaseConstraction
+  skillPointsCost: 2
+
+- type: skill
+  id: skillMaintenance
+  name: skill-maintenance-name
+  desc: skill-maintenance-desc
+  difficulty: 2
+  color: "#dbaf3dFF"
+  needTeacher: true
+  timeToLearn: 60
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/hammer.png"
+  skillPointsCost: 2
+
+- type: skill
+  id: skillMediumConstruction
+  name: skill-mediumconstruction-name
+  desc: skill-mediumconstruction-desc
+  difficulty: 2
+  color: "#dbaf3dFF"
+  needTeacher: true
+  timeToLearn: 60
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/hammer.png"
+  requirements:
+    - skillBaseConstraction
+  skillPointsCost: 2
+
+- type: skill
+  id: skillMediumBotany
+  name: skill-mediumbotany-name
+  desc: skill-mediumbotany-desc
+  difficulty: 2
+  color: "#8cd672FF"
+  needTeacher: true
+  timeToLearn: 60
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/tree.png"
+  requirements:
+    - skillBotany
+  skillPointsCost: 2
+
+- type: skill
+  id: skillBasicAtmos
+  name: skill-basicatmos-name
+  desc: skill-basicatmos-desc
+  difficulty: 2
+  color: "#dbaf3dFF"
+  needTeacher: true
+  timeToLearn: 60
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/gas-cylinder.png"
+  skillPointsCost: 2
+
+- type: skill
+  id: skillMedicalEquipment
+  name: skill-medicalequipment-name
+  desc: skill-medicalequipment-desc
+  difficulty: 2
+  color: "#6598e5FF"
+  needTeacher: true
+  timeToLearn: 60
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/medication.png"
+  skillPointsCost: 2
+
+- type: skill
+  id: skillPharmacology
+  name: skill-pharmacology-name
+  desc: skill-pharmacology-desc
+  difficulty: 2
+  color: "#6598e5FF"
+  needTeacher: true
+  timeToLearn: 60
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/pill.png"
+  skillPointsCost: 2
+
+#Hard
+- type: skill
+  id: skillPiloting
+  name: skill-piloting-name
+  desc: skill-piloting-desc
+  difficulty: 3
+  color: "#b53c3cFF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/account-tie-hat.png"
+  skillPointsCost: 3
+
+- type: skill
+  id: skillAtmos
+  name: skill-atmos-name
+  desc: skill-atmos-desc
+  difficulty: 3
+  color: "#dbaf3dFF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/gas-cylinder.png"
+  requirements:
+    - skillBasicAtmos
+  skillPointsCost: 3
+
+- type: skill
+  id: skillHardInstrumentation
+  name: skill-hardinstrumentation-name
+  desc: skill-hardinstrumentation-desc
+  difficulty: 3
+  color: "#dbaf3dFF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/hammer.png"
+  requirements:
+    - skillInstrumentation
+  skillPointsCost: 3
+
+- type: skill
+  id: skillRobotics
+  name: skill-robotics-name
+  desc: skillrobotics-desc
+  difficulty: 3
+  color: "#9d3cb5FF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/robot.png"
+  requirements:
+    - skillInstrumentation
+    - skillBaseConstraction
+  skillPointsCost: 3
+
+- type: skill
+  id: skillResearch
+  name: skill-research-name
+  desc: skill-research-desc
+  difficulty: 3
+  color: "#9d3cb5FF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/desktop-classic.png"
+  skillPointsCost: 3
+
+- type: skill
+  id: skillPharmaceuticals
+  name: skill-pharmaceuticals-name
+  desc: skill-pharmaceuticals-desc
+  difficulty: 3
+  color: "#6598e5FF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/flask-empty-outline.png"
+  requirements:
+    - skillPharmacology
+  skillPointsCost: 3
+
+- type: skill
+  id: skillShooting
+  name: skill-shooting-name
+  desc: skill-shooting-desc
+  difficulty: 3
+  color: "#b53c3cFF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/target.png"
+  skillPointsCost: 3
+
+- type: skill
+  id: skillSurgery
+  name: skill-surgery-name
+  desc: skill-surgery-desc
+  difficulty: 3
+  color: "#6598e5FF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/doctor.png"
+  requirements:
+    - skillPharmacology
+    - skillMedicalEquipment
+  skillPointsCost: 3
+
+- type: skill
+  id: skillNeuroSurgery
+  name: skill-neurosurgery-name
+  desc: skill-neurosurgery-desc
+  difficulty: 3
+  color: "#6598e5FF"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/doctor.png"
+  requirements:
+    - skillPharmacology
+    - skillMedicalEquipment
+  skillPointsCost: 3
+
+#FUN
+- type: skill
+  id: skillClownJoker
+  name: skill-clownJoker-name
+  desc: skill-clownJoker-desc
+  difficulty: 3
+  color: "#ff0aad"
+  needTeacher: true
+  timeToLearn: 80
+  icon: "/Textures/Imperial/CrewSkills/VerbIcons/clown-joker.png"
+  skillPointsCost: 0

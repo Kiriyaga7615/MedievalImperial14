@@ -1,0 +1,80 @@
+{
+  "copyright" : "Sprites by Magic",
+  "license" : "CC-BY-SA-3.0",
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "evolution"
+        },
+        {
+            "name": "plant_heal_weeds"
+        },
+        {
+            "name": "plant_plasma_weeds"
+        },
+        {
+            "name": "sleep"
+        },
+        {
+            "name": "evasion"
+        },
+        {
+            "name": "plasma_transfer"
+        },
+        {
+            "name": "build_wall"
+        },
+        {
+            "name": "pounce"
+        },
+        {
+            "name": "savage"
+        },
+        {
+            "name": "build_turret"
+        },
+        {
+            "name": "plasma_aura"
+        },
+        {
+            "name": "heal_aura"
+        },
+        {
+            "name": "charge"
+        },
+        {
+            "name": "rage"
+        },
+        {
+            "name": "ravage"
+        },
+        {
+            "name": "corrosive_acid"
+        },
+        {
+            "name": "neurotoxin"
+        },
+        {
+            "name": "emit_heal_pheromones"
+        },
+        {
+            "name": "leader"
+        },
+        {
+            "name": "lay_egg"
+        },
+        {
+            "name": "spawn_lawra"
+        },
+        {
+            "name": "plasma"
+        },
+        {
+            "name": "acid"
+        }
+    ]
+}

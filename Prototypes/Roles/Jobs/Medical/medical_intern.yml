@@ -1,0 +1,45 @@
+﻿- type: job
+  id: MedicalIntern
+  name: job-name-intern
+  description: job-description-intern
+  playTimeTracker: JobMedicalIntern
+  psychosisGainResist: 0.5 # psychosis
+  #requirements:
+    #- !type:OverallPlaytimeRequirement
+    #  time: 7200 #Imperial role timers
+    #- !type:DepartmentTimeRequirement
+    #  department: Medical
+    #  time: 54000 # 15 hrs
+    #  inverted: true # stop playing intern if you're good at med!
+  startingGear: MedicalInternGear
+  icon: "JobIconMedicalIntern"
+  supervisors: главарь
+  #canBeAntag: false
+  #access:
+  #- Medical
+  #- Maintenance
+  skills:
+  - skillBotany
+  - skillBaseMed
+  - skillBaseConstraction
+  #- skillPharmacology
+  #- skillMedicalEquipment
+
+- type: startingGear
+  id: MedicalInternGear
+  equipment:
+    jumpsuit: MedievalClothingUniformJumpsuitShitCloth16
+    back: MedievalClothingBackpackSatchelLeather
+    shoes: MedievalClothingShoesSpider
+    id: MedievalKeyAlchem
+    #ears: ClothingHeadsetGrey
+    pocket1: MedievalRevent25
+    #pocket2: MedievalRevent25
+    neck: MedievalClothingNeckCloakClanWolf
+    belt: MedievalCoinBag
+    head: MedievalClothingHeadHelmetBand1
+    gloves: ClothingHandsGlovesColorGray
+    mask: MedievalMaskFace
+  innerClothingSkirt: MedievalClothingUniformJumpsuitShitCloth16
+  satchel: MedievalClothingBackpackSatchelLeather
+  duffelbag: MedievalClothingBackpackSatchelLeather

@@ -1,0 +1,27 @@
+- type: entity
+  name: syndicate jaws of life
+  parent: JawsOfLife
+  id: SabotageBorgJawsOfLife
+  description: Useful for entering the station or its departments.
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/jaws_of_life.rsi
+    state: syn_jaws_pry
+  - type: Tool
+    qualities:
+      - Prying
+    speed: 3.0
+  - type: MultipleTool
+    entries:
+      - behavior: Prying
+        sprite:
+          sprite: Objects/Tools/jaws_of_life.rsi
+          state: syn_jaws_pry
+        useSound: /Audio/Items/jaws_pry.ogg
+        changeSound: /Audio/Items/change_jaws.ogg
+      - behavior: Cutting
+        sprite:
+          sprite: Objects/Tools/jaws_of_life.rsi
+          state: syn_jaws_cutter
+        useSound: /Audio/Items/jaws_cut.ogg
+        changeSound: /Audio/Items/change_jaws.ogg

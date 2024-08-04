@@ -1,0 +1,8 @@
+- type: entity
+  id: CrateScienceBorg
+  parent: CrateScienceSecure
+  components:
+  - type: StorageFill
+    contents:
+      - id: BorgCentralControlModule
+        amount: 2

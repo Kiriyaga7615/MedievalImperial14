@@ -1,0 +1,239 @@
+- type: entity
+  id: BaseBorgModuleImperial
+  parent: BaseItem
+  name: borg module
+  description: A piece of tech that gives cyborgs new abilities.
+  abstract: true
+  components:
+  - type: BorgModule
+  - type: StaticPrice
+    price: 250
+
+- type: entity
+  id: SecurityBorgRangedModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: security borg ranged module
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    layers:
+    - state: icon
+  - type: ItemBorgModule
+    items:
+    - WeaponLaserBorg
+    - WeaponDisablerBorg
+
+- type: entity
+  id: SecurityBorgMeleeModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: security borg melee module
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/stunbaton.rsi
+    layers:
+    - state: stunbaton_off
+  - type: ItemBorgModule
+    items:
+    - JawsOfLife
+    - StunbatonBorg
+
+- type: entity
+  id: EngeneeringBorgToolModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: engineering borg tool module
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/jaws_of_life.rsi
+    layers:
+    - state: jaws_pry
+  - type: ItemBorgModule
+    items:
+    - JawsOfLife
+    - PowerDrill
+    - WelderExperimental
+    - ClothingBackpackSatchelEngineering
+
+- type: entity
+  id: EngeneeringBorgAnalyzingModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: engineering borg analyzing module
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/t-ray.rsi
+    layers:
+    - state: tray-off
+  - type: ItemBorgModule
+    items:
+    - trayScanner
+    - GasAnalyzer
+    - Multitool
+    - NetworkConfigurator
+
+- type: entity
+  id: MedicalBorgSurgeryModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: medical borg surgery module
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+    layers:
+    - state: scalpel
+  - type: ItemBorgModule
+    items:
+    - SurgeryToolBorg
+    - BoneSetter
+    - SawImprov
+    - FixOVein
+    - BoneGel
+    - OrganHealer
+
+- type: entity
+  id: MedicalBorgHealingModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: medical borg healing module
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/healthanalyzer.rsi
+    layers:
+    - state: icon
+  - type: ItemBorgModule
+    items:
+    - HyposprayBorg
+    - JawsOfLife
+    - HandheldHealthAnalyzerUnpowered
+
+- type: entity
+  id: AssaultBorgBattleModule
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: assault borg battle module
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/LMGs/l6.rsi
+    layers:
+    - state: icon
+  - type: ItemBorgModule
+    items:
+    - EnergySword
+    - CyberneticMachineGun
+    - PinpointerNuclear
+
+- type: entity
+  id: SyndiBorgSupportModule
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: syndi borg support module
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/emag.rsi
+    layers:
+    - state: icon
+  - type: ItemBorgModule
+    items:
+    - Emag
+    - SyndicateJawsOfLife
+
+- type: entity
+  id: SabotageBorgToolModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: engineering borg tool module
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/jaws_of_life.rsi
+    layers:
+    - state: jaws_pry
+  - type: ItemBorgModule
+    items:
+    - SabotageBorgJawsOfLife
+    - PowerDrill
+    - WelderExperimental
+    - ClothingBackpackSatchelEngineeringSabotageBorg
+
+- type: entity
+  id: SyndiMedicalBorgSurgeryModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: syndi medical borg surgery module
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+    layers:
+    - state: scalpel
+  - type: ItemBorgModule
+    items:
+    - SurgeryToolBorgSyndi
+    - BoneSetter
+    - SawImprov
+    - FixOVein
+    - BoneGel
+    - OrganHealer
+
+- type: entity
+  id: SyndiMedicalBorgHealingModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: syndi medical borg healing module
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/healthanalyzer.rsi
+    layers:
+    - state: icon
+  - type: ItemBorgModule
+    items:
+    - SyndiHypoBorg
+    - SyndicateJawsOfLife
+    - HandheldHealthAnalyzerUnpowered
+#    - HandheldHealthAnalyzerBorg
+
+- type: entity
+  id: CargoBorgMinerModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: cargoborg miner module
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/handdrill.rsi
+    layers:
+    - state: handdrill
+  - type: ItemBorgModule
+    items:
+    - MiningDrillBorg
+    - WeaponGrapplingGunBorg
+    - OreBag
+
+- type: entity
+  id: CargoBorgCargoModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: cargo borg cargo module
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/appraisal-tool.rsi
+    layers:
+    - state: icon
+  - type: ItemBorgModule
+    items:
+    - AppraisalToolBorg
+    - JawsOfLife
+
+- type: entity
+  id: JanitorBorgCleanModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: janitor borg clean module
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/mop.rsi
+    layers:
+    - state: mop
+  - type: ItemBorgModule
+    items:
+    - BorgMopItem
+    - BorgSprayBottleFull
+
+- type: entity
+  id: JanitorBorgTrashModuleImperial
+  parent: [ BaseBorgModuleImperial, BaseProviderBorgModule ]
+  name: janitor borg trash module
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/trashbag.rsi
+    layers:
+    - state: icon-1
+  - type: ItemBorgModule
+    items:
+    - TrashBagBorg
+    - LightReplacer

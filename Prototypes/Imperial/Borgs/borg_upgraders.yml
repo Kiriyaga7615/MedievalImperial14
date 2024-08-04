@@ -1,0 +1,132 @@
+- type: entity
+  id: BaseBorgUpgrader
+  parent: BaseItem
+  name: borg module
+  description: Upgrade cyborgs.
+  abstract: true
+  components:
+  - type: StaticPrice
+    price: 50
+
+- type: entity
+  id: BorgHealthUpgrader
+  parent: BaseBorgUpgrader
+  name: borg health upgrader
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: cyborg_upgrade
+  - type: BorgUpgrader
+    upgraderType: Health
+
+- type: entity
+  id: BorgHealthUpgrader2
+  parent: BorgHealthUpgrader
+  name: borg health upgrader level 2
+  components:
+  - type: BorgUpgrader
+    upgraderType: Health
+    level: 2
+
+- type: entity
+  id: BorgHealthUpgrader3
+  parent: BorgHealthUpgrader
+  name: borg health upgrader level 2
+  components:
+  - type: BorgUpgrader
+    upgraderType: Health
+    level: 3
+
+- type: entity
+  id: BorgSpeedUpgrader
+  parent: BaseBorgUpgrader
+  name: borg speed upgrader
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: cyborg_upgrade1
+  - type: BorgUpgrader
+    upgraderType: Speed
+
+- type: entity
+  id: BorgSpeedUpgrader2
+  parent: BorgSpeedUpgrader
+  name: borg speed upgrader level 2
+  components:
+  - type: BorgUpgrader
+    upgraderType: Speed
+    level: 2
+
+- type: entity
+  id: BorgSpeedUpgrader3
+  parent: BorgSpeedUpgrader
+  name: borg speed upgrader level 3
+  components:
+  - type: BorgUpgrader
+    upgraderType: Speed
+    level: 3
+
+- type: entity
+  id: BorgBatteryUpgrader
+  parent: BaseBorgUpgrader
+  name: borg battery upgrader
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: cyborg_upgrade2
+  - type: BorgUpgrader
+    upgraderType: Battery
+
+- type: entity
+  id: BorgBatteryUpgrader2
+  parent: BorgBatteryUpgrader
+  name: borg battery upgrader level 2
+  components:
+  - type: BorgUpgrader
+    upgraderType: Battery
+    level: 2
+
+- type: entity
+  id: BorgBatteryUpgrader3
+  parent: BorgBatteryUpgrader
+  name: borg battery upgrader level 3
+  components:
+  - type: BorgUpgrader
+    upgraderType: Battery
+    level: 3
+
+- type: entity
+  id: BorgLaserUpgrader
+  parent: BaseBorgUpgrader
+  name: borg laser upgrader
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: ash_plating
+  - type: BorgUpgrader
+    upgraderType: Laser
+
+- type: entity
+  id: BorgLaserUpgrader2
+  parent: BorgLaserUpgrader
+  name: borg laser upgrader level 2
+  components:
+  - type: BorgUpgrader
+    upgraderType: Laser
+    level: 2
+
+- type: entity
+  id: BorgFakeLawsUpgrader
+  parent: BaseBorgUpgrader
+  name: borg fake laws module
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: mainboard
+  - type: BorgUpgrader
+    upgraderType: FakeLaws

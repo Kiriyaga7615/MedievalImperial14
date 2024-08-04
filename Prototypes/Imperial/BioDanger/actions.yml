@@ -1,0 +1,229 @@
+- type: entity
+  id: BioDangerInfectAction
+  name: infection
+  description: infect people
+  noSpawn: true
+  components:
+    - type: EntityTargetAction
+      useDelay: 60
+      deselectOnMiss: false
+      repeat: false
+      canTargetSelf: false
+      checkCanAccess: false
+      interactOnMiss: false
+      targetingIndicator: true
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: infect
+      event: !type:BioDangerInfectActionEvent
+      whitelist:
+        components:
+          - HumanoidAppearance
+
+- type: entity
+  id: BioDangerDnaAction
+  name: get dna count
+  description: amogus
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 0.5
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: dnk
+      event: !type:BioDangerDnaActionEvent
+
+- type: entity
+  id: BioDangerLethalAction
+  name: more lethal
+  description: lethal compomy
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 10
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: lethal
+      event: !type:BioDangerLethalActionEvent
+
+- type: entity
+  id: BioDangerInfectionAction
+  name: more infectionable
+  description: blyat greenland
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 10
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: infection
+      event: !type:BioDangerInfectionActionEvent
+
+- type: entity
+  id: BioDangerDefendAction
+  name: more def
+  description: blyat madagaskari
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 10
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: defend
+      event: !type:BioDangerDefendActionEvent
+
+- type: entity
+  id: BioDangerInfoAction
+  name: more def
+  description: blyat madagaskari
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 1
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: progress
+      event: !type:BioDangerInfoActionEvent
+
+- type: entity
+  id: BioDangerBloodAction
+  name: more blood
+  description: blyat ahahah
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: blood
+      event: !type:BioDangerBloodActionEvent
+
+- type: entity
+  id: BioDangerCodeAction
+  name: chage cood
+  description: ahahah blyat
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 260
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: genom
+      event: !type:BioDangerCodeActionEvent
+
+- type: entity
+  id: BioDangerReagentAction
+  name: chage reagent
+  description: ahahah vrachi idite nahui
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 940
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: heal
+      event: !type:BioDangerReagentActionEvent
+
+- type: entity
+  id: BioDangerCoughAction
+  name: more cough
+  description: blyat ahahah
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: cough
+      event: !type:BioDangerCoughActionEvent
+
+- type: entity
+  id: BioDangerRvotaAction
+  name: more rvota
+  description: blyat hihihi
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: rvota
+      event: !type:BioDangerRvotaActionEvent
+
+- type: entity
+  id: BioDangerSleepAction
+  name: more sleep
+  description: blyat huihuihui
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: sleep
+      event: !type:BioDangerSleepActionEvent
+
+- type: entity
+  id: BioDangerStunAction
+  name: more stun
+  description: blyat hz che write suda
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: stun
+      event: !type:BioDangerStunActionEvent
+
+- type: entity
+  id: BioDangerMuteAction
+  name: more mute
+  description: chel ti v mute
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: mute
+      event: !type:BioDangerMuteActionEvent
+
+- type: entity
+  id: BioDangerBleedAction
+  name: more bleed
+  description: uga buga
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: bleed
+      event: !type:BioDangerBleedActionEvent
+
+- type: entity
+  id: BioDangerSlowAction
+  name: more slow
+  description: uga buga
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: slow
+      event: !type:BioDangerSlowActionEvent
+
+- type: entity
+  id: BioDangerBlindAction
+  name: more blind
+  description: ne vizhu nihuya
+  noSpawn: true
+  components:
+    - type: InstantAction
+      useDelay: 3
+      icon:
+        sprite: /Textures/Imperial/BioDanger/misc.rsi
+        state: blind
+      event: !type:BioDangerBlindActionEvent

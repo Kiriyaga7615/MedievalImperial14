@@ -1,0 +1,32 @@
+- type: Tag
+  id: Stunbaton
+
+- type: Tag
+  id: LaserGun
+
+- type: Tag
+  id: Brain
+
+- type: Tag
+  id: CantBeZombie
+
+- type: Tag
+  id: ImperialBorg
+
+- type: Tag
+  id: SyndieBorg
+
+- type: Tag
+  id: NeutralBorg
+
+- type: Tag
+  id: BorgCentralControlModule
+
+- type: Tag
+  id: StationAI
+
+- type: Tag
+  id: AICore
+
+- type: Tag
+  id: AntiSingularity

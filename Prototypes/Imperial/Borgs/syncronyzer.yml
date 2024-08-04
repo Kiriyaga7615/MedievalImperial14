@@ -1,0 +1,15 @@
+- type: entity
+  parent: BaseItem
+  id: LawsSyncronizer
+  name: laws syncronizer
+  description: A handheld device used for laws sync.
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Objects/Tools/syncronizer.rsi
+      layers:
+        - state: base
+    - type: Item
+      sprite: Objects/Tools/syncronizer.rsi
+    - type: LawsSyncronizer
+

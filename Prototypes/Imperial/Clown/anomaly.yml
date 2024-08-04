@@ -1,0 +1,163 @@
+- type: entity
+  id: AnomalyClown
+  parent: BaseAnomaly
+  suffix: Clown
+  components:
+  - type: Sprite
+    sprite: Imperial/Anomaly/honk_anom.rsi
+    layers:
+    - state: anom
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: pulse
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+  - type: Anomaly
+    corePrototype: AnomalyCoreClown
+    coreInertPrototype: AnomalyCoreClownInert
+  - type: PointLight
+    radius: 5.0
+    energy: 20
+    color: "#1e070e"
+    castShadows: false
+  - type: RadiationSource
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        maxAmount: 10
+        minRange: 1
+        maxRange: 4
+      spawns:
+      - TrashBananiumPeel
+      - TrashBananiumPeel
+      - TrashBananiumPeel
+      - MaterialBananium1
+      - MaterialBananium1
+      - MaterialBananium1
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 1
+        maxAmount: 5
+        maxRange: 4
+      spawns:
+      - ClownRift
+      - MobBehonkerIce
+      - MobClown
+      - MobClown
+      - MobClown
+      - TrashBananiumPeel
+      - MaterialBananium1
+  - type: ExplosionAnomaly
+    supercriticalExplosion: Default
+    explosionTotalIntensity: 12
+    explosionDropoff: 4
+    explosionMaxTileIntensity: 1
+
+- type: entity
+  name: Clowns Spawner
+  id: SpawnMobClowns
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: base
+      sprite: Objects/Weapons/Guns/Battery/behonker_eye.rsi
+  - type: ConditionalSpawner
+    prototypes:
+      - MobClownBlob
+      - MobClownHonkhulk
+      - MobClownDestroyer
+      - MobClownMunculus
+      - MobClown
+      - MobClownLongFace
+      - MobClownFleshclown
+      - MobClown
+      - MobClownLongFace
+      - MobClownFleshclown
+      - MobClown
+      - MobClownLongFace
+      - MobClownFleshclown
+
+- type: entity
+  id: ClownRift
+  name: clown rift
+  description: A rift akin to the ones space clown use to travel long distances.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DragonRift
+    maxAccumuluator: 1600
+    spawnCooldown: 60
+    spawn: SpawnMobClowns
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: Fixtures
+  - type: Sprite
+    layers:
+    - sprite: Imperial/Anomaly/clown_rift.rsi
+      state: icon
+  - type: InteractionOutline
+  - type: Clickable
+  - type: PointLight
+    enabled: true
+    color: "#FFFF00"
+    radius: 10.0
+    energy: 5.0
+    netsync: false
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: clown rift
+    # only show after making the announcement at 50%
+    enabled: false
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
+
+#Core anomaly
+
+- type: entity
+  parent: BaseAnomalyCore
+  id: AnomalyCoreClown
+  suffix: Clown
+  components:
+  - type: Sprite
+    sprite: Imperial/Clowns/clown_anomaly_core.rsi
+  - type: EmitSoundOnUse #placeholder for future unical mechanic
+    sound:
+      collection: BananiumHorn
+  - type: PointLight
+    radius: 1.5
+    energy: 10
+    color: "#FFFF00"
+    castShadows: false
+
+- type: entity
+  parent: BaseAnomalyInertCore
+  id: AnomalyCoreClownInert
+  suffix: Clown, Inert
+  components:
+  - type: Sprite
+    sprite: Imperial/Clowns/clown_anomaly_core.rsi
+  - type: EmitSoundOnUse #placeholder for future unical mechanic
+    sound:
+      collection: BananiumHorn
+  - type: PointLight
+    radius: 1.5
+    energy: 1.5
+    color: "#FFFF00"
+    castShadows: false

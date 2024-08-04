@@ -1,0 +1,15 @@
+- type: entity
+  id: test Crowbar quality
+  name: crowbar test
+  parent: Crowbar
+  components:
+    - type: QualityOfItem
+      quality: 3
+
+- type: entity
+  id: test rig quality
+  name: test rig
+  parent: ClothingOuterHardsuitAtmos
+  components:
+    - type: QualityOfItem
+      quality: 3

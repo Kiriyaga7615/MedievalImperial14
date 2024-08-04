@@ -1,0 +1,59 @@
+﻿- type: polymorph
+  id: Human
+  configuration:
+    entity: MobHuman
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: Arachnid
+  configuration:
+    entity: MobArachnid
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: Diona
+  configuration:
+    entity: MobDiona
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: Dwarf
+  configuration:
+    entity: MobDwarf
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: Reptilian
+  configuration:
+    entity: MobReptilian
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Transfer
+    allowRepeatedMorphs: true
+    revertOnCrit: false
+    revertOnDeath: false

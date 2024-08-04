@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: DeathAlarmImplant
+  name: death alarm implant
+  description: sends message
+  noSpawn: true
+  components:
+    - type: SubdermalImplant
+    - type: TriggerOnMobstateChange
+      mobState:
+        - Critical
+    - type: DeathAlarmImplantTrigger
